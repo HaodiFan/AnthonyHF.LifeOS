@@ -1,0 +1,14 @@
+name: AnthonyHF.Skill
+owner: Anthony Fan
+positioning: Anthony Fan personal avatar skill matrix
+submodules:
+  - id: wenxin-skill
+    name: Wenxin Skill
+    path: skills/wenxin-skill
+    repository: https://github.com/HaodiFan/wenxin-skill.git
+    role: Personal writing, thinking, and expression layer.
+  - id: engineering-everything
+    name: Engineering Everything
+    path: skills/engineering-everything
+    repository: https://github.com/HaodiFan/engineering-everything.git
+    role: Engineering judgment router for software, organizations, SOPs, projects, and AI/agent workflows.
