@@ -1,6 +1,6 @@
-[submodule "skills/wenxin-skill"]
-	path = skills/wenxin-skill
-	url = https://github.com/HaodiFan/wenxin-skill.git
 [submodule "skills/engineering-everything"]
 	path = skills/engineering-everything
 	url = https://github.com/HaodiFan/engineering-everything.git
+[submodule "knowledge/af-wiki"]
+	path = knowledge/af-wiki
+	url = https://github.com/HaodiFan/AF-wiki.git

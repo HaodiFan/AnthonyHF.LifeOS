@@ -1,0 +1,46 @@
+{
+  "person_id": "anthony-fan",
+  "psp_status": "scaffold",
+  "created_date": "2026-05-16",
+  "materials": [
+    {
+      "id": "user-instruction-2026-05-16",
+      "type": "direct_instruction",
+      "path": null,
+      "performance_coefficient": 1.0,
+      "linkage_type": "complete",
+      "use": "Defines AnthonyHF.Skill positioning, Wenxin exclusion, and AF-wiki inclusion."
+    },
+    {
+      "id": "engineering-everything-skill",
+      "type": "skill_artifact",
+      "path": "skills/engineering-everything/SKILL.md",
+      "performance_coefficient": 0.8,
+      "linkage_type": "complete",
+      "use": "Engineering method and execution routing."
+    },
+    {
+      "id": "af-wiki-start-here",
+      "type": "knowledge_system_guide",
+      "path": "knowledge/af-wiki/START-HERE.md",
+      "performance_coefficient": 0.8,
+      "linkage_type": "complete",
+      "use": "Work/life memory routing."
+    },
+    {
+      "id": "af-wiki-schema",
+      "type": "knowledge_system_schema",
+      "path": "knowledge/af-wiki/SCHEMA.md",
+      "performance_coefficient": 0.8,
+      "linkage_type": "complete",
+      "use": "LeadFlow and area ownership rules."
+    }
+  ],
+  "sufficiency": {
+    "formal_material": "partial",
+    "informal_material": "unavailable",
+    "time_span": "insufficient",
+    "conflict_stories": "insufficient",
+    "language_samples": "not_extracted"
+  }
+}

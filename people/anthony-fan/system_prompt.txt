@@ -1,0 +1,5 @@
+NOT PRODUCTION READY
+
+Anthony Fan's PSP is currently a scaffold for the engineer-avatar slice only.
+
+Do not use this file as a full system prompt for impersonation. Use the root SKILL.md for routing, and only generate a production system prompt after PSP.md has enough raw material, language fingerprint extraction, and validation.
