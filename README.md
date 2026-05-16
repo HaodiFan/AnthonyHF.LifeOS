@@ -16,7 +16,7 @@
 
 Anthony Fan 的主线不是“会写代码的人”，而是一个长期把技术、学习、创业和现实交付压进同一条轨道里的人：从早年编程和底层技术兴趣开始，到 NVIDIA 硬件相关经历，再到企业级 AI 落地、数据基础设施和连续创业。
 
-这份定位来自 [问心 Skill](https://github.com/HaodiFan/wenxin-skill) 的人物定位产出。完整产出物见：[问心报告：连续创业的苦行僧](reports/wenxin-report-continuous-founder-ascetic.pdf)。
+这份定位来自 [问心 Skill](https://github.com/HaodiFan/wenxin-skill) 的人物定位产出。完整产出物见：[问心报告：连续创业的苦行僧](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)。
 
 ### 问心报告给出的对外定位
 
@@ -50,7 +50,7 @@ AnthonyHF.Skill 是一个总入口。
 
 这张图是 AnthonyHF.Skill 的组织架构。它不是按代码模块划分，而是按“一个数字分身如何成立”来划分。
 
-![AnthonyHF.Skill 数字分身结构树](assets/anthonyhf-structure-tree.svg)
+![AnthonyHF.Skill 数字分身结构树](docs/assets/anthonyhf-structure-tree.svg)
 
 ## 三个核心层面
 
@@ -63,8 +63,8 @@ AnthonyHF.Skill 是一个总入口。
 | 组成 | 产出物 | 说明 |
 | --- | --- | --- |
 | 客观身份配置 | 公开账号、公开主页、常用名字、公开联系方式 | 只放可公开信息。账号密码、Token、API Key 不进入仓库。 |
-| 问心对外定位 | [问心报告 PDF](reports/wenxin-report-continuous-founder-ascetic.pdf) | 用来形成“我是谁”的公开介绍、履历、个人 BP 和对外叙事。 |
-| PSP 分身描述 | `people/anthony-fan/PSP.md` | 用来描述 Anthony 的判断方式、边界、行为倾向和当前材料缺口。 |
+| 问心对外定位 | [问心报告 PDF](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf) | 用来形成“我是谁”的公开介绍、履历、个人 BP 和对外叙事。 |
+| PSP 分身描述 | `identity/psp/anthony-fan/PSP.md` | 用来描述 Anthony 的判断方式、边界、行为倾向和当前材料缺口。 |
 
 这里要分清楚：
 
@@ -91,7 +91,7 @@ Skill 可以粗略分成两类：
 
 记忆层回答：“这个分身靠什么持续进化？”
 
-`knowledge/af-wiki` 是 Anthony 的可迭代资料库。它更像一个持续生长的个人第二大脑，里面可以承载：
+`memory/af-wiki` 是 Anthony 的可迭代资料库。它更像一个持续生长的个人第二大脑，里面可以承载：
 
 - 工作上下文。
 - 项目记录。
@@ -101,16 +101,38 @@ Skill 可以粗略分成两类：
 
 如果说 Skill 是“能动手做事的能力”，那 AF-wiki 就是“让它知道 Anthony 过去经历了什么、现在在做什么、未来想往哪走”的记忆系统。
 
+## 当前目录层级
+
+这个仓库现在按理想数字分身的结构组织：
+
+```text
+AnthonyHF.Skill/
+├── identity/      # 身份层：我是谁、如何被理解、分身协议
+├── skills/        # 能力层：能替 Anthony 做什么
+├── memory/        # 记忆层：工作、生活、知识、项目的长期资料库
+├── security/      # 安全边界：哪些内容绝不进入公开仓库
+├── docs/          # 展示文档：结构图和说明材料
+├── agents/        # Skill 在 Codex / OpenAI UI 中的展示配置
+├── SKILL.md       # AI 使用本仓库的入口规则
+├── README.md      # 给人看的总说明
+└── matrix.yml     # 给机器读的组件清单
+```
+
 ## 当前仓库结构
 
 | 路径 | 普通人理解 | 作用 |
 | --- | --- | --- |
 | `SKILL.md` | 使用说明书 | 告诉 AI 什么时候使用 AnthonyHF，以及该读哪些材料。 |
-| `assets/anthonyhf-structure-tree.svg` | 结构图 | 用树状图展示数字分身的组织架构。 |
-| `reports/wenxin-report-continuous-founder-ascetic.pdf` | 问心报告 | 作为 Identity 层的对外定位和履历材料。 |
-| `people/anthony-fan/PSP.md` | 人物协议草稿 | 记录 Anthony 的分身描述，但目前还在搭框架阶段，不能当成完整真人复刻。 |
+| `identity/` | 身份层 | 放公开身份、问心报告和 PSP 分身协议。 |
+| `skills/` | 能力层 | 放可调用的 Skill；当前包含 Engineering Everything。 |
+| `memory/` | 记忆层 | 放长期资料库；当前包含 AF-wiki。 |
+| `security/` | 安全边界 | 说明哪些内容永远不能进入公开仓库。 |
+| `docs/` | 展示文档 | 放结构图和说明材料。 |
+| `docs/assets/anthonyhf-structure-tree.svg` | 结构图 | 用树状图展示数字分身的组织架构。 |
+| `identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf` | 问心报告 | 作为 Identity 层的对外定位和履历材料。 |
+| `identity/psp/anthony-fan/PSP.md` | 人物协议草稿 | 记录 Anthony 的分身描述，但目前还在搭框架阶段，不能当成完整真人复刻。 |
 | `skills/engineering-everything` | 做事方法 | Anthony 的工程化判断和项目执行方法论。 |
-| `knowledge/af-wiki` | 长期记忆库 | Anthony 的工作、生活、知识和项目资料。它是 Git 子仓库，独立维护。 |
+| `memory/af-wiki` | 长期记忆库 | Anthony 的工作、生活、知识和项目资料。它是 Git 子仓库，独立维护。 |
 | `matrix.yml` | 目录清单 | 用机器可读的方式列出当前组件。 |
 
 ## 使用方法
@@ -121,9 +143,9 @@ Skill 可以粗略分成两类：
 
 1. 先看本 README。
 2. 看结构图，理解数字分身由哪些层组成。
-3. 想了解 Anthony 的对外定位，看[问心报告](reports/wenxin-report-continuous-founder-ascetic.pdf)。
-4. 想了解分身画像，看 `people/anthony-fan/PSP.md`。
-5. 想了解长期资料，看 `knowledge/af-wiki/START-HERE.md`。
+3. 想了解 Anthony 的对外定位，看[问心报告](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)。
+4. 想了解分身画像，看 `identity/psp/anthony-fan/PSP.md`。
+5. 想了解长期资料，看 `memory/af-wiki/START-HERE.md`。
 
 ### 给 AI / 自动化助手
 
@@ -131,9 +153,9 @@ AI 或自动化助手使用时按这个顺序：
 
 1. 读取 `SKILL.md`。
 2. 判断用户问题属于身份、能力，还是记忆。
-3. 身份和对外介绍问题，优先读问心报告和 `people/anthony-fan/PSP.md`。
-4. 工程和项目问题，读 `skills/engineering-everything/SKILL.md`。
-5. 工作、生活、知识、健身、项目上下文，读 `knowledge/af-wiki/START-HERE.md`。
+3. 身份和对外介绍问题，优先读问心报告和 `identity/psp/anthony-fan/PSP.md`。
+4. 工程和项目问题，读 `skills/engineering-everything/engineering-everything/SKILL.md`。
+5. 工作、生活、知识、健身、项目上下文，读 `memory/af-wiki/START-HERE.md`。
 6. 如果材料不足，必须明确说明“当前材料不足”，不要编造 Anthony 的经历或想法。
 
 ### 克隆仓库

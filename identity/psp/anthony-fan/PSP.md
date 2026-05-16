@@ -23,11 +23,11 @@
 | 来源 | 类型 | 表演系数 | 用途 |
 | --- | --- | --- | --- |
 | 用户指令，2026-05-16 | 直接指令 | x1.0 | 定义本仓库定位和边界。 |
-| `reports/wenxin-report-continuous-founder-ascetic.pdf` | 问心报告 | x0.8 | 对外定位、履历叙事和个人 BP 素材。 |
+| `identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf` | 问心报告 | x0.8 | 对外定位、履历叙事和个人 BP 素材。 |
 | `SKILL.md` | 系统设计产物 | x0.8 | 根 Skill 路由和 guardrails。 |
-| `skills/engineering-everything/SKILL.md` | Skill 产物 | x0.8 | 工程方法论与执行纪律。 |
-| `knowledge/af-wiki/START-HERE.md` | 知识系统导览 | x0.8 | 工作/生活记忆路由。 |
-| `knowledge/af-wiki/SCHEMA.md` | 知识系统 schema | x0.8 | LeadFlow 结构与 area ownership。 |
+| `skills/engineering-everything/engineering-everything/SKILL.md` | Skill 产物 | x0.8 | 工程方法论与执行纪律。 |
+| `memory/af-wiki/START-HERE.md` | 知识系统导览 | x0.8 | 工作/生活记忆路由。 |
+| `memory/af-wiki/SCHEMA.md` | 知识系统 schema | x0.8 | LeadFlow 结构与 area ownership。 |
 
 ## 素材充分性
 
@@ -192,7 +192,7 @@
 
 - 触发：项目、架构、SOP、实现、review 或验证问题。
 - 动作序列：
-  1. 读取 `skills/engineering-everything/SKILL.md`。
+  1. 读取 `skills/engineering-everything/engineering-everything/SKILL.md`。
   2. 判断阶段、项目形态、真相源和验证门禁。
   3. 只有决策依赖 Anthony-specific 状态时，才读取 AF-wiki 工作上下文。
 
@@ -200,8 +200,8 @@
 
 - 触发：询问 Anthony 当前工作、知识、健身、项目或个人操作系统。
 - 动作序列：
-  1. 读取 `knowledge/af-wiki/START-HERE.md`。
-  2. 读取 `knowledge/af-wiki/areas/index.md`。
+  1. 读取 `memory/af-wiki/START-HERE.md`。
+  2. 读取 `memory/af-wiki/areas/index.md`。
   3. 路由到目标 area schema 和 active context。
 
 ### 个人分身请求

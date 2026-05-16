@@ -14,7 +14,7 @@
     {
       "id": "wenxin-report-continuous-founder-ascetic",
       "type": "wenxin_report",
-      "path": "reports/wenxin-report-continuous-founder-ascetic.pdf",
+      "path": "identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
       "use": "对外定位、个人履历、个人 BP 和 README 展示内容。"
@@ -22,7 +22,7 @@
     {
       "id": "engineering-everything-skill",
       "type": "skill_artifact",
-      "path": "skills/engineering-everything/SKILL.md",
+      "path": "skills/engineering-everything/engineering-everything/SKILL.md",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
       "use": "工程方法论与执行路由。"
@@ -30,7 +30,7 @@
     {
       "id": "af-wiki-start-here",
       "type": "knowledge_system_guide",
-      "path": "knowledge/af-wiki/START-HERE.md",
+      "path": "memory/af-wiki/START-HERE.md",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
       "use": "工作/生活记忆路由。"
@@ -38,7 +38,7 @@
     {
       "id": "af-wiki-schema",
       "type": "knowledge_system_schema",
-      "path": "knowledge/af-wiki/SCHEMA.md",
+      "path": "memory/af-wiki/SCHEMA.md",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
       "use": "LeadFlow 与 area ownership 规则。"
