@@ -2,7 +2,7 @@
 
 这是 Anthony Fan 的个人数字分身入口。
 
-它不是一个普通的代码仓库，也不是简历仓库。你可以把它理解成：一个 AI 想要“像 Anthony 一样做事”时，先从这里进门，再去读取不同层面的材料。
+它不是一个普通代码仓库，也不是简历仓库。你可以把它理解成：一个 AI 想要“像 Anthony 一样做事”时，先从这里进门，再去读取不同层面的材料。
 
 这个仓库主要回答三件事：
 
@@ -12,13 +12,28 @@
 
 ## Anthony 是谁
 
-Anthony Fan 当前的核心身份是：一个把工作、知识、生活经验和工程判断沉淀成 AI 可调用系统的人。
+**29 岁，20 年码龄的超级工程师。**
 
-更具体地说：
+Anthony Fan 的主线不是“会写代码的人”，而是一个长期把技术、学习、创业和现实交付压进同一条轨道里的人：从早年编程和底层技术兴趣开始，到 NVIDIA 硬件相关经历，再到企业级 AI 落地、数据基础设施和连续创业。
 
-- 他关心的不只是“让 AI 回答问题”，而是让 AI 能继承一个人的上下文、判断方式和做事习惯。
-- 他把自己的工作、生活、学习、健身、研究和项目经验，放进可以持续迭代的知识系统里。
-- 他希望数字分身不是“模仿语气的聊天机器人”，而是能基于真实材料持续进化的个人操作系统。
+这份定位来自 [问心 Skill](https://github.com/HaodiFan/wenxin-skill) 的人物定位产出。完整产出物见：[问心报告：连续创业的苦行僧](reports/wenxin-report-continuous-founder-ascetic.pdf)。
+
+### 问心报告给出的对外定位
+
+> 29 岁 20 年码龄的连续创业 CTO / 超级工程师。
+
+更展开地说：
+
+- **他是谁**：从底层硬件经验走向企业级 AI 落地的连续创业 CTO，长期在“硬技术、真实业务、AI 浪潮变化”交界处工作。
+- **他凭什么**：底层穿透能力 + 多年定向学习形成的跨域复利；有企业级客户交付经验，也经历过数据创业和 AI 落地创业。
+- **他能给什么**：从底层成本结构到业务交付的完整技术判断力，以及对 AI 落地机会窗口的敏感度。
+
+问心报告里最值得被公开展示的判断是：
+
+- **最强壁垒**：长期、可验证、可复利的学习习惯。
+- **第二壁垒**：企业级电商 / BI / AI 落地的真实生产经验。
+- **第三壁垒**：在 GUI agent trajectory 数据窗口期的市场判断。
+- **第四壁垒**：软硬交界处的元认知地图，知道自己知道什么，也知道自己不知道什么。
 
 ## 这个仓库是什么
 
@@ -28,47 +43,14 @@ AnthonyHF.Skill 是一个总入口。
 
 - 哪些东西代表 Anthony 的身份。
 - 哪些 Skill 能替 Anthony 做事。
-- 哪些知识库记录了 Anthony 的工作和生活。
+- 哪些知识库记录 Anthony 的工作和生活。
 - 哪些内容可以公开，哪些内容绝不能放进公开仓库。
 
-## 数字分身的冰山结构
+## 数字分身结构树
 
-普通人看到一个数字分身，可能只看到它“会说话、会写东西、会帮忙做事”。但真正让它长期有用的，是水面下的结构。
+这张图是 AnthonyHF.Skill 的组织架构。它不是按代码模块划分，而是按“一个数字分身如何成立”来划分。
 
-```mermaid
-flowchart TB
-  subgraph visible["水面上：别人看得见的 Anthony"]
-    public_intro["对外介绍 / 履历 / 项目说明"]
-    public_accounts["公开身份信息：GitHub、网站、公开联系方式"]
-  end
-
-  subgraph action["水面下第一层：能替 Anthony 做事的能力"]
-    root_skill["AnthonyHF.Skill：总入口和路由规则"]
-    work_skills["工作型 Skill：写报告、写代码、做项目、做复盘"]
-    cognition_skills["认知型 Skill：培训、判断、方法论、组织经验"]
-    engineering_everything["Engineering Everything：工程化判断方法论"]
-  end
-
-  subgraph memory["水面下第二层：持续积累的记忆和资料"]
-    psp["PSP 人物模型：Anthony 的分身描述"]
-    afwiki["AF-wiki：工作 / 生活 / 健身 / 知识 / 项目资料库"]
-    history["历史记录：决策、复盘、研究、计划、变化"]
-  end
-
-  subgraph private["不放进公开仓库：敏感配置"]
-    secrets["账号密码、API Key、Token、私人证件、不可公开资料"]
-  end
-
-  public_intro --> root_skill
-  public_accounts --> root_skill
-  root_skill --> work_skills
-  root_skill --> cognition_skills
-  root_skill --> engineering_everything
-  root_skill --> psp
-  root_skill --> afwiki
-  afwiki --> history
-  secrets -.只在安全管理器或本地私有配置中保存.-> root_skill
-```
+![AnthonyHF.Skill 数字分身结构树](assets/anthonyhf-structure-tree.svg)
 
 ## 三个核心层面
 
@@ -76,13 +58,19 @@ flowchart TB
 
 身份层回答：“Anthony 到底是谁？”
 
-这里包括三类东西：
+它由三部分组成：
 
-- **客观身份配置**：公开账号、公开主页、常用名字、公开联系方式等。
-- **分身描述**：`people/anthony-fan/PSP.md`，记录 Anthony 的判断方式、边界、当前身份切片和缺失素材。
-- **对外履历与介绍**：用于让别人快速理解 Anthony 做过什么、擅长什么、正在构建什么。这类材料可以来自独立的自我审视 / 个人定位类 Skill，但不默认放进本仓库。
+| 组成 | 产出物 | 说明 |
+| --- | --- | --- |
+| 客观身份配置 | 公开账号、公开主页、常用名字、公开联系方式 | 只放可公开信息。账号密码、Token、API Key 不进入仓库。 |
+| 问心对外定位 | [问心报告 PDF](reports/wenxin-report-continuous-founder-ascetic.pdf) | 用来形成“我是谁”的公开介绍、履历、个人 BP 和对外叙事。 |
+| PSP 分身描述 | `people/anthony-fan/PSP.md` | 用来描述 Anthony 的判断方式、边界、行为倾向和当前材料缺口。 |
 
-注意：账号密码、API Key、Token、私密身份材料不属于这个公开仓库。它们只能放在密码管理器、本地私有配置或专门的安全系统里。
+这里要分清楚：
+
+- **问心 Skill 的产出物**在 Identity 层，偏对外表达：它回答“别人应该怎么理解我”。
+- **PSP 方法的产出物**也在 Identity 层，但偏分身内核：它回答“AI 要如何理解我的判断方式和行为边界”。
+- 两者不是一回事。问心更像对外履历和定位，PSP 更像数字分身的人物协议。
 
 ### 2. Skills：能力层
 
@@ -118,7 +106,9 @@ Skill 可以粗略分成两类：
 | 路径 | 普通人理解 | 作用 |
 | --- | --- | --- |
 | `SKILL.md` | 使用说明书 | 告诉 AI 什么时候使用 AnthonyHF，以及该读哪些材料。 |
-| `people/anthony-fan/PSP.md` | 人物画像草稿 | 记录 Anthony 的分身描述，但目前还在搭框架阶段，不能当成完整真人复刻。 |
+| `assets/anthonyhf-structure-tree.svg` | 结构图 | 用树状图展示数字分身的组织架构。 |
+| `reports/wenxin-report-continuous-founder-ascetic.pdf` | 问心报告 | 作为 Identity 层的对外定位和履历材料。 |
+| `people/anthony-fan/PSP.md` | 人物协议草稿 | 记录 Anthony 的分身描述，但目前还在搭框架阶段，不能当成完整真人复刻。 |
 | `skills/engineering-everything` | 做事方法 | Anthony 的工程化判断和项目执行方法论。 |
 | `knowledge/af-wiki` | 长期记忆库 | Anthony 的工作、生活、知识和项目资料。它是 Git 子仓库，独立维护。 |
 | `matrix.yml` | 目录清单 | 用机器可读的方式列出当前组件。 |
@@ -130,9 +120,10 @@ Skill 可以粗略分成两类：
 如果你只是想理解 AnthonyHF.Skill，按这个顺序看：
 
 1. 先看本 README。
-2. 再看 `SKILL.md`，理解 AI 如何使用这个仓库。
-3. 想了解分身画像，看 `people/anthony-fan/PSP.md`。
-4. 想了解长期资料，看 `knowledge/af-wiki/START-HERE.md`。
+2. 看结构图，理解数字分身由哪些层组成。
+3. 想了解 Anthony 的对外定位，看[问心报告](reports/wenxin-report-continuous-founder-ascetic.pdf)。
+4. 想了解分身画像，看 `people/anthony-fan/PSP.md`。
+5. 想了解长期资料，看 `knowledge/af-wiki/START-HERE.md`。
 
 ### 给 AI / 自动化助手
 
@@ -140,9 +131,9 @@ AI 或自动化助手使用时按这个顺序：
 
 1. 读取 `SKILL.md`。
 2. 判断用户问题属于身份、能力，还是记忆。
-3. 身份问题读 `people/anthony-fan/PSP.md`。
-4. 工程和项目问题读 `skills/engineering-everything/SKILL.md`。
-5. 工作、生活、知识、健身、项目上下文读 `knowledge/af-wiki/START-HERE.md`。
+3. 身份和对外介绍问题，优先读问心报告和 `people/anthony-fan/PSP.md`。
+4. 工程和项目问题，读 `skills/engineering-everything/SKILL.md`。
+5. 工作、生活、知识、健身、项目上下文，读 `knowledge/af-wiki/START-HERE.md`。
 6. 如果材料不足，必须明确说明“当前材料不足”，不要编造 Anthony 的经历或想法。
 
 ### 克隆仓库

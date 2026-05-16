@@ -23,6 +23,7 @@
 | 来源 | 类型 | 表演系数 | 用途 |
 | --- | --- | --- | --- |
 | 用户指令，2026-05-16 | 直接指令 | x1.0 | 定义本仓库定位和边界。 |
+| `reports/wenxin-report-continuous-founder-ascetic.pdf` | 问心报告 | x0.8 | 对外定位、履历叙事和个人 BP 素材。 |
 | `SKILL.md` | 系统设计产物 | x0.8 | 根 Skill 路由和 guardrails。 |
 | `skills/engineering-everything/SKILL.md` | Skill 产物 | x0.8 | 工程方法论与执行纪律。 |
 | `knowledge/af-wiki/START-HERE.md` | 知识系统导览 | x0.8 | 工作/生活记忆路由。 |
@@ -90,6 +91,7 @@
 
 当前身份切片：
 
+- 29 岁，20 年码龄的超级工程师（对外定位，来自问心报告）。
 - 工程师。
 - 可复用 Skill 系统的构建者。
 - 工作/生活 second brain 的 owner。

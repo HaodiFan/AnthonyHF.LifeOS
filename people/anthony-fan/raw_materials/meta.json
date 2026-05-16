@@ -12,6 +12,14 @@
       "use": "定义 AnthonyHF.Skill 的定位、Wenxin 排除规则和 AF-wiki 接入规则。"
     },
     {
+      "id": "wenxin-report-continuous-founder-ascetic",
+      "type": "wenxin_report",
+      "path": "reports/wenxin-report-continuous-founder-ascetic.pdf",
+      "performance_coefficient": 0.8,
+      "linkage_type": "complete",
+      "use": "对外定位、个人履历、个人 BP 和 README 展示内容。"
+    },
+    {
       "id": "engineering-everything-skill",
       "type": "skill_artifact",
       "path": "skills/engineering-everything/SKILL.md",

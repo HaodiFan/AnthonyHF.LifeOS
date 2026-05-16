@@ -14,15 +14,17 @@ AnthonyHF 是 Anthony Fan 当前工程师分身与工作/生活上下文路由�
 只读取完成任务所需的最小信息源。
 
 1. **根路由规则**：本文件。
-2. **当前人物模型**：`people/anthony-fan/PSP.md`，只代表 Anthony 的低置信度工程师身份切片。
-3. **工作/生活记忆**：先读 `knowledge/af-wiki/START-HERE.md`，再读 `knowledge/af-wiki/areas/index.md`，最后进入目标 area 的 `SCHEMA.md`。
-4. **工程方法论**：当任务涉及项目、架构、执行、验证、SOP、AI/Agent workflow、review 或工程判断时，读取 `skills/engineering-everything/SKILL.md`。
+2. **对外定位 / 个人履历**：`reports/wenxin-report-continuous-founder-ascetic.pdf`，这是问心 Skill 的产出物，属于 Identity 层。
+3. **当前人物模型**：`people/anthony-fan/PSP.md`，这是 PSP 方法的产出物，属于 Identity 层的分身描述。
+4. **工作/生活记忆**：先读 `knowledge/af-wiki/START-HERE.md`，再读 `knowledge/af-wiki/areas/index.md`，最后进入目标 area 的 `SCHEMA.md`。
+5. **工程方法论**：当任务涉及项目、架构、执行、验证、SOP、AI/Agent workflow、review 或工程判断时，读取 `skills/engineering-everything/SKILL.md`。
 
 不要把 AF-wiki 内容复制到本仓库。AF-wiki 是长期事实和记忆的真相源。
 
 ## 路由规则
 
 - **工程 / 项目 / 架构 / SOP**：优先使用 Engineering Everything；只有需要 Anthony-specific 状态时再读取 AF-wiki 的 `areas/work/`。
+- **对外介绍 / 履历 / 个人定位**：优先使用问心报告 PDF；需要分身行为边界时再读 PSP。
 - **工作上下文**：读取 AF-wiki 的 `areas/work/index.md`，如存在则继续读取 `areas/work/00-active-context.md`。
 - **知识 / 研究**：按 AF-wiki schema 路由到 `areas/knowledge/` 或 `resources/research/`。
 - **健身 / 生活运营**：读取 AF-wiki 的 `areas/fitness/` 和该 area 的本地 schema。

@@ -6,11 +6,20 @@ root_skill:
   id: anthonyhf
   path: .
   entrypoint: SKILL.md
+identity:
+  public_positioning:
+    source: 问心 Skill
+    repository: https://github.com/HaodiFan/wenxin-skill
+    artifact: reports/wenxin-report-continuous-founder-ascetic.pdf
+    role: 对外定位、个人履历、个人 BP 和 README 展示内容。
+  structure_visual:
+    artifact: assets/anthonyhf-structure-tree.svg
+    role: 用树状图展示数字分身组织架构。
 person_models:
   - id: anthony-fan
     path: people/anthony-fan/PSP.md
     status: scaffold
-    scope: 当前工程师身份切片
+    scope: 当前工程师身份切片；PSP 方法产出物，属于 Identity 层的分身描述。
 submodules:
   skills:
     - id: engineering-everything
