@@ -1,5 +1,7 @@
 # AnthonyHF.Skill
 
+![AnthonyHF.Skill repo 架构冰山图](docs/assets/anthonyhf-avatar-iceberg.svg)
+
 这是 Anthony Fan 的个人数字分身入口。
 
 它不是一个普通代码仓库，也不是简历仓库。你可以把它理解成：一个 AI 想要“像 Anthony 一样做事”时，先从这里进门，再去读取不同层面的材料。
@@ -46,11 +48,13 @@ AnthonyHF.Skill 是一个总入口。
 - 哪些知识库记录 Anthony 的工作和生活。
 - 哪些内容可以公开，哪些内容绝不能放进公开仓库。
 
-## 数字分身结构树
+## Repo 架构冰山图
 
-这张图是 AnthonyHF.Skill 的组织架构。它不是按代码模块划分，而是按“一个数字分身如何成立”来划分。
+README 顶部那张图是这个仓库的第一入口。它的作用不是做技术系统图，而是让普通人一眼看懂 AnthonyHF.Skill 这个公开 repo 的组织方式：
 
-![AnthonyHF.Skill 数字分身结构树](docs/assets/anthonyhf-structure-tree.svg)
+- 水面上是 GitHub 首页最先看到的入口文件：`README.md`、`SKILL.md`、`matrix.yml`。
+- 水面下是数字分身真正依赖的目录层：`identity/`、`skills/`、`memory/`。
+- 两侧是辅助层：`docs/` 负责展示，`security/` 负责公开边界。
 
 ## 三个核心层面
 
@@ -81,11 +85,15 @@ Skill 可以粗略分成两类：
 - **工作型 Skill**：替 Anthony 做具体事情，比如写报告、写代码、整理文档、做项目计划、复盘进展。
 - **认知型 Skill**：承载 Anthony 的判断方式，比如工程化思维、培训方法、组织经验、项目治理和方法论沉淀。
 
-当前已经接入的核心能力是：
+当前已经接入的具体 Skill 是：
 
-- `skills/engineering-everything`：把问题按工程方式拆解，判断阶段、路径、边界和验证方式。
+- `skills/engineering-everything`：CTO 岗位相关的具体 Skill，用工程方式拆解问题，判断阶段、路径、边界和验证方式。
 
-未来可以继续加入更多 Skill，但每个 Skill 都应该有清晰职责，不要把所有东西混成一个大杂烩。
+这里要分清楚：
+
+- **认知型 Skill** 是一个能力模块类别，未来可以包含工程判断、公司运营、组织培训、管理机制等不同 Skill。
+- **Engineering Everything** 是这个类别下已经接入的一个具体 Skill，主要承载 CTO / 工程负责人视角。
+- 未来可以继续加入更多 Skill，但每个 Skill 都应该有清晰职责，不要把所有东西混成一个大杂烩。
 
 ### 3. AF-wiki：记忆层
 
@@ -128,7 +136,7 @@ AnthonyHF.Skill/
 | `memory/` | 记忆层 | 放长期资料库；当前包含 AF-wiki。 |
 | `security/` | 安全边界 | 说明哪些内容永远不能进入公开仓库。 |
 | `docs/` | 展示文档 | 放结构图和说明材料。 |
-| `docs/assets/anthonyhf-structure-tree.svg` | 结构图 | 用树状图展示数字分身的组织架构。 |
+| `docs/assets/anthonyhf-avatar-iceberg.svg` | 架构图 | 用冰山图解释 repo 的组织架构和数字分身层次。 |
 | `identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf` | 问心报告 | 作为 Identity 层的对外定位和履历材料。 |
 | `identity/psp/anthony-fan/PSP.md` | 人物协议草稿 | 记录 Anthony 的分身描述，但目前还在搭框架阶段，不能当成完整真人复刻。 |
 | `skills/engineering-everything` | 做事方法 | Anthony 的工程化判断和项目执行方法论。 |
@@ -142,7 +150,7 @@ AnthonyHF.Skill/
 如果你只是想理解 AnthonyHF.Skill，按这个顺序看：
 
 1. 先看本 README。
-2. 看结构图，理解数字分身由哪些层组成。
+2. 看 README 顶部的冰山图，理解这个 repo 由哪些目录层组成。
 3. 想了解 Anthony 的对外定位，看[问心报告](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)。
 4. 想了解分身画像，看 `identity/psp/anthony-fan/PSP.md`。
 5. 想了解长期资料，看 `memory/af-wiki/START-HERE.md`。

@@ -29,8 +29,8 @@ identity:
     artifact: identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
     role: 对外定位、个人履历、个人 BP 和 README 展示内容。
   structure_visual:
-    artifact: docs/assets/anthonyhf-structure-tree.svg
-    role: 用树状图展示数字分身组织架构。
+    artifact: docs/assets/anthonyhf-avatar-iceberg.svg
+    role: README 顶部的 repo 架构冰山图，用普通人能理解的方式展示入口文件、身份层、能力层、记忆层、展示层和安全边界。
 person_models:
   - id: anthony-fan
     path: identity/psp/anthony-fan/PSP.md
@@ -43,7 +43,7 @@ submodules:
       path: skills/engineering-everything
       entrypoint: skills/engineering-everything/engineering-everything/SKILL.md
       repository: https://github.com/HaodiFan/engineering-everything.git
-      role: 工程判断、项目执行、架构、SOP、AI/Agent workflow 与验证门禁方法论。
+      role: CTO 岗位相关的具体认知/执行 Skill，用于工程判断、项目执行、架构、SOP、AI/Agent workflow 与验证门禁。
   memory:
     - id: af-wiki
       name: AF-wiki

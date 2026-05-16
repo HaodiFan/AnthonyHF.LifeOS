@@ -9,4 +9,6 @@ Skill 分两类：
 
 当前已接入：
 
-- `engineering-everything/`：工程化判断、项目执行、架构、SOP、AI/Agent workflow 和验证门禁方法论。
+- `engineering-everything/`：CTO 岗位相关的具体 Skill，负责工程化判断、项目执行、架构、SOP、AI/Agent workflow 和验证门禁。
+
+注意：认知型 Skill 是一个类别，`engineering-everything/` 只是当前已经接入的一个具体例子。未来还可以继续加入公司运营、组织培训、管理机制等其他认知型 Skill。
