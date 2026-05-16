@@ -29,8 +29,8 @@ identity:
     artifact: identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
     role: 对外定位、个人履历、个人 BP 和 README 展示内容。
   structure_visual:
-    artifact: docs/assets/anthonyhf-avatar-iceberg.svg
-    role: README 顶部的 repo 架构冰山图，用普通人能理解的方式展示入口文件、身份层、能力层、记忆层、展示层和安全边界。
+    artifact: docs/assets/anthonyhf-readme-cover.png
+    role: README 顶部的个人数字分身接口封面图，用普通人能理解的方式展示入口文件、Anthony.HF Core、模块名与当前实例的区别、Identity/Skills/Memory-Wiki 三个核心模块、问心报告/PSP/engineering-everything/AF-wiki 当前实例、展示层、安全边界和底层运行组件。
 person_models:
   - id: anthony-fan
     path: identity/psp/anthony-fan/PSP.md

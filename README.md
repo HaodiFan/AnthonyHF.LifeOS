@@ -1,6 +1,6 @@
 # AnthonyHF.Skill
 
-![AnthonyHF.Skill repo 架构冰山图](docs/assets/anthonyhf-avatar-iceberg.svg)
+![Anthony.HF 个人数字分身接口](docs/assets/anthonyhf-readme-cover.png)
 
 这是 Anthony Fan 的个人数字分身入口。
 
@@ -48,13 +48,17 @@ AnthonyHF.Skill 是一个总入口。
 - 哪些知识库记录 Anthony 的工作和生活。
 - 哪些内容可以公开，哪些内容绝不能放进公开仓库。
 
-## Repo 架构冰山图
+## Repo 架构封面图
 
-README 顶部那张图是这个仓库的第一入口。它的作用不是做技术系统图，而是让普通人一眼看懂 AnthonyHF.Skill 这个公开 repo 的组织方式：
+README 顶部那张图是这个仓库的第一入口。它的作用不是做传统架构图，而是让普通人一眼看懂 AnthonyHF.Skill 这个公开 repo 的组织方式：
 
-- 水面上是 GitHub 首页最先看到的入口文件：`README.md`、`SKILL.md`、`matrix.yml`。
-- 水面下是数字分身真正依赖的目录层：`identity/`、`skills/`、`memory/`。
-- 两侧是辅助层：`docs/` 负责展示，`security/` 负责公开边界。
+- 顶部是 GitHub 首页最先看到的入口文件：`README.md`、`SKILL.md`、`matrix.yml`。
+- 中心是 `Anthony.HF Core`，表示个人数字分身中枢。
+- 周围是数字分身真正依赖的模块层：`Identity`、`Skills`、`Memory-Wiki`。
+- 大卡片表示模块名，小徽章表示 AnthonyHF 当前接入的具体实例：`问心报告`、`PSP`、`engineering-everything`、`AF-wiki`。
+- `Memory-Wiki` 是记忆模块名，`AF-wiki` 是当前实例；它作为 Hermes 使用的长期上下文。
+- 外侧是辅助和边界：`docs/` 负责展示，`security/` 负责公开边界。
+- 底部是运行组件：`Codex`、`Hermes`、`GitHub`、`Postgres`、`Python`。
 
 ## 三个核心层面
 
@@ -136,7 +140,7 @@ AnthonyHF.Skill/
 | `memory/` | 记忆层 | 放长期资料库；当前包含 AF-wiki。 |
 | `security/` | 安全边界 | 说明哪些内容永远不能进入公开仓库。 |
 | `docs/` | 展示文档 | 放结构图和说明材料。 |
-| `docs/assets/anthonyhf-avatar-iceberg.svg` | 架构图 | 用冰山图解释 repo 的组织架构和数字分身层次。 |
+| `docs/assets/anthonyhf-readme-cover.png` | README 封面图 | 用个人数字分身接口图解释 repo 组织架构、模块关系和底层组件。 |
 | `identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf` | 问心报告 | 作为 Identity 层的对外定位和履历材料。 |
 | `identity/psp/anthony-fan/PSP.md` | 人物协议草稿 | 记录 Anthony 的分身描述，但目前还在搭框架阶段，不能当成完整真人复刻。 |
 | `skills/engineering-everything` | 做事方法 | Anthony 的工程化判断和项目执行方法论。 |
@@ -150,7 +154,7 @@ AnthonyHF.Skill/
 如果你只是想理解 AnthonyHF.Skill，按这个顺序看：
 
 1. 先看本 README。
-2. 看 README 顶部的冰山图，理解这个 repo 由哪些目录层组成。
+2. 看 README 顶部的封面图，理解这个 repo 由哪些入口、目录层和底层组件组成。
 3. 想了解 Anthony 的对外定位，看[问心报告](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)。
 4. 想了解分身画像，看 `identity/psp/anthony-fan/PSP.md`。
 5. 想了解长期资料，看 `memory/af-wiki/START-HERE.md`。
