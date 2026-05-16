@@ -1,15 +1,15 @@
-# Conflict Stories · Anthony Fan
+# 冲突故事 · Anthony Fan
 
-Status: insufficient for PSP 1.1.
+状态：不足以支撑 PSP 1.1。
 
-## Observed Repository Boundary Conflict
+## 已观察到的仓库边界冲突
 
-- Context: AnthonyHF.Skill initially included Wenxin as a submodule.
-- Correction: User clarified that Wenxin should not be a submodule here.
-- Chosen side: AnthonyHF.Skill should carry Anthony's current engineer identity and work/life context, while Wenxin remains outside.
-- Tradeoff: Less broad personal-positioning coverage in this repository; clearer source ownership.
-- Confidence: medium for repository architecture, not enough for personal value ordering.
+- 情境：AnthonyHF.Skill 初版把 Wenxin 作为 submodule。
+- 纠偏：用户明确说明 Wenxin 不应作为本仓库 submodule。
+- 选择：AnthonyHF.Skill 承载 Anthony 当前工程师身份与工作/生活上下文，Wenxin 留在外部。
+- 取舍：本仓库减少泛化个人定位覆盖，换取更清晰的 source ownership。
+- 置信度：对仓库架构为中；不足以推断个人终极价值排序。
 
-## Missing
+## 缺失
 
-PSP requires at least five conflict stories to infer a stable ultimate ordering. Add real decision cases before using this file for full avatar behavior.
+PSP 至少需要 5 个真实冲突故事，才能推断稳定的终极排序。在用本文件支撑完整个人分身行为前，需要补充真实决策案例。

@@ -1,6 +1,7 @@
 name: AnthonyHF.Skill
 owner: Anthony Fan
-positioning: Anthony Fan personal engineer avatar and work/life operating context
+positioning: Anthony Fan 的个人工程师分身与工作/生活上下文入口
+language: zh-CN-first
 root_skill:
   id: anthonyhf
   path: .
@@ -9,20 +10,20 @@ person_models:
   - id: anthony-fan
     path: people/anthony-fan/PSP.md
     status: scaffold
-    scope: current engineer slice only
+    scope: 当前工程师身份切片
 submodules:
   skills:
     - id: engineering-everything
       name: Engineering Everything
       path: skills/engineering-everything
       repository: https://github.com/HaodiFan/engineering-everything.git
-      role: Engineering judgment router for software, organizations, SOPs, projects, and AI/agent workflows.
+      role: 工程判断、项目执行、架构、SOP、AI/Agent workflow 与验证门禁方法论。
   knowledge:
     - id: af-wiki
       name: AF-wiki
       path: knowledge/af-wiki
       repository: https://github.com/HaodiFan/AF-wiki.git
-      role: Durable work/life second brain and source of Anthony-specific context.
+      role: Anthony 工作/生活 second brain，是长期事实、记忆和 area 上下文的真相源。
 excluded:
   - id: wenxin-skill
-    reason: Personal positioning and self-knowledge workflow is intentionally kept outside AnthonyHF.Skill.
+    reason: Wenxin 属于个人定位、自我认知和个人 BP 工作流，故意不放入 AnthonyHF.Skill。

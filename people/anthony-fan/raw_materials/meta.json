@@ -9,7 +9,7 @@
       "path": null,
       "performance_coefficient": 1.0,
       "linkage_type": "complete",
-      "use": "Defines AnthonyHF.Skill positioning, Wenxin exclusion, and AF-wiki inclusion."
+      "use": "定义 AnthonyHF.Skill 的定位、Wenxin 排除规则和 AF-wiki 接入规则。"
     },
     {
       "id": "engineering-everything-skill",
@@ -17,7 +17,7 @@
       "path": "skills/engineering-everything/SKILL.md",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
-      "use": "Engineering method and execution routing."
+      "use": "工程方法论与执行路由。"
     },
     {
       "id": "af-wiki-start-here",
@@ -25,7 +25,7 @@
       "path": "knowledge/af-wiki/START-HERE.md",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
-      "use": "Work/life memory routing."
+      "use": "工作/生活记忆路由。"
     },
     {
       "id": "af-wiki-schema",
@@ -33,7 +33,7 @@
       "path": "knowledge/af-wiki/SCHEMA.md",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
-      "use": "LeadFlow and area ownership rules."
+      "use": "LeadFlow 与 area ownership 规则。"
     }
   ],
   "sufficiency": {

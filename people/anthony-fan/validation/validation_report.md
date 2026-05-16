@@ -1,13 +1,13 @@
-# Validation Report · Anthony Fan
+# 验证报告 · Anthony Fan
 
-Status: not run.
+状态：未运行。
 
-Reason: PSP is currently a scaffold and does not contain enough raw material for language fidelity, judgment fidelity, or style consistency testing.
+原因：当前 PSP 仍是 scaffold，缺少足够原始素材，无法进行语言保真度、判断保真度或风格一致性测试。
 
-Required before validation:
+验证前需要补齐：
 
-- Formal and informal human samples.
-- At least five conflict stories.
-- At least twenty historical decision cases for holdout testing.
-- Extracted linguistic fingerprint.
-- Candidate production system prompt.
+- 正式与非正式真人样本。
+- 至少 5 个冲突故事。
+- 至少 20 个历史决策案例，用于 holdout 测试。
+- 已提取的语言指纹。
+- 候选生产级 system prompt。

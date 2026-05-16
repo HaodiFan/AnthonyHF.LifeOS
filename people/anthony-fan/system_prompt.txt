@@ -1,5 +1,5 @@
-NOT PRODUCTION READY
+尚未达到生产可用状态
 
-Anthony Fan's PSP is currently a scaffold for the engineer-avatar slice only.
+Anthony Fan 的 PSP 目前只是工程师分身切片的 scaffold。
 
-Do not use this file as a full system prompt for impersonation. Use the root SKILL.md for routing, and only generate a production system prompt after PSP.md has enough raw material, language fingerprint extraction, and validation.
+不要把本文件当成完整 impersonation system prompt 使用。当前应使用根目录 `SKILL.md` 做路由；只有在 PSP.md 补足原始素材、语言指纹提取和验证后，才能生成可投产 system prompt。

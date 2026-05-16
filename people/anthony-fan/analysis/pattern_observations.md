@@ -1,12 +1,12 @@
-# Pattern Observations · Anthony Fan
+# 模式观察 · Anthony Fan
 
-Status: scaffold.
+状态：scaffold。
 
-| ID | Observation | Evidence | Confidence |
+| ID | 观察 | 证据 | 置信度 |
 | --- | --- | --- | --- |
-| P001 | Separate adjacent skills when their purpose changes the identity of the repository. | Wenxin removal instruction. | Medium |
-| P002 | Keep durable work/life context in AF-wiki rather than copying it into the root skill. | AF-wiki submodule instruction and AF-wiki schema. | Medium |
-| P003 | Use Engineering Everything for engineering judgment rather than rewriting that method in the root skill. | Existing Engineering Everything submodule. | Medium |
-| P004 | Mark persona-model gaps explicitly instead of filling them with plausible language. | PSP protocol and current material insufficiency. | High |
+| P001 | 当相邻 Skill 会改变仓库身份时，应将其拆出。 | Wenxin 移除指令。 | 中 |
+| P002 | 持久工作/生活上下文应保留在 AF-wiki，而不是复制进根 Skill。 | AF-wiki submodule 指令与 AF-wiki schema。 | 中 |
+| P003 | 工程判断应复用 Engineering Everything，而不是在根 Skill 中重写方法论。 | 现有 Engineering Everything submodule。 | 中 |
+| P004 | 人物模型缺少素材时，应显式标注缺口，而不是填充“看起来合理”的描述。 | PSP 协议与当前素材不足状态。 | 高 |
 
-Promotion rule: only promote observations into stable PSP patterns after three independent supporting scenes.
+提升规则：同一观察至少有 3 个独立支撑场景后，才能提升为稳定 PSP pattern。
