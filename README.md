@@ -2,13 +2,14 @@
 
 ![Anthony.HF 个人数字分身接口](docs/assets/anthonyhf-readme-cover.png)
 
-> AnthonyHF.Skill 是 Anthony Fan 的个人数字分身接口：把“我是谁、我会做什么、我经历过什么、哪些不能公开”组织成 AI 可以读取、普通人也能看懂的仓库。
+> 这是 Anthony Fan 给自己准备的数字分身工作台。
+> 人看它，可以快速理解我是谁；AI 看它，可以知道该读哪些资料、怎么帮我做事、哪些内容不能碰。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PSP: v0.3](https://img.shields.io/badge/PSP-v0.3-blue.svg)](identity/psp/anthony-fan/PSP.md)
 [![Engineering Everything: v0.9.1](https://img.shields.io/badge/Skill-Engineering--Everything-green.svg)](skills/engineering-everything/engineering-everything/SKILL.md)
 
-[我是谁](#我是谁) · [数字分身结构](#数字分身结构) · [如何使用](#如何使用) · [仓库结构](#仓库结构) · [公开边界](#公开边界)
+[我是谁](#我是谁) · [这个仓库是什么](#这个仓库是什么) · [里面有什么](#里面有什么) · [怎么使用](#怎么使用) · [公开边界](#公开边界)
 
 ---
 
@@ -16,132 +17,161 @@
 
 **我是 Anthony Fan，29 岁，20 年码龄的超级工程师。**
 
-问心报告给我的公开定位是：连续创业的全栈 CTO，一个用长期学习纪律和底层工程肌肉反复穿过技术浪潮的人。我的路径不是简单换赛道，而是不断“下到下一层”：从 9 岁被攻击脚本吸引，到 C++、UIUC ECE、NVIDIA Tegra SoC simulation，再到企业级电商 BI、数据治理、LLM/Agent 和 AI 落地创业。
+我的经历可以简单理解成一句话：我一直在往更底层、更复杂、更有杠杆的地方走。
 
-这不是一个“会写代码的人”的简历。更准确地说，这是一个把学习、工程、业务场景和创业判断持续叠加的人。
+9 岁时，我被攻击脚本吸引，开始接触代码。后来一路写 C++，读 UIUC ECE，在 NVIDIA 做 Tegra SoC simulation，再往上走到企业 BI、数据治理、LLM、Agent 和企业 AI 落地。现在我在做 MetaInflow，把工程能力、业务理解和 AI 变成可以真正交付给企业的东西。
 
-如果只用三个关键词理解我：**底层穿透、业务闭环、长期复利**。
+我不是单纯“会写代码的人”。代码只是入口。更重要的是，我习惯把一个复杂问题拆到底层，看清它为什么会这样，再把它重新搭成一个能跑、能交付、能迭代的系统。
 
-当前公开主线：
+如果只用三个词理解我：
 
-- **连续创业 CTO**：从 GrainedAI 的 GUI agent trajectory 数据供应商，到 MetaInflow 的企业级 AI 落地。
-- **底层穿透型工程师**：从软硬交界处建立元认知，再向上穿透到数据、业务和 AI 应用。
-- **企业 AI 落地者**：服务过欧莱雅、利洁时等 tier 1 客户，经历 RPA、数据中台、BERT、LLM 到 Agent 的演进。
-- **长期学习的苦行僧**：6 年坚持工作日 2-3 小时加周末定向学习，形成可验证的跨域复利。
-- **正在升级的系统构建者**：下一阶段重点不是再证明会工程，而是把工程能力产品化、组织化、商业化。
+- **底层穿透**：不满足于表面答案，会往下一层找原因。
+- **业务闭环**：技术最后要落到客户、产品、交付和现金流。
+- **长期复利**：持续学习，把多年积累变成下一次创业的资本。
 
-会议里的我更接近一个把抽象能力压到现实闭环的人：会追任务表、时间线、风险、owner、客户资料、验收标准、交付链路和现金流；会讲 context、memory、workflow、graph、ontology，也会问第一步抓手是什么、怎么低成本验证、怎么灰度、公测、宣发和转化。
+## 不只是简历
 
-所以 AnthonyHF.Skill 不是“个人介绍页”，而是一个正在形成的个人操作系统入口：身份、能力、记忆和边界都要能被人读懂，也要能被 Agent 正确调用。
+问心报告把我描述成“连续创业的苦行僧”。这个说法有点重，但大体准确：我长期靠纪律性学习和工程深度积累优势，也在补产品化、商业化、组织复制这些下一阶段必须补的能力。
 
-## 问心报告的公开画像
+公开版本里，最重要的几条线是：
 
-本仓库不把 Anthony 压成一个标准 CTO 标签。更接近的画像是一组组合能力：
-
-| 维度 | 当前画像 |
+| 方向 | 人话解释 |
 | --- | --- |
-| 核心身份 | 29 岁、20 年码龄、连续创业 CTO、超级工程师 |
-| 最强壁垒 | 可验证的长期学习纪律和跨域学习复利 |
-| 工程底座 | C/C++、ECE、NVIDIA SoC、软硬交界元认知、全栈工程 |
-| 业务战场 | 电商 BI、数据治理、企业级 AI 落地、LLM/Agent workflow |
-| 浪潮判断 | 从 BERT 到 LLM，从 GUI agent trajectory 到企业 AI 落地 |
-| 工作方式 | 把抽象判断压到任务表、链路、节点、标准、owner 和验证 |
-| AI 判断 | 不信 prompt-only，关注 context、memory、workflow、ontology、长期迭代 |
-| 真实短板 | 产品化、商业转化、组织复制仍是下一阶段要补的能力 |
+| 长期学习 | 不是短期冲刺，而是很多年持续往深处学。 |
+| 工程底座 | 从底层软硬件到全栈系统，能理解复杂系统怎么跑。 |
+| 企业 AI | 不只聊模型，而是把 AI 放进真实业务流程里。 |
+| 连续创业 | 经历过方向选择、团队限制、商业验证和重新出发。 |
+| 真实短板 | 还在补产品化、销售转化、组织复制和外部势能。 |
 
-问心报告把 Anthony 的主线总结为：**用纪律性换跨域学习的复利，用复利换创业资本**。这个 README 采用的是公开展示版，不展示不适合公开仓库承载的私人诊断。
-
-来源：
+更完整的公开材料在这里：
 
 - [问心报告：连续创业的苦行僧](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)
-- [问心 Skill](https://github.com/HaodiFan/wenxin-skill)：生成对外定位、履历叙事和个人 BP 材料的 Skill；它不是本仓库的 submodule。
-- [PSP · Anthony Fan](identity/psp/anthony-fan/PSP.md)：PSP 方法的产出物，负责描述数字分身的判断方式、置信度和行为边界；v0.3 已吸收 Feishu 妙记的私有蒸馏结论，但不公开原始会议内容。
+- [PSP · Anthony Fan](identity/psp/anthony-fan/PSP.md)
 
-## 数字分身结构
+## 这个仓库是什么
 
-普通人可以把这个 repo 理解成一个人的“数字工作台”：
+你可以把这个仓库想成我的“数字工作台”。
 
-| 层 | 像什么 | 当前模块/实例 |
+它不是普通个人主页，也不是简历仓库。它更像一个给人和 AI 共用的说明书：
+
+- 别人想了解我，可以从这里看到我的公开身份、经历和判断方式。
+- AI 想帮我工作，可以从这里知道该读什么资料、使用什么能力、遵守什么边界。
+- 我自己持续迭代时，可以把新的经历、Skill、记忆和规则放回这个结构里。
+
+简单说，这里承载的是我的“工作/生活数字分身”的入口。
+
+## 里面有什么
+
+这个仓库分成五块。名字看起来像文件夹，本质上是五个抽屉：
+
+| 抽屉 | 放什么 | 当前内容 |
 | --- | --- | --- |
-| `identity/` 身份层 | 身份证、公开履历、自我模型 | 问心报告、PSP、公开身份配置 |
-| `skills/` 能力层 | 会做事的方法和工具 | `engineering-everything` 是 CTO 岗工程 Skill，未来会有更多认知/运营 Skill |
-| `memory/` 记忆层 | 长期笔记本和工作生活上下文 | `Memory-Wiki` 是模块名，当前实例是 `AF-wiki`，给 Hermes 作为长期记忆使用 |
-| `docs/` 展示层 | 对外说明书、图、文章、案例 | README 封面图和结构说明 |
-| `security/` 边界层 | 什么能公开、什么必须隔离 | 权限、隐私、不可公开内容规则 |
+| `identity/` | 我是谁 | 问心报告、PSP、公开身份材料 |
+| `skills/` | 我会怎么做事 | 目前有 Engineering Everything，用来处理工程、项目、架构、执行判断 |
+| `memory/` | 我长期记住什么 | AF-wiki，记录工作、生活、项目、知识和复盘 |
+| `docs/` | 给外面看的材料 | README 封面图、说明材料、公开展示内容 |
+| `security/` | 什么不能公开 | 隐私、权限、密钥、会议和私有资料边界 |
 
-这里要区分“模块名”和“当前实例”：
+这里有一个很重要的区别：
 
-| 模块名 | 当前 AnthonyHF 里的实例 | 含义 |
+| 类型 | 在这个仓库里的例子 | 怎么理解 |
 | --- | --- | --- |
-| Identity | 问心报告 + PSP + public-profile | 我是谁，以及 AI 如何理解这个人 |
-| Skills | Engineering Everything | 我能做什么；Engineering Everything 只是第一个具体 Skill |
-| Memory-Wiki | AF-wiki | 我经历过什么、当前在做什么、长期记忆在哪里 |
+| 身份材料 | 问心报告、PSP | 帮 AI 和人理解“Anthony 是谁”。 |
+| 能力工具 | Engineering Everything | 帮 AI 按我的工程方式做事。 |
+| 长期记忆 | AF-wiki | 放工作、生活、项目和知识的长期上下文。 |
 
-## 如何使用
+Engineering Everything 只是第一个能力工具。以后还会有更多 Skill，比如公司运营、产品判断、培训、销售、组织管理等。
 
-### 给人类读者
+## 现在这个分身能做什么
 
-从上往下读 README：先认识 Anthony，再理解这个 repo 如何承载数字分身。如果只想看履历和定位，读 [问心报告](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)。如果想理解 AI 如何协作，读 [SKILL.md](SKILL.md)。
+它已经能比较好地支持这些事：
 
-### 给 AI Agent
+- 介绍 Anthony：不是套模板，而是基于问心报告和 PSP 讲清楚我的主线。
+- 协助工程判断：遇到项目、架构、代码、流程、SOP，可以进入 Engineering Everything。
+- 理解工作方式：比如我为什么总会追任务表、时间线、风险、负责人、验收标准和交付链路。
+- 读取长期记忆：需要当前项目、知识、复盘或生活上下文时，进入 AF-wiki。
+- 保护边界：知道哪些内容不能公开，哪些只能留在私有系统里。
 
-先读 [SKILL.md](SKILL.md)，再按任务路由：
+它还不能做这些事：
 
-- 问“Anthony 是谁”：读 `identity/wenxin/` 和 `identity/psp/`。
-- 问工程、架构、项目执行、SOP、review：读 `skills/engineering-everything/`。
-- 问当前工作、生活、项目、复盘、知识库：读 `memory/af-wiki/`。
+- 不能冒充完整的我。
+- 不能公开 Feishu 妙记、会议原文、客户细节或私有文档。
+- 不能把 PSP 当成完整人格复刻。
+- 不能编造我的经历、客户、能力或私人心理画像。
+
+## 怎么使用
+
+### 如果你是普通读者
+
+从这份 README 开始就够了。
+
+想看更完整的公开画像，读 [问心报告](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)。想看 AI 怎么理解我的判断方式，读 [PSP](identity/psp/anthony-fan/PSP.md)。PSP 可以理解成“给数字分身用的人物说明书”，它还在迭代，不是完整人格复刻。
+
+### 如果你是 AI
+
+先读 [SKILL.md](SKILL.md)。那是给 AI 的协作说明。
+
+大致规则是：
+
+- 问“Anthony 是谁”：读 `identity/`。
+- 问工程、项目、架构、代码、流程：读 `skills/engineering-everything/`。
+- 问当前工作、生活、知识、项目复盘：读 `memory/af-wiki/`。
 - 问能不能公开、能不能提交、能不能复制：读 `security/`。
 
 ### 克隆仓库
 
 ```bash
-# 克隆仓库并包含所有子模块
 git clone --recurse-submodules https://github.com/HaodiFan/AnthonyHF.Skill.git
+```
 
-# 已有本地仓库时，初始化子模块
+如果已经克隆过：
+
+```bash
 git submodule update --init --recursive
 ```
 
-## 效果示例
+## 一个例子
 
-> **Q: 请用一句话介绍 Anthony Fan。**
->
-> **AnthonyHF.Skill**: Anthony Fan 是 29 岁、20 年码龄的连续创业 CTO，从底层软硬交界一路穿透到企业 AI 落地，用长期学习纪律、工程深度和浪潮判断构建自己的第二次创业复利。
+**问题：用一句话介绍 Anthony Fan。**
 
-> **Q: 我想给一个旧项目加新功能，应该从哪开始？**
->
-> **AnthonyHF.Skill**: 先不要写代码。按 Engineering Everything 的路由，先确认项目真相源、现有架构、边界、验证门禁和最小端到端闭环；如果涉及 Anthony 当前工作上下文，再进入 AF-wiki 找项目记忆。
+回答应该像这样：
 
-## 仓库结构
+> Anthony Fan 是 29 岁、20 年码龄的连续创业 CTO，从底层软硬件一路穿透到企业 AI 落地，正在把长期工程能力变成可交付、可复制、可进化的公司能力。
+
+**问题：我想让 AI 帮 Anthony 处理一个旧项目，应该从哪里开始？**
+
+回答应该像这样：
+
+> 先别急着写代码。先找项目资料、当前状态、任务表、风险、负责人和验收标准；工程判断走 Engineering Everything，涉及 Anthony 当前上下文再去 AF-wiki。
+
+## 目录结构
 
 ```text
 AnthonyHF.Skill/
-├── identity/          # 身份层：我是谁，别人如何理解我，AI 如何描述我
-│   ├── public-profile/ # 可公开身份配置，不放账号密码
-│   ├── wenxin/         # 问心 Skill 的产出物：对外定位、履历、BP 材料
-│   └── psp/            # PSP 方法的产出物：分身内核、判断方式、边界
-├── skills/            # 能力层：数字分身能替 Anthony 做什么
-│   └── engineering-everything/ # CTO 岗工程判断与执行 Skill
-├── memory/            # 记忆层：工作、生活、知识、项目和复盘
-│   └── af-wiki/        # AF-wiki submodule，Hermes 的长期记忆源
-├── docs/              # 展示层：结构图、说明文档、公开材料
-├── security/          # 边界层：隐私、权限、不可公开内容
-├── SKILL.md           # Agent 协议：AI 如何读取和协作
-└── matrix.yml         # 机器索引：能力与路由结构化清单
+├── identity/          # 我是谁：问心报告、PSP、公开身份材料
+├── skills/            # 我会怎么做事：工程、产品、组织等能力工具
+├── memory/            # 我记得什么：AF-wiki，长期工作/生活/知识库
+├── docs/              # 对外展示材料
+├── security/          # 公开边界和隐私规则
+├── SKILL.md           # 给 AI 的协作说明
+└── matrix.yml         # 给机器读的结构化索引
 ```
 
 ## 公开边界
 
-这个仓库是公开入口，不是 Anthony 的全部私人数据。
+这个仓库是公开入口，不是我的全部私人数据。
 
-- 不提交 API Key、Token、密码、cookie、私钥、证件、合同、聊天记录。
-- 不把 AF-wiki 内容复制到根仓库；AF-wiki 是长期记忆真相源。
-- 不把 Wenxin Skill 放进 submodule；本仓库只保留它产出的公开身份材料。
-- 不编造 Anthony 的经历、客户、能力水位或私人心理画像。
-- 不把 PSP scaffold 当成完整真人复刻；低置信度内容必须标注。
+永远不要往这里提交：
+
+- API Key、Token、密码、cookie、私钥。
+- 身份证件、合同、财务数据。
+- 私人聊天记录、Feishu/Miaoji 原始转写、会议链接。
+- 客户细节、私有文档正文、不可公开的 AF-wiki 内容。
+
+这个仓库只保留公开材料，以及经过抽象、脱敏、不能反推出原文的 PSP 结论。
 
 ## 开发者与协议
 
 - **Owner**: Anthony Fan
 - **License**: [MIT](LICENSE)
-- **Built with**: Codex, Wenxin Skill output, PSP v0.3 scaffold, Feishu Miaoji distilled evidence, Engineering Everything Skill
+- **Built with**: Codex, Wenxin Skill output, PSP v0.3, Feishu Miaoji 脱敏证据, Engineering Everything Skill
