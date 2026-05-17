@@ -47,6 +47,8 @@
 
 - [问心报告：连续创业的苦行僧](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)
 - [PSP · Anthony Fan](identity/psp/anthony-fan/PSP.md)
+- [Wenxin Skill](skills/self-evolution/wenxin)：帮我把经历整理成对外定位、履历叙事和公开表达。
+- [PSP Skill](skills/self-evolution/psp)：帮我把真实材料提炼成数字分身能使用的人物模型。
 
 ## 这个仓库是什么
 
@@ -67,7 +69,7 @@
 | 抽屉 | 放什么 | 当前内容 |
 | --- | --- | --- |
 | `identity/` | 我是谁 | 问心报告、PSP、公开身份材料 |
-| `skills/` | 我会怎么做事 | 目前有 Engineering Everything，用来处理工程、项目、架构、执行判断 |
+| `skills/` | 我会怎么做事，也会怎么更新自己 | Engineering Everything 用来处理工程判断；Wenxin 和 PSP 用来自我更新 |
 | `memory/` | 我长期记住什么 | AF-wiki，记录工作、生活、项目、知识和复盘 |
 | `docs/` | 给外面看的材料 | README 封面图、说明材料、公开展示内容 |
 | `security/` | 什么不能公开 | 隐私、权限、密钥、会议和私有资料边界 |
@@ -77,16 +79,21 @@
 | 类型 | 在这个仓库里的例子 | 怎么理解 |
 | --- | --- | --- |
 | 身份材料 | 问心报告、PSP | 帮 AI 和人理解“Anthony 是谁”。 |
-| 能力工具 | Engineering Everything | 帮 AI 按我的工程方式做事。 |
+| 对外定位工具 | Wenxin Skill | 帮我把经历讲清楚，形成公开身份和履历叙事。 |
+| 分身建模工具 | PSP Skill | 帮我从材料里提炼判断方式、语言风格、行为边界。 |
+| 执行能力工具 | Engineering Everything | 帮 AI 按我的工程方式做事。 |
 | 长期记忆 | AF-wiki | 放工作、生活、项目和知识的长期上下文。 |
 
-Engineering Everything 只是第一个能力工具。以后还会有更多 Skill，比如公司运营、产品判断、培训、销售、组织管理等。
+Wenxin 和 PSP 是这个仓库的“自我更新工具”：当我有新经历、新材料、新会议、新复盘时，它们帮助这个数字分身变得更像我、更完整。Engineering Everything 是执行工具：当要做工程、项目、架构、流程判断时，它负责把事做好。
+
+以后还会有更多 Skill，比如公司运营、产品判断、培训、销售、组织管理等。
 
 ## 现在这个分身能做什么
 
 它已经能比较好地支持这些事：
 
 - 介绍 Anthony：不是套模板，而是基于问心报告和 PSP 讲清楚我的主线。
+- 更新 Anthony：用 Wenxin 整理新的公开叙事，用 PSP 更新人物模型和分身边界。
 - 协助工程判断：遇到项目、架构、代码、流程、SOP，可以进入 Engineering Everything。
 - 理解工作方式：比如我为什么总会追任务表、时间线、风险、负责人、验收标准和交付链路。
 - 读取长期记忆：需要当前项目、知识、复盘或生活上下文时，进入 AF-wiki。
@@ -114,11 +121,21 @@ Engineering Everything 只是第一个能力工具。以后还会有更多 Skill
 大致规则是：
 
 - 问“Anthony 是谁”：读 `identity/`。
+- 更新公开定位、履历、个人叙事：读 `skills/self-evolution/wenxin/`。
+- 更新 PSP、语言风格、判断方式、分身边界：读 `skills/self-evolution/psp/`。
 - 问工程、项目、架构、代码、流程：读 `skills/engineering-everything/`。
 - 问当前工作、生活、知识、项目复盘：读 `memory/af-wiki/`。
 - 问能不能公开、能不能提交、能不能复制：读 `security/`。
 
 ### 克隆仓库
+
+如果只是看公开 README 和公开材料：
+
+```bash
+git clone https://github.com/HaodiFan/AnthonyHF.Skill.git
+```
+
+如果你有私有 submodule 的访问权限，可以连同 AF-wiki、Wenxin、PSP 等子仓库一起拉下来：
 
 ```bash
 git clone --recurse-submodules https://github.com/HaodiFan/AnthonyHF.Skill.git
@@ -149,7 +166,9 @@ git submodule update --init --recursive
 ```text
 AnthonyHF.Skill/
 ├── identity/          # 我是谁：问心报告、PSP、公开身份材料
-├── skills/            # 我会怎么做事：工程、产品、组织等能力工具
+├── skills/            # 我会怎么做事，也会怎么更新自己
+│   ├── engineering-everything/ # 工程、项目、架构和执行判断
+│   └── self-evolution/         # Wenxin 和 PSP，用来自我更新
 ├── memory/            # 我记得什么：AF-wiki，长期工作/生活/知识库
 ├── docs/              # 对外展示材料
 ├── security/          # 公开边界和隐私规则
@@ -167,6 +186,7 @@ AnthonyHF.Skill/
 - 身份证件、合同、财务数据。
 - 私人聊天记录、Feishu/Miaoji 原始转写、会议链接。
 - 客户细节、私有文档正文、不可公开的 AF-wiki 内容。
+- Wenxin、PSP、AF-wiki 这些私有 submodule 里的非公开内容。
 
 这个仓库只保留公开材料，以及经过抽象、脱敏、不能反推出原文的 PSP 结论。
 

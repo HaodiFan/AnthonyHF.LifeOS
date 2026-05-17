@@ -26,8 +26,9 @@ identity:
   public_positioning:
     source: 问心 Skill
     repository: https://github.com/HaodiFan/wenxin-skill
+    submodule_path: skills/self-evolution/wenxin
     artifact: identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
-    role: 对外定位、个人履历、个人 BP 和 README 展示内容。
+    role: 对外定位、个人履历、个人 BP 和 README 展示内容；同时作为 AnthonyHF.Skill 自我更新所用的定位 Skill。
   structure_visual:
     artifact: docs/assets/anthonyhf-readme-cover.png
     role: README 顶部的个人数字分身接口封面图，用普通人能理解的方式展示入口文件、Anthony.HF Core、模块名与当前实例的区别、Identity/Skills/Memory-Wiki 三个核心模块、问心报告/PSP/engineering-everything/AF-wiki 当前实例、展示层、安全边界和底层运行组件。
@@ -44,12 +45,28 @@ submodules:
       entrypoint: skills/engineering-everything/engineering-everything/SKILL.md
       repository: https://github.com/HaodiFan/engineering-everything.git
       role: CTO 岗位相关的具体认知/执行 Skill，用于工程判断、项目执行、架构、SOP、AI/Agent workflow 与验证门禁。
+    - id: psp
+      name: PSP Skill
+      path: skills/self-evolution/psp
+      entrypoint: skills/self-evolution/psp/SKILL.md
+      repository: https://github.com/MetaInFLow/psp-skill.git
+      role: AnthonyHF.Skill 自我进化所用的人物建模 Skill，用于从原始材料提炼 PSP、语言指纹、冲突故事、分身边界和验证方法。
+      visibility: private
+    - id: wenxin
+      name: Wenxin Skill
+      path: skills/self-evolution/wenxin
+      entrypoint: skills/self-evolution/wenxin/SKILL.md
+      repository: https://github.com/HaodiFan/wenxin-skill.git
+      role: AnthonyHF.Skill 自我进化所用的对外定位 Skill，用于把经历、能力、短板和阶段目标整理成公开叙事、履历和个人 BP。
+      visibility: private
   memory:
     - id: af-wiki
       name: AF-wiki
       path: memory/af-wiki
       repository: https://github.com/HaodiFan/AF-wiki.git
       role: Anthony 工作/生活 second brain，是长期事实、记忆和 area 上下文的真相源。
-excluded:
-  - id: wenxin-skill
-    reason: Wenxin 属于个人定位、自我认知和个人 BP 工作流，故意不放入 AnthonyHF.Skill。
+self_evolution:
+  purpose: 让 AnthonyHF.Skill 可以持续更新“我是谁”和“AI 如何理解我”。
+  skills:
+    - wenxin
+    - psp
