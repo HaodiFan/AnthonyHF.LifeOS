@@ -1,6 +1,6 @@
 name: AnthonyHF.Skill
 owner: Anthony Fan
-positioning: Anthony Fan 的个人工程师分身与工作/生活上下文入口
+positioning: Anthony Fan 的个人数字分身、公开身份、工程师分身与工作/生活上下文入口
 language: zh-CN-first
 root_skill:
   id: anthonyhf
@@ -35,7 +35,7 @@ person_models:
   - id: anthony-fan
     path: identity/psp/anthony-fan/PSP.md
     status: scaffold
-    scope: 当前工程师身份切片；PSP 方法产出物，属于 Identity 层的分身描述。
+    scope: 当前公开身份画像、工程师身份切片与工作/生活上下文路由；PSP 方法产出物，属于 Identity 层的分身描述。
 submodules:
   skills:
     - id: engineering-everything
