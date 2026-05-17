@@ -5,7 +5,7 @@
 > AnthonyHF.Skill 是 Anthony Fan 的个人数字分身接口：把“我是谁、我会做什么、我经历过什么、哪些不能公开”组织成 AI 可以读取、普通人也能看懂的仓库。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PSP: v0.2](https://img.shields.io/badge/PSP-v0.2-blue.svg)](identity/psp/anthony-fan/PSP.md)
+[![PSP: v0.3](https://img.shields.io/badge/PSP-v0.3-blue.svg)](identity/psp/anthony-fan/PSP.md)
 [![Engineering Everything: v0.9.1](https://img.shields.io/badge/Skill-Engineering--Everything-green.svg)](skills/engineering-everything/engineering-everything/SKILL.md)
 
 [我是谁](#我是谁) · [数字分身结构](#数字分身结构) · [如何使用](#如何使用) · [仓库结构](#仓库结构) · [公开边界](#公开边界)
@@ -20,7 +20,7 @@
 
 这不是一个“会写代码的人”的简历。更准确地说，这是一个把学习、工程、业务场景和创业判断持续叠加的人。
 
-如果只用三个关键词理解我：**浪潮判断、底层穿透、长期学习纪律**。
+如果只用三个关键词理解我：**底层穿透、业务闭环、长期复利**。
 
 当前公开主线：
 
@@ -29,6 +29,10 @@
 - **企业 AI 落地者**：服务过欧莱雅、利洁时等 tier 1 客户，经历 RPA、数据中台、BERT、LLM 到 Agent 的演进。
 - **长期学习的苦行僧**：6 年坚持工作日 2-3 小时加周末定向学习，形成可验证的跨域复利。
 - **正在升级的系统构建者**：下一阶段重点不是再证明会工程，而是把工程能力产品化、组织化、商业化。
+
+会议里的我更接近一个把抽象能力压到现实闭环的人：会追任务表、时间线、风险、owner、客户资料、验收标准、交付链路和现金流；会讲 context、memory、workflow、graph、ontology，也会问第一步抓手是什么、怎么低成本验证、怎么灰度、公测、宣发和转化。
+
+所以 AnthonyHF.Skill 不是“个人介绍页”，而是一个正在形成的个人操作系统入口：身份、能力、记忆和边界都要能被人读懂，也要能被 Agent 正确调用。
 
 ## 问心报告的公开画像
 
@@ -41,6 +45,8 @@
 | 工程底座 | C/C++、ECE、NVIDIA SoC、软硬交界元认知、全栈工程 |
 | 业务战场 | 电商 BI、数据治理、企业级 AI 落地、LLM/Agent workflow |
 | 浪潮判断 | 从 BERT 到 LLM，从 GUI agent trajectory 到企业 AI 落地 |
+| 工作方式 | 把抽象判断压到任务表、链路、节点、标准、owner 和验证 |
+| AI 判断 | 不信 prompt-only，关注 context、memory、workflow、ontology、长期迭代 |
 | 真实短板 | 产品化、商业转化、组织复制仍是下一阶段要补的能力 |
 
 问心报告把 Anthony 的主线总结为：**用纪律性换跨域学习的复利，用复利换创业资本**。这个 README 采用的是公开展示版，不展示不适合公开仓库承载的私人诊断。
@@ -49,7 +55,7 @@
 
 - [问心报告：连续创业的苦行僧](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)
 - [问心 Skill](https://github.com/HaodiFan/wenxin-skill)：生成对外定位、履历叙事和个人 BP 材料的 Skill；它不是本仓库的 submodule。
-- [PSP · Anthony Fan](identity/psp/anthony-fan/PSP.md)：PSP 方法的产出物，负责描述数字分身的判断方式、置信度和行为边界。
+- [PSP · Anthony Fan](identity/psp/anthony-fan/PSP.md)：PSP 方法的产出物，负责描述数字分身的判断方式、置信度和行为边界；v0.3 已吸收 Feishu 妙记的私有蒸馏结论，但不公开原始会议内容。
 
 ## 数字分身结构
 
@@ -138,4 +144,4 @@ AnthonyHF.Skill/
 
 - **Owner**: Anthony Fan
 - **License**: [MIT](LICENSE)
-- **Built with**: Codex, Wenxin Skill output, PSP scaffold, Engineering Everything Skill
+- **Built with**: Codex, Wenxin Skill output, PSP v0.3 scaffold, Feishu Miaoji distilled evidence, Engineering Everything Skill

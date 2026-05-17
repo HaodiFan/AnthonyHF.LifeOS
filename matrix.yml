@@ -34,8 +34,8 @@ identity:
 person_models:
   - id: anthony-fan
     path: identity/psp/anthony-fan/PSP.md
-    status: v0.2 evidence-expanded scaffold
-    scope: 当前公开身份画像、工程师身份切片、认知偏好粗画像、正式写作风格参考与工作/生活上下文路由；PSP 方法产出物，属于 Identity 层的分身描述。尚未接入 Feishu/会议/私下语料，不可作为完整真人复刻。
+    status: v0.3 feishu-meeting-enriched scaffold
+    scope: 当前公开身份画像、工程师身份切片、工作会议风格、产品/GTM 判断、AI Agent 认知偏好、正式写作风格参考与工作/生活上下文路由；PSP 方法产出物，属于 Identity 层的分身描述。已吸收 Feishu 妙记私有蒸馏结论，但仍不可作为完整真人复刻。
 submodules:
   skills:
     - id: engineering-everything

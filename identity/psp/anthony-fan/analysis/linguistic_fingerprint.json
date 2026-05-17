@@ -1,7 +1,12 @@
 {
   "metadata": {
-    "total_chars": 8124,
-    "total_sentences": 222
+    "formal_total_chars": 8124,
+    "formal_total_sentences": 222,
+    "meeting_transcript_count": 13,
+    "meeting_raw_transcript_bytes": 382424,
+    "meeting_anthony_speech_chars": 64284,
+    "meeting_anthony_segments": 864,
+    "status": "formal English writing plus private Chinese work-meeting distilled metrics"
   },
   "dim_1_information_density": {
     "avg_sentence_length": 36.59,
@@ -111,5 +116,62 @@
   "dim_12_rhythm_markers": {
     "pause_markers_per_10k": 0.0,
     "emphasis_end_per_10k": 0.0
+  },
+  "meeting_zh_work_fingerprint": {
+    "source_policy": "raw Feishu/Miaoji transcripts stay private and are not committed",
+    "sample_scope": {
+      "date_range": "2026-02-11 to 2026-05-14",
+      "transcript_count": 13,
+      "anthony_speech_chars": 64284,
+      "anthony_segments": 864,
+      "sentence_count": 1511,
+      "avg_sentence_length": 40.3,
+      "median_sentence_length": 29,
+      "p90_sentence_length": 89,
+      "max_sentence_length": 230
+    },
+    "high_frequency_markers": {
+      "就是": 763,
+      "这个": 670,
+      "然后": 482,
+      "对": 440,
+      "OK": 234,
+      "可能": 225,
+      "那个": 181,
+      "其实": 152,
+      "先": 148,
+      "直接": 90,
+      "比如": 51,
+      "是不是": 27
+    },
+    "work_terms": {
+      "开发": 117,
+      "模板": 92,
+      "数据": 66,
+      "AI": 59,
+      "产品": 52,
+      "时间": 51,
+      "项目": 48,
+      "用户": 47,
+      "飞书": 42,
+      "场景": 34,
+      "客户": 33,
+      "方案": 28,
+      "业务": 26,
+      "成本": 24,
+      "知识": 24,
+      "同步": 22,
+      "链路": 21,
+      "交付": 20,
+      "系统": 20
+    },
+    "manual_observations": [
+      "中文会议表达不是正式文章式，而是边推理边落地：先判断上下文，再定义标准、链路、节点、任务和下一步。",
+      "常把英文工程词和中文业务词混用，例如 timeline、delay、scope、workflow、system prompt、TLDR、doc、review。",
+      "高频使用“先”“直接”“OK”“对”推进决策，说明会议中倾向快速收敛而不是长篇铺垫。",
+      "遇到执行模糊时会把问题压到任务表、时间节点、风险、客户资料、验收标准和 owner。",
+      "解释抽象 AI 概念时仍会回到 memory、context、graph、ontology、workflow、语言风格校正等工程结构。"
+    ],
+    "confidence": "medium for work-meeting communication; low for private-life voice"
   }
 }

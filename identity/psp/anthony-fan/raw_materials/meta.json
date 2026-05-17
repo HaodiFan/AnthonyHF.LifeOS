@@ -1,6 +1,6 @@
 {
   "person_id": "anthony-fan",
-  "psp_status": "v0.2 evidence-expanded scaffold",
+  "psp_status": "v0.3 feishu-meeting-enriched scaffold",
   "created_date": "2026-05-16",
   "last_evidence_update": "2026-05-17",
   "materials": [
@@ -77,31 +77,54 @@
       "use": "LeadFlow 与 area ownership 规则。"
     },
     {
+      "id": "af-wiki-wechat-article-leads",
+      "type": "knowledge_lead_notes",
+      "path": "memory/af-wiki/areas/knowledge/wechat-articles/*.md",
+      "performance_coefficient": 0.4,
+      "linkage_type": "partial",
+      "use": "公众号/研究文章线索；多数为正文无法抓取时的 lead-first 记录，只用于判断长期关注主题，不作为写作风格强证据。"
+    },
+    {
+      "id": "feishu-miaoji-private-distilled-2026q1q2",
+      "type": "private_meeting_transcripts_distilled",
+      "path": "private:/tmp/anthonyhf-psp-feishu/transcripts",
+      "performance_coefficient": 0.95,
+      "linkage_type": "complete",
+      "use": "13 条 Feishu 妙记转写，覆盖 2026-02-11 至 2026-05-14，约 382KB 原始转写、约 6.4 万字 Anthony 中文会议发言。原文不进入公开仓库，仅沉淀工作风格、决策模式、语言指纹和冲突故事。"
+    },
+    {
+      "id": "feishu-doc-search-index-private-distilled",
+      "type": "private_doc_search_index_distilled",
+      "path": "private:lark-cli --profile metainflow-feishu docs +search",
+      "performance_coefficient": 0.4,
+      "linkage_type": "partial",
+      "use": "用 metainflow-feishu profile 搜索 Anthony、工程、复盘、AI 等历史文档索引；只使用标题/摘要级信号判断工作主题分布，未提交私有链接、原文或客户细节。"
+    },
+    {
       "id": "zhihu-655112123",
       "type": "external_url_unavailable",
       "path": "https://zhuanlan.zhihu.com/p/655112123",
       "performance_coefficient": null,
       "linkage_type": "unavailable",
-      "use": "Defuddle、curl 和 web fetch 均未能取得正文；不作为当前 PSP 证据。"
-    },
-    {
-      "id": "feishu-history-meetings",
-      "type": "connector_unavailable",
-      "path": null,
-      "performance_coefficient": null,
-      "linkage_type": "not_accessed",
-      "use": "当前环境未暴露 Feishu 连接器；后续接入后应作为低表演系数原始素材优先读取。"
+      "use": "Defuddle 返回 403；web search 未找到可用正文；不作为当前 PSP 证据。"
     }
   ],
   "sufficiency": {
     "formal_material": "partial",
-    "informal_material": "unavailable",
-    "time_span": "insufficient_for_full_psp",
-    "conflict_stories": "candidate_only",
-    "language_samples": "formal_writing_extracted",
+    "informal_material": "work_meetings_partial",
+    "time_span": "partial_2026q1q2_meetings_plus_long_resume",
+    "conflict_stories": "meeting_enriched_candidate_set",
+    "language_samples": "formal_writing_and_chinese_work_meeting_extracted",
     "formal_language_sample_size": {
       "total_chars": 8124,
       "total_sentences": 222
+    },
+    "meeting_language_sample_size": {
+      "transcript_count": 13,
+      "raw_transcript_bytes": 382424,
+      "anthony_speech_chars": 64284,
+      "anthony_segments": 864,
+      "date_range": "2026-02-11 to 2026-05-14"
     },
     "full_psp_ready": false
   }
