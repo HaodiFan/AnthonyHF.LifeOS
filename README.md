@@ -5,7 +5,7 @@
 > AnthonyHF.Skill 是 Anthony Fan 的个人数字分身接口：把“我是谁、我会做什么、我经历过什么、哪些不能公开”组织成 AI 可以读取、普通人也能看懂的仓库。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PSP: v0.1](https://img.shields.io/badge/PSP-v0.1-blue.svg)](identity/psp/anthony-fan/PSP.md)
+[![PSP: v0.2](https://img.shields.io/badge/PSP-v0.2-blue.svg)](identity/psp/anthony-fan/PSP.md)
 [![Engineering Everything: v0.9.1](https://img.shields.io/badge/Skill-Engineering--Everything-green.svg)](skills/engineering-everything/engineering-everything/SKILL.md)
 
 [我是谁](#我是谁) · [数字分身结构](#数字分身结构) · [如何使用](#如何使用) · [仓库结构](#仓库结构) · [公开边界](#公开边界)

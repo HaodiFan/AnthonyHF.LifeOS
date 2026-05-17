@@ -1,15 +1,16 @@
 {
   "person_id": "anthony-fan",
-  "psp_status": "scaffold",
+  "psp_status": "v0.2 evidence-expanded scaffold",
   "created_date": "2026-05-16",
+  "last_evidence_update": "2026-05-17",
   "materials": [
     {
-      "id": "user-instruction-2026-05-16",
+      "id": "user-instruction-2026-05-16-to-2026-05-17",
       "type": "direct_instruction",
       "path": null,
       "performance_coefficient": 1.0,
       "linkage_type": "complete",
-      "use": "定义 AnthonyHF.Skill 的定位、Wenxin 排除规则和 AF-wiki 接入规则。"
+      "use": "定义 AnthonyHF.Skill 的定位、Wenxin 排除规则、AF-wiki 接入规则、README 叙事方向和 PSP 更新目标。"
     },
     {
       "id": "wenxin-report-continuous-founder-ascetic",
@@ -17,7 +18,39 @@
       "path": "identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
-      "use": "对外定位、个人履历、个人 BP 和 README 展示内容。"
+      "use": "对外定位、个人履历、能力水位、短板、候选冲突故事和 README 展示内容。"
+    },
+    {
+      "id": "cognitive-arch-01",
+      "type": "formal_writing",
+      "path": "external: blog/articles/Cognitive Arch | 01. A Comprehensive Guide to Cognitive Architectures for LLM Integration.en.md",
+      "performance_coefficient": 0.7,
+      "linkage_type": "complete",
+      "use": "正式写作语言指纹、认知架构偏好、LLM agent 能力拆解。"
+    },
+    {
+      "id": "exploring-agi-appendix-01",
+      "type": "formal_writing",
+      "path": "external: blog/articles/Exploring AGI | Appendix 01: A New Perspective on the Parallels Between Transformers and the Neocortex.en.md",
+      "performance_coefficient": 0.7,
+      "linkage_type": "complete",
+      "use": "正式写作语言指纹、Transformer/neocortex 类比、动态系统视角。"
+    },
+    {
+      "id": "exploring-agi-appendix-02",
+      "type": "formal_writing",
+      "path": "external: blog/articles/Exploring AGI | Appendix 02: Revisit Transformers and the Neocortex: A Thousand Brains Perspective.en.md",
+      "performance_coefficient": 0.7,
+      "linkage_type": "complete",
+      "use": "正式写作语言指纹、Thousand Brains、reference frame、连续学习和跨学科综合。"
+    },
+    {
+      "id": "root-skill",
+      "type": "skill_artifact",
+      "path": "SKILL.md",
+      "performance_coefficient": 0.8,
+      "linkage_type": "complete",
+      "use": "根 Skill 路由、公开身份读取顺序和 guardrails。"
     },
     {
       "id": "engineering-everything-skill",
@@ -42,13 +75,34 @@
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
       "use": "LeadFlow 与 area ownership 规则。"
+    },
+    {
+      "id": "zhihu-655112123",
+      "type": "external_url_unavailable",
+      "path": "https://zhuanlan.zhihu.com/p/655112123",
+      "performance_coefficient": null,
+      "linkage_type": "unavailable",
+      "use": "Defuddle、curl 和 web fetch 均未能取得正文；不作为当前 PSP 证据。"
+    },
+    {
+      "id": "feishu-history-meetings",
+      "type": "connector_unavailable",
+      "path": null,
+      "performance_coefficient": null,
+      "linkage_type": "not_accessed",
+      "use": "当前环境未暴露 Feishu 连接器；后续接入后应作为低表演系数原始素材优先读取。"
     }
   ],
   "sufficiency": {
     "formal_material": "partial",
     "informal_material": "unavailable",
-    "time_span": "insufficient",
-    "conflict_stories": "insufficient",
-    "language_samples": "not_extracted"
+    "time_span": "insufficient_for_full_psp",
+    "conflict_stories": "candidate_only",
+    "language_samples": "formal_writing_extracted",
+    "formal_language_sample_size": {
+      "total_chars": 8124,
+      "total_sentences": 222
+    },
+    "full_psp_ready": false
   }
 }

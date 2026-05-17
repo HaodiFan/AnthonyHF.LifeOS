@@ -1,7 +1,115 @@
 {
-  "person_id": "anthony-fan",
-  "status": "not_extracted",
-  "reason": "尚未加入足够的正式与非正式语言样本。",
-  "generated_at": null,
-  "dimensions": {}
+  "metadata": {
+    "total_chars": 8124,
+    "total_sentences": 222
+  },
+  "dim_1_information_density": {
+    "avg_sentence_length": 36.59,
+    "median": 17,
+    "total_sentences": 222
+  },
+  "dim_2_sentence_length_distribution": {
+    "short_pct": 40.1,
+    "medium_pct": 27.5,
+    "long_pct": 32.4,
+    "describe": "短长交替"
+  },
+  "dim_3_logic_unfold": {
+    "pattern": "未明显特征",
+    "samples": 0
+  },
+  "dim_4_abstraction_level": {
+    "analogy_freq_per_10k_char": 0.0,
+    "data_freq_per_10k_char": 1.0,
+    "ratio_analogy_to_data": 0.0
+  },
+  "dim_5_emotional_intensity": {
+    "strong_negative_per_10k": 0.0,
+    "soft_negative_per_10k": 0.0,
+    "strong_positive_per_10k": 0.0,
+    "soft_positive_per_10k": 0.0
+  },
+  "dim_6_transition_markers": {
+    "但是": 0.0,
+    "不过": 0.0,
+    "其实": 0.0,
+    "说白了": 0.0,
+    "换句话说": 0.0,
+    "也就是说": 0.0,
+    "我说": 0.0,
+    "你听我说": 0.0,
+    "话说回来": 0.0,
+    "反过来说": 0.0,
+    "事实上": 0.0,
+    "实际上": 0.0,
+    "本质上": 0.0
+  },
+  "dim_7_negation_preference": {
+    "direct_negation_per_10k": 0.0,
+    "concessive_per_10k": 0.0,
+    "softened_per_10k": 0.0
+  },
+  "dim_8_function_words": {
+    "我_认为": {
+      "preferred": "未观察到",
+      "counts": {
+        "我觉得": 0,
+        "我认为": 0,
+        "我看": 0,
+        "依我说": 0,
+        "我的看法": 0
+      },
+      "preference_ratio": 0.0
+    },
+    "重要": {
+      "preferred": "未观察到",
+      "counts": {
+        "重要": 0,
+        "关键": 0,
+        "核心": 0,
+        "要紧": 0
+      },
+      "preference_ratio": 0.0
+    },
+    "问题": {
+      "preferred": "未观察到",
+      "counts": {
+        "问题": 0,
+        "毛病": 0,
+        "麻烦": 0,
+        "事儿": 0
+      },
+      "preference_ratio": 0.0
+    },
+    "做得好": {
+      "preferred": "未观察到",
+      "counts": {
+        "很好": 0,
+        "非常好": 0,
+        "对": 0,
+        "可以": 0,
+        "棒": 0,
+        "牛": 0
+      },
+      "preference_ratio": 0.0
+    }
+  },
+  "dim_9_signature_phrases": {
+    "top_ngrams": [],
+    "min_freq_threshold": 2
+  },
+  "dim_10_humor_markers": {
+    "self_mockery_per_10k": 0.0,
+    "sarcasm_per_10k": 0.0,
+    "exaggeration_per_10k": 0.0
+  },
+  "dim_11_register_switching": {
+    "formal_markers_per_10k": 0.0,
+    "informal_markers_per_10k": 0.0,
+    "register_describe": "中性"
+  },
+  "dim_12_rhythm_markers": {
+    "pause_markers_per_10k": 0.0,
+    "emphasis_end_per_10k": 0.0
+  }
 }
