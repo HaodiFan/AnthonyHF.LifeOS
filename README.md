@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="docs/assets/anthonyhf-mark.svg" alt="AnthonyHF.Skill" width="210" />
-
   <h1>AnthonyHF.Skill</h1>
 
   <p><strong>Anthony Fan 的个人数字分身接口</strong></p>

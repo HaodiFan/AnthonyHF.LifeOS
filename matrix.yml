@@ -23,9 +23,6 @@ layers:
     path: docs/
     purpose: 面向人类读者的结构图和说明材料。
 identity:
-  brand_mark:
-    artifact: docs/assets/anthonyhf-mark.svg
-    role: README 顶部的轻量品牌标识，用来模拟开源项目首页的 Logo / 标题 / 入口结构。
   public_positioning:
     source: 问心 Skill
     repository: https://github.com/HaodiFan/wenxin-skill
