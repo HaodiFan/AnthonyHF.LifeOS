@@ -6,6 +6,7 @@
   <p>人看它，可以快速理解我是谁；AI 看它，可以知道该读哪些资料、怎么协作、哪些内容不能碰。</p>
 
   <p>
+    <a href="https://haodifan.github.io/AnthonyHF.Skill/">个人主页</a> ·
     <a href="#我是谁">我是谁</a> ·
     <a href="#这个仓库是什么">仓库定位</a> ·
     <a href="#里面有什么">组织结构</a> ·
@@ -15,6 +16,7 @@
   </p>
 
   <p>
+    <a href="https://haodifan.github.io/AnthonyHF.Skill/"><img src="https://img.shields.io/badge/homepage-GitHub%20Pages-111827" alt="GitHub Pages homepage" /></a>
     <a href="https://github.com/HaodiFan/AnthonyHF.Skill"><img src="https://img.shields.io/badge/repo-public-2EA44F" alt="Repo: public" /></a>
     <a href="identity/psp/anthony-fan/PSP.md"><img src="https://img.shields.io/badge/PSP-v0.3-4B8BFF" alt="PSP v0.3" /></a>
     <a href="skills/engineering-everything/engineering-everything/SKILL.md"><img src="https://img.shields.io/badge/skill-Engineering%20Everything-15A36B" alt="Engineering Everything" /></a>

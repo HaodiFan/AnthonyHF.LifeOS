@@ -21,7 +21,14 @@ layers:
     purpose: 公开仓库的安全边界和禁入内容。
   docs:
     path: docs/
-    purpose: 面向人类读者的结构图和说明材料。
+    purpose: 面向人类读者的个人主页、结构图和说明材料。
+homepage:
+  type: github_pages_project_site
+  source:
+    branch: main
+    path: /docs
+  url: https://haodifan.github.io/AnthonyHF.Skill/
+  entrypoint: docs/index.html
 identity:
   public_positioning:
     source: 问心 Skill
