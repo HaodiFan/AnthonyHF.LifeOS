@@ -1,16 +1,16 @@
 {
   "person_id": "anthony-fan",
-  "psp_status": "v0.3 feishu-meeting-enriched scaffold",
+  "psp_status": "v0.4 chatgpt-export-enriched scaffold",
   "created_date": "2026-05-16",
-  "last_evidence_update": "2026-05-17",
+  "last_evidence_update": "2026-05-18",
   "materials": [
     {
-      "id": "user-instruction-2026-05-16-to-2026-05-17",
+      "id": "user-instruction-2026-05-16-to-2026-05-18",
       "type": "direct_instruction",
       "path": null,
       "performance_coefficient": 1.0,
       "linkage_type": "complete",
-      "use": "定义 AnthonyHF.Skill 的定位、Wenxin 排除规则、AF-wiki 接入规则、README 叙事方向和 PSP 更新目标。"
+      "use": "定义 AnthonyHF.Skill 的定位、Wenxin 排除规则、AF-wiki 接入规则、README 叙事方向、PSP 更新目标；2026-05-18 确认 ChatGPT export 抽象萃取结论可公开。"
     },
     {
       "id": "wenxin-report-continuous-founder-ascetic",
@@ -101,6 +101,22 @@
       "use": "用 metainflow-feishu profile 搜索 Anthony、工程、复盘、AI 等历史文档索引；只使用标题/摘要级信号判断工作主题分布，未提交私有链接、原文或客户细节。"
     },
     {
+      "id": "chatgpt-export-2026-05-17-filtered",
+      "type": "chatgpt_export_filtered",
+      "path": "source_id:chatgpt_export_2026_05_17",
+      "performance_coefficient": 0.75,
+      "linkage_type": "partial",
+      "use": "1162 条 ChatGPT conversations 的筛选萃取；初筛 390 条 Anthony candidate、320 条 maybe、49 条教师/教案排除。用于个人履历、创业复盘、产品机会、工程偏好、AI-native 公司观和用户侧语言指纹。原始全文不进入 PSP。"
+    },
+    {
+      "id": "af-wiki-inbox-chatgpt-export-anthony-extraction-2026-05-18",
+      "type": "intake_note",
+      "path": "memory/af-wiki/inbox/2026-05-18-chatgpt-export-anthony-extraction.md",
+      "performance_coefficient": 0.8,
+      "linkage_type": "partial",
+      "use": "ChatGPT export 的抽象萃取中间产物；记录可公开的 identity/work 候选模式，不包含原始聊天全文。"
+    },
+    {
       "id": "zhihu-655112123",
       "type": "external_url_unavailable",
       "path": "https://zhuanlan.zhihu.com/p/655112123",
@@ -111,10 +127,10 @@
   ],
   "sufficiency": {
     "formal_material": "partial",
-    "informal_material": "work_meetings_partial",
-    "time_span": "partial_2026q1q2_meetings_plus_long_resume",
-    "conflict_stories": "meeting_enriched_candidate_set",
-    "language_samples": "formal_writing_and_chinese_work_meeting_extracted",
+    "informal_material": "work_meetings_plus_chatgpt_export_partial",
+    "time_span": "chatgpt_export_2023_01_to_2026_05_plus_2026q1q2_meetings_plus_long_resume",
+    "conflict_stories": "meeting_and_chatgpt_export_enriched_candidate_set",
+    "language_samples": "formal_writing_chinese_work_meeting_and_chatgpt_user_instructions_extracted",
     "formal_language_sample_size": {
       "total_chars": 8124,
       "total_sentences": 222
@@ -125,6 +141,15 @@
       "anthony_speech_chars": 64284,
       "anthony_segments": 864,
       "date_range": "2026-02-11 to 2026-05-14"
+    },
+    "chatgpt_export_sample_size": {
+      "conversation_count": 1162,
+      "anthony_candidate_count": 390,
+      "maybe_anthony_count": 320,
+      "teacher_excluded_count": 49,
+      "filtered_short_instruction_count": 2914,
+      "filtered_short_instruction_chars": 267667,
+      "date_range": "2023-01 to 2026-05"
     },
     "full_psp_ready": false
   }

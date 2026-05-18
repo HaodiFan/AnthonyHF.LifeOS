@@ -1,8 +1,8 @@
 # 模式观察 · Anthony Fan
 
-状态：v0.3 feishu-meeting-enriched scaffold。
+状态：v0.4 chatgpt-export-enriched scaffold。
 
-隐私规则：Feishu/Miaoji 原始转写不进入公开仓库。下表只保留跨场景稳定模式。
+隐私规则：Feishu/Miaoji 原始转写和完整 ChatGPT export 不进入公开仓库。下表只保留跨场景稳定模式和公开可用的抽象结论。
 
 | ID | 观察 | 证据 | 置信度 |
 | --- | --- | --- | --- |
@@ -26,5 +26,13 @@
 | P018 | 中文会议口语高频使用“就是、这个、然后、对、OK、可能、其实、先、直接”，节奏是边推理边收敛。 | 13 条 Feishu 妙记语言指纹统计。 | 中 |
 | P019 | 对知识和工作记忆的默认模型是分类、索引、上下文、长期沉淀，而不是一次性文档堆积。 | Feishu onboarding/知识管理讨论 + AF-wiki 结构。 | 中 |
 | P020 | 当团队协作浪费时间时，会直接打断并要求回到文档、表格和事实状态；沟通风格比正式文章更锋利。 | Feishu 项目同步妙记私有蒸馏。 | 中低 |
+| P021 | 把公司理解为 AI-native 杠杆机器：不是“一个人 + 一堆 AI”，而是 skill、SOP、角色、培训和 workflow 的组合。 | ChatGPT export：AI Native 创业公司、年度规划讨论。 | 高 |
+| P022 | 当前身份从“做产品的工程师”推进到“企业自进化系统工程师”。 | ChatGPT export：AI Native 创业公司。 | 中高 |
+| P023 | 产品机会研究先承认不确定性，再找公司/项目/论文/开源/客户场景证据。 | ChatGPT export：agent_data tools idea、Agent RL environment、GEO。 | 高 |
+| P024 | 当产品清晰度是瓶颈时，明确要求 PRD / detailed PRD / design doc，而不是直接写代码。 | ChatGPT export 多场景短指令统计。 | 高 |
+| P025 | 工程 runtime 倾向可检查、可续跑、数据库持久化和 Occam's Razor，不喜欢中间过程只散落成 JSON。 | ChatGPT export：Flow Orchestration、repo coding prompt。 | 高 |
+| P026 | UI 结构跟生命周期、scope、对象层级、角色权限和 service blueprint 走。 | ChatGPT export：生命周期与 UI 布局。 | 高 |
+| P027 | 创业复盘不只列产品，还追问交付吞吐、SOP 蒸馏、外部势能、软实力和个人价值点。 | ChatGPT export：GrainedAI 创业经验分析。 | 高 |
+| P028 | ChatGPT 协作语言是高频短指令 + 强纠偏：先定义目标和边界，再持续修正误解。 | ChatGPT export 用户侧统计。 | 中高 |
 
 提升规则：同一观察至少有 3 个独立支撑场景后，才能提升为稳定 PSP pattern。

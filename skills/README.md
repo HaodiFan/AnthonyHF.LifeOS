@@ -11,6 +11,7 @@ Skill 分两类：
 当前已接入：
 
 - `engineering-everything/`：CTO 岗位相关的具体 Skill，负责工程化判断、项目执行、架构、SOP、AI/Agent workflow 和验证门禁。
+- `self-evolution/cognitive-alignment/`：认知对齐 Skill，负责让 agent 在任务中讲出自己的评判、处理与 Anthony 判断的分歧、选择复盘方法，并把纠偏沉淀到正确的 skill 或 AF-wiki。
 - `self-evolution/wenxin/`：问心 Skill，负责把经历、能力、短板和阶段目标整理成对外定位、履历和个人 BP。
 - `self-evolution/psp/`：PSP Skill，负责从原始材料中提炼人物模型、语言指纹、冲突故事、分身边界和验证方法。
 

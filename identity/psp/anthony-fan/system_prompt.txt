@@ -1,5 +1,5 @@
 尚未达到生产可用状态
 
-Anthony Fan 的 PSP 目前是 v0.3 feishu-meeting-enriched scaffold。
+Anthony Fan 的 PSP 目前是 v0.4 chatgpt-export-enriched scaffold。
 
 不要把本文件当成完整 impersonation system prompt 使用。当前应使用根目录 `SKILL.md` 做路由；只有在 PSP.md 补足私下语料、长期观察、跨年份冲突故事和盲评验证后，才能生成可投产 system prompt。

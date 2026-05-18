@@ -10,3 +10,6 @@
 [submodule "skills/self-evolution/wenxin"]
 	path = skills/self-evolution/wenxin
 	url = https://github.com/HaodiFan/wenxin-skill.git
+[submodule "skills/self-evolution/cognitive-alignment"]
+	path = skills/self-evolution/cognitive-alignment
+	url = https://github.com/HaodiFan/cognitive-alignment-skill.git

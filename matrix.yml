@@ -59,6 +59,13 @@ submodules:
       repository: https://github.com/MetaInFLow/psp-skill.git
       role: AnthonyHF.Skill 自我进化所用的人物建模 Skill，用于从原始材料提炼 PSP、语言指纹、冲突故事、分身边界和验证方法。
       visibility: private
+    - id: cognitive-alignment
+      name: Cognitive Alignment Skill
+      path: skills/self-evolution/cognitive-alignment
+      entrypoint: skills/self-evolution/cognitive-alignment/SKILL.md
+      repository: https://github.com/HaodiFan/cognitive-alignment-skill.git
+      role: AnthonyHF.Skill 自我进化所用的认知对齐 Skill，用于让 agent 先讲清自己的评判，与 Anthony 的认知校准；出现分歧时选择复盘方法，并把纠偏沉淀到正确 skill、AF-wiki 或新 skill。
+      visibility: private
     - id: wenxin
       name: Wenxin Skill
       path: skills/self-evolution/wenxin
@@ -75,5 +82,6 @@ submodules:
 self_evolution:
   purpose: 让 AnthonyHF.Skill 可以持续更新“我是谁”和“AI 如何理解我”。
   skills:
+    - cognitive-alignment
     - wenxin
     - psp

@@ -19,9 +19,9 @@
     <a href="https://haodifan.github.io/AnthonyHF.Skill/"><img src="https://img.shields.io/badge/homepage-GitHub%20Pages-111827" alt="GitHub Pages homepage" /></a>
     <a href="https://github.com/HaodiFan/AnthonyHF.Skill"><img src="https://img.shields.io/badge/repo-public-2EA44F" alt="Repo: public" /></a>
     <a href="package.json"><img src="https://img.shields.io/badge/homepage-React%20%2B%20GSAP-96F2E5" alt="Homepage built with React and GSAP" /></a>
-    <a href="identity/psp/anthony-fan/PSP.md"><img src="https://img.shields.io/badge/PSP-v0.3-4B8BFF" alt="PSP v0.3" /></a>
+    <a href="identity/psp/anthony-fan/PSP.md"><img src="https://img.shields.io/badge/PSP-v0.4-4B8BFF" alt="PSP v0.4" /></a>
     <a href="skills/engineering-everything/engineering-everything/SKILL.md"><img src="https://img.shields.io/badge/skill-Engineering%20Everything-15A36B" alt="Engineering Everything" /></a>
-    <a href="skills/self-evolution/psp"><img src="https://img.shields.io/badge/self--evolution-PSP%20%2B%20Wenxin-FF9F45" alt="PSP and Wenxin self evolution" /></a>
+    <a href="skills/self-evolution/cognitive-alignment"><img src="https://img.shields.io/badge/self--evolution-Alignment%20%2B%20PSP%20%2B%20Wenxin-FF9F45" alt="Alignment, PSP and Wenxin self evolution" /></a>
     <a href="memory/af-wiki"><img src="https://img.shields.io/badge/memory-AF--wiki-6D5DF6" alt="AF-wiki" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111827" alt="MIT License" /></a>
   </p>
@@ -65,6 +65,7 @@
 
 - [问心报告：连续创业的苦行僧](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)
 - [PSP · Anthony Fan](identity/psp/anthony-fan/PSP.md)
+- [Cognitive Alignment Skill](skills/self-evolution/cognitive-alignment)：帮 AI 在任务中讲出自己的评判，和我的认知对齐；出现分歧时复盘并迭代 skill。
 - [Wenxin Skill](skills/self-evolution/wenxin)：帮我把经历整理成对外定位、履历叙事和公开表达。
 - [PSP Skill](skills/self-evolution/psp)：帮我把真实材料提炼成数字分身能使用的人物模型。
 
@@ -97,7 +98,7 @@
 | 抽屉 | 放什么 | 当前内容 |
 | --- | --- | --- |
 | `identity/` | 我是谁 | 问心报告、PSP、公开身份材料 |
-| `skills/` | 我会怎么做事，也会怎么更新自己 | Engineering Everything 用来处理工程判断；Wenxin 和 PSP 用来自我更新 |
+| `skills/` | 我会怎么做事，也会怎么更新自己 | Engineering Everything 用来处理工程判断；Cognitive Alignment、Wenxin 和 PSP 用来自我更新 |
 | `memory/` | 我长期记住什么 | AF-wiki，记录工作、生活、项目、知识和复盘 |
 | `docs/` | 给外面看的材料 | README 封面图、说明材料、公开展示内容 |
 | `security/` | 什么不能公开 | 隐私、权限、密钥、会议和私有资料边界 |
@@ -109,10 +110,11 @@
 | 身份材料 | 问心报告、PSP | 帮 AI 和人理解“Anthony 是谁”。 |
 | 对外定位工具 | Wenxin Skill | 帮我把经历讲清楚，形成公开身份和履历叙事。 |
 | 分身建模工具 | PSP Skill | 帮我从材料里提炼判断方式、语言风格、行为边界。 |
+| 认知对齐工具 | Cognitive Alignment Skill | 让 AI 先讲清自己的判断，和我的认知对齐；出现分歧时复盘并迭代 skill。 |
 | 执行能力工具 | Engineering Everything | 帮 AI 按我的工程方式做事。 |
 | 长期记忆 | AF-wiki | 放工作、生活、项目和知识的长期上下文。 |
 
-Wenxin 和 PSP 是这个仓库的“自我更新工具”：当我有新经历、新材料、新会议、新复盘时，它们帮助这个数字分身变得更像我、更完整。Engineering Everything 是执行工具：当要做工程、项目、架构、流程判断时，它负责把事做好。
+Cognitive Alignment、Wenxin 和 PSP 是这个仓库的“自我更新工具”：当我有新经历、新材料、新会议、新复盘或新的纠偏时，它们帮助这个数字分身变得更像我、更完整。Engineering Everything 是执行工具：当要做工程、项目、架构、流程判断时，它负责把事做好。
 
 以后还会有更多 Skill，比如公司运营、产品判断、培训、销售、组织管理等。
 
@@ -122,6 +124,7 @@ Wenxin 和 PSP 是这个仓库的“自我更新工具”：当我有新经历�
 
 - 介绍 Anthony：不是套模板，而是基于问心报告和 PSP 讲清楚我的主线。
 - 更新 Anthony：用 Wenxin 整理新的公开叙事，用 PSP 更新人物模型和分身边界。
+- 对齐判断：遇到需要讲判断、和我的认知校准、分歧复盘或 skill 迭代的任务，进入 Cognitive Alignment。
 - 协助工程判断：遇到项目、架构、代码、流程、SOP，可以进入 Engineering Everything。
 - 理解工作方式：比如我为什么总会追任务表、时间线、风险、负责人、验收标准和交付链路。
 - 读取长期记忆：需要当前项目、知识、复盘或生活上下文时，进入 AF-wiki。
@@ -151,6 +154,7 @@ Wenxin 和 PSP 是这个仓库的“自我更新工具”：当我有新经历�
 - 问“Anthony 是谁”：读 `identity/`。
 - 更新公开定位、履历、个人叙事：读 `skills/self-evolution/wenxin/`。
 - 更新 PSP、语言风格、判断方式、分身边界：读 `skills/self-evolution/psp/`。
+- 需要讲出 agent 自己的评判、对齐我的认知、处理分歧复盘或迭代 skill：读 `skills/self-evolution/cognitive-alignment/`。
 - 问工程、项目、架构、代码、流程：读 `skills/engineering-everything/`。
 - 问当前工作、生活、知识、项目复盘：读 `memory/af-wiki/`。
 - 问能不能公开、能不能提交、能不能复制：读 `security/`。
@@ -199,7 +203,7 @@ AnthonyHF.Skill/
 ├── identity/          # 我是谁：问心报告、PSP、公开身份材料
 ├── skills/            # 我会怎么做事，也会怎么更新自己
 │   ├── engineering-everything/ # 工程、项目、架构和执行判断
-│   └── self-evolution/         # Wenxin 和 PSP，用来自我更新
+│   └── self-evolution/         # Cognitive Alignment、Wenxin 和 PSP，用来自我更新
 ├── memory/            # 我记得什么：AF-wiki，长期工作/生活/知识库
 ├── docs/              # 对外展示材料
 ├── security/          # 公开边界和隐私规则
@@ -226,4 +230,4 @@ AnthonyHF.Skill/
 - **Owner**: Anthony Fan
 - **License**: [MIT](LICENSE)
 - **Homepage stack**: Vite, React, TypeScript, Tailwind CSS 4, GSAP ScrollTrigger
-- **Built with**: Codex, Wenxin Skill output, PSP v0.3, Feishu Miaoji 脱敏证据, Engineering Everything Skill
+- **Built with**: Codex, Wenxin Skill output, PSP v0.4, Feishu Miaoji 脱敏证据, ChatGPT export 抽象萃取, Engineering Everything Skill
