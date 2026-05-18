@@ -1,0 +1,51 @@
+<svg width="420" height="180" viewBox="0 0 420 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AnthonyHF.Skill mark</title>
+  <desc id="desc">A warm personal digital twin mark combining an HF core and a skill matrix loop.</desc>
+  <defs>
+    <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(98 72) rotate(48) scale(83 80)">
+      <stop stop-color="#FFD9A8"/>
+      <stop offset="0.48" stop-color="#FF8FA3"/>
+      <stop offset="1" stop-color="#6D5DF6"/>
+    </radialGradient>
+    <linearGradient id="cardGradient" x1="40" y1="36" x2="156" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4E7"/>
+      <stop offset="0.52" stop-color="#FFB56B"/>
+      <stop offset="1" stop-color="#FF7A90"/>
+    </linearGradient>
+    <linearGradient id="matrixGradient" x1="248" y1="55" x2="356" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD36E"/>
+      <stop offset="0.42" stop-color="#FF9F45"/>
+      <stop offset="1" stop-color="#EF6A73"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#7A3B22" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <path d="M70 32C82 9 119 6 134 27C156 27 171 47 164 68C180 84 170 112 147 114H70C44 114 31 84 49 66C42 51 52 35 70 32Z" fill="url(#coreGlow)" opacity="0.92"/>
+    <circle cx="66" cy="54" r="8" fill="#F25555"/>
+    <circle cx="145" cy="35" r="8" fill="#5DDE72"/>
+    <circle cx="158" cy="70" r="7" fill="#58B8FF"/>
+    <circle cx="112" cy="18" r="6" fill="#7C3AED"/>
+  </g>
+
+  <rect x="48" y="65" width="106" height="80" rx="24" fill="url(#cardGradient)" filter="url(#softShadow)"/>
+  <circle cx="82" cy="102" r="17" fill="#2A1242"/>
+  <circle cx="121" cy="102" r="17" fill="#3A2315"/>
+  <path d="M91 126C99 136 113 136 121 126" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M98 92H107V113" stroke="#FFF6EA" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M204 34L174 146" stroke="#D8DCE2" stroke-width="5" stroke-linecap="round"/>
+
+  <g filter="url(#softShadow)">
+    <path d="M277 70C291 51 323 53 332 76C340 96 322 119 300 112C275 105 270 86 284 69" stroke="url(#matrixGradient)" stroke-width="17" stroke-linecap="round"/>
+    <path d="M334 70C348 51 380 53 389 76C397 96 379 119 357 112C332 105 327 86 341 69" stroke="url(#matrixGradient)" stroke-width="17" stroke-linecap="round"/>
+    <path d="M268 117C291 132 333 132 356 117" stroke="url(#matrixGradient)" stroke-width="17" stroke-linecap="round"/>
+    <circle cx="294" cy="61" r="5" fill="#FFF4D6"/>
+    <circle cx="327" cy="77" r="5" fill="#D9EEFF"/>
+    <circle cx="366" cy="63" r="5" fill="#FFF4D6"/>
+    <circle cx="286" cy="128" r="5" fill="#D9EEFF"/>
+    <circle cx="346" cy="127" r="5" fill="#FFF4D6"/>
+  </g>
+</svg>

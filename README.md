@@ -1,15 +1,32 @@
-# AnthonyHF.Skill
+<div align="center">
+  <img src="docs/assets/anthonyhf-mark.svg" alt="AnthonyHF.Skill" width="210" />
+
+  <h1>AnthonyHF.Skill</h1>
+
+  <p><strong>Anthony Fan 的个人数字分身接口</strong></p>
+  <p>29 岁 · 20 年码龄 · 超级工程师 · 工作 / 生活 / 能力的公开入口</p>
+  <p>人看它，可以快速理解我是谁；AI 看它，可以知道该读哪些资料、怎么协作、哪些内容不能碰。</p>
+
+  <p>
+    <a href="#我是谁">我是谁</a> ·
+    <a href="#这个仓库是什么">仓库定位</a> ·
+    <a href="#里面有什么">组织结构</a> ·
+    <a href="#怎么使用">使用方法</a> ·
+    <a href="SKILL.md">Agent 协议</a> ·
+    <a href="matrix.yml">机器索引</a>
+  </p>
+
+  <p>
+    <a href="https://github.com/HaodiFan/AnthonyHF.Skill"><img src="https://img.shields.io/badge/repo-public-2EA44F" alt="Repo: public" /></a>
+    <a href="identity/psp/anthony-fan/PSP.md"><img src="https://img.shields.io/badge/PSP-v0.3-4B8BFF" alt="PSP v0.3" /></a>
+    <a href="skills/engineering-everything/engineering-everything/SKILL.md"><img src="https://img.shields.io/badge/skill-Engineering%20Everything-15A36B" alt="Engineering Everything" /></a>
+    <a href="skills/self-evolution/psp"><img src="https://img.shields.io/badge/self--evolution-PSP%20%2B%20Wenxin-FF9F45" alt="PSP and Wenxin self evolution" /></a>
+    <a href="memory/af-wiki"><img src="https://img.shields.io/badge/memory-AF--wiki-6D5DF6" alt="AF-wiki" /></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111827" alt="MIT License" /></a>
+  </p>
+</div>
 
 ![Anthony.HF 个人数字分身接口](docs/assets/anthonyhf-readme-cover.png)
-
-> 这是 Anthony Fan 给自己准备的数字分身工作台。
-> 人看它，可以快速理解我是谁；AI 看它，可以知道该读哪些资料、怎么帮我做事、哪些内容不能碰。
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PSP: v0.3](https://img.shields.io/badge/PSP-v0.3-blue.svg)](identity/psp/anthony-fan/PSP.md)
-[![Engineering Everything: v0.9.1](https://img.shields.io/badge/Skill-Engineering--Everything-green.svg)](skills/engineering-everything/engineering-everything/SKILL.md)
-
-[我是谁](#我是谁) · [这个仓库是什么](#这个仓库是什么) · [里面有什么](#里面有什么) · [怎么使用](#怎么使用) · [公开边界](#公开边界)
 
 ---
 
