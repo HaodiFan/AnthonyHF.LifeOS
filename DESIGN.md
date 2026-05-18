@@ -1,7 +1,7 @@
 ---
-version: alpha
-name: AF Public Console
-description: A dark, precise public interface for Anthony Fan's avatar skill, knowledge, and deployment network.
+version: beta
+name: AF Flow Console
+description: A GSAP-driven public interface for Anthony Fan's avatar skill, AF-wiki memory, static identity assets, and deployment network.
 colors:
   primary: "#F4F1E8"
   secondary: "#A9A49A"
@@ -116,9 +116,9 @@ components:
 
 ## Overview
 
-AF Public Console is the shared visual language for Anthony Fan's public profile network. It should make the system readable to humans and agents: identity, skills, AF-wiki memory, public boundary, and deployment links.
+AF Flow Console is the shared visual language for Anthony Fan's public profile network. It should make the system readable to humans and agents: identity, skills, AF-wiki memory, public boundary, personal assets, and deployment links.
 
-The page should feel like a precise command surface rather than a personal landing page. Visual density is acceptable when it improves routing clarity.
+The homepage is now a Vite React page using GSAP ScrollTrigger through `components/ui/story-scroll.tsx`. It should feel like a precise scrollable system poster rather than a generic personal landing page. Visual density is acceptable when it improves routing clarity.
 
 ## Colors
 
@@ -136,7 +136,7 @@ Use Inter for interface text and JetBrains Mono for route labels, counters, file
 
 ## Layout
 
-Use full-width sections constrained to a maximum content width. Hero text is unframed; cards are only for repeated nodes, links, and capability blocks.
+Use full-viewport story sections. Hero text is unframed; cards are only for repeated nodes, links, and capability blocks. The README cover image should stay visible as a first-viewport signal, while the rest of the page uses personal photos, public project logos, product images, and AF-wiki routing visualizations.
 
 ## Elevation & Depth
 
@@ -151,10 +151,12 @@ Use 4px for small controls and 8px for panels. Avoid large rounded cards unless 
 - `button-primary` routes to the highest-priority public entry.
 - `panel` groups identity, skill, memory, and boundary content.
 - `badge` labels repo paths, skill routes, and public/private status.
+- `story-scroll` provides the GSAP section rotation and pinning behavior.
 
 ## Do's and Don'ts
 
 - **Do** link AF-wiki, GitHub Profile, AnthonyHF.Skill, and app deployments together.
 - **Do** make the AI collaboration boundary explicit.
+- **Do** keep useful public static assets in `public/assets/` with provenance notes.
 - **Don't** publish raw private source material or client-specific details.
 - **Don't** use decorative generated imagery as the primary information layer.

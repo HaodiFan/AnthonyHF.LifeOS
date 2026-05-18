@@ -18,6 +18,7 @@
   <p>
     <a href="https://haodifan.github.io/AnthonyHF.Skill/"><img src="https://img.shields.io/badge/homepage-GitHub%20Pages-111827" alt="GitHub Pages homepage" /></a>
     <a href="https://github.com/HaodiFan/AnthonyHF.Skill"><img src="https://img.shields.io/badge/repo-public-2EA44F" alt="Repo: public" /></a>
+    <a href="package.json"><img src="https://img.shields.io/badge/homepage-React%20%2B%20GSAP-96F2E5" alt="Homepage built with React and GSAP" /></a>
     <a href="identity/psp/anthony-fan/PSP.md"><img src="https://img.shields.io/badge/PSP-v0.3-4B8BFF" alt="PSP v0.3" /></a>
     <a href="skills/engineering-everything/engineering-everything/SKILL.md"><img src="https://img.shields.io/badge/skill-Engineering%20Everything-15A36B" alt="Engineering Everything" /></a>
     <a href="skills/self-evolution/psp"><img src="https://img.shields.io/badge/self--evolution-PSP%20%2B%20Wenxin-FF9F45" alt="PSP and Wenxin self evolution" /></a>
@@ -78,6 +79,16 @@
 - 我自己持续迭代时，可以把新的经历、Skill、记忆和规则放回这个结构里。
 
 简单说，这里承载的是我的“工作/生活数字分身”的入口。
+
+## 主页实现
+
+[GitHub Pages 主页](https://haodifan.github.io/AnthonyHF.Skill/) 现在是一个 Vite + React + TypeScript + Tailwind 4 + GSAP ScrollTrigger 应用。
+
+它做三件事：
+
+- 把 `README.md`、`SKILL.md`、`matrix.yml`、`AF-wiki` 这几个核心入口做成可滚动的公开导航。
+- 用 `components/ui/story-scroll.tsx` 承载 GSAP story scroll 动效，并保留 shadcn-compatible 的 `components/ui` 结构。
+- 把来自 `sayhi2anthony` 的公开个人照片、项目 logo、产品图和硬件图整理进 `public/assets/`，避免继续散落在不同页面里。
 
 ## 里面有什么
 
@@ -182,6 +193,9 @@ git submodule update --init --recursive
 
 ```text
 AnthonyHF.Skill/
+├── src/               # React 首页源码
+├── components/ui/     # shadcn-compatible UI 组件，含 story-scroll.tsx
+├── public/assets/     # 首页使用的公开静态资源
 ├── identity/          # 我是谁：问心报告、PSP、公开身份材料
 ├── skills/            # 我会怎么做事，也会怎么更新自己
 │   ├── engineering-everything/ # 工程、项目、架构和执行判断
@@ -211,4 +225,5 @@ AnthonyHF.Skill/
 
 - **Owner**: Anthony Fan
 - **License**: [MIT](LICENSE)
+- **Homepage stack**: Vite, React, TypeScript, Tailwind CSS 4, GSAP ScrollTrigger
 - **Built with**: Codex, Wenxin Skill output, PSP v0.3, Feishu Miaoji 脱敏证据, Engineering Everything Skill
