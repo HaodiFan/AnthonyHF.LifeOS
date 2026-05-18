@@ -318,20 +318,41 @@ function App() {
           </div>
 
           <div className="grid flex-1 items-center gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative min-h-[300px] sm:min-h-[360px]">
-              <img
-                src={asset('assets/personal/selfie.jpg')}
-                alt="Anthony Fan portrait"
-                className="absolute left-0 top-0 h-[min(54vw,360px)] w-[min(54vw,360px)] rounded-lg border border-[#071420]/12 object-cover shadow-[0_24px_70px_rgba(7,20,32,0.18)]"
-              />
-              <img
-                src={asset('assets/personal/metainflow-founder.jpg')}
-                alt="Anthony Fan founder profile"
-                className="absolute bottom-0 right-0 h-[min(46vw,300px)] w-[min(46vw,300px)] rounded-lg border border-white object-cover shadow-[0_24px_70px_rgba(7,20,32,0.16)]"
-              />
-              <div className="absolute bottom-5 left-5 rounded-lg border border-[#071420]/12 bg-white/86 px-4 py-3 text-sm shadow-lg backdrop-blur">
-                <span className="font-mono text-xs text-[#2f6d80]">Public identity</span>
-                <strong className="block text-lg">29 岁 · 20 年码龄</strong>
+            <div className="grid gap-3 sm:grid-cols-[minmax(0,0.72fr)_minmax(180px,0.5fr)]">
+              <div className="relative overflow-hidden rounded-lg border border-[#071420]/12 bg-white shadow-[0_24px_70px_rgba(7,20,32,0.18)]">
+                <img
+                  src={asset('assets/personal/selfie.jpg')}
+                  alt="Anthony Fan portrait"
+                  className="aspect-[4/5] h-full max-h-[430px] w-full object-cover"
+                />
+                <div className="absolute bottom-4 left-4 rounded-lg border border-[#071420]/12 bg-white/88 px-4 py-3 text-sm shadow-lg backdrop-blur">
+                  <span className="font-mono text-xs text-[#2f6d80]">Public identity</span>
+                  <strong className="block text-lg">29 岁 · 20 年码龄</strong>
+                </div>
+              </div>
+
+              <div className="grid gap-3">
+                <div className="rounded-lg border border-[#071420]/12 bg-white/76 p-4 shadow-[0_18px_55px_rgba(7,20,32,0.1)]">
+                  <div className="mb-5 flex items-center justify-between gap-3">
+                    <span className="grid h-10 w-10 place-items-center rounded-lg bg-[#12354a] text-white">
+                      <Route aria-hidden="true" className="h-5 w-5" />
+                    </span>
+                    <span className="font-mono text-xs text-[#2f6d80]">identity/</span>
+                  </div>
+                  <strong className="block text-xl leading-tight">身份不是素材堆</strong>
+                  <p className="mt-3 text-sm leading-relaxed text-[#52687a]">
+                    公开叙事、PSP、问心报告和安全边界分层读取。
+                  </p>
+                </div>
+                <div className="rounded-lg border border-[#071420]/12 bg-[#071420] p-4 text-white shadow-[0_18px_55px_rgba(7,20,32,0.14)]">
+                  <span className="font-mono text-xs text-[#96f2e5]">read order</span>
+                  <div className="mt-3 grid gap-2 font-mono text-xs text-white/72">
+                    <span>README.md</span>
+                    <span>SKILL.md</span>
+                    <span>identity/psp</span>
+                    <span>security/README</span>
+                  </div>
+                </div>
               </div>
             </div>
 

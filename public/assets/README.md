@@ -6,7 +6,6 @@
 
 - `assets/personal/anthonyhf-readme-cover.png`：本仓库 README 封面图副本，用于 React 首页。
 - `assets/personal/selfie.jpg`：来自 `sayhi2anthony/public/source_images/selfie.jpg`。
-- `assets/personal/metainflow-founder.jpg`：来自 `sayhi2anthony/public/source_images/metainflow-founder.jpg`。
 - `assets/logos/`：公开项目或公司 logo，包括 NVIDIA、GrainedAI、MetaInFlow、SnapAnthony、ShellProbe。
 - `assets/products/`：公开产品展示图，包括 SnapAnthony、ShellProbe。
 - `assets/hardware/`：公开硬件相关展示图，包括 Jetson Orin、Jetson Xavier。
