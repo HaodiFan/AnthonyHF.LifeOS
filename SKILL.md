@@ -42,7 +42,7 @@ AnthonyHF 是 Anthony Fan 的个人数字分身、公开身份、工程师分身
 - **材料写入 / Skill 迭代**：先按 `cognition/object-taxonomy.yml` 判断对象类型。事实和偏好进入 AF-wiki 或 memory layer；可复用流程进入 runtime skill；稳定判断和 gate 经过 IPO Reverse 与 owner alignment 后才进入 distilled meta skill；skill 需要读取事实时使用 `skills/bindings/data-sources.yml` 绑定，不把事实硬写进 `SKILL.md`。
 - **Runtime Translation 微调**：先运行 openLifeOS factory 的 `scripts/translate_lifeos.py <this-repo> --runtime openclaw|hermes --emit-review` 生成 baseline，再只读 manifest / coverage / review 文件提出建议稿。不得自动覆盖 canonical LifeOS 文件。
 - **跨平台迁移**：先按 `docs/migration/platform-migration-instructions.md` 判断目标平台。LifeOS 是真相源；OpenClaw/Hermes/Codex Skill/GitHub Pages/AF-wiki/local evidence source 都只能接收安全投影、索引、binding 或建议稿。
-- **移动硬盘 / 本地 archive 导入**：先生成本地私有 inventory，分类后再决定哪些材料可用于 Wenxin、PSP、IPO Reverse、Skill roadmap 或 memory pointer。不得把整盘内容、私密正文或 raw archive 复制进本公开 repo。
+- **移动硬盘 / 本地 archive 导入**：优先运行 factory 的 `scripts/intake_external_drive.py` 生成本地私有 inventory 和公开安全 summary；再按 `docs/evidence-intake/*next-pass*.md` 选择材料。不得把整盘内容、私密正文或 raw archive 复制进本公开 repo。
 
 ## 边界
 

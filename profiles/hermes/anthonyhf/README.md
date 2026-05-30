@@ -4,7 +4,7 @@ Runtime projection for `hermes` generated from `AnthonyHF.LifeOS`.
 
 ## Source
 
-- Canonical LifeOS: `/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS`
+- Canonical LifeOS: `AnthonyHF.LifeOS`
 - Display name: AnthonyHF
 - Visibility: public
 
@@ -36,9 +36,13 @@ Current maturity: `scaffold`
 
 Reasons:
 
-- No approved evidence body has been processed yet.
+- A local external drive evidence source has been indexed, but no approved evidence body has been processed into LifeOS yet.
 - Wenxin, PSP, memory, and skill roadmap are intake-ready only.
-- Any public profile beyond initialized fields would require source material.
+- Any public profile beyond initialized fields still requires owner-approved source material and summarization.
+
+Available but unprocessed sources:
+
+- `external-drive-afelite-20260530`: local-only inventory created at `~/LifeOS_Intake/AnthonyHF/external-drive/`; public-safe intake summary recorded in `docs/evidence-intake/external-drive-afelite-20260530.md`.
 
 ## Required Final Disclosure
 

@@ -1,8 +1,8 @@
 # Translation Review Proposal
 
-Translation ID: `anthonyhf-openclaw-20260530-223832`
+Translation ID: `anthonyhf-openclaw-20260530-230949`
 Target runtime: `openclaw`
-Target profile: `/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS/profiles/openclaw/anthonyhf`
+Target profile: `output/meta/AnthonyHF.LifeOS/profiles/openclaw/anthonyhf`
 
 This file is a proposal surface for SKILL.md-guided semantic tuning. It must not be applied automatically.
 

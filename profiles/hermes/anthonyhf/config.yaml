@@ -1,7 +1,7 @@
 name: "AnthonyHF"
 description: "LifeOS runtime projection for AnthonyHF"
 lifeos:
-  source: "/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS"
+  source: "AnthonyHF.LifeOS"
   visibility: "public"
   canonical_source: true
 translation:

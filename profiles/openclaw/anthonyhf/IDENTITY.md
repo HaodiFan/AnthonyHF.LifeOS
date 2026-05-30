@@ -54,6 +54,6 @@ Anthony Fan 是以长期工程深度、企业 AI 落地和 AI-native organizatio
 
 ## Provenance
 
-- LifeOS source: `/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS`
+- LifeOS source: `AnthonyHF.LifeOS`
 - Wenxin source: `identity/wenxin/WENXIN_REPORT.md`
 - OpenClaw template: `docs/reference/templates/IDENTITY.md` in `openclaw/openclaw`.

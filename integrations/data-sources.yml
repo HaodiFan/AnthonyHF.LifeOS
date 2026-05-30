@@ -37,6 +37,23 @@ sources:
       - memory/working-lessons/
       - skills/recommendations/skill-roadmap.yml
       - identity/psp/
+  local_external_drive_afelite:
+    enabled: true
+    config: docs/evidence-intake/external-drive-afelite-20260530.md
+    authority: owner-local-evidence
+    token_policy: no-token
+    visibility: local-only-index
+    body_policy: no-body-copy
+    allowed_targets:
+      - docs/evidence-sufficiency.md
+      - identity/wenxin/
+      - identity/psp/
+      - skills/recommendations/skill-roadmap.yml
+      - memory/working-lessons/
+    forbidden_targets:
+      - public raw file export
+      - runtime prompt body injection
+      - homepage assets without owner approval
 public_export_gate:
   requires_owner_approval: true
   allowed:

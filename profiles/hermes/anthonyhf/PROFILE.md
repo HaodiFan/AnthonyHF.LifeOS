@@ -11,7 +11,7 @@ This file is translated from the LifeOS identity layer.
 
 ## Wenxin Summary
 
-Source: `/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS/identity/wenxin/WENXIN_REPORT.md`
+Source: `identity/wenxin/WENXIN_REPORT.md`
 
 # AnthonyHF Wenxin Report Wrapper
 

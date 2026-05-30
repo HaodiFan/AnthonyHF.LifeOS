@@ -210,7 +210,20 @@ First action:
 
 - Create an inventory only. Do not copy files into LifeOS.
 
-Suggested private workspace:
+Use the factory intake script when available:
+
+```bash
+python3 scripts/intake_external_drive.py /Volumes/<drive-name> \
+  --private-out ~/LifeOS_Intake/AnthonyHF/external-drive \
+  --lifeos-repo output/meta/AnthonyHF.LifeOS \
+  --source-id external-drive-<drive-name>-<yyyymmdd> \
+  --owner AnthonyHF \
+  --force
+```
+
+The script writes raw paths only to the private local intake directory and writes a public-safe summary to `docs/evidence-intake/`.
+
+Manual fallback private workspace:
 
 ```bash
 mkdir -p ~/LifeOS_Intake/AnthonyHF/external-drive
@@ -235,6 +248,7 @@ Then classify files into:
 Allowed LifeOS outputs:
 
 - `docs/evidence-sufficiency.md` maturity update
+- `docs/evidence-intake/` public-safe inventory and next-pass queue
 - `identity/wenxin/` public-safe synthesis
 - `identity/psp/anthony-fan/` abstracted patterns and boundaries
 - `skills/recommendations/skill-roadmap.yml`

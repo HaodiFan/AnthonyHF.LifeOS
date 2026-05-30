@@ -4,7 +4,7 @@ This runtime SOUL is a projection generated from the canonical LifeOS repo. It i
 
 ## Source PSP Summary
 
-Source: `/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS/identity/psp/anthony-fan/PSP-20260530-171725.md`
+Source: `identity/psp/anthony-fan/PSP-20260530-171725.md`
 
 <!--
 openLifeOS PSP mirror
@@ -137,7 +137,7 @@ Do not edit this mirror directly; update PSP.md first, then refresh the mirror w
 
 ## Provenance
 
-- Source LifeOS: `/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS`
+- Source LifeOS: `AnthonyHF.LifeOS`
 - PSP source: `identity/psp/anthony-fan/PSP-20260530-171725.md`
 - Evidence sufficiency source: `docs/evidence-sufficiency.md`
 
@@ -165,9 +165,13 @@ Current maturity: `scaffold`
 
 Reasons:
 
-- No approved evidence body has been processed yet.
+- A local external drive evidence source has been indexed, but no approved evidence body has been processed into LifeOS yet.
 - Wenxin, PSP, memory, and skill roadmap are intake-ready only.
-- Any public profile beyond initialized fields would require source material.
+- Any public profile beyond initialized fields still requires owner-approved source material and summarization.
+
+Available but unprocessed sources:
+
+- `external-drive-afelite-20260530`: local-only inventory created at `~/LifeOS_Intake/AnthonyHF/external-drive/`; public-safe intake summary recorded in `docs/evidence-intake/external-drive-afelite-20260530.md`.
 
 ## Required Final Disclosure
 
