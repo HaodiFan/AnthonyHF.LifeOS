@@ -1,11 +1,13 @@
-translation_id: "anthonyhf-openclaw-20260530-173932"
+translation_id: "anthonyhf-openclaw-20260530-223832"
 target_runtime: "openclaw"
 coverage:
   supported:
     - "identity.psp -> SOUL.md"
     - "identity.wenxin -> IDENTITY.md/PROFILE.md"
     - "runtime_skill -> skills/"
+    - "openclaw.workspace_skill_adapters -> skills/<skill>/SKILL.md"
   partial:
+    - "openclaw.source_symlinks -> skills/_source-links/; advisory only and may be ignored by sandboxed workspace copies"
     - "long_term_memory -> USER.md/memories/seed.md; runtime may not enforce fact provenance"
     - "distilled_knowledge -> USER.md/memories/knowledge.md; claim freshness is preserved as text"
     - "distilled_meta_skill -> AGENTS.md/PROFILE.md; runtime may treat rules as advisory"

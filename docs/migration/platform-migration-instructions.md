@@ -80,22 +80,27 @@ Output:
 - `profiles/openclaw/anthonyhf/USER.md`
 - `profiles/openclaw/anthonyhf/AGENTS.md`
 - `profiles/openclaw/anthonyhf/TOOLS.md`
+- `profiles/openclaw/anthonyhf/skills/<skill>/SKILL.md`
+- `profiles/openclaw/anthonyhf/skills/_source-links/`
 - `profiles/openclaw/anthonyhf/profile.manifest.yml`
 - `profiles/openclaw/anthonyhf/coverage-report.yml`
 - `profiles/openclaw/anthonyhf/translation.review.md`
 
 Review focus:
 
+- `IDENTITY.md`: must fill the OpenClaw `IDENTITY.md` template fields (`Name`, `Creature`, `Vibe`, `Emoji`, `Avatar`) instead of dumping a generic identity summary.
 - `SOUL.md`: runtime voice, source limitation wording, person-model boundaries.
 - `AGENTS.md`: workspace behavior rules, skill promotion gates, security language.
 - `USER.md`: stable fact ordering, memory summary readability.
 - `TOOLS.md`: connector assumptions, unavailable tool notes.
+- `skills/`: OpenClaw-discoverable wrapper skills must exist as real `SKILL.md` files under the workspace `skills/` directory. Symlinks are advisory only because sandboxed workspace copies may ignore links that resolve outside the workspace.
 
 Do not:
 
 - Put raw evidence into prompt files.
 - Treat `translation.review.md` as applied changes.
 - Edit manifest provenance, coverage status, or validation results by hand.
+- Rely only on symlinks for OpenClaw skill loading.
 
 ## Target: Hermes
 
