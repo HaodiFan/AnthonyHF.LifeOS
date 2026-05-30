@@ -16,6 +16,11 @@ evidence_sufficiency: insufficient
 - Wenxin PDF generated before this migration.
 - AnthonyHF.LifeOS README public narrative, derived from the original AnthonyHF.Skill surface.
 - PSP v0.4 public-safe person model and boundary notes.
+- AFElite project evidence first pass:
+  - `identity/wenxin/project-evidence-external-drive-20260530.md`
+  - `identity/wenxin/project-evidence/qcanything-platform-20260530.md`
+  - `identity/wenxin/project-evidence/webtwin-20260530.md`
+  - `identity/wenxin/project-evidence/computer-use-datasets-20260530.md`
 
 ## 一句话定位 / one-line positioning
 
@@ -40,6 +45,9 @@ Anthony Fan 是以长期工程深度、企业 AI 落地和 AI-native organizatio
 - Engineering systems
 - Enterprise AI delivery
 - Agent / Skill / memory infrastructure
+- AI/data tooling platforms
+- Plugin runtime and process-control architecture
+- Web-agent / computer-use data pipeline infrastructure
 - Public narrative and identity systems
 - Organization and training mechanisms
 
@@ -52,6 +60,7 @@ Evidence-limited public wrapper: 60%。该百分比只描述公开 Markdown wrap
 - 需要从 PDF 中抽取完整结构化 Wenxin 字段。
 - 需要 owner 确认哪些公开叙事可进入 README / profile。
 - 需要把新材料继续分流到 PSP、memory、Skill roadmap 和 public narrative system。
+- AFElite 项目 evidence 目前是 README/architecture metadata 级别，尚未验证交付规模、采用情况、商业结果或反例。
 
 ## 三条未来路径 / three future paths
 
@@ -65,6 +74,9 @@ Evidence-limited public wrapper: 60%。该百分比只描述公开 Markdown wrap
 - cognitive-alignment
 - public-narrative-system
 - openlifeos-runtime-translation
+- plugin-runtime-architecture
+- web-agent-data-pipeline
+- computer-use-data-pipeline
 
 ## missing_information
 

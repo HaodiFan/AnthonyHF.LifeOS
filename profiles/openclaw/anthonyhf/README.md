@@ -18,7 +18,7 @@ Runtime files are projections. The LifeOS folder remains the source of truth.
 
 Generated: 2026-05-30
 Owner: AnthonyHF
-Maturity Level: `scaffold`
+Maturity Level: `evidence-limited-v0`
 
 ## Meaning
 
@@ -32,17 +32,32 @@ This report separates **structure readiness** from **content maturity**.
 
 ## Current Assessment
 
-Current maturity: `scaffold`
+Current maturity: `evidence-limited-v0`
 
 Reasons:
 
-- A local external drive evidence source has been indexed, but no approved evidence body has been processed into LifeOS yet.
-- Wenxin, PSP, memory, and skill roadmap are intake-ready only.
-- Any public profile beyond initialized fields still requires owner-approved source material and summarization.
+- A local external drive evidence source has been indexed.
+- Owner-approved project metadata and architecture evidence has been summarized into Wenxin project evidence notes.
+- The evidence is still thin: most sources are README/design-doc level, not full delivery retrospectives, production metrics, adoption proof, or counterexamples.
+- PSP/person model remains scaffold-level for this intake because Anthony-authored writings,感悟, reflections, corrections, conflict stories, and judgment samples have not yet been processed.
+- Any stronger public profile claims still require owner-approved source material and summarization.
 
-Available but unprocessed sources:
+Available sources:
 
 - `external-drive-afelite-20260530`: local-only inventory created at `~/LifeOS_Intake/AnthonyHF/external-drive/`; public-safe intake summary recorded in `docs/evidence-intake/external-drive-afelite-20260530.md`.
+- Project first-read summary: `docs/evidence-intake/external-drive-project-first-read-20260530.md`.
+- Wenxin project evidence:
+  - `identity/wenxin/project-evidence-external-drive-20260530.md`
+  - `identity/wenxin/project-evidence/qcanything-platform-20260530.md`
+  - `identity/wenxin/project-evidence/webtwin-20260530.md`
+  - `identity/wenxin/project-evidence/computer-use-datasets-20260530.md`
+
+Unavailable or not yet processed:
+
+- Raw source code bodies.
+- Dataset bodies.
+- Customer, contract, Feishu/Lark, financial, credential, private chat, and transcript material.
+- Anthony-authored reflection/writing evidence for PSP.
 
 ## Required Final Disclosure
 

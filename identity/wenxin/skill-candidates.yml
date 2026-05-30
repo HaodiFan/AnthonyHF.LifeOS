@@ -34,3 +34,39 @@ recommendations:
     evidence_needed:
       - Public posts, product pages, scripts, README iterations, and launch retrospectives.
     expected_artifacts: skills/runtime/public-narrative-system-index.md
+  - id: plugin-runtime-architecture
+    skill_type: distilled-meta-skill
+    domain: ai-tooling-platforms
+    priority: high
+    source: identity/wenxin/project-evidence/qcanything-platform-20260530.md
+    why: QCAnything plugin runtime evidence shows process isolation, IPC/RPC boundaries, task state machines, sandbox storage, and plugin lifecycle design.
+    promotion_gate: IPO Reverse + owner alignment + privacy review
+    evidence_needed:
+      - Delivery retrospective for what shipped versus remained design.
+      - Runtime failure cases, task cancellation behavior, and plugin isolation examples.
+      - Public-safe examples of plugin integration or product usage.
+    expected_artifacts: skills/meta/plugin-runtime-architecture-index.md
+  - id: web-agent-data-pipeline
+    skill_type: runtime-skill
+    domain: agent-data-infrastructure
+    priority: high
+    source: identity/wenxin/project-evidence/webtwin-20260530.md
+    why: WebTwin evidence shows browser rendering, asset extraction, component analysis, and downstream AI/Cursor workflow preparation.
+    promotion_gate: project evidence synthesis + owner alignment + rights/privacy review
+    evidence_needed:
+      - Validated extraction examples that are public-safe to summarize.
+      - Failure cases around anti-bot, dynamic rendering, CDN assets, and deduplication.
+      - Clear boundary between public website analysis and copied third-party assets.
+    expected_artifacts: skills/runtime/web-environment-extraction-index.md
+  - id: computer-use-data-pipeline
+    skill_type: runtime-skill
+    domain: computer-use-agent-data
+    priority: high
+    source: identity/wenxin/project-evidence/computer-use-datasets-20260530.md
+    why: TL_ComputerUseDatasets evidence shows modular platform fetchers, task dispatch, database-backed states, and web interface drift debugging.
+    promotion_gate: IPO Reverse + owner alignment + platform data rights review
+    evidence_needed:
+      - Public-safe data pipeline retrospectives.
+      - Examples of interface-drift debugging and prompt/tool adaptation.
+      - Evidence of completed processing flow, validation rules, and outputs.
+    expected_artifacts: skills/runtime/computer-use-data-pipeline-index.md

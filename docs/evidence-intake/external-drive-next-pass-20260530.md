@@ -24,33 +24,71 @@ Concrete candidate paths remain local-only in:
 
 This is enough to start selective synthesis, but not enough to raise content maturity by itself.
 
-## Pass 1: Project Evidence For IPO Reverse
+First metadata read:
 
-Goal: choose 10-20 project outputs that best reveal AnthonyHF's reusable engineering judgment, product judgment, data/AI workflow design, and delivery patterns.
+- `docs/evidence-intake/external-drive-project-first-read-20260530.md`
+
+## Routing Correction
+
+Anthony's alignment rule:
+
+- Projects and delivered systems should first feed Wenxin: use them to answer "who I am", "where I stand", "how complete I am in my field", and "where I should go next".
+- IPO Reverse is the analysis method for project evidence, not the final destination.
+- Personal writing, reflections,感悟, corrections, conflict stories, and judgment samples should feed PSP/person model.
+- Skills receive distilled reusable procedures only after the Wenxin/IPO/PSP routing decision is clear.
+
+## Pass 1: Project Evidence For Wenxin
+
+Goal: choose 10-20 project outputs that best reveal AnthonyHF's domain position, capability map, field completeness, gaps, and future path.
+
+Method: run IPO Reverse on each selected project, then summarize the result into Wenxin and skill evidence. Do not treat project output as PSP evidence unless it contains an explicit personal reflection or decision sample.
 
 Public-safe candidate clusters:
 
 | Cluster | Likely LifeOS Use | Suggested Target |
 | --- | --- | --- |
-| AI data QA / dataset quality tooling | project delivery evidence, validation pattern, workflow design | `skills/recommendations/skill-roadmap.yml`, `memory/working-lessons/` |
-| Web agent / browser environment / RL environment tooling | agent workflow evidence, evaluation harness pattern | `skills/runtime/`, `skills/meta/` proposal |
-| Computer-use data pipeline and annotation workflow | data production operating model, QA loop | `memory/working-lessons/`, IPO Reverse note |
-| PII / privacy / compliance data pipeline | privacy-aware data engineering pattern | `security/README.md`, `skills/meta/` proposal |
-| Dataset acquisition / mining / crawler projects | data source strategy, acquisition workflow | `skills/runtime/` proposal |
-| Public homepage / product presentation surfaces | public narrative and presentation system evidence | `identity/wenxin/`, `skills/runtime/` proposal |
-| OCR / book / academic data extraction projects | unstructured data processing pattern | `skills/recommendations/skill-roadmap.yml` |
-| Marketplace / data product experiments | productization and GTM evidence | `identity/wenxin/`, `memory/working-lessons/` |
+| AI data QA / dataset quality tooling | field capability, delivery scope, validation maturity | `identity/wenxin/`, `skills/recommendations/skill-roadmap.yml` |
+| Web agent / browser environment / RL environment tooling | frontier direction, agent/data infrastructure ability | `identity/wenxin/`, `skills/runtime/` proposal |
+| Computer-use data pipeline and annotation workflow | data production operating model, AI data workflow position | `identity/wenxin/`, IPO Reverse note |
+| PII / privacy / compliance data pipeline | privacy-aware data engineering capability | `identity/wenxin/`, `security/README.md` |
+| Dataset acquisition / mining / crawler projects | data source strategy, acquisition workflow | `identity/wenxin/`, `skills/runtime/` proposal |
+| Public homepage / product presentation surfaces | public narrative and productization evidence | `identity/wenxin/`, `apps/homepage/` if public-safe |
+| OCR / book / academic data extraction projects | unstructured data processing capability | `identity/wenxin/`, `skills/recommendations/skill-roadmap.yml` |
+| Marketplace / data product experiments | productization and GTM direction | `identity/wenxin/`, `memory/working-lessons/` |
 
 Rules:
 
 - Read only selected project metadata first: README, package metadata, public docs, commit-independent file tree.
 - Do not copy source code into LifeOS.
 - If code inspection is needed, summarize design and evidence, not implementation body.
-- Any customer-specific detail must be redacted or converted into a non-identifying pattern.
+- Any customer-specific detail must be redacted or converted into a non-identifying Wenxin capability signal.
 
-## Pass 2: Public Identity / Wenxin Evidence
+## Pass 2: Writing And Reflection Evidence For PSP
 
-Goal: identify public-safe documents that can improve the public profile, Wenxin summary, and homepage narrative.
+Goal: identify Anthony's own writing,感悟, retrospectives, corrections, conflict stories, and judgment samples that can improve the PSP/person model.
+
+Allowed after owner selection:
+
+- Personal essays, notes, reflections, self-review, work/life感悟.
+- Redacted decision records and correction examples.
+- Redacted conflict or disagreement reviews.
+- Owner-authored principles, rules, and judgment samples.
+
+Forbidden without explicit approval:
+
+- contracts, customer materials, Feishu/Lark exports, financial records, raw private chats, meeting transcripts, identity documents, tokens, credentials, dataset bodies, source repository bodies.
+- Language fingerprint extraction from private chats.
+- Stable personality claims without evidence.
+
+Suggested targets:
+
+- `identity/psp/anthony-fan/PSP.md`
+- `identity/psp/anthony-fan/update-log-*.md`
+- `memory/working-lessons/` for provisional lessons before promotion
+
+## Pass 3: Public Narrative / Profile Evidence
+
+Goal: identify public-safe biography, product narrative, talks, homepage assets, and profile material.
 
 Allowed after owner selection:
 
@@ -59,9 +97,11 @@ Allowed after owner selection:
 - Approved case summaries with customer and private details removed.
 - Approved portfolio screenshots or homepage assets.
 
-Forbidden without explicit approval:
+Forbidden:
 
-- contracts, customer materials, Feishu/Lark exports, financial records, raw private chats, meeting transcripts, identity documents, tokens, credentials, dataset bodies, source repository bodies.
+- raw private evidence;
+- private relationship or customer details;
+- public claims not backed by approved evidence.
 
 Suggested targets:
 
@@ -69,30 +109,6 @@ Suggested targets:
 - `identity/wenxin/WENXIN_REPORT.md`
 - `identity/wenxin/public-positioning.md`
 - `apps/homepage/` only for owner-approved public assets
-
-## Pass 3: PSP / Behavior Pattern Evidence
-
-Goal: improve the person model only from approved behavior or judgment samples.
-
-Allowed after owner selection:
-
-- Abstracted decision cases.
-- Redacted conflict or correction examples.
-- Repeated judgment patterns with evidence pointers.
-- Validation samples written specifically for PSP review.
-
-Forbidden:
-
-- language fingerprint extraction from private chats;
-- raw transcripts;
-- private relationship or customer details;
-- claims not backed by evidence.
-
-Suggested targets:
-
-- `identity/psp/anthony-fan/PSP.md`
-- `identity/psp/anthony-fan/update-log-*.md`
-- `memory/working-lessons/` for provisional lessons before promotion
 
 ## Pass 4: Runtime Projection Refresh
 
@@ -109,9 +125,9 @@ Check that OpenClaw receives real `skills/*/SKILL.md` adapters and that Hermes r
 
 Before reading bodies, Anthony should pick one of these routes:
 
-1. `project-first`: process 10-20 project roots for IPO Reverse and skill evidence.
-2. `identity-first`: process only public-safe identity/profile documents.
-3. `psp-first`: process owner-approved behavior/judgment samples.
+1. `wenxin-project-first`: process 10-20 project roots into Wenxin capability/positioning evidence.
+2. `psp-writing-first`: process owner-approved writing,感悟, retrospectives, and judgment samples into PSP evidence.
+3. `identity-public-first`: process only public-safe identity/profile documents.
 4. `runtime-first`: improve OpenClaw/Hermes projection quality without reading more private evidence.
 
-Default recommended route: `project-first`, because it improves skills and delivery evidence while minimizing exposure of personal documents.
+Default recommended route: `wenxin-project-first`, because projects reveal field position and capability map while minimizing exposure of personal writing.

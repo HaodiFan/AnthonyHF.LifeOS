@@ -237,8 +237,8 @@ find "/Volumes/<drive-name>" -type f \
 Then classify files into:
 
 - public identity evidence
-- PSP behavior or judgment evidence
-- project output for IPO Reverse
+- project output for Wenxin capability and field-position evidence
+- Anthony-authored writing,感悟, reflection, correction, conflict story, or judgment sample for PSP evidence
 - skill evidence
 - long-term memory pointer
 - aesthetics/design preference
@@ -249,8 +249,8 @@ Allowed LifeOS outputs:
 
 - `docs/evidence-sufficiency.md` maturity update
 - `docs/evidence-intake/` public-safe inventory and next-pass queue
-- `identity/wenxin/` public-safe synthesis
-- `identity/psp/anthony-fan/` abstracted patterns and boundaries
+- `identity/wenxin/` project-backed capability map, field position, gap analysis, and public-safe synthesis
+- `identity/psp/anthony-fan/` abstracted patterns and boundaries from Anthony-authored writing,感悟, reflection, correction, or judgment samples
 - `skills/recommendations/skill-roadmap.yml`
 - `memory/` pointers or summaries
 

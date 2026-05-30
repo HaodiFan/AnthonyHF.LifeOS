@@ -29,7 +29,7 @@ Local private inventory files are stored outside this repo:
 ## Inventory Result
 
 - Mounted volume: `AFElite`
-- Mount: `/Volumes/AFElite`
+- Mount: local external drive mount for `AFElite`
 - Filesystem: `ExFAT`
 - Size: 256.0 GB
 - Used: 249.9 GB
@@ -50,9 +50,9 @@ Excluded from the filtered list:
 
 | Bucket | LifeOS Use | Policy |
 | --- | --- | --- |
-| Code | project evidence, IPO Reverse candidates, skill evidence | index first; do not copy repos into public LifeOS |
+| Code | project evidence for Wenxin capability map, field position, future path, and later skill evidence | index first; do not copy repos into public LifeOS |
 | Datasets | research/data source provenance | index only unless a specific approved skill needs dataset evidence |
-| Documents | Wenxin/PSP/memory evidence candidates | private-by-default; owner approval required before summarization |
+| Documents | writings/reflections for PSP, public profile evidence for Wenxin, memory pointers | private-by-default; owner approval required before summarization |
 
 ## Sensitive Zones
 
@@ -73,11 +73,11 @@ These categories are private-by-default and must not be copied into the public r
 
 Recommended next action is a selective, owner-approved evidence pass:
 
-1. Pick 10-20 high-value project outputs from the Code bucket for IPO Reverse.
-2. Pick explicitly approved public-safe documents for Wenxin/public profile.
-3. Pick behavior or judgment samples for PSP only after owner approval.
+1. Pick 10-20 high-value project outputs from the Code bucket for Wenxin project evidence.
+2. Pick Anthony-authored writings,感悟, reflections, corrections, or judgment samples for PSP only after owner approval.
+3. Pick explicitly approved public-safe documents for public profile and Wenxin narrative.
 4. Keep dataset material as provenance/index unless a specific skill needs it.
 
 ## Maturity Impact
 
-This intake creates source availability but does not by itself increase LifeOS maturity beyond `scaffold`. Maturity can move to `evidence-limited-v0` after approved evidence bodies are summarized into Wenxin, PSP, skill roadmap, or memory pointers with provenance.
+This intake creates source availability but does not by itself increase LifeOS maturity beyond `scaffold`. Maturity can move to `evidence-limited-v0` after approved project evidence is summarized into Wenxin and approved writing/reflection evidence is summarized into PSP, skill roadmap, or memory pointers with provenance.

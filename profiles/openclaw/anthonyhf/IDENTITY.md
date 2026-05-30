@@ -51,6 +51,7 @@ Anthony Fan 是以长期工程深度、企业 AI 落地和 AI-native organizatio
 - 需要从 PDF 中抽取完整结构化 Wenxin 字段。
 - 需要 owner 确认哪些公开叙事可进入 README / profile。
 - 需要把新材料继续分流到 PSP、memory、Skill roadmap 和 public narrative system。
+- AFElite 项目 evidence 目前是 README/architecture metadata 级别，尚未验证交付规模、采用情况、商业结果或反例。
 
 ## Provenance
 
