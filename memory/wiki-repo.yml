@@ -1,10 +1,10 @@
 github_owner: HaodiFan
-repository: AnthonyHF.wiki
+repository: AF-wiki
 visibility: private
-local_path: memory/anthony-fan-wiki
+local_path: memory/af-wiki
 create_with_gh: false
 authoritative_source: github
-sync_modes: github
+sync_modes: github-submodule,index-only-public-summary
 source_policy: private-by-default
 public_mirror: index-only
 allowed_public_exports: approved-facts, redacted-summaries, abstracted-patterns
@@ -13,4 +13,15 @@ raw_material_policy: never-copy-raw-private-bodies
 rsync_enabled: false
 rsync_target: ""
 status: linked
-rule: 链接或摘要长期 wiki；public 层只保留 index/approved-derived 内容，不复制私密正文。如果 authoritative_source 是 server-rsync，则服务器是唯一真源，GitHub 只作为协同或公开镜像。
+rule: AF-wiki 是 AnthonyHF.LifeOS 配置的 memory wiki 实例，不是 openLifeOS 的默认架构。public 层只保留 index、approved-derived summaries、memory tiers 和 provenance，不复制私密正文。
+intake:
+  mode: owner-approved-extract
+  raw_body_policy: external-only
+  write_targets:
+    - memory/working-lessons/
+    - memory/long-term/
+    - memory/distilled-knowledge/
+query:
+  default_entrypoint: memory/af-wiki/START-HERE.md
+  area_index: memory/af-wiki/areas/index.md
+  fallback_when_unavailable: use memory tiers and ask owner for approved extract

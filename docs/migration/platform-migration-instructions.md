@@ -14,13 +14,13 @@ LifeOS canonical source
   -> feedback returns as lesson evidence
 ```
 
-Never copy raw private bodies, secrets, customer material, Feishu/Miaoji transcripts, full AF-wiki private notes, or unreviewed working lessons into a platform package.
+Never copy raw private bodies, secrets, customer material, Feishu/Miaoji transcripts, external private memory notes, or unreviewed working lessons into a platform package.
 
 ## Migration Intake Protocol
 
 Use this protocol before any platform-specific migration:
 
-1. Identify the platform target: `lifeos`, `openclaw`, `hermes`, `codex-skill`, `af-wiki`, `github-pages`, or `local-evidence-source`.
+1. Identify the platform target: `lifeos`, `openclaw`, `hermes`, `codex-skill`, `github-pages`, or `local-evidence-source`.
 2. Read `DELIVERY.md` to confirm which architecture target is being updated.
 3. Read `cognition/object-taxonomy.yml`, `cognition/data-contracts.yml`, and `security/README.md`.
 4. Classify each source as identity, memory, skill, integration, public surface, evidence, or raw/private material.
@@ -48,9 +48,9 @@ Write targets:
 - Wenxin output: `identity/wenxin/`
 - PSP/person model: `identity/psp/anthony-fan/`
 - Memory pointers and tiers: `memory/`
-- Runtime skill candidates: `skills/runtime/`
-- Distilled meta skills: `skills/meta/`
-- Skill bindings: `skills/bindings/`
+- Runtime skill candidates: `identity/wenxin/skill-recommendations.yml`
+- Distilled meta skills: `identity/wenxin/skill-summaries/`
+- Skill bindings: `cognition/skill-bindings/`
 - Evidence maturity: `docs/evidence-sufficiency.md`
 
 Rules:
@@ -145,7 +145,7 @@ Use when a reusable AnthonyHF capability should become an installable Codex Skil
 
 Source:
 
-- Mature repeated workflow from `skills/runtime/` or `skills/meta/`
+- Mature repeated workflow from `identity/wenxin/skill-recommendations.yml` or `identity/wenxin/skill-summaries/`
 - Evidence from completed tasks or IPO Reverse
 - Owner alignment
 
@@ -153,7 +153,7 @@ Write target:
 
 - A separate skill package, not the LifeOS root.
 - The skill package must include its own `SKILL.md`.
-- LifeOS should keep a binding or pointer in `skills/bindings/` or `matrix.yml`.
+- LifeOS should keep a binding or pointer in `cognition/skill-bindings/` or `matrix.yml`.
 
 Rules:
 
@@ -161,22 +161,22 @@ Rules:
 - Put facts in memory or source bindings; put reusable procedure in the Skill.
 - If the skill depends on AnthonyHF context, declare that dependency explicitly.
 
-## Target: AF-wiki / Memory Wiki
+## Target: Memory Tiers
 
-Use when migrating long-term work, life, knowledge, project, or area context.
+Use when migrating long-term work, life, knowledge, project, or area context into AnthonyHF.LifeOS.
 
 Write targets:
 
-- AF-wiki or configured memory authority for private/long-term content.
-- `memory/START-HERE.md` and `memory/wiki-repo.yml` for routing.
-- `memory/long-term/` only for public-safe summaries or pointers.
+- `memory/START-HERE.md` and `memory/wiki-repo.yml` for routing policy.
+- `memory/working-lessons/` for unpromoted observations.
+- `memory/long-term/` only for owner-approved summaries or pointers.
 - `memory/distilled-knowledge/` only for approved distilled knowledge.
 
 Rules:
 
-- AF-wiki remains the memory authority.
-- Do not copy private AF-wiki bodies into this public repo.
-- Use source IDs, area indexes, and summaries instead of raw bodies.
+- A configured memory wiki can be a target/authority when `memory/wiki-repo.yml` enables it; AF-wiki is only AnthonyHF's instance choice.
+- Do not copy external private memory bodies into this public repo.
+- Use source IDs, local evidence manifests, and summaries instead of raw bodies.
 
 ## Target: GitHub Pages / Homepage
 
@@ -251,7 +251,7 @@ Allowed LifeOS outputs:
 - `docs/evidence-intake/` public-safe inventory and next-pass queue
 - `identity/wenxin/` project-backed capability map, field position, gap analysis, and public-safe synthesis
 - `identity/psp/anthony-fan/` abstracted patterns and boundaries from Anthony-authored writing,感悟, reflection, correction, or judgment samples
-- `skills/recommendations/skill-roadmap.yml`
+- `identity/wenxin/skill-recommendations.yml`
 - `memory/` pointers or summaries
 
 Do not:

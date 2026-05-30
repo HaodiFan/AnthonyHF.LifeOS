@@ -20,9 +20,9 @@
     <a href="https://github.com/HaodiFan/AnthonyHF.LifeOS"><img src="https://img.shields.io/badge/repo-public-2EA44F" alt="Repo: public" /></a>
     <a href="apps/homepage/package.json"><img src="https://img.shields.io/badge/homepage-React%20%2B%20GSAP-96F2E5" alt="Homepage built with React and GSAP" /></a>
     <a href="identity/psp/anthony-fan/PSP.md"><img src="https://img.shields.io/badge/PSP-v0.4-4B8BFF" alt="PSP v0.4" /></a>
-    <a href="skills/engineering-everything/engineering-everything/SKILL.md"><img src="https://img.shields.io/badge/skill-Engineering%20Everything-15A36B" alt="Engineering Everything" /></a>
+    <a href="identity/wenxin/skill-summaries/engineering-everything.md"><img src="https://img.shields.io/badge/meta-Engineering%20Everything-15A36B" alt="Engineering Everything meta skill" /></a>
     <a href="skills/self-evolution/cognitive-alignment"><img src="https://img.shields.io/badge/self--evolution-Alignment%20%2B%20PSP%20%2B%20Wenxin-FF9F45" alt="Alignment, PSP and Wenxin self evolution" /></a>
-    <a href="memory/af-wiki"><img src="https://img.shields.io/badge/memory-AF--wiki-6D5DF6" alt="AF-wiki" /></a>
+    <a href="memory/wiki-repo.yml"><img src="https://img.shields.io/badge/memory-AF--wiki-6D5DF6" alt="AF-wiki memory wiki" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111827" alt="MIT License" /></a>
   </p>
 </div>
@@ -87,7 +87,7 @@
 
 它做三件事：
 
-- 把 `README.md`、`SKILL.md`、`matrix.yml`、`AF-wiki` 这几个核心入口做成可滚动的公开导航。
+- 把 `README.md`、`SKILL.md`、`matrix.yml` 和 approved memory tiers 这几个核心入口做成可滚动的公开导航。
 - 用 `apps/homepage/components/ui/story-scroll.tsx` 承载 GSAP story scroll 动效，并保留 shadcn-compatible 的 `components/ui` 结构。
 - 把来自 `sayhi2anthony` 的公开个人照片、项目 logo、产品图和硬件图整理进 `apps/homepage/public/assets/`，避免继续散落在不同页面里。
 - `apps/homepage/` 是 public surface，不是身份、记忆或 Skill 的真相源。
@@ -99,8 +99,8 @@
 | 抽屉 | 放什么 | 当前内容 |
 | --- | --- | --- |
 | `identity/` | 我是谁 | 问心报告、PSP、公开身份材料 |
-| `skills/` | 我会怎么做事，也会怎么更新自己 | Engineering Everything 用来处理工程判断；Cognitive Alignment、Wenxin 和 PSP 用来自我更新 |
-| `memory/` | 我长期记住什么 | AF-wiki，记录工作、生活、项目、知识和复盘 |
+| `skills/` | 我会怎么做事，也会怎么更新自己 | Engineering Everything 是构建型 meta skill；Cognitive Alignment、Wenxin、PSP 和 IPO Reverse 用来自我更新 |
+| `memory/` | 我长期记住什么 | AF-wiki 作为 AnthonyHF 的 memory wiki；repo 内保留 owner-approved 摘要、working lessons 和 distilled knowledge |
 | `docs/` | 给外面看的材料 | README 封面图、说明材料、公开展示内容 |
 | `security/` | 什么不能公开 | 隐私、权限、密钥、会议和私有资料边界 |
 
@@ -112,10 +112,10 @@
 | 对外定位工具 | Wenxin Skill | 帮我把经历讲清楚，形成公开身份和履历叙事。 |
 | 分身建模工具 | PSP Skill | 帮我从材料里提炼判断方式、语言风格、行为边界。 |
 | 认知对齐工具 | Cognitive Alignment Skill | 让 AI 先讲清自己的判断，和我的认知对齐；出现分歧时复盘并迭代 skill。 |
-| 执行能力工具 | Engineering Everything | 帮 AI 按我的工程方式做事。 |
-| 长期记忆 | AF-wiki | 放工作、生活、项目和知识的长期上下文。 |
+| 构建型 meta skill | Engineering Everything | 我自己起的名字：很多构建类型的事情，都以工程化方式思考。 |
+| 长期记忆 | AF-wiki + memory tiers | AF-wiki 是 AnthonyHF 配置的 memory wiki；公开仓库只放索引、摘要和边界。 |
 
-Cognitive Alignment、Wenxin 和 PSP 是这个仓库的“自我更新工具”：当我有新经历、新材料、新会议、新复盘或新的纠偏时，它们帮助这个数字分身变得更像我、更完整。Engineering Everything 是执行工具：当要做工程、项目、架构、流程判断时，它负责把事做好。
+Cognitive Alignment、Wenxin、PSP 和 IPO Reverse 是这个仓库的“自我更新工具”：当我有新经历、新材料、新会议、新复盘或新的纠偏时，它们帮助这个数字分身变得更像我、更完整。Engineering Everything 是构建型 meta skill：当要做工程、项目、架构、流程、产品或组织判断时，它先提供工程化思考框架；外部 repo 是可执行实现。
 
 以后还会有更多 Skill，比如公司运营、产品判断、培训、销售、组织管理等。
 
@@ -126,9 +126,9 @@ Cognitive Alignment、Wenxin 和 PSP 是这个仓库的“自我更新工具”�
 - 介绍 Anthony：不是套模板，而是基于问心报告和 PSP 讲清楚我的主线。
 - 更新 Anthony：用 Wenxin 整理新的公开叙事，用 PSP 更新人物模型和分身边界。
 - 对齐判断：遇到需要讲判断、和我的认知校准、分歧复盘或 skill 迭代的任务，进入 Cognitive Alignment。
-- 协助工程判断：遇到项目、架构、代码、流程、SOP，可以进入 Engineering Everything。
+- 协助构建型判断：遇到项目、架构、代码、流程、SOP、产品或组织问题，先进入 `skills/engineering-everything/SKILL.md`。
 - 理解工作方式：比如我为什么总会追任务表、时间线、风险、负责人、验收标准和交付链路。
-- 读取长期记忆：需要当前项目、知识、复盘或生活上下文时，进入 AF-wiki。
+- 读取长期记忆：需要当前项目、知识、复盘或生活上下文时，按 `memory/wiki-repo.yml` 查询当前配置的 memory wiki；不可用时使用 `memory/` 中 owner-approved 的摘要或用户本轮显式提供的材料。
 - 保护边界：知道哪些内容不能公开，哪些只能留在私有系统里。
 
 它还不能做这些事：
@@ -156,8 +156,8 @@ Cognitive Alignment、Wenxin 和 PSP 是这个仓库的“自我更新工具”�
 - 更新公开定位、履历、个人叙事：读 `skills/self-evolution/wenxin/`。
 - 更新 PSP、语言风格、判断方式、分身边界：读 `skills/self-evolution/psp/`。
 - 需要讲出 agent 自己的评判、对齐我的认知、处理分歧复盘或迭代 skill：读 `skills/self-evolution/cognitive-alignment/`。
-- 问工程、项目、架构、代码、流程：读 `skills/engineering-everything/`。
-- 问当前工作、生活、知识、项目复盘：读 `memory/af-wiki/`。
+- 问工程、项目、架构、代码、流程、产品/组织构建：先读 `skills/engineering-everything/SKILL.md`，需要能力总结再读 `identity/wenxin/skill-summaries/engineering-everything.md`。
+- 问当前工作、生活、知识、项目复盘：读 `memory/wiki-repo.yml`、`memory/START-HERE.md`，再进入当前配置的 memory wiki 或 `memory/` 下 approved summary。
 - 问能不能公开、能不能提交、能不能复制：读 `security/`。
 
 ### 克隆仓库
@@ -168,17 +168,7 @@ Cognitive Alignment、Wenxin 和 PSP 是这个仓库的“自我更新工具”�
 git clone https://github.com/HaodiFan/AnthonyHF.LifeOS.git
 ```
 
-如果你有私有 submodule 的访问权限，可以连同 AF-wiki、Wenxin、PSP 等子仓库一起拉下来：
-
-```bash
-git clone --recurse-submodules https://github.com/HaodiFan/AnthonyHF.LifeOS.git
-```
-
-如果已经克隆过：
-
-```bash
-git submodule update --init --recursive
-```
+Wenxin、PSP、IPO Reverse 作为 release/archive vendored skill 进入 `skills/self-evolution/`，不是 submodule。AF-wiki 是 AnthonyHF 选择的 memory wiki，可作为 private submodule/index 连接；openLifeOS factory 不默认使用 AF-wiki。
 
 ## 一个例子
 
@@ -192,7 +182,7 @@ git submodule update --init --recursive
 
 回答应该像这样：
 
-> 先别急着写代码。先找项目资料、当前状态、任务表、风险、负责人和验收标准；工程判断走 Engineering Everything，涉及 Anthony 当前上下文再去 AF-wiki。
+> 先别急着写代码。先找项目资料、当前状态、任务表、风险、负责人和验收标准；构建型判断走 Engineering Everything meta skill，涉及 Anthony 当前上下文时按 `memory/wiki-repo.yml` 查询配置的 memory wiki。
 
 ## 目录结构
 
@@ -203,7 +193,7 @@ AnthonyHF.LifeOS/
 ├── matrix.yml         # 给机器读的结构化索引
 ├── identity/          # 我是谁：问心报告、PSP、公开身份材料
 ├── skills/            # 我会怎么做事，也会怎么更新自己
-├── memory/            # 我记得什么：AF-wiki，长期工作/生活/知识库
+├── memory/            # 我记得什么：memory wiki 配置、approved summaries、working lessons、distilled knowledge
 ├── cognition/         # openLifeOS cognition object 和数据契约
 ├── integrations/      # GitHub、Feishu、Hermes 等外部系统边界
 ├── profiles/          # OpenClaw / Hermes runtime projection
@@ -222,8 +212,8 @@ AnthonyHF.LifeOS/
 - API Key、Token、密码、cookie、私钥。
 - 身份证件、合同、财务数据。
 - 私人聊天记录、Feishu/Miaoji 原始转写、会议链接。
-- 客户细节、私有文档正文、不可公开的 AF-wiki 内容。
-- Wenxin、PSP、AF-wiki 这些私有 submodule 里的非公开内容。
+- 客户细节、私有文档正文、不可公开的外部记忆内容。
+- 未经 owner 审核的 skill/private source 内容。
 
 这个仓库只保留公开材料，以及经过抽象、脱敏、不能反推出原文的 PSP 结论。
 
@@ -232,4 +222,4 @@ AnthonyHF.LifeOS/
 - **Owner**: Anthony Fan
 - **License**: [MIT](LICENSE)
 - **Homepage stack**: Vite, React, TypeScript, Tailwind CSS 4, GSAP ScrollTrigger
-- **Built with**: Codex, Wenxin Skill output, PSP v0.4, Feishu Miaoji 脱敏证据, ChatGPT export 抽象萃取, Engineering Everything Skill
+- **Built with**: Codex, Wenxin Skill output, PSP v0.4, Feishu Miaoji 脱敏证据, ChatGPT export 抽象萃取, Engineering Everything meta skill

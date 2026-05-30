@@ -12,13 +12,14 @@ sources:
       - memory/working-lessons/
       - memory/long-term/
       - memory/distilled-knowledge/
+    rule: Use the configured memory wiki for intake/query; AF-wiki is AnthonyHF's instance choice, not the openLifeOS default.
   github:
     enabled: false
     config: integrations/github.yml
     authority: repository-state
     token_policy: env-only-or-gh-auth
     allowed_targets:
-      - skills/recommendations/skill-roadmap.yml
+      - identity/wenxin/skill-recommendations.yml
       - memory/working-lessons/
   feishu:
     enabled: false
@@ -35,7 +36,7 @@ sources:
     token_policy: env-only-or-platform-secret
     allowed_targets:
       - memory/working-lessons/
-      - skills/recommendations/skill-roadmap.yml
+      - identity/wenxin/skill-recommendations.yml
       - identity/psp/
   local_external_drive_afelite:
     enabled: true
@@ -48,7 +49,7 @@ sources:
       - docs/evidence-sufficiency.md
       - identity/wenxin/
       - identity/psp/
-      - skills/recommendations/skill-roadmap.yml
+      - identity/wenxin/skill-recommendations.yml
       - memory/working-lessons/
     forbidden_targets:
       - public raw file export

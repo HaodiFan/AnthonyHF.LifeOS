@@ -8,7 +8,7 @@ Configured targets:
 
 - `identity/wenxin`
 - `identity/psp`
-- `skills/recommendations`
+- `identity/wenxin/skill-recommendations`
 - `memory/index`
 - `SKILL.md`
 

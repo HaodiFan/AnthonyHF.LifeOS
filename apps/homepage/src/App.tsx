@@ -32,7 +32,6 @@ type RouteItem = {
 const asset = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
 
 const repo = 'https://github.com/HaodiFan/AnthonyHF.LifeOS';
-const afWiki = 'https://haodifan.github.io/AF-wiki/';
 const homepage = 'https://haodifan.github.io/AnthonyHF.LifeOS/';
 
 const topRoutes: RouteItem[] = [
@@ -60,8 +59,8 @@ const topRoutes: RouteItem[] = [
   {
     eyebrow: 'Memory',
     title: 'AF-wiki',
-    copy: '健身、知识、工作和项目的长期记忆。',
-    href: afWiki,
+    copy: 'AnthonyHF 配置的 memory wiki；公开层只暴露索引和批准摘要。',
+    href: `${repo}/blob/main/memory/wiki-repo.yml`,
     icon: Brain,
   },
 ];
@@ -86,8 +85,8 @@ const layers = [
   {
     number: '03',
     title: 'Memory',
-    path: 'memory/af-wiki/',
-    copy: 'LeadFlow second brain。持续维护 fitness、knowledge、work areas。',
+    path: 'memory/',
+    copy: 'AF-wiki 是 AnthonyHF 的 memory wiki；repo 内只保留 approved summaries、working lessons 和 distilled knowledge。',
     accent: 'bg-[#f0c15b]',
     icon: Network,
   },
@@ -132,10 +131,10 @@ const networkRoutes: RouteItem[] = [
     icon: Github,
   },
   {
-    eyebrow: 'Second Brain',
-    title: 'AF-wiki Map',
-    copy: '健身记忆、知识图谱、source boundary 和 area 导航。',
-    href: afWiki,
+    eyebrow: 'Memory',
+    title: 'AF-wiki',
+    copy: '配置的 memory wiki、approved summaries 和 query 边界。',
+    href: `${repo}/blob/main/memory/wiki-repo.yml`,
     icon: Brain,
   },
   {
@@ -225,11 +224,11 @@ function App() {
             <span className="hidden sm:inline">Repo</span>
           </ExternalAnchor>
           <ExternalAnchor
-            href={afWiki}
+            href={`${repo}/blob/main/memory/wiki-repo.yml`}
             className="inline-flex h-9 items-center gap-2 rounded-lg border border-white/14 px-3 text-xs font-semibold text-white/78 transition hover:bg-white/10 hover:text-white"
           >
             <Brain aria-hidden="true" className="h-4 w-4" />
-            <span className="hidden sm:inline">AF-wiki</span>
+            <span className="hidden sm:inline">Memory Wiki</span>
           </ExternalAnchor>
         </nav>
       </header>
@@ -251,7 +250,7 @@ function App() {
           <div className="grid min-h-0 flex-1 items-center gap-6 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="max-w-3xl">
               <p className="mb-4 inline-flex rounded-lg border border-[#96f2e5]/35 bg-[#96f2e5]/10 px-3 py-2 font-mono text-xs text-[#b9fff6]">
-                Identity + Skills + AF-wiki + Security
+                Identity + Skills + Memory + Security
               </p>
               <h1 className="text-balance text-[clamp(3rem,9vw,8.5rem)] font-extrabold leading-[0.92]">
                 AnthonyHF.
@@ -448,7 +447,7 @@ function App() {
         </FlowSection>
 
         <FlowSection
-          aria-label="AF-wiki knowledge and fitness map"
+          aria-label="Approved memory tiers"
           style={{
             background:
               'linear-gradient(135deg, #eaf8f4 0%, #f8fbff 48%, #f9f3e1 100%)',
@@ -456,22 +455,22 @@ function App() {
           }}
         >
           <div className="mt-12 flex items-center justify-between text-xs text-[#256357]">
-            <span className="font-mono uppercase">04 / AF-wiki</span>
-            <span className="font-mono uppercase">Fitness + Knowledge as operating memory</span>
+            <span className="font-mono uppercase">04 / Memory</span>
+            <span className="font-mono uppercase">Approved summaries only</span>
           </div>
 
           <div className="grid flex-1 items-center gap-6 xl:grid-cols-[0.9fr_1.1fr]">
             <div>
               <p className="mb-4 inline-flex rounded-lg border border-[#0b6b58]/20 bg-white/80 px-3 py-2 font-mono text-xs uppercase text-[#256357]">
-                LeadFlow second brain
+                openLifeOS memory tiers
               </p>
               <h2 className="text-balance text-[clamp(2.3rem,5vw,4.3rem)] font-extrabold leading-[0.95]">
-                健身和知识不是笔记堆。
+                记忆不是 raw archive。
                 <br />
-                是可路由的记忆系统。
+                是批准后的摘要和证据索引。
               </h2>
               <p className="mt-5 max-w-[62ch] text-[clamp(1rem,1.65vw,1.2rem)] leading-relaxed text-[#3f5d57]">
-                AF-wiki 现在按动态 area 组织。Fitness 维护计划、记录、营养、周复盘和结构化数据；Knowledge 维护 agent systems map、source manifests、topics 和 retained notes。
+                AnthonyHF.LifeOS 当前使用 AF-wiki 作为 memory wiki 实例。公开仓库只保留 owner-approved summaries、working lessons、distilled knowledge 和 provenance；私有原文留在原系统或由 owner 本轮显式提供。
               </p>
             </div>
 
@@ -518,8 +517,8 @@ function App() {
 
           <div className="hidden grid-cols-4 gap-3 2xl:grid">
             {[
-              ['START-HERE', '第一次进入 AF-wiki 的导览。'],
-              ['areas/index', '当前 area registry 和 skill routing。'],
+              ['START-HERE', '第一次进入 memory tiers 的导览。'],
+              ['approved summaries', '只使用 owner 批准后的摘要。'],
               ['source manifests', '只保存 provenance，不保存原文。'],
               ['public boundary', 'Git 仓库只放抽象、索引和萃取。'],
             ].map(([title, copy]) => (
@@ -553,7 +552,7 @@ function App() {
                 它是公开系统入口。
               </h2>
               <p className="mt-5 max-w-[58ch] text-[clamp(1rem,1.7vw,1.22rem)] leading-relaxed text-white/66">
-                GitHub Profile 负责门面，AF-wiki 负责长期记忆，AnthonyHF.LifeOS 负责 canonical 分身协议，OpenClaw/Hermes projection 负责 runtime 消费。
+                GitHub Profile 负责门面，AnthonyHF.LifeOS 负责 canonical 分身协议和 approved memory tiers，OpenClaw/Hermes projection 负责 runtime 消费。
               </p>
             </div>
 

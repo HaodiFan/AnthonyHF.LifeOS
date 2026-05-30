@@ -69,7 +69,7 @@ The checked assets include:
 
 All original submodule gitlinks are preserved at the same commit:
 
-- `memory/af-wiki`: `55d44808e63008dc840bd5b3e156a97eb1f927e4`
+- `memory/af-wiki`: configured as AnthonyHF's memory wiki instance; not an openLifeOS default.
 - `skills/engineering-everything`: `7542eeff809a9ee7f9e919c046108bfde4caf143`
 - `skills/self-evolution/cognitive-alignment`: `15f791ff41cfa110c2451c5e555761f87d7d4c1b`
 - `skills/self-evolution/psp`: `cb2f1fbb78d6d8beba22c80b89680f44edbc01b8`
@@ -83,4 +83,4 @@ All original submodule gitlinks are preserved at the same commit:
 
 ## Boundary
 
-Private submodule bodies, AF-wiki private content, Feishu/Miaoji raw transcripts, customer details, tokens, secrets, and raw private materials were not copied into the public LifeOS surface.
+Private submodule bodies, external private memory content, Feishu/Miaoji raw transcripts, customer details, tokens, secrets, and raw private materials were not copied into the public LifeOS surface.

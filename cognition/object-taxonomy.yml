@@ -44,7 +44,7 @@ objects:
       - contradiction_status
   runtime_skill:
     role: repeatable executable procedure
-    default_path: skills/runtime/
+    default_path: skills/<skill-id>/SKILL.md after promotion; identity/wenxin/skill-recommendations.yml before promotion
     durable: true
     forbidden:
       - user facts
@@ -52,7 +52,7 @@ objects:
       - raw evidence bodies
   distilled_meta_skill:
     role: reusable judgment, routing, methodology, and review gates
-    default_path: skills/meta/
+    default_path: skills/<skill-id>/SKILL.md after promotion; identity/wenxin/skill-summaries/ for non-executable summaries
     durable: true
   policy_persona:
     role: behavior boundaries, tone, approvals, and standing orders
@@ -68,12 +68,13 @@ objects:
     durable: true
   skill_binding:
     role: facts, configs, and connectors a skill may read without embedding them
-    default_path: skills/bindings/data-sources.yml
+    default_path: cognition/skill-bindings/data-sources.yml
     durable: true
 split_policy:
   hybrid_input:
     fact_part: memory/working-lessons/ or memory/long-term/
-    procedure_part: skills/runtime/ proposal
+    procedure_part: identity/wenxin/skill-recommendations.yml proposal
+    judgment_part: identity/wenxin/skill-summaries/ before promotion
     relation: grounds
   raw_private_material:
     store: authorized external source

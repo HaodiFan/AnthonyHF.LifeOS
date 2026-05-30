@@ -2,7 +2,7 @@
 name: anthonyhf-engineering-everything
 description: Route engineering, architecture, execution, SOP, AI/Agent workflow, and validation tasks.
 source_runtime: openclaw
-canonical_source: skills/engineering-everything/engineering-everything/SKILL.md
+canonical_source: skills/engineering-everything/SKILL.md
 ---
 
 # anthonyhf-engineering-everything
@@ -11,7 +11,7 @@ This is an OpenClaw workspace skill adapter generated from AnthonyHF.LifeOS.
 
 ## Canonical Source
 
-- `skills/engineering-everything/engineering-everything/SKILL.md`
+- `skills/engineering-everything/SKILL.md`
 
 ## Use When
 

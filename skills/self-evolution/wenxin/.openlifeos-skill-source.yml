@@ -1,0 +1,8 @@
+schema: openlifeos.skill-source.v1
+skill_id: wenxin
+github_repo: MetaInFLow/wenxin-skill
+source_type: release
+source_ref: v0.1.1
+installed_at: 2026-05-31T00:48:38+08:00
+install_mode: github-archive-vendor
+submodule: false

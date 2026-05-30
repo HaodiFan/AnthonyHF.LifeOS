@@ -10,7 +10,7 @@
       "path": null,
       "performance_coefficient": 1.0,
       "linkage_type": "complete",
-      "use": "定义 AnthonyHF.Skill 的定位、Wenxin 排除规则、AF-wiki 接入规则、README 叙事方向、PSP 更新目标；2026-05-18 确认 ChatGPT export 抽象萃取结论可公开。"
+      "use": "定义 AnthonyHF.Skill 的定位、Wenxin 排除规则、README 叙事方向、PSP 更新目标；2026-05-18 确认 ChatGPT export 抽象萃取结论可公开。"
     },
     {
       "id": "wenxin-report-continuous-founder-ascetic",
@@ -55,34 +55,10 @@
     {
       "id": "engineering-everything-skill",
       "type": "skill_artifact",
-      "path": "skills/engineering-everything/engineering-everything/SKILL.md",
+      "path": "skills/engineering-everything/SKILL.md",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
       "use": "工程方法论与执行路由。"
-    },
-    {
-      "id": "af-wiki-start-here",
-      "type": "knowledge_system_guide",
-      "path": "memory/af-wiki/START-HERE.md",
-      "performance_coefficient": 0.8,
-      "linkage_type": "complete",
-      "use": "工作/生活记忆路由。"
-    },
-    {
-      "id": "af-wiki-schema",
-      "type": "knowledge_system_schema",
-      "path": "memory/af-wiki/SCHEMA.md",
-      "performance_coefficient": 0.8,
-      "linkage_type": "complete",
-      "use": "LeadFlow 与 area ownership 规则。"
-    },
-    {
-      "id": "af-wiki-wechat-article-leads",
-      "type": "knowledge_lead_notes",
-      "path": "memory/af-wiki/areas/knowledge/wechat-articles/*.md",
-      "performance_coefficient": 0.4,
-      "linkage_type": "partial",
-      "use": "公众号/研究文章线索；多数为正文无法抓取时的 lead-first 记录，只用于判断长期关注主题，不作为写作风格强证据。"
     },
     {
       "id": "feishu-miaoji-private-distilled-2026q1q2",
@@ -107,14 +83,6 @@
       "performance_coefficient": 0.75,
       "linkage_type": "partial",
       "use": "1162 条 ChatGPT conversations 的筛选萃取；初筛 390 条 Anthony candidate、320 条 maybe、49 条教师/教案排除。用于个人履历、创业复盘、产品机会、工程偏好、AI-native 公司观和用户侧语言指纹。原始全文不进入 PSP。"
-    },
-    {
-      "id": "af-wiki-inbox-chatgpt-export-anthony-extraction-2026-05-18",
-      "type": "intake_note",
-      "path": "memory/af-wiki/inbox/2026-05-18-chatgpt-export-anthony-extraction.md",
-      "performance_coefficient": 0.8,
-      "linkage_type": "partial",
-      "use": "ChatGPT export 的抽象萃取中间产物；记录可公开的 identity/work 候选模式，不包含原始聊天全文。"
     },
     {
       "id": "zhihu-655112123",

@@ -1,7 +1,7 @@
 enabled: true
 update_cadence: on-new-evidence
 source_usage: github-events, feishu-export, wiki-diff, manual-approved-material
-targets: identity/wenxin, identity/psp, skills/recommendations, memory/index, SKILL.md
+targets: identity/wenxin, identity/psp, identity/wenxin/skill-recommendations, memory/index, SKILL.md
 github_collaboration: pull-request-or-commit
 token_policy: env-only-or-platform-secret
 status: configured

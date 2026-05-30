@@ -1,0 +1,37 @@
+schema: openlifeos.artifact-versions.v1
+artifact_type: wenxin
+owner: Anthony Fan
+active_artifact: wenxin-20260530-235550
+current_entrypoint: WENXIN_REPORT.md
+activation_policy:
+  write_path: "WENXIN-<timestamp>.md"
+  current_entrypoint_policy: "Keep WENXIN_REPORT.md as the human-readable active entrypoint; mirror or summarize the active timestamped artifact."
+  activation_requires:
+    - owner-approved evidence summary
+    - standard_output_gate
+    - changelog entry
+    - identity/current.yml update
+versions:
+  - artifact_id: wenxin-original-pdf
+    path: wenxin-report-continuous-founder-ascetic.pdf
+    status: preserved-original
+    created_at: unknown
+    evidence_sufficiency: source-artifact
+    based_on:
+      - original AnthonyHF.Skill source artifact
+    notes: "Original Wenxin report PDF preserved as imported identity source."
+  - artifact_id: wenxin-20260530-235550
+    path: WENXIN-20260530-235550.md
+    current_entrypoint: WENXIN_REPORT.md
+    status: active
+    created_at: "2026-05-30T23:55:50+08:00"
+    evidence_sufficiency: insufficient
+    based_on:
+      - wenxin-report-continuous-founder-ascetic.pdf
+      - project-evidence-external-drive-20260530.md
+      - project-evidence/
+      - ../psp/anthony-fan/PSP.md
+    changes:
+      - "Created a versioned Markdown snapshot of the active Wenxin wrapper."
+      - "Marked the current report as evidence-limited rather than a full reconstruction of the PDF."
+      - "Routed project and delivery evidence into Wenxin capability map and candidate Skill recommendations."

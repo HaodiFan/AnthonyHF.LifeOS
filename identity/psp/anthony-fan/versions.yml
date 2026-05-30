@@ -1,0 +1,53 @@
+schema: openlifeos.artifact-versions.v1
+artifact_type: psp
+person_id: anthony-fan
+owner: Anthony Fan
+active_artifact: psp-20260530-171725
+current_entrypoint: PSP.md
+activation_policy:
+  write_path: "PSP-<timestamp>.md"
+  current_entrypoint_policy: "Keep PSP.md as the active human-readable entrypoint; it must match or intentionally summarize the active timestamped artifact."
+  activation_requires:
+    - approved evidence summary
+    - standard_output_gate
+    - validation or missing-information section
+    - changelog entry
+    - identity/current.yml update
+    - artifacts/current.yml update
+versions:
+  - artifact_id: psp-00000000-openlifeos
+    path: PSP-00000000-openlifeos.md
+    status: preserved-import-baseline
+    created_at: unknown
+    evidence_sufficiency: low
+    based_on:
+      - original AnthonyHF.Skill scaffold
+    changes:
+      - "Preserved imported openLifeOS PSP scaffold."
+  - artifact_id: psp-20260530-171725
+    path: PSP-20260530-171725.md
+    current_entrypoint: PSP.md
+    status: active
+    created_at: "2026-05-30T17:17:25+08:00"
+    evidence_sufficiency: partial
+    based_on:
+      - identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
+      - source_id:chatgpt_export_2026_05_17
+      - private:/tmp/anthonyhf-psp-feishu/transcripts
+      - owner-approved-summary:chatgpt_export_2026_05_18
+    changes:
+      - "Added ChatGPT-export-enriched PSP scaffold."
+      - "Marked Hao Daily Notes as intern notes and removed them from Anthony PSP evidence."
+      - "Kept private source bodies outside the public repo."
+  - artifact_id: soul-20260530-235550
+    path: SOUL-20260530-235550.md
+    current_entrypoint: ../../../SOUL.md
+    status: active
+    created_at: "2026-05-30T23:55:50+08:00"
+    evidence_sufficiency: partial
+    based_on:
+      - PSP-20260530-171725.md
+      - ../../wenxin/WENXIN_REPORT.md
+    changes:
+      - "Added Soul as the PSP-derived operating-method layer."
+      - "Activated root SOUL.md without replacing PSP as the person-model source."

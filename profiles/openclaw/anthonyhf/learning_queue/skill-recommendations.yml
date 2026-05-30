@@ -1,0 +1,99 @@
+schema: openlifeos.wenxin-skill-recommendations.v1
+language: zh-CN
+generated_from: identity/wenxin/
+status: evidence-gated-active
+rule: 这是 AnthonyHF 的 Wenxin 产物，不是 skills 实现层。推荐 Skill 必须来自 Anthony 的 owner-approved evidence，并满足两类条件之一：1）Anthony 某项能力 highly possible 达到全球前 5% 或同领域高分位；2）Anthony 经常重复做某类事情，且能抽象出稳定输入、流程、输出和验收标准。LifeOS self-evolution tools、系统模块、泛泛领域兴趣和一次性项目不得直接算 Anthony 本人的推荐 Skill。
+eligibility_gate:
+  allowed_types:
+    - top_5_percent_capability_hypothesis
+    - repeated_workflow
+recommendations:
+  - machine_name: engineering-capability
+    alias: Engineering Everything
+    aliases:
+      - engineering-everything
+      - Engineering Everything
+      - 工程化万物
+      - engeinering-everyting
+    implementation_name: engineering-everything
+    user_named: true
+    skill_type: distilled-meta-skill
+    eligibility_type: repeated_workflow
+    evidence_strength: strong
+    implemented: true
+    summarized: true
+    summary_artifact: identity/wenxin/skill-summaries/engineering-everything.md
+    implementation_artifact: skills/engineering-everything/SKILL.md
+    usage_scenarios:
+      - 工程、产品、组织、流程、交付、研究、复盘或 Skill 沉淀任务，需要先判断真相源、边界、拆解、风险、验收和可复用产物。
+      - Agent 需要站在 Anthony 的构建型工程判断上推进复杂任务，而不是只执行局部代码或文案。
+    evidence_sources:
+      - identity/wenxin/skill-summaries/engineering-everything.md
+      - identity/psp/anthony-fan/PSP.md
+      - identity/psp/anthony-fan/analysis/pattern_observations.md
+    evidence_needed:
+      - 3-5 个 public-safe 工程、产品或企业 AI 交付案例，说明该方法如何改变执行结果。
+      - 反例：哪些任务不应该套用 Engineering Everything。
+    promotion_gate: IPO Reverse + owner alignment
+  - machine_name: ai-data-qc-and-delivery-ops
+    alias: null
+    user_named: false
+    skill_type: runtime-skill
+    eligibility_type: repeated_workflow
+    evidence_strength: medium-high
+    implemented: false
+    summarized: false
+    summary_artifact: null
+    implementation_artifact: null
+    usage_scenarios:
+      - AI 数据生产、截图/bbox/timing 质量问题、QC 修复链路、任务分发、交付估算和复盘。
+      - 需要把项目型数据交付经验抽象成可重复执行的 operations playbook。
+    evidence_sources:
+      - identity/wenxin/project-evidence/feishu-project-ops-20260530.md
+      - identity/wenxin/project-evidence/qcanything-platform-20260530.md
+      - identity/wenxin/project-evidence/computer-use-datasets-20260530.md
+    evidence_needed:
+      - Owner-approved 项目复盘，区分 Anthony 本人决策、团队日志和客户/项目事实。
+      - 可脱敏的失败类别、triage 决策、QC 验收标准和修复结果。
+    promotion_gate: repeated delivery review + IPO Reverse + privacy review
+  - machine_name: agent-and-plugin-runtime-architecture
+    alias: null
+    user_named: false
+    skill_type: distilled-meta-skill
+    eligibility_type: top_5_percent_capability_hypothesis
+    evidence_strength: hypothesis
+    implemented: false
+    summarized: false
+    summary_artifact: null
+    implementation_artifact: null
+    usage_scenarios:
+      - 设计 AI tooling runtime、plugin sandbox、IPC/RPC、任务生命周期、web environment extraction 或 agent data pipeline。
+      - 需要判断某个 AI 工具系统应该如何拆分 backend、runtime、plugin、task sandbox、state machine 和审计边界。
+    evidence_sources:
+      - identity/wenxin/project-evidence/qcanything-platform-20260530.md
+      - identity/wenxin/project-evidence/webtwin-20260530.md
+      - identity/wenxin/project-evidence/computer-use-datasets-20260530.md
+    evidence_needed:
+      - shipped usage、生产可靠性、采用情况或外部对比。
+      - 架构决策记录，说明为什么选择当前 runtime 边界而不是更简单方案。
+      - 2-3 个可比较公开系统或市场参照，用于校准 top 5% / 高分位假设。
+    promotion_gate: external benchmark + owner alignment + IPO Reverse
+watchlist:
+  - machine_name: public-narrative-system
+    alias: null
+    reason_not_recommended_yet: 有公开页面和叙事表面，但当前证据不足以证明 top 5% 能力，或足够稳定的重复工作流。
+    needed_to_promote:
+      - 重复的脚本、文章、页面、产品叙事和复盘。
+      - 清晰的输入、流程、输出和验收标准。
+  - machine_name: cognitive-alignment
+    alias: Cognitive Alignment
+    reason_not_recommended_yet: 当前是 LifeOS self-evolution tool 和 owner-agent 对齐机制，还不是 Anthony 本人可复用高分位/高频工作流 Skill 的证据。
+    needed_to_promote:
+      - 多个 owner-approved 分歧、纠偏、复盘案例，证明 Anthony 自己的方法可抽象。
+      - 证明该方法能泛化到维护 AnthonyHF.LifeOS 之外的场景。
+  - machine_name: openlifeos-runtime-translation
+    alias: null
+    reason_not_recommended_yet: 当前主要是 openLifeOS 系统能力；只有出现多次 runtime translation 和验证 gate 后才应提升为 runtime Skill。
+    needed_to_promote:
+      - 3 个以上 runtime translation 案例。
+      - 明确的 source coverage、projection、review 和 validation loop。

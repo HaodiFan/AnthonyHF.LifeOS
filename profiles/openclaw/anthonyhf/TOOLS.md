@@ -13,7 +13,7 @@ bindings:
     allowed_sources:
       - memory/long-term/
       - memory/distilled-knowledge/
-      - memory/wiki-repo.yml
+      - memory/working-lessons/
     forbidden_sources:
       - raw private files
       - secrets
@@ -22,16 +22,17 @@ bindings:
     purpose: Let runtime skills produce evidence for promotion.
     writes_to:
       - memory/working-lessons/
-      - skills/recommendations/skill-roadmap.yml
+      - identity/wenxin/skill-recommendations.yml
     promotion_gate: IPO Reverse plus owner alignment
   external_connector_data:
     purpose: Let skills declare external dependencies.
     registry: integrations/data-sources.yml
     token_policy: never store tokens in repo
+    default_external_memory: disabled
 split_rule:
   fact_goes_to: memory/long-term/ or memory/working-lessons/
-  procedure_goes_to: skills/runtime/
-  abstracted_judgment_goes_to: skills/meta/
+  procedure_goes_to: identity/wenxin/skill-recommendations.yml until promoted into a real skills/<skill-id>/SKILL.md package
+  abstracted_judgment_goes_to: identity/wenxin/skill-summaries/ until promoted into a real skills/<skill-id>/SKILL.md package
 ```
 
 ## Data Sources
@@ -51,13 +52,14 @@ sources:
       - memory/working-lessons/
       - memory/long-term/
       - memory/distilled-knowledge/
+    rule: Use the configured memory wiki for intake/query; AF-wiki is AnthonyHF's instance choice, not the openLifeOS default.
   github:
     enabled: false
     config: integrations/github.yml
     authority: repository-state
     token_policy: env-only-or-gh-auth
     allowed_targets:
-      - skills/recommendations/skill-roadmap.yml
+      - identity/wenxin/skill-recommendations.yml
       - memory/working-lessons/
   feishu:
     enabled: false
@@ -74,7 +76,7 @@ sources:
     token_policy: env-only-or-platform-secret
     allowed_targets:
       - memory/working-lessons/
-      - skills/recommendations/skill-roadmap.yml
+      - identity/wenxin/skill-recommendations.yml
       - identity/psp/
   local_external_drive_afelite:
     enabled: true
@@ -87,7 +89,7 @@ sources:
       - docs/evidence-sufficiency.md
       - identity/wenxin/
       - identity/psp/
-      - skills/recommendations/skill-roadmap.yml
+      - identity/wenxin/skill-recommendations.yml
       - memory/working-lessons/
     forbidden_targets:
       - public raw file export

@@ -4,7 +4,7 @@
 
 当前内容：
 
-- `assets/anthonyhf-readme-cover.png`：README 顶部使用的“个人数字分身接口”封面图，用来让普通人快速看懂入口文件、核心模块、当前实例和底层组件。图里大卡片是模块名，小徽章是 AnthonyHF 当前实例，例如 `Memory-Wiki -> AF-wiki`、`Skills -> engineering-everything`、`Identity -> 问心报告 / PSP`。
+- `assets/anthonyhf-readme-cover.png`：README 顶部使用的“个人数字分身接口”封面图，用来让普通人快速看懂入口文件、核心模块、当前实例和底层组件。图里大卡片是模块名，小徽章是 AnthonyHF 当前实例，例如 `Memory -> approved summaries`、`Skills -> engineering-everything`、`Identity -> 问心报告 / PSP`。
 
 GitHub Pages 首页现在由 `apps/homepage/` 下的 Vite React 应用生成：
 

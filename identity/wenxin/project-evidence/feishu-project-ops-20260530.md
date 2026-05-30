@@ -103,7 +103,7 @@ Add this capability signal:
 
 ## Skill Candidates
 
-- `skills/runtime/ai-data-qc-operations-index.md`
-- `skills/runtime/web-agent-data-production-index.md`
-- `skills/meta/delivery-estimation-retrospective-index.md`
-- `skills/meta/data-infra-transfer-and-storage-index.md`
+- `identity/wenxin/skill-recommendations.ymlai-data-qc-operations-index.md`
+- `identity/wenxin/skill-recommendations.ymlweb-agent-data-production-index.md`
+- `identity/wenxin/skill-summaries/delivery-estimation-retrospective-index.md`
+- `identity/wenxin/skill-summaries/data-infra-transfer-and-storage-index.md`

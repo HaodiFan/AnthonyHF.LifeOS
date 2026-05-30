@@ -80,4 +80,4 @@ Recommended next action is a selective, owner-approved evidence pass:
 
 ## Maturity Impact
 
-This intake creates source availability but does not by itself increase LifeOS maturity beyond `scaffold`. Maturity can move to `evidence-limited-v0` after approved project evidence is summarized into Wenxin and approved writing/reflection evidence is summarized into PSP, skill roadmap, or memory pointers with provenance.
+This intake creates source availability but does not by itself increase LifeOS maturity beyond `scaffold`. Maturity can move to `evidence-limited-v0` after approved project evidence is summarized into Wenxin and approved writing/reflection evidence is summarized into PSP, skill recommendations, or memory pointers with provenance.

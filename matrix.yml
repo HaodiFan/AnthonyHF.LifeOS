@@ -4,11 +4,20 @@ positioning: Anthony Fan 的个人数字分身、公开身份、工程师分身�
 language: zh-CN
 process_log_language: zh-CN
 visibility: public
+lifeos_status:
+  path: LIFEOS_STATUS.yml
+  lifecycle: development
+  upload_version: anthonyhf-lifeos-upload-20260531
+  delivery_version: anthonyhf-lifeos-delivery-unreleased
+  current_version: anthonyhf-lifeos-upload-20260531
 root_skill:
   id: anthonyhf
   path: .
   entrypoint: SKILL.md
 layers:
+  artifacts:
+    path: artifacts/
+    purpose: 核心过程产物 latest registry，统一指向 Wenxin、PSP、Soul、Design、recommendations 和 maturity 的最新版本。
   identity:
     path: identity/
     purpose: 我是谁、如何被理解、分身协议。
@@ -17,13 +26,25 @@ layers:
     purpose: 数字分身能替 Anthony 做什么。
   memory:
     path: memory/
-    purpose: 工作、生活、知识、项目和历史变化的长期资料库。
+    purpose: AnthonyHF 配置的 memory wiki、owner-approved 长期事实、摘要、working lessons 和 distilled knowledge。
   security:
     path: security/
     purpose: 公开仓库的安全边界和禁入内容。
   docs:
     path: docs/
     purpose: 面向人类读者的个人主页、结构图和说明材料。
+artifacts:
+  current_registry:
+    path: artifacts/current.yml
+    role: 所有核心过程产物的机器可读 latest 指针；agent 和 runtime projection 必须先解析这里。
+  soul:
+    current_entrypoint: SOUL.md
+    versioned_artifacts: identity/psp/anthony-fan/SOUL-<timestamp>.md
+    role: 从 PSP 激活出来的处事方法和行为操作层。
+  design:
+    current_entrypoint: DESIGN.md
+    versioned_artifacts: design/DESIGN-<timestamp>.md
+    role: 全局审美、表达偏好和设计判断入口。
 homepage:
   type: github_pages_project_site
   source:
@@ -52,28 +73,39 @@ delivery:
       path: apps/homepage/
       role: Vite/React public presentation app, not identity truth source.
 identity:
+  current_registry:
+    artifact: identity/current.yml
+    role: Machine-readable active pointer for Wenxin and PSP artifacts. Runtime projections must resolve identity artifacts through this registry before falling back to legacy entrypoints.
   public_positioning:
     source: 问心 Skill
-    repository: https://github.com/HaodiFan/wenxin-skill
+    repository: https://github.com/MetaInFLow/wenxin-skill
     submodule_path: skills/self-evolution/wenxin
     artifact: identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
     role: 对外定位、个人履历、个人 BP 和 README 展示内容；同时作为 AnthonyHF.LifeOS 自我更新所用的定位 Skill。
   structure_visual:
     artifact: docs/assets/anthonyhf-readme-cover.png
-    role: README 顶部的个人数字分身接口封面图，用普通人能理解的方式展示入口文件、Anthony.HF Core、模块名与当前实例的区别、Identity/Skills/Memory-Wiki 三个核心模块、问心报告/PSP/engineering-everything/AF-wiki 当前实例、展示层、安全边界和底层运行组件。
+    role: README 顶部的个人数字分身接口封面图，用普通人能理解的方式展示入口文件、Anthony.HF Core、模块名与当前实例的区别、Identity/Skills/Memory 三个核心模块、问心报告/PSP/engineering-everything/AF-wiki 当前实例、展示层、安全边界和底层运行组件。
 person_models:
   - id: anthony-fan
     path: identity/psp/anthony-fan/PSP.md
-    status: v0.3 feishu-meeting-enriched scaffold
+    active_registry: identity/psp/anthony-fan/current.yml
+    versions_ledger: identity/psp/anthony-fan/versions.yml
+    status: v0.4 chatgpt-export-enriched scaffold
     scope: 当前公开身份画像、工程师身份切片、工作会议风格、产品/GTM 判断、AI Agent 认知偏好、正式写作风格参考与工作/生活上下文路由；PSP 方法产出物，属于 Identity 层的分身描述。已吸收 Feishu 妙记私有蒸馏结论，但仍不可作为完整真人复刻。
+aesthetics:
+  current_entrypoint: DESIGN.md
+  versions_ledger: design/versions.yml
+  changelog: design/changelog.md
+  scope: AnthonyHF 的全局表达偏好、设计偏好、叙事节奏、视觉倾向和好作品判断标准；项目级设计文件只作为局部覆盖，不自动升级为长期偏好。
 submodules:
   skills:
     - id: engineering-everything
       name: Engineering Everything
       path: skills/engineering-everything
-      entrypoint: skills/engineering-everything/engineering-everything/SKILL.md
+      entrypoint: skills/engineering-everything/SKILL.md
       repository: https://github.com/HaodiFan/engineering-everything.git
-      role: CTO 岗位相关的具体认知/执行 Skill，用于工程判断、项目执行、架构、SOP、AI/Agent workflow 与验证门禁。
+      role: Engineering Everything 的外部可执行 Skill 实现；canonical meta 说明在 identity/wenxin/skill-summaries/engineering-everything.md。
+      skill_type: external-executable-meta-skill
     - id: psp
       name: PSP Skill
       path: skills/self-evolution/psp
@@ -81,18 +113,26 @@ submodules:
       repository: https://github.com/MetaInFLow/psp-skill.git
       role: AnthonyHF.LifeOS 自我进化所用的人物建模 Skill，用于从原始材料提炼 PSP、语言指纹、冲突故事、分身边界和验证方法。
       visibility: private
+    - id: ipo-reverse
+      name: IPO Reverse Skill
+      path: skills/self-evolution/ipo-reverse
+      entrypoint: skills/self-evolution/ipo-reverse/SKILL.md
+      repository: https://github.com/MetaInFLow/ipo-reverse-skill.git
+      license: PolyForm-Noncommercial-1.0.0
+      role: AnthonyHF.LifeOS 自我进化所用的 IPO 逆向 Skill，用于从已完成产出物反推证据、隐性认知任务、中间思考资产和可复用 IPO。
+      visibility: public-source-available-noncommercial
     - id: cognitive-alignment
       name: Cognitive Alignment Skill
       path: skills/self-evolution/cognitive-alignment
       entrypoint: skills/self-evolution/cognitive-alignment/SKILL.md
       repository: https://github.com/HaodiFan/cognitive-alignment-skill.git
-      role: AnthonyHF.LifeOS 自我进化所用的认知对齐 Skill，用于让 agent 先讲清自己的评判，与 Anthony 的认知校准；出现分歧时选择复盘方法，并把纠偏沉淀到正确 skill、AF-wiki 或新 skill。
+      role: AnthonyHF.LifeOS 自我进化所用的认知对齐 Skill，用于让 agent 先讲清自己的评判，与 Anthony 的认知校准；出现分歧时选择复盘方法，并把纠偏沉淀到正确 skill、memory tier 或新 skill。
       visibility: private
     - id: wenxin
       name: Wenxin Skill
       path: skills/self-evolution/wenxin
       entrypoint: skills/self-evolution/wenxin/SKILL.md
-      repository: https://github.com/HaodiFan/wenxin-skill.git
+      repository: https://github.com/MetaInFLow/wenxin-skill.git
       role: AnthonyHF.LifeOS 自我进化所用的对外定位 Skill，用于把经历、能力、短板和阶段目标整理成公开叙事、履历和个人 BP。
       visibility: private
   memory:
@@ -100,7 +140,7 @@ submodules:
       name: AF-wiki
       path: memory/af-wiki
       repository: https://github.com/HaodiFan/AF-wiki.git
-      role: Anthony 工作/生活 second brain，是长期事实、记忆和 area 上下文的真相源。
+      role: AnthonyHF.LifeOS 当前配置的 memory wiki；作为 Anthony 实例选择，不是 openLifeOS 默认架构。
 self_evolution:
   purpose: 让 AnthonyHF.LifeOS 可以持续更新“我是谁”和“AI 如何理解我”。
   skills:
@@ -121,14 +161,21 @@ openlifeos_protocol:
     working_lessons: memory/working-lessons/
     long_term: memory/long-term/
     distilled_knowledge: memory/distilled-knowledge/
-    external_authority: memory/af-wiki
-    rule: AF-wiki remains the long-term memory authority; openLifeOS tiers provide routing and promotion surfaces without copying private bodies.
+    external_authority: memory/wiki-repo.yml
+    rule: Each LifeOS should configure its own memory wiki. AnthonyHF uses AF-wiki; public LifeOS tiers only expose owner-approved summaries, evidence manifests, or current-task extracts.
   skill_taxonomy:
-    runtime_skills: skills/runtime/
-    distilled_meta_skills: skills/meta/
-    local_self_evolution_submodules: skills/self-evolution/
-    default_bridge_skills: skills/default-skills/self-evolution/
+    skill_packages: skills/
+    skill_package_rule: Every branch under skills/ must eventually contain a SKILL.md entrypoint; non-Skill summaries, bindings, and source metadata live outside skills/.
+    skill_recommendations: identity/wenxin/skill-recommendations.yml
+    skill_summaries: identity/wenxin/skill-summaries/
+    local_self_evolution_skills: skills/self-evolution/
+    default_bridge_skills: integrations/skill-sources/default-skills/
     promotion_gate: Runtime evidence requires IPO Reverse, owner alignment, and privacy review before becoming distilled meta skill behavior.
+  meta_skills:
+    engineering_everything:
+      canonical: skills/engineering-everything/SKILL.md
+      summary: identity/wenxin/skill-summaries/engineering-everything.md
+      meaning: Anthony 自己命名的构建型 meta skill；很多构建类型的事情，都以工程化方式思考。
   runtime_translation:
     openclaw_profile: profiles/openclaw/anthonyhf/
     hermes_profile: profiles/hermes/anthonyhf/
@@ -138,6 +185,7 @@ openlifeos_protocol:
     inventory: docs/migration/source-inventory.yml
 skill_layers:
   placement_policy:
-    instance_local: skills/runtime/ and skills/meta/ are local LifeOS capability surfaces unless promoted.
+    instance_local: only directories that contain a descendant SKILL.md belong under skills/.
+    non_skill_artifacts: use identity/wenxin/skill-recommendations.yml, identity/wenxin/skill-summaries/, cognition/skill-bindings/, integrations/skill-sources/, or docs/skill-system/.
     installable_codex: installable Codex Skills must live in standalone skill packages or the Codex skills directory.
-    submodules: existing external Skills remain submodule pointers and are not inlined into this public showroom.
+    external Skills are installed from release/archive copies with source manifests; private source bodies are not copied unless explicitly vendored as approved skill packages.

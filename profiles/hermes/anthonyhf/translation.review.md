@@ -1,6 +1,6 @@
 # Translation Review Proposal
 
-Translation ID: `anthonyhf-hermes-20260530-234609`
+Translation ID: `anthonyhf-hermes-20260531-022906`
 Target runtime: `hermes`
 Target profile: `output/meta/AnthonyHF.LifeOS/profiles/hermes/anthonyhf`
 
@@ -41,7 +41,7 @@ This file is a proposal surface for SKILL.md-guided semantic tuning. It must not
 ### PROFILE.md
 
 - Status: `present`
-- Source evidence: `identity/wenxin/WENXIN_REPORT.md and skills/meta/`
+- Source evidence: `identity/wenxin/WENXIN_REPORT.md and identity/wenxin/skill-summaries/`
 - Suggested change: Review Profile narrative, profile-level guidance, and meta-skill readability.
 - Reason: Improve runtime fit without changing the LifeOS source of truth.
 - Risk: May overfit runtime phrasing or weaken evidence boundaries if applied without review.

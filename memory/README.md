@@ -6,6 +6,10 @@
 
 当前已接入：
 
-- `af-wiki/`：Anthony 的工作、生活、健身、知识、研究、项目和历史变化资料库。
+- `working-lessons/`：尚未晋升的候选经验。
+- `long-term/`：owner-approved 的长期事实和摘要。
+- `distilled-knowledge/`：经过抽象、脱敏、可复用的知识结论。
+
+AF-wiki 是 AnthonyHF.LifeOS 配置的 memory wiki 实例。openLifeOS factory 不默认使用 AF-wiki；其他 LifeOS 应配置自己的 memory wiki。
 
 如果 Skill 是“能做事的能力”，Memory 就是“知道过去发生了什么、现在在做什么、未来要往哪走”的长期上下文。

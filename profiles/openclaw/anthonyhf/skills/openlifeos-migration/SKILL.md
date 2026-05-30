@@ -1,6 +1,6 @@
 ---
 name: anthonyhf-openlifeos-migration
-description: Migrate AnthonyHF.LifeOS across OpenClaw, Hermes, Codex Skill, AF-wiki, GitHub Pages, and local evidence sources.
+description: Migrate this LifeOS across OpenClaw, Hermes, Codex Skill, configured memory wiki, GitHub Pages, and local evidence sources.
 source_runtime: openclaw
 canonical_source: docs/migration/platform-migration-instructions.md
 ---

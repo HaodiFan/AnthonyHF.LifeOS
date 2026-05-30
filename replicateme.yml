@@ -8,6 +8,10 @@ person_id: anthony-fan
 language: zh-CN
 process_log_language: zh-CN
 visibility: public
+lifeos_lifecycle: development
+upload_version: anthonyhf-lifeos-upload-20260531
+delivery_version: anthonyhf-lifeos-delivery-unreleased
+current_lifeos_version: anthonyhf-lifeos-upload-20260531
 public_summary: AnthonyHF 的 openLifeOS 已完成 local-only 初始化；个人定位、履历、技能、审美、经历和长期记忆等待 owner-approved evidence 后再生成。
 public_material_policy: private-by-default
 raw_material_policy: never-commit
@@ -45,7 +49,7 @@ feishu_token_policy: not-configured
 hermes_configure: true
 hermes_update_cadence: on-new-evidence
 hermes_source_usage: github-events, feishu-export, wiki-diff, manual-approved-material
-hermes_targets: identity/wenxin, identity/psp, skills/recommendations, memory/index, SKILL.md
+hermes_targets: identity/wenxin, identity/psp, identity/wenxin/skill-recommendations, memory/index, SKILL.md
 hermes_token_policy: env-only-or-platform-secret
 wenxin_goals: self-understanding, public-positioning, field-map, gap-analysis, future-paths, skill-candidates
 recommended_skill_domains: professional-core, communication, decision-making

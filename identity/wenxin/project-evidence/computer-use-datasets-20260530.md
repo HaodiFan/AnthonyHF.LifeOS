@@ -71,9 +71,9 @@ Compared with WebTwin, this project is less about extracting page artifacts and 
 
 ## Reusable Skill Candidates
 
-- `skills/runtime/computer-use-data-pipeline-index.md`
-- `skills/runtime/web-agent-environment-debugging-index.md`
-- `skills/meta/data-pipeline-operations-index.md`
+- `identity/wenxin/skill-recommendations.ymlcomputer-use-data-pipeline-index.md`
+- `identity/wenxin/skill-recommendations.ymlweb-agent-environment-debugging-index.md`
+- `identity/wenxin/skill-summaries/data-pipeline-operations-index.md`
 
 ## Privacy Review
 

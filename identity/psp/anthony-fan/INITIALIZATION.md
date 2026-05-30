@@ -2,6 +2,7 @@
 
 Generated At: 2026-05-30T17:17:25+08:00
 Person ID: `anthony-fan`
+Current PSP Registry: `current.yml`
 Current PSP Artifact: `PSP-20260530-171725.md`
 Current Update Log: `update-log-20260530-171725.md`
 
@@ -20,10 +21,10 @@ Current Update Log: `update-log-20260530-171725.md`
 
 ## 转换前检查
 
-1. 确认使用的 PSP 主产物：`PSP-20260530-171725.md`。
+1. 先读取 `identity/current.yml` 和本目录 `current.yml`，确认 active PSP 主产物；当前为 `PSP-20260530-171725.md`。
 2. 读取 `identity/public-profile/profile.yml`，只使用 owner-approved 的公开身份字段。
 3. 读取 `memory/long-term/` 和 `memory/distilled-knowledge/`，只抽取稳定事实、偏好、长期上下文和证据摘要。
-4. 读取 `skills/runtime/`、`skills/meta/` 和 `skills/default-skills/`，只抽取可复用 procedure、触发条件、验证门和失败处理。
+4. 读取 `identity/wenxin/skill-recommendations.yml`、`identity/wenxin/skill-summaries/` 和 `integrations/skill-sources/default-skills/`，只抽取可复用 procedure、触发条件、验证门和失败处理。
 5. 读取 `security/README.md` 和 `security/permissions.yml`，抽取硬边界、禁入内容、审批规则和工具权限。
 6. 对每条候选内容执行分型：事实进 memory/identity/persona，流程进 Skill/agent instruction，混合内容先拆分再写入。
 
@@ -54,7 +55,7 @@ Current Update Log: `update-log-20260530-171725.md`
 1. 从 `PSP-20260530-171725.md` 抽取 persona、身份姿态、行为边界、最佳态画像和反钝化约束，写入 `SOUL.md`。
 2. 从 `identity/public-profile/profile.yml` 抽取用户身份字段和称呼偏好，写入 `USER.md`。
 3. 从 `memory/long-term/` 抽取稳定事实、偏好、长期项目上下文和证据摘要，写入 `MEMORY.md`。
-4. 从 `skills/runtime/` 和 `skills/meta/` 抽取可复用流程，按主题拆成 `skills/<skill-id>/SKILL.md`。
+4. 从 `identity/wenxin/skill-recommendations.yml` 和 `identity/wenxin/skill-summaries/` 抽取可复用流程，按主题拆成 `skills/<skill-id>/SKILL.md`。
 5. 如果存在项目级约束，把 repo 操作规则、审批边界、工具限制写入 `.hermes.md`，不要写进 `MEMORY.md`。
 6. 校验 `MEMORY.md`：删除步骤、SOP、workflow、临时任务状态。
 7. 校验 `SOUL.md`：只保留人格位、行为边界和表达约束，不复制 raw evidence。
@@ -78,10 +79,10 @@ Current Update Log: `update-log-20260530-171725.md`
 1. 从 `PSP-20260530-171725.md` 抽取人格位、身份姿态、行为边界和最佳态画像，写入 `SOUL.md`。
 2. 从 `identity/public-profile/profile.yml` 和 PSP 的身份字段抽取 self/user/org/alias 信息，写入 `IDENTITY.md` 和 `USER.md`。
 3. 从 `security/` 和 root `SKILL.md` 抽取 agent 运行规则、路由规则、协作规则和项目边界，写入 `AGENTS.md`。
-4. 从 `security/permissions.yml`、`integrations/` 和 `skills/bindings/data-sources.yml` 抽取工具权限、数据源边界和禁止事项，写入 `TOOLS.md`。
+4. 从 `security/permissions.yml`、`integrations/` 和 `cognition/skill-bindings/data-sources.yml` 抽取工具权限、数据源边界和禁止事项，写入 `TOOLS.md`。
 5. 从 `memory/long-term/` 抽取稳定事实和长期偏好，写入 `MEMORY.md`。
 6. 从 `memory/working-lessons/` 抽取候选经验，按日期写入 `memory/YYYY-MM-DD.md`；未验证内容必须标注 candidate/review-needed。
-7. 从 `skills/runtime/`、`skills/meta/` 和 `skills/default-skills/` 复制或改写为 OpenClaw 兼容 `skills/<skill-id>/SKILL.md`。
+7. 从 `identity/wenxin/skill-recommendations.yml`、`identity/wenxin/skill-summaries/` 和 `integrations/skill-sources/default-skills/` 复制或改写为 OpenClaw 兼容 `skills/<skill-id>/SKILL.md`。
 8. 校验 `AGENTS.md`：只能放操作规则和 routing，不放长期人物事实。
 9. 校验 `MEMORY.md`：只能放 declarative facts，不放 procedure。
 10. 校验 `memory/YYYY-MM-DD.md`：候选经验必须保留日期、来源、置信度和 review 状态。

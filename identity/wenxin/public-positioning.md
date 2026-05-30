@@ -9,4 +9,4 @@ AnthonyHF.LifeOS 是 Anthony Fan 的个人数字分身接口、公开身份入�
 公开边界：
 
 - 可以公开 AnthonyHF.LifeOS 的仓库结构、主页资产、公开 PSP 结论、runtime projection 路径和已批准身份叙事。
-- 不公开 Feishu/Miaoji 原文、客户细节、AF-wiki 私密正文、token、secret 或未脱敏资料。
+- 不公开 Feishu/Miaoji 原文、客户细节、外部私有记忆正文、token、secret 或未脱敏资料。

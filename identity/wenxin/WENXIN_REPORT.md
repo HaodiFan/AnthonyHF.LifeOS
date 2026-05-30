@@ -61,24 +61,43 @@ Evidence-limited public wrapper: 60%。该百分比只描述公开 Markdown wrap
 
 - 需要从 PDF 中抽取完整结构化 Wenxin 字段。
 - 需要 owner 确认哪些公开叙事可进入 README / profile。
-- 需要把新材料继续分流到 PSP、memory、Skill roadmap 和 public narrative system。
+- 需要把新材料继续分流到 PSP、memory、Skill recommendations 和 public narrative system。
 - AFElite 项目 evidence 目前是 README/architecture metadata 级别，尚未验证交付规模、采用情况、商业结果或反例。
 
 ## 三条未来路径 / three future paths
 
 1. 继续把 AnthonyHF.LifeOS 作为公开数字分身入口和 openLifeOS 样板间。
-2. 把 Engineering Everything、Cognitive Alignment、Public Narrative 等能力沉淀成可安装或可复用 Skill。
-3. 将 AF-wiki、runtime profiles 和 Dream Loop 连接成持续进化系统。
+2. 把已经通过证据门控的高频工作流或高分位能力沉淀成可安装或可复用 Skill；self-evolution 工具只作为系统能力，不默认算 Anthony 本人的推荐 Skill。
+3. 将 runtime profiles 和 Dream Loop 连接成持续进化系统。
 
-## Skill candidates
+## 推荐 Skill
 
-- engineering-everything
-- cognitive-alignment
-- public-narrative-system
-- openlifeos-runtime-translation
-- plugin-runtime-architecture
-- web-agent-data-pipeline
-- computer-use-data-pipeline
+推荐 Skill 是问心产物，当前真相源是 `identity/wenxin/skill-recommendations.yml`，不是 `skills/` 实现层。进入推荐列表必须先通过两个门槛之一：
+
+1. `top_5_percent_capability_hypothesis`：证据显示 Anthony 在该能力上 highly possible 达到全球前 5% 或同领域高分位。
+2. `repeated_workflow`：Anthony 经常重复做这类工作，并且可以抽象出稳定输入、流程、输出和验收标准。
+
+当前推荐：
+
+- `engineering-capability`
+  - aliases: `engineering-everything`, `Engineering Everything`, `工程化万物`, `engeinering-everyting`
+  - implementation: `engineering-everything`
+  - eligibility_type: `repeated_workflow`
+  - evidence: PSP 中关于真相源、边界、任务拆解、验证、交付、复用的模式；长期重复出现的工程、产品、组织构建任务。
+- `ai-data-qc-and-delivery-ops`
+  - eligibility_type: `repeated_workflow`
+  - evidence: QCAnything, WebAgent data production, computer-use dataset pipeline, large data delivery retrospectives.
+- `agent-and-plugin-runtime-architecture`
+  - eligibility_type: `top_5_percent_capability_hypothesis`
+  - evidence: QCAnything backend/runtime, plugin sandboxing, IPC/RPC, WebTwin, computer-use data pipeline.
+  - status: 假设；需要外部 benchmark、采用情况或生产可靠性证据，才能声明 top 5%。
+
+观察列表，暂不推荐：
+
+- `cognitive-alignment`：当前是 LifeOS self-evolution tool，还不是 Anthony 本人高分位或高频重复个人 Skill 的证据。
+- `public-narrative-system`：可能是重复工作，但需要重复脚本、页面、文章和复盘证据后再提升。
+- `openlifeos-runtime-translation`: currently a system capability; promote only after repeated translation cases and validation gates.
+- `web-agent-data-pipeline` and `computer-use-data-pipeline`: currently folded into `ai-data-qc-and-delivery-ops` unless enough evidence supports separate repeatable workflows.
 
 ## missing_information
 

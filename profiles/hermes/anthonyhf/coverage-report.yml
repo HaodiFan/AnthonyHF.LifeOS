@@ -1,4 +1,4 @@
-translation_id: "anthonyhf-hermes-20260530-234609"
+translation_id: "anthonyhf-hermes-20260531-022906"
 target_runtime: "hermes"
 coverage:
   supported:
@@ -19,4 +19,4 @@ coverage:
   intentionally_excluded:
     - "raw_materials export; raw private evidence stays in LifeOS"
     - "working_lessons prompt injection; unreviewed lessons stay in learning_queue"
-    - "skill_roadmap runtime activation; roadmap remains backlog until promoted"
+    - "skill_recommendations runtime activation; recommendations remain backlog until promoted"

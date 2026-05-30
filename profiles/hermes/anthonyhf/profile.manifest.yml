@@ -1,23 +1,34 @@
-translation_id: "anthonyhf-hermes-20260530-234609"
+translation_id: "anthonyhf-hermes-20260531-022906"
 source_lifeos: "AnthonyHF.LifeOS"
 target_runtime: "hermes"
 target_profile: "profiles/hermes/anthonyhf"
-generated_at: "2026-05-30T23:46:09+08:00"
+generated_at: "2026-05-31T02:29:06+08:00"
+identity_current: "identity/current.yml"
 tuning_policy: "proposal_only"
 review_mode: "proposal-only"
 review_file: "translation.review.md"
 manual_confirmation_required: true
 
+lifeos_status:
+  status_file: "LIFEOS_STATUS.yml"
+  lifecycle: "development"
+  current_version: "anthonyhf-lifeos-upload-20260531"
+  upload_version: "anthonyhf-lifeos-upload-20260531"
+  delivery_version: "anthonyhf-lifeos-delivery-unreleased"
+  meta_skill_source_mode: "submodule-or-working-source"
+  meta_skill_uploadable: "true"
+
 generated_files:
   - target: "SOUL.md"
-    rule: "psp-to-soul"
+    rule: "active-soul-and-psp-to-runtime-soul"
     sources:
+      - "identity/psp/anthony-fan/SOUL-20260530-235550.md"
       - "identity/psp/anthony-fan/PSP-20260530-171725.md"
       - "docs/evidence-sufficiency.md"
   - target: "PROFILE.md"
     rule: "wenxin-to-identity"
     sources:
-      - "identity/wenxin/WENXIN_REPORT.md"
+      - "identity/wenxin/WENXIN-20260530-235550.md"
   - target: "memories/seed.md"
     rule: "long-term-memory-to-user-context"
     sources:
@@ -26,26 +37,22 @@ generated_files:
   - target: "config.yaml"
     rule: "bindings-to-tools + security-to-runtime-policy + integrations-to-runtime-connectors"
     sources:
-      - "skills/bindings/data-sources.yml"
+      - "cognition/skill-bindings/data-sources.yml"
       - "security/permissions.yml"
       - "integrations/data-sources.yml"
   - target: "README.md"
     rule: "evidence-sufficiency-to-profile-readme"
     sources:
       - "docs/evidence-sufficiency.md"
-  - target: "skills/README.md"
-    rule: "runtime-skill-to-runtime-skill"
+  - target: "learning_queue/skill-recommendations.yml"
+    rule: "skill-recommendations-to-backlog"
     sources:
-      - "skills/runtime/"
-  - target: "learning_queue/skill-roadmap.yml"
-    rule: "skill-roadmap-to-backlog"
-    sources:
-      - "skills/recommendations/skill-roadmap.yml"
+      - "identity/wenxin/skill-recommendations.yml"
       - "memory/working-lessons/README.md"
   - target: "learning_queue/working-lessons.README.md"
-    rule: "skill-roadmap-to-backlog"
+    rule: "skill-recommendations-to-backlog"
     sources:
-      - "skills/recommendations/skill-roadmap.yml"
+      - "identity/wenxin/skill-recommendations.yml"
       - "memory/working-lessons/README.md"
   - target: "translation.review.md"
     rule: "skill-guided-review-proposal"
@@ -53,6 +60,10 @@ generated_files:
       - "profile.manifest.yml"
       - "coverage-report.yml"
       - "runtime projection files"
+  - target: "profile.manifest.yml"
+    rule: "lifeos-lifecycle-status-to-runtime-manifest"
+    sources:
+      - "LIFEOS_STATUS.yml"
 
 excluded:
   - path: "identity/psp/*/raw_materials/"

@@ -1,6 +1,6 @@
 # Translation Review Proposal
 
-Translation ID: `anthonyhf-openclaw-20260530-234609`
+Translation ID: `anthonyhf-openclaw-20260531-022906`
 Target runtime: `openclaw`
 Target profile: `output/meta/AnthonyHF.LifeOS/profiles/openclaw/anthonyhf`
 
@@ -41,7 +41,7 @@ This file is a proposal surface for SKILL.md-guided semantic tuning. It must not
 ### AGENTS.md
 
 - Status: `present`
-- Source evidence: `skills/meta/ and security/permissions.yml`
+- Source evidence: `identity/wenxin/skill-summaries/ and security/permissions.yml`
 - Suggested change: Review Agent-workspace operating rules, promotion boundaries, and enforcement wording.
 - Reason: Improve runtime fit without changing the LifeOS source of truth.
 - Risk: May overfit runtime phrasing or weaken evidence boundaries if applied without review.
@@ -59,7 +59,7 @@ This file is a proposal surface for SKILL.md-guided semantic tuning. It must not
 ### TOOLS.md
 
 - Status: `present`
-- Source evidence: `skills/bindings/data-sources.yml and integrations/data-sources.yml`
+- Source evidence: `cognition/skill-bindings/data-sources.yml and integrations/data-sources.yml`
 - Suggested change: Review Connector binding clarity and unsupported connector notes.
 - Reason: Improve runtime fit without changing the LifeOS source of truth.
 - Risk: May overfit runtime phrasing or weaken evidence boundaries if applied without review.

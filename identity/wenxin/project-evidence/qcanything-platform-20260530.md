@@ -71,10 +71,10 @@ QCAnything positions AnthonyHF around AI-native tooling infrastructure rather th
 
 ## Reusable Skill Candidates
 
-- `skills/meta/plugin-runtime-architecture-index.md`
-- `skills/meta/ai-tooling-platform-architecture-index.md`
-- `skills/runtime/backend-api-system-design-index.md`
-- `skills/runtime/json-document-workflow-index.md`
+- `identity/wenxin/skill-summaries/plugin-runtime-architecture-index.md`
+- `identity/wenxin/skill-summaries/ai-tooling-platform-architecture-index.md`
+- `identity/wenxin/skill-recommendations.ymlbackend-api-system-design-index.md`
+- `identity/wenxin/skill-recommendations.ymljson-document-workflow-index.md`
 
 ## Privacy Review
 

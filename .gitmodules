@@ -4,12 +4,6 @@
 [submodule "memory/af-wiki"]
 	path = memory/af-wiki
 	url = https://github.com/HaodiFan/AF-wiki.git
-[submodule "skills/self-evolution/psp"]
-	path = skills/self-evolution/psp
-	url = https://github.com/MetaInFLow/psp-skill.git
-[submodule "skills/self-evolution/wenxin"]
-	path = skills/self-evolution/wenxin
-	url = https://github.com/HaodiFan/wenxin-skill.git
 [submodule "skills/self-evolution/cognitive-alignment"]
 	path = skills/self-evolution/cognitive-alignment
 	url = https://github.com/HaodiFan/cognitive-alignment-skill.git

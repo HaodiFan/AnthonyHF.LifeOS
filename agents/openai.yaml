@@ -1,7 +1,7 @@
 interface:
   display_name: "AnthonyHF"
   short_description: "Anthony Fan 的工程师分身与工作生活入口"
-  default_prompt: "使用 $anthonyhf 读取我的工程师画像和 AF-wiki 上下文，帮我判断下一步。"
+  default_prompt: "使用 $anthonyhf 读取我的工程师画像和 approved memory 上下文，帮我判断下一步。"
 
 policy:
   allow_implicit_invocation: true

@@ -1,0 +1,61 @@
+schema: openlifeos.identity-current.v2
+owner: Anthony Fan
+repo: AnthonyHF.LifeOS
+updated_at: "2026-05-30T23:55:50+08:00"
+policy:
+  canonical_rule: "Runtime profiles read active identity artifacts from this registry; the full latest-artifact view lives in artifacts/current.yml."
+  update_rule: "New Wenxin, PSP, Soul, or design output must be written as a timestamped artifact first, then activated by updating artifacts/current.yml, this registry when identity-related, and the per-artifact versions.yml ledger."
+  raw_material_rule: "Raw ChatGPT exports, Feishu/Miaoji transcripts, external private memory bodies, and drive archives remain outside the public repo."
+active:
+  wenxin:
+    artifact_id: wenxin-20260530-235550
+    current_entrypoint: identity/wenxin/WENXIN_REPORT.md
+    versioned_artifact: identity/wenxin/WENXIN-20260530-235550.md
+    versions_ledger: identity/wenxin/versions.yml
+    changelog: identity/wenxin/changelog.md
+    status: evidence-limited-public-wrapper
+    evidence_sufficiency: insufficient
+    based_on:
+      - identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
+      - identity/wenxin/project-evidence-external-drive-20260530.md
+      - identity/wenxin/project-evidence/
+      - identity/psp/anthony-fan/PSP.md
+  psp:
+    artifact_id: psp-20260530-171725
+    current_entrypoint: identity/psp/anthony-fan/PSP.md
+    versioned_artifact: identity/psp/anthony-fan/PSP-20260530-171725.md
+    versions_ledger: identity/psp/anthony-fan/versions.yml
+    changelog: identity/psp/anthony-fan/changelog.md
+    status: v0.4-chatgpt-export-enriched-scaffold
+    evidence_sufficiency: partial
+    based_on:
+      - identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
+      - source_id:chatgpt_export_2026_05_17
+      - private:/tmp/anthonyhf-psp-feishu/transcripts
+      - owner-approved-summary:chatgpt_export_2026_05_18
+  soul:
+    artifact_id: soul-20260530-235550
+    current_entrypoint: SOUL.md
+    versioned_artifact: identity/psp/anthony-fan/SOUL-20260530-235550.md
+    versions_ledger: identity/psp/anthony-fan/versions.yml
+    changelog: identity/psp/anthony-fan/changelog.md
+    status: v0.1-psp-derived-operating-method
+    evidence_sufficiency: partial
+    based_on:
+      - identity/psp/anthony-fan/PSP-20260530-171725.md
+      - identity/wenxin/WENXIN_REPORT.md
+runtime_projection_inputs:
+  openclaw:
+    profile: profiles/openclaw/anthonyhf/
+    uses:
+      - active.wenxin.versioned_artifact
+      - active.psp.versioned_artifact
+      - active.soul.versioned_artifact
+      - docs/evidence-sufficiency.md
+  hermes:
+    profile: profiles/hermes/anthonyhf/
+    uses:
+      - active.wenxin.versioned_artifact
+      - active.psp.versioned_artifact
+      - active.soul.versioned_artifact
+      - docs/evidence-sufficiency.md

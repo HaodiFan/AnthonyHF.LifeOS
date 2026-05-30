@@ -17,6 +17,6 @@
 - 稳定事实进入 `memory/long-term/` 或私有 memory wiki。
 - 候选经验进入 `memory/working-lessons/`，等待复盘和晋升。
 - 多源归纳的 claim 进入 `memory/distilled-knowledge/`。
-- 可复用步骤进入 `skills/runtime/` 或外部 runtime skill repo。
-- 可复用判断进入 `skills/meta/`。
-- Skill 需要的事实和数据源放在 `skills/bindings/`，不要写死进 `SKILL.md`。
+- 可复用步骤进入 `identity/wenxin/skill-recommendations.yml` 或外部 runtime skill repo。
+- 可复用判断进入 `identity/wenxin/skill-summaries/`。
+- Skill 需要的事实和数据源放在 `cognition/skill-bindings/`，不要写死进 `SKILL.md`。

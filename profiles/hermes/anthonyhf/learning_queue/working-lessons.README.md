@@ -19,5 +19,5 @@ Promotion:
 
 - factual and stable -> `memory/long-term/`;
 - multi-source claim -> `memory/distilled-knowledge/`;
-- repeatable procedure -> `skills/runtime/` proposal;
-- reusable judgment -> `skills/meta/` proposal after IPO Reverse and owner alignment.
+- repeatable procedure -> `identity/wenxin/skill-recommendations.yml` proposal;
+- reusable judgment -> `identity/wenxin/skill-summaries/` proposal after IPO Reverse and owner alignment.

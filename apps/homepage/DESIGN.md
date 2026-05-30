@@ -1,7 +1,7 @@
 ---
 version: beta
 name: AF Flow Console
-description: A GSAP-driven public interface for Anthony Fan's LifeOS showroom, AF-wiki memory, static identity assets, runtime projections, and deployment network.
+description: A GSAP-driven public interface for Anthony Fan's LifeOS showroom, configured memory wiki, static identity assets, runtime projections, and deployment network.
 colors:
   primary: "#F4F1E8"
   secondary: "#A9A49A"
@@ -116,7 +116,7 @@ components:
 
 ## Overview
 
-AF Flow Console is the shared visual language for Anthony Fan's public profile network. It should make the system readable to humans and agents: identity, skills, AF-wiki memory, public boundary, personal assets, runtime projections, and deployment links.
+AF Flow Console is the shared visual language for Anthony Fan's public profile network. It should make the system readable to humans and agents: identity, skills, configured memory wiki, public boundary, personal assets, runtime projections, and deployment links.
 
 The homepage is now a Vite React page using GSAP ScrollTrigger through `apps/homepage/components/ui/story-scroll.tsx`. It should feel like a precise scrollable system poster rather than a generic personal landing page. Visual density is acceptable when it improves routing clarity.
 
@@ -136,7 +136,7 @@ Use Inter for interface text and JetBrains Mono for route labels, counters, file
 
 ## Layout
 
-Use full-viewport story sections. Hero text is unframed; cards are only for repeated nodes, links, and capability blocks. The README cover image should stay visible as a first-viewport signal, while the rest of the page uses personal photos, public project logos, product images, and AF-wiki routing visualizations.
+Use full-viewport story sections. Hero text is unframed; cards are only for repeated nodes, links, and capability blocks. The README cover image should stay visible as a first-viewport signal, while the rest of the page uses personal photos, public project logos, product images, and memory-wiki routing visualizations.
 
 ## Elevation & Depth
 
@@ -155,7 +155,7 @@ Use 4px for small controls and 8px for panels. Avoid large rounded cards unless 
 
 ## Do's and Don'ts
 
-- **Do** link AF-wiki, GitHub Profile, AnthonyHF.LifeOS, OpenClaw/Hermes projections, and app deployments together.
+- **Do** link GitHub Profile, AnthonyHF.LifeOS, configured memory wiki, OpenClaw/Hermes projections, and app deployments together.
 - **Do** make the AI collaboration boundary explicit.
 - **Do** keep useful public static assets in `apps/homepage/public/assets/` with provenance notes.
 - **Don't** publish raw private source material or client-specific details.

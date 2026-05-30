@@ -9,6 +9,7 @@ The `_source-links/` directory contains advisory symlinks back to AnthonyHF.Life
 - `skills/_source-links/root-skill`
 - `skills/_source-links/lifeos-skills`
 - `skills/_source-links/self-evolution`
+- `skills/_source-links/ipo-reverse`
 - `skills/_source-links/engineering-everything`
 - `skills/_source-links/migration-docs`
 

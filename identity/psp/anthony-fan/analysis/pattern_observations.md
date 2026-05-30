@@ -7,7 +7,7 @@
 | ID | 观察 | 证据 | 置信度 |
 | --- | --- | --- | --- |
 | P001 | 当相邻 Skill 会改变仓库身份时，应将其拆出。 | Wenxin 移除指令。 | 中 |
-| P002 | 持久工作/生活上下文应保留在 AF-wiki，而不是复制进根 Skill。 | AF-wiki submodule 指令与 AF-wiki schema。 | 中 |
+| P002 | 持久工作/生活上下文使用配置的 memory wiki；只接收 owner-approved summaries 或当前任务 extract。 | openLifeOS memory policy。 | 中 |
 | P003 | 工程判断应复用 Engineering Everything，而不是在根 Skill 中重写方法论。 | Engineering Everything submodule。 | 中 |
 | P004 | 人物模型缺少素材时，应显式标注缺口，而不是填充“看起来合理”的描述。 | PSP 协议与当前素材不足状态。 | 高 |
 | P005 | 解释复杂 AI 系统时，先找缺失的认知模块：memory、planning、grounding、reasoning、action。 | Cognitive Architecture 文章。 | 中 |
@@ -24,7 +24,7 @@
 | P016 | 对客户交付的注意力会落到客户资料、服务器/权限、验收 criteria、回款 delay、任务阻塞等现实卡点。 | Feishu 项目/交付讨论私有蒸馏。 | 中 |
 | P017 | 执行中会主动压 scope：定义截止点、节点、灰度/公测节奏、宣发先后，而不是一次性追求完美系统。 | Feishu 产品节奏讨论私有蒸馏。 | 中 |
 | P018 | 中文会议口语高频使用“就是、这个、然后、对、OK、可能、其实、先、直接”，节奏是边推理边收敛。 | 13 条 Feishu 妙记语言指纹统计。 | 中 |
-| P019 | 对知识和工作记忆的默认模型是分类、索引、上下文、长期沉淀，而不是一次性文档堆积。 | Feishu onboarding/知识管理讨论 + AF-wiki 结构。 | 中 |
+| P019 | 对知识和工作记忆的默认模型是分类、索引、上下文、长期沉淀，而不是一次性文档堆积。 | Feishu onboarding/知识管理讨论 + openLifeOS memory tiers。 | 中 |
 | P020 | 当团队协作浪费时间时，会直接打断并要求回到文档、表格和事实状态；沟通风格比正式文章更锋利。 | Feishu 项目同步妙记私有蒸馏。 | 中低 |
 | P021 | 把公司理解为 AI-native 杠杆机器：不是“一个人 + 一堆 AI”，而是 skill、SOP、角色、培训和 workflow 的组合。 | ChatGPT export：AI Native 创业公司、年度规划讨论。 | 高 |
 | P022 | 当前身份从“做产品的工程师”推进到“企业自进化系统工程师”。 | ChatGPT export：AI Native 创业公司。 | 中高 |

@@ -47,13 +47,13 @@ Public-safe candidate clusters:
 
 | Cluster | Likely LifeOS Use | Suggested Target |
 | --- | --- | --- |
-| AI data QA / dataset quality tooling | field capability, delivery scope, validation maturity | `identity/wenxin/`, `skills/recommendations/skill-roadmap.yml` |
-| Web agent / browser environment / RL environment tooling | frontier direction, agent/data infrastructure ability | `identity/wenxin/`, `skills/runtime/` proposal |
+| AI data QA / dataset quality tooling | field capability, delivery scope, validation maturity | `identity/wenxin/`, `identity/wenxin/skill-recommendations.yml` |
+| Web agent / browser environment / RL environment tooling | frontier direction, agent/data infrastructure ability | `identity/wenxin/`, `identity/wenxin/skill-recommendations.yml` proposal |
 | Computer-use data pipeline and annotation workflow | data production operating model, AI data workflow position | `identity/wenxin/`, IPO Reverse note |
 | PII / privacy / compliance data pipeline | privacy-aware data engineering capability | `identity/wenxin/`, `security/README.md` |
-| Dataset acquisition / mining / crawler projects | data source strategy, acquisition workflow | `identity/wenxin/`, `skills/runtime/` proposal |
+| Dataset acquisition / mining / crawler projects | data source strategy, acquisition workflow | `identity/wenxin/`, `identity/wenxin/skill-recommendations.yml` proposal |
 | Public homepage / product presentation surfaces | public narrative and productization evidence | `identity/wenxin/`, `apps/homepage/` if public-safe |
-| OCR / book / academic data extraction projects | unstructured data processing capability | `identity/wenxin/`, `skills/recommendations/skill-roadmap.yml` |
+| OCR / book / academic data extraction projects | unstructured data processing capability | `identity/wenxin/`, `identity/wenxin/skill-recommendations.yml` |
 | Marketplace / data product experiments | productization and GTM direction | `identity/wenxin/`, `memory/working-lessons/` |
 
 Rules:

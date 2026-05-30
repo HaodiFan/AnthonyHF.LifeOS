@@ -15,4 +15,4 @@
 - PDF 原文、扫描件、OCR 全文。
 - 带 GPS 元数据或个人隐私风险的照片。
 - 客户品牌素材、会议材料、日志、缓存、构建产物。
-- AF-wiki 私有 source vault 内容。
+- 外部私有 source vault 内容。

@@ -34,22 +34,22 @@ Routing rule: these project signals should primarily feed Wenxin. IPO Reverse is
 
 1. **Data quality and compliance systems**
    - Evidence: DatasetGuard, PII pipeline, QCAnything audit/versioning features.
-   - Candidate LifeOS target: `identity/wenxin/WENXIN_REPORT.md`, then `skills/meta/data-quality-compliance-index.md`.
+   - Candidate LifeOS target: `identity/wenxin/WENXIN_REPORT.md`, then `identity/wenxin/skill-summaries/data-quality-compliance-index.md`.
    - Risk: PII/privacy material can contain sensitive examples; read only architecture and redacted summaries.
 
 2. **Agent/web environment and data generation**
    - Evidence: WebTwin, WebAgentRLEnv, TL_ComputerUseDatasets.
-   - Candidate LifeOS target: `identity/wenxin/WENXIN_REPORT.md`, then `skills/runtime/web-agent-data-pipeline-index.md`.
+   - Candidate LifeOS target: `identity/wenxin/WENXIN_REPORT.md`, then `identity/wenxin/skill-recommendations.ymlweb-agent-data-pipeline-index.md`.
    - Risk: captured website data and generated datasets may include third-party content; do not copy bodies.
 
 3. **Plugin/runtime architecture**
    - Evidence: QCAnything plugin runtime.
-   - Candidate LifeOS target: `identity/wenxin/WENXIN_REPORT.md`, then `skills/meta/plugin-runtime-architecture-index.md`.
+   - Candidate LifeOS target: `identity/wenxin/WENXIN_REPORT.md`, then `identity/wenxin/skill-summaries/plugin-runtime-architecture-index.md`.
    - Risk: runtime manifests can expose local paths or private integration assumptions; summarize only design.
 
 4. **Document/book mining**
    - Evidence: SmartBookMiner.
-   - Candidate LifeOS target: `identity/wenxin/WENXIN_REPORT.md`, then `skills/runtime/document-mining-index.md`.
+   - Candidate LifeOS target: `identity/wenxin/WENXIN_REPORT.md`, then `identity/wenxin/skill-recommendations.ymldocument-mining-index.md`.
    - Risk: extracted source documents may be copyrighted/private; treat bodies as forbidden unless explicitly approved.
 
 5. **Productized AI tooling**
@@ -84,13 +84,13 @@ Project outputs should write first to:
 
 - `identity/wenxin/project-evidence-*.md`
 - `identity/wenxin/WENXIN_REPORT.md`
-- `identity/wenxin/skill-candidates.yml`
+- `identity/wenxin/skill-recommendations.yml`
 
-Only after Wenxin synthesis should reusable procedures move toward `skills/runtime/` or `skills/meta/`.
+Only after Wenxin synthesis should reusable procedures move toward `identity/wenxin/skill-recommendations.yml` or `identity/wenxin/skill-summaries/`.
 
 ## LifeOS Maturity Impact
 
-This first read creates early project evidence but does not yet change maturity from `scaffold`, because no owner-approved synthesis has been promoted into Wenxin, PSP, memory, or skill roadmap.
+This first read creates early project evidence but does not yet change maturity from `scaffold`, because no owner-approved synthesis has been promoted into Wenxin, PSP, memory, or skill recommendations.
 
 Maturity can move to `evidence-limited-v0` after at least one Wenxin project evidence note is written with:
 

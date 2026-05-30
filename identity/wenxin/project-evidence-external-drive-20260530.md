@@ -68,5 +68,5 @@ Each project note should include:
 - capability signal;
 - field-position signal;
 - gap / incompleteness;
-- reusable skill candidates;
+- reusable candidate Skill recommendations;
 - privacy review.
