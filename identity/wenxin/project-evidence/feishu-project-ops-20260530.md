@@ -92,7 +92,7 @@ Feishu project ops evidence strengthens these Wenxin areas:
 
 - Need owner review before treating any customer/project outcome as public claim.
 - Need separate handling for transcripts and AI notes.
-- Need distinguish Anthony-authored reflections from team-authored operational logs.
+- Need distinguish Anthony-authored reflections from team-authored operational logs. Owner clarified that `Hao Daily Notes` are intern materials, so they are team/process evidence, not Anthony PSP evidence.
 - Need avoid exact project/customer identifiers beyond already public or owner-approved names.
 
 ## Suggested Wenxin Update
@@ -107,4 +107,3 @@ Add this capability signal:
 - `skills/runtime/web-agent-data-production-index.md`
 - `skills/meta/delivery-estimation-retrospective-index.md`
 - `skills/meta/data-infra-transfer-and-storage-index.md`
-

@@ -19,7 +19,7 @@
 5. AI Agent 判断稳定使用 context、memory、graph/ontology、workflow、language correction、structured retrieval 等概念。
 6. 对工作记忆的理解是分类、索引、长期沉淀和可路由上下文，而不是一次性总结。
 7. 中文会议语言比正式文章更直接、更口语化，常以“先”“直接”“OK”“对”收敛决策。
-8. 2026-05-30 外部硬盘 Feishu first read 进一步发现 Daily Notes / working notes 类材料包含 done / in-progress / issue / solution / next-plan 执行循环；该证据仍需确认作者和上下文后才能进入稳定 PSP。
+8. 2026-05-30 owner correction：`Hao Daily Notes` 为实习生材料，不能作为 Anthony PSP/person-model 证据；只能作为团队执行、带教、项目运营或流程设计旁证。
 
 ## PSP 影响
 
@@ -32,4 +32,4 @@
 
 这些材料足以提升 Anthony 在工作会议、工程管理、产品/GTM 讨论、AI Agent 判断中的 PSP 置信度；仍不足以推断私人关系、生活场景、高压情绪曲线或完整人格复刻。
 
-新增外部硬盘 Feishu first read 只支持工作执行节奏和问题处理方式的低置信度观察；不支持语言指纹、稳定人格或私人生活推断。
+新增外部硬盘 Feishu first read 中的 `Hao Daily Notes` 已排除出 Anthony PSP。后续只有确认作者为 Anthony 的文字、感悟、反思、纠偏、冲突故事或判断样本，才能进入 PSP 候选证据。
