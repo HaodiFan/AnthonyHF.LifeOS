@@ -51,6 +51,10 @@ Available sources:
   - `identity/wenxin/project-evidence/qcanything-platform-20260530.md`
   - `identity/wenxin/project-evidence/webtwin-20260530.md`
   - `identity/wenxin/project-evidence/computer-use-datasets-20260530.md`
+  - `identity/wenxin/project-evidence/feishu-project-ops-20260530.md`
+- Feishu first read:
+  - `docs/evidence-intake/feishu-first-read-20260530.md`
+  - `identity/psp/anthony-fan/analysis/feishu_writing_first_read_20260530.md`
 
 Unavailable or not yet processed:
 
@@ -58,6 +62,7 @@ Unavailable or not yet processed:
 - Dataset bodies.
 - Customer, contract, Feishu/Lark, financial, credential, private chat, and transcript material.
 - Anthony-authored reflection/writing evidence for PSP.
+- Feishu raw bodies, transcripts, customer examples, credentials, private links, HR/finance/recruiting/contract files.
 
 ## Required Final Disclosure
 

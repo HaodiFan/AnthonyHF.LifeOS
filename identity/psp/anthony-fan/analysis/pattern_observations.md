@@ -34,5 +34,8 @@
 | P026 | UI 结构跟生命周期、scope、对象层级、角色权限和 service blueprint 走。 | ChatGPT export：生命周期与 UI 布局。 | 高 |
 | P027 | 创业复盘不只列产品，还追问交付吞吐、SOP 蒸馏、外部势能、软实力和个人价值点。 | ChatGPT export：GrainedAI 创业经验分析。 | 高 |
 | P028 | ChatGPT 协作语言是高频短指令 + 强纠偏：先定义目标和边界，再持续修正误解。 | ChatGPT export 用户侧统计。 | 中高 |
+| P029 | 工作 notes 倾向用 done / in-progress / issue / solution / next-plan 管理执行，关注具体 failure mode 和下一步修复。 | 外部硬盘 Feishu first read：Daily Notes redacted summary，作者/上下文待确认。 | 低 |
+| P030 | 数据生产和交付中会把问题拆到截图时机、bbox 漂移、脏 OCR、key 判断、磁盘空间、限流、上传/下载速度等可操作变量。 | 外部硬盘 Feishu first read：Daily Notes、WebAgent 生产复盘 redacted summary。 | 中低 |
+| P031 | Feishu 材料常混合正文、代码、凭证上下文、客户/项目记录，进入 PSP 前必须先做 redaction-first summary。 | 外部硬盘 Feishu first read 安全边界。 | 高 |
 
 提升规则：同一观察至少有 3 个独立支撑场景后，才能提升为稳定 PSP pattern。

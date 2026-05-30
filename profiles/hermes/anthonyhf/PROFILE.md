@@ -36,6 +36,7 @@ evidence_sufficiency: insufficient
   - `identity/wenxin/project-evidence/qcanything-platform-20260530.md`
   - `identity/wenxin/project-evidence/webtwin-20260530.md`
   - `identity/wenxin/project-evidence/computer-use-datasets-20260530.md`
+  - `identity/wenxin/project-evidence/feishu-project-ops-20260530.md`
 
 ## 一句话定位 / one-line positioning
 
@@ -63,6 +64,7 @@ Anthony Fan 是以长期工程深度、企业 AI 落地和 AI-native organizatio
 - AI/data tooling platforms
 - Plugin runtime and process-control architecture
 - Web-agent / computer-use data pipeline infrastructure
+- AI data production, QC operations, and delivery retrospectives
 - Public narrative and identity systems
 - Organization and training mechanisms
 

@@ -70,3 +70,27 @@ recommendations:
       - Examples of interface-drift debugging and prompt/tool adaptation.
       - Evidence of completed processing flow, validation rules, and outputs.
     expected_artifacts: skills/runtime/computer-use-data-pipeline-index.md
+  - id: ai-data-qc-operations
+    skill_type: runtime-skill
+    domain: ai-data-production
+    priority: high
+    source: identity/wenxin/project-evidence/feishu-project-ops-20260530.md
+    why: Feishu project ops evidence shows QCAnything productization, WebAgent production repair loops, screenshot/bbox/timing issue handling, operational QC roles, and delivery retrospectives.
+    promotion_gate: owner alignment + privacy review + project retrospective synthesis
+    evidence_needed:
+      - Redacted project retrospectives for QCAnything and WebAgent production.
+      - Failure-mode taxonomy for screenshots, bbox drift, scroll timing, and instruction mismatch.
+      - Public-safe examples of QC workflow design and repair loop outcomes.
+    expected_artifacts: skills/runtime/ai-data-qc-operations-index.md
+  - id: delivery-estimation-retrospective
+    skill_type: distilled-meta-skill
+    domain: delivery-operations
+    priority: medium
+    source: identity/wenxin/project-evidence/feishu-project-ops-20260530.md
+    why: GitHub high-star repo retrospective captures estimation errors around timeline, storage, network throughput, object storage, compression, and delivery risk.
+    promotion_gate: multiple project retrospectives + owner alignment + privacy review
+    evidence_needed:
+      - 2-3 more delivery retrospectives with estimated-vs-actual data.
+      - Redacted lessons on cloud/storage/network limits.
+      - Counterexamples where estimates were correct.
+    expected_artifacts: skills/meta/delivery-estimation-retrospective-index.md

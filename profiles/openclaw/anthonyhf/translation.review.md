@@ -1,6 +1,6 @@
 # Translation Review Proposal
 
-Translation ID: `anthonyhf-openclaw-20260530-232625`
+Translation ID: `anthonyhf-openclaw-20260530-233603`
 Target runtime: `openclaw`
 Target profile: `output/meta/AnthonyHF.LifeOS/profiles/openclaw/anthonyhf`
 
