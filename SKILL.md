@@ -24,7 +24,8 @@ AnthonyHF 是 Anthony Fan 的个人数字分身、公开身份、工程师分身
 9. **openLifeOS 认知对象 / 资料绑定**：当任务涉及把新材料写入 Skill、memory、PSP、公开 profile 或外部资料源时，先读 `cognition/object-taxonomy.yml`、`cognition/data-contracts.yml` 和 `skills/bindings/data-sources.yml`，区分事实、流程、meta 判断、身份模型和资料源。
 10. **证据充分性 / 成熟度**：涉及当前模型成熟度、材料缺口或能否对外声明时，读取 `docs/evidence-sufficiency.md`。
 11. **Runtime profile 翻译**：当需要把 AnthonyHF.LifeOS 翻译成 OpenClaw agent 或 Hermes profile 时，读取 `profiles/<runtime>/anthonyhf/profile.manifest.yml`、`coverage-report.yml` 和 `translation.review.md`；runtime profile 是投影，不是真相源。
-12. **openLifeOS 标准入口**：公开身份先读 `identity/public-profile/profile.yml`；记忆入口先读 `memory/START-HERE.md`；集成入口先读 `integrations/`、`integrations/hermes.yml`、`integrations/data-sources.yml`；能力入口先读 `skills/README.md`。
+12. **跨平台迁移 / 外部资料导入**：当任务涉及迁移到 OpenClaw、Hermes、Codex Skill、AF-wiki、GitHub Pages、其他 LifeOS，或从移动硬盘/本地 archive 导入材料时，先读 `docs/migration/platform-migration-instructions.md`。默认只生成 projection、inventory 或 review proposal，不直接复制原始资料。
+13. **openLifeOS 标准入口**：公开身份先读 `identity/public-profile/profile.yml`；记忆入口先读 `memory/START-HERE.md`；集成入口先读 `integrations/`、`integrations/hermes.yml`、`integrations/data-sources.yml`；能力入口先读 `skills/README.md`。
 
 不要把 AF-wiki 内容复制到本仓库。AF-wiki 是长期事实和记忆的真相源。
 
@@ -40,6 +41,8 @@ AnthonyHF 是 Anthony Fan 的个人数字分身、公开身份、工程师分身
 - **个人分身行为**：读取 `identity/psp/anthony-fan/PSP.md`；如果所需维度被标为不可用或低置信度，必须说明限制。只有错误假设代价高时才要求用户补素材。
 - **材料写入 / Skill 迭代**：先按 `cognition/object-taxonomy.yml` 判断对象类型。事实和偏好进入 AF-wiki 或 memory layer；可复用流程进入 runtime skill；稳定判断和 gate 经过 IPO Reverse 与 owner alignment 后才进入 distilled meta skill；skill 需要读取事实时使用 `skills/bindings/data-sources.yml` 绑定，不把事实硬写进 `SKILL.md`。
 - **Runtime Translation 微调**：先运行 openLifeOS factory 的 `scripts/translate_lifeos.py <this-repo> --runtime openclaw|hermes --emit-review` 生成 baseline，再只读 manifest / coverage / review 文件提出建议稿。不得自动覆盖 canonical LifeOS 文件。
+- **跨平台迁移**：先按 `docs/migration/platform-migration-instructions.md` 判断目标平台。LifeOS 是真相源；OpenClaw/Hermes/Codex Skill/GitHub Pages/AF-wiki/local evidence source 都只能接收安全投影、索引、binding 或建议稿。
+- **移动硬盘 / 本地 archive 导入**：先生成本地私有 inventory，分类后再决定哪些材料可用于 Wenxin、PSP、IPO Reverse、Skill roadmap 或 memory pointer。不得把整盘内容、私密正文或 raw archive 复制进本公开 repo。
 
 ## 边界
 

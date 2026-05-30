@@ -43,3 +43,5 @@ The original stable PSP entrypoint remains `identity/psp/anthony-fan/PSP.md`. A 
 See `docs/migration/source-inventory.yml` for original tracked files, openLifeOS-added files, submodule pointers, and private/external boundaries.
 
 See `docs/migration/information-retention-audit-20260530.md` for the no-loss migration audit.
+
+See `docs/migration/platform-migration-instructions.md` for LifeOS, OpenClaw, Hermes, Codex Skill, AF-wiki, GitHub Pages, and local evidence source migration rules.
