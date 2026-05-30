@@ -1,0 +1,52 @@
+repo_path: .
+repo_name: AnthonyHF.LifeOS
+identity_mode: named
+owner_name: Anthony Fan
+display_name: AnthonyHF
+psp_display_name: Anthony Fan
+person_id: anthony-fan
+language: zh-CN
+process_log_language: zh-CN
+visibility: public
+public_summary: AnthonyHF 的 openLifeOS 已完成 local-only 初始化；个人定位、履历、技能、审美、经历和长期记忆等待 owner-approved evidence 后再生成。
+public_material_policy: private-by-default
+raw_material_policy: never-commit
+github_owner: HaodiFan
+github_configure: true
+github_account_type: unknown
+github_auth_method: gh-oauth
+github_permissions: metadata:read, contents:write
+github_require_gh: true
+github_auth_required: false
+github_create_avatar_repo: false
+github_create_memory_repo: false
+github_token_policy: do-not-store; use gh auth or environment variables
+memory_repo_name: AnthonyHF.wiki
+memory_repo_visibility: private
+memory_repo_path: memory/anthony-fan-wiki
+memory_source_policy: github-private-wiki
+memory_access_policy: private-by-default
+memory_public_mirror: index-only
+memory_collaboration_policy: private-pr-or-owner-approved-extract
+memory_raw_material_policy: never-copy-raw-private-bodies
+memory_allowed_public_exports: approved-facts, redacted-summaries, abstracted-patterns
+wiki_authoritative_source: github
+wiki_sync_modes: github
+wiki_rsync_enabled: false
+wiki_rsync_target: ""
+feishu_configure: false
+feishu_tenant_name: ""
+feishu_app_id: ""
+feishu_app_type: none
+feishu_auth_method: skip
+feishu_permissions: ""
+feishu_source_usage: ""
+feishu_token_policy: not-configured
+hermes_configure: true
+hermes_update_cadence: on-new-evidence
+hermes_source_usage: github-events, feishu-export, wiki-diff, manual-approved-material
+hermes_targets: identity/wenxin, identity/psp, skills/recommendations, memory/index, SKILL.md
+hermes_token_policy: env-only-or-platform-secret
+wenxin_goals: self-understanding, public-positioning, field-map, gap-analysis, future-paths, skill-candidates
+recommended_skill_domains: professional-core, communication, decision-making
+skill_recommendations_source: identity/wenxin/

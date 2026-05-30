@@ -1,0 +1,93 @@
+[
+  {
+    "id": "business_proposal_reverse",
+    "type": "normal",
+    "prompt": "我有一份已经完成的企业 AI 方案，帮我拆解它是怎么做出来的，并沉淀成可复现流程。",
+    "must_include": [
+      "产出物证据图",
+      "隐性认知任务",
+      "方法论竞选",
+      "中间思考资产",
+      "反证",
+      "IPO"
+    ],
+    "must_not_include": [
+      "直接只给步骤清单"
+    ]
+  },
+  {
+    "id": "skill_reverse",
+    "type": "normal",
+    "prompt": "逆推这个 Skill 的设计过程，看看它背后的方法论和中间文档是什么。",
+    "must_include": [
+      "description",
+      "消费者 AI",
+      "渐进加载",
+      "eval",
+      "方法论选择"
+    ],
+    "must_not_include": [
+      "只总结 Skill 内容"
+    ]
+  },
+  {
+    "id": "conversation_to_sop",
+    "type": "normal",
+    "prompt": "从这段销售对话里萃取 SOP，告诉我高手为什么这么问、什么时候推进。",
+    "must_include": [
+      "隐性认知任务",
+      "触发信号",
+      "中间资产",
+      "成功标准",
+      "下游消费"
+    ],
+    "must_not_include": [
+      "只整理话术"
+    ]
+  },
+  {
+    "id": "code_module_reverse",
+    "type": "normal",
+    "prompt": "这个代码模块已经写完了，帮我逆向拆解它的开发过程和关键判断。",
+    "must_include": [
+      "接口设计",
+      "隐含假设",
+      "测试",
+      "失败信号",
+      "证据等级"
+    ],
+    "must_not_include": [
+      "只解释代码功能"
+    ]
+  },
+  {
+    "id": "task_description_only",
+    "type": "edge",
+    "prompt": "帮我拆解一下怎么做一个 landing page。",
+    "expected_behavior": "指出这不是已完成产出物，不能做逆向 IPO；如果用户要正向路径，应转 execution-plan。"
+  },
+  {
+    "id": "no_questions_requested",
+    "type": "edge",
+    "prompt": "别问我，直接基于这份方案主动推演它是怎么做出来的。",
+    "expected_behavior": "主动推演，标注证据等级和假设，不追问用户。"
+  },
+  {
+    "id": "summarize_should_not_trigger",
+    "type": "should_not_trigger",
+    "prompt": "总结一下这份文档的核心要点。",
+    "expected_behavior": "不使用 ipo-reverse；这是总结任务。"
+  },
+  {
+    "id": "quality_review_should_not_trigger",
+    "type": "should_not_trigger",
+    "prompt": "评价这份方案质量好不好，有哪些问题。",
+    "expected_behavior": "不使用 ipo-reverse；这是审查任务。"
+  },
+  {
+    "id": "forward_plan_should_not_trigger",
+    "type": "should_not_trigger",
+    "prompt": "帮我设计一个未来两周的执行计划。",
+    "expected_behavior": "不使用 ipo-reverse；应转 execution-plan。"
+  }
+]

@@ -6,7 +6,7 @@ Skill 分两类：
 
 - 工作型 Skill：写报告、写代码、做项目、做复盘，把想法变成可交付成果。
 - 认知型 Skill：沉淀判断、培训、方法论、组织经验和项目治理方式。
-- 自我更新型 Skill：帮助 AnthonyHF.Skill 更新“我是谁”和“AI 如何理解我”。
+- 自我更新型 Skill：帮助 AnthonyHF.LifeOS 更新“我是谁”和“AI 如何理解我”。
 
 当前已接入：
 
@@ -16,3 +16,10 @@ Skill 分两类：
 - `self-evolution/psp/`：PSP Skill，负责从原始材料中提炼人物模型、语言指纹、冲突故事、分身边界和验证方法。
 
 注意：认知型 Skill 是一个类别，`engineering-everything/` 只是当前已经接入的一个具体例子。未来还可以继续加入公司运营、组织培训、管理机制等其他认知型 Skill。
+
+## Placement Policy
+
+- `skills/runtime/` and `skills/meta/` are instance-local LifeOS capability surfaces by default.
+- Instance-local Skills are not automatically installable Codex Skills.
+- To become installable by Codex, a Skill must be promoted into a standalone skill package or installed into the Codex skills directory, then routed from `matrix.yml` and the relevant root Skill.
+- Existing external capabilities such as `skills/engineering-everything/` and `skills/self-evolution/*` remain submodule pointers or external sources; do not inline private repository bodies into this public showroom.

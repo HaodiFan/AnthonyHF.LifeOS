@@ -1,0 +1,80 @@
+version: 1
+owner: Anthony Fan
+visibility: public
+rule: "memory answers what is true; skill answers how to do it; hybrid input must be split"
+objects:
+  ephemeral_memory:
+    role: current run state and temporary observations
+    default_path: external session log
+    durable: false
+    promote_to: working_lesson
+    forbidden:
+      - stable facts
+      - reusable procedures
+  working_lesson:
+    role: dated candidate lesson with evidence pointers
+    default_path: memory/working-lessons/
+    durable: candidate
+    promote_to:
+      - long_term_memory
+      - distilled_knowledge
+      - runtime_skill_proposal
+    required_fields:
+      - summary
+      - source_ref
+      - confidence
+      - scope
+      - review_status
+  long_term_memory:
+    role: stable declarative fact, preference, decision, or constraint
+    default_path: memory/long-term/
+    durable: true
+    forbidden:
+      - workflow
+      - procedure
+      - script
+  distilled_knowledge:
+    role: compiled claim with evidence, freshness, and contradiction status
+    default_path: memory/distilled-knowledge/
+    durable: true
+    required_fields:
+      - claim
+      - evidence
+      - freshness
+      - contradiction_status
+  runtime_skill:
+    role: repeatable executable procedure
+    default_path: skills/runtime/
+    durable: true
+    forbidden:
+      - user facts
+      - private preferences
+      - raw evidence bodies
+  distilled_meta_skill:
+    role: reusable judgment, routing, methodology, and review gates
+    default_path: skills/meta/
+    durable: true
+  policy_persona:
+    role: behavior boundaries, tone, approvals, and standing orders
+    default_path: identity/ and security/
+    durable: true
+  identity_layer:
+    role: self, user, org, aliases, public profile, and PSP pointers
+    default_path: identity/
+    durable: true
+  data_source:
+    role: connector authority, visibility, token policy, and allowed exports
+    default_path: integrations/data-sources.yml
+    durable: true
+  skill_binding:
+    role: facts, configs, and connectors a skill may read without embedding them
+    default_path: skills/bindings/data-sources.yml
+    durable: true
+split_policy:
+  hybrid_input:
+    fact_part: memory/working-lessons/ or memory/long-term/
+    procedure_part: skills/runtime/ proposal
+    relation: grounds
+  raw_private_material:
+    store: authorized external source
+    repo_surface: pointer or approved summary only

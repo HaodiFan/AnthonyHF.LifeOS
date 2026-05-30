@@ -1,0 +1,48 @@
+version: 1
+owner: Anthony Fan
+default_visibility: public
+authoritative_sources:
+  owner_approved_material:
+    authority: owner
+    allowed_exports:
+      - approved facts
+      - redacted summaries
+      - abstracted patterns
+    forbidden_exports:
+      - secrets
+      - raw private bodies
+      - customer data without approval
+  memory_wiki:
+    config: memory/wiki-repo.yml
+    authority: configured per memory/wiki-repo.yml
+    allowed_exports:
+      - private collaboration notes
+      - area indexes
+      - approved public mirrors
+  hermes:
+    config: integrations/hermes.yml
+    authority: imported evidence only
+    allowed_exports:
+      - session summaries
+      - skill evidence
+      - memory candidates
+  feishu:
+    config: integrations/feishu.yml
+    authority: external app source
+    allowed_exports:
+      - owner-approved extracts
+      - redacted summaries
+  github:
+    config: integrations/github.yml
+    authority: repository state
+    allowed_exports:
+      - public issues and PRs
+      - private repo summaries when authorized
+write_order:
+  - capture pointer or event
+  - classify object type
+  - split declarative and procedural content
+  - apply visibility and authority policy
+  - write to target path
+  - update skill binding if procedure depends on facts
+  - review before public export

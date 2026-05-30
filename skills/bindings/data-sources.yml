@@ -1,0 +1,27 @@
+version: 1
+owner: Anthony Fan
+bindings:
+  default_memory_lookup:
+    purpose: Let skills read stable facts without embedding them.
+    allowed_sources:
+      - memory/long-term/
+      - memory/distilled-knowledge/
+      - memory/wiki-repo.yml
+    forbidden_sources:
+      - raw private files
+      - secrets
+      - unapproved transcripts
+  runtime_skill_evidence:
+    purpose: Let runtime skills produce evidence for promotion.
+    writes_to:
+      - memory/working-lessons/
+      - skills/recommendations/skill-roadmap.yml
+    promotion_gate: IPO Reverse plus owner alignment
+  external_connector_data:
+    purpose: Let skills declare external dependencies.
+    registry: integrations/data-sources.yml
+    token_policy: never store tokens in repo
+split_rule:
+  fact_goes_to: memory/long-term/ or memory/working-lessons/
+  procedure_goes_to: skills/runtime/
+  abstracted_judgment_goes_to: skills/meta/

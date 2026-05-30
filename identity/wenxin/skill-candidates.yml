@@ -1,0 +1,36 @@
+generated_from: identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
+status: active-public-wrapper
+recommendations:
+  - id: engineering-everything
+    skill_type: distilled-meta-skill
+    domain: engineering-judgment
+    priority: high
+    source: skills/engineering-everything
+    why: AnthonyHF.LifeOS already routes engineering, project, architecture, execution, SOP, AI/Agent workflow, and validation tasks through Engineering Everything.
+    promotion_gate: IPO Reverse + owner alignment + privacy review
+    evidence_needed:
+      - 2-5 completed engineering or enterprise AI delivery cases with public-safe summaries.
+      - Repeated judgment principles and review gates.
+      - Failure cases showing when the method should not apply.
+    expected_artifacts: skills/meta/engineering-everything-index.md
+  - id: cognitive-alignment
+    skill_type: distilled-meta-skill
+    domain: self-evolution
+    priority: high
+    source: skills/self-evolution/cognitive-alignment
+    why: AnthonyHF.LifeOS uses cognitive alignment to handle disagreements, owner correction, and Skill iteration.
+    promotion_gate: IPO Reverse + owner alignment + privacy review
+    evidence_needed:
+      - Examples of agent judgment, owner correction, and resulting reusable rule updates.
+      - Privacy-safe retrospectives of alignment failures.
+    expected_artifacts: skills/meta/cognitive-alignment-index.md
+  - id: public-narrative-system
+    skill_type: runtime-skill
+    domain: content-productization
+    priority: medium
+    source: skills/content/public-narrative-system
+    why: AnthonyHF.LifeOS includes public homepage, README narrative, product matrix language, and openLifeOS public story surfaces.
+    promotion_gate: repeated public narrative outputs + owner alignment
+    evidence_needed:
+      - Public posts, product pages, scripts, README iterations, and launch retrospectives.
+    expected_artifacts: skills/runtime/public-narrative-system-index.md

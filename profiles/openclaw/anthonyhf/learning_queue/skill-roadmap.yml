@@ -1,0 +1,37 @@
+generated_from: identity/wenxin/
+status: active-showroom-roadmap
+rule: 当前记录 AnthonyHF.LifeOS 已有公开入口、子模块指针和可继续蒸馏的 Skill 候选；任何升级仍需 IPO Reverse、owner alignment 和 privacy review。
+recommendations:
+  - id: engineering-everything
+    skill_type: distilled-meta-skill
+    domain: engineering-judgment
+    priority: high
+    source: skills/engineering-everything
+    why: AnthonyHF.LifeOS already uses Engineering Everything for engineering, project, architecture, SOP, AI/Agent workflow, and validation judgment.
+    promotion_gate: IPO Reverse + owner alignment
+    evidence_needed:
+      - 2-5 public-safe engineering or enterprise AI delivery cases.
+      - Repeated routing decisions, review gates, and counterexamples.
+      - Validation outcomes showing the method improved execution.
+    expected_artifacts: skills/meta/engineering-everything-index.md
+  - id: cognitive-alignment
+    skill_type: distilled-meta-skill
+    domain: self-evolution
+    priority: high
+    source: skills/self-evolution/cognitive-alignment
+    why: AnthonyHF.LifeOS already uses Cognitive Alignment for owner correction, disagreement review, and Skill iteration.
+    promotion_gate: IPO Reverse + owner alignment
+    evidence_needed:
+      - Privacy-safe examples of disagreement, correction, and reusable rule updates.
+      - Owner-approved summaries of alignment failures and fixes.
+    expected_artifacts: skills/meta/cognitive-alignment-index.md
+  - id: public-narrative-system
+    skill_type: runtime-skill
+    domain: public-narrative
+    priority: medium
+    source: README.md, apps/homepage/src/, apps/homepage/public/assets/, docs/assets/
+    why: The showroom includes a public homepage and narrative surfaces that can be turned into reusable public narrative operations.
+    promotion_gate: repeated output review + owner alignment
+    evidence_needed:
+      - README revisions, homepage launch notes, content scripts, and product narrative retrospectives.
+    expected_artifacts: skills/runtime/public-narrative-system-index.md

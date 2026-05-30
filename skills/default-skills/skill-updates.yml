@@ -1,0 +1,25 @@
+status: configured
+update_policy: owner-reviewed
+rule: 内置 default-skills 可以从 GitHub latest/ref 更新，但必须先生成 diff，并由 owner 确认后再覆盖本地 Skill。
+default_source:
+  provider: github
+  repo: "openLifeOS/default-skills"
+  ref: "latest"
+  path: skills/default-skills
+skills:
+  wenxin:
+    local_path: skills/default-skills/self-evolution/wenxin
+    github_repo: "openLifeOS/wenxin-skill"
+    ref: latest
+    update_mode: owner-reviewed-copy
+  psp:
+    local_path: skills/default-skills/self-evolution/psp
+    github_repo: "openLifeOS/psp-skill"
+    ref: latest
+    update_mode: owner-reviewed-copy
+  ipo-reverse:
+    local_path: skills/default-skills/self-evolution/ipo-reverse
+    github_repo: "openLifeOS/ipo-reverse-skill"
+    ref: latest
+    update_mode: owner-reviewed-copy
+

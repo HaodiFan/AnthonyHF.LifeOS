@@ -1,0 +1,16 @@
+github_owner: HaodiFan
+repository: AnthonyHF.wiki
+visibility: private
+local_path: memory/anthony-fan-wiki
+create_with_gh: false
+authoritative_source: github
+sync_modes: github
+source_policy: private-by-default
+public_mirror: index-only
+allowed_public_exports: approved-facts, redacted-summaries, abstracted-patterns
+private_collaboration: private-pr-or-owner-approved-extract
+raw_material_policy: never-copy-raw-private-bodies
+rsync_enabled: false
+rsync_target: ""
+status: linked
+rule: 链接或摘要长期 wiki；public 层只保留 index/approved-derived 内容，不复制私密正文。如果 authoritative_source 是 server-rsync，则服务器是唯一真源，GitHub 只作为协同或公开镜像。

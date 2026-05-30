@@ -1,0 +1,69 @@
+translation_id: "anthonyhf-hermes-20260530-173932"
+source_lifeos: "/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS"
+target_runtime: "hermes"
+target_profile: "/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS/profiles/hermes/anthonyhf"
+generated_at: "2026-05-30T17:39:32+08:00"
+tuning_policy: "proposal_only"
+review_mode: "proposal-only"
+review_file: "translation.review.md"
+manual_confirmation_required: true
+
+generated_files:
+  - target: "SOUL.md"
+    rule: "psp-to-soul"
+    sources:
+      - "identity/psp/anthony-fan/PSP-20260530-171725.md"
+      - "docs/evidence-sufficiency.md"
+  - target: "PROFILE.md"
+    rule: "wenxin-to-identity"
+    sources:
+      - "identity/wenxin/WENXIN_REPORT.md"
+  - target: "memories/seed.md"
+    rule: "long-term-memory-to-user-context"
+    sources:
+      - "memory/long-term/"
+      - "memory/distilled-knowledge/"
+  - target: "config.yaml"
+    rule: "bindings-to-tools + security-to-runtime-policy + integrations-to-runtime-connectors"
+    sources:
+      - "skills/bindings/data-sources.yml"
+      - "security/permissions.yml"
+      - "integrations/data-sources.yml"
+  - target: "README.md"
+    rule: "evidence-sufficiency-to-profile-readme"
+    sources:
+      - "docs/evidence-sufficiency.md"
+  - target: "skills/README.md"
+    rule: "runtime-skill-to-runtime-skill"
+    sources:
+      - "skills/runtime/"
+  - target: "learning_queue/skill-roadmap.yml"
+    rule: "skill-roadmap-to-backlog"
+    sources:
+      - "skills/recommendations/skill-roadmap.yml"
+      - "memory/working-lessons/README.md"
+  - target: "learning_queue/working-lessons.README.md"
+    rule: "skill-roadmap-to-backlog"
+    sources:
+      - "skills/recommendations/skill-roadmap.yml"
+      - "memory/working-lessons/README.md"
+  - target: "translation.review.md"
+    rule: "skill-guided-review-proposal"
+    sources:
+      - "profile.manifest.yml"
+      - "coverage-report.yml"
+      - "runtime projection files"
+
+excluded:
+  - path: "identity/psp/*/raw_materials/"
+    reason: "raw_private_material"
+  - path: "memory/working-lessons/"
+    reason: "unreviewed_candidate_lessons_not_prompt_injected"
+
+validation:
+  secret_scan: "passed"
+  private_body_scan: "manual_review_required"
+  provenance: "passed"
+  coverage_audit: "passed_with_gaps"
+  tuning_policy: "proposal_only"
+  manual_confirmation_required: "true"

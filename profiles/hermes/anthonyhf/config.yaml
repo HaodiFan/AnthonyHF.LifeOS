@@ -1,0 +1,10 @@
+name: "AnthonyHF"
+description: "LifeOS runtime projection for AnthonyHF"
+lifeos:
+  source: "/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS"
+  visibility: "public"
+  canonical_source: true
+translation:
+  feedback_policy: runtime_logs_to_working_lessons
+  direct_identity_writes: false
+  direct_meta_skill_writes: false

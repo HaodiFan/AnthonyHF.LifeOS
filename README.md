@@ -1,12 +1,12 @@
 <div align="center">
-  <h1>AnthonyHF.Skill</h1>
+  <h1>AnthonyHF.LifeOS</h1>
 
   <p><strong>Anthony Fan 的个人数字分身接口</strong></p>
   <p>29 岁 · 20 年码龄 · 超级工程师 · 工作 / 生活 / 能力的公开入口</p>
   <p>人看它，可以快速理解我是谁；AI 看它，可以知道该读哪些资料、怎么协作、哪些内容不能碰。</p>
 
   <p>
-    <a href="https://haodifan.github.io/AnthonyHF.Skill/">个人主页</a> ·
+    <a href="https://haodifan.github.io/AnthonyHF.LifeOS/">个人主页</a> ·
     <a href="#我是谁">我是谁</a> ·
     <a href="#这个仓库是什么">仓库定位</a> ·
     <a href="#里面有什么">组织结构</a> ·
@@ -16,9 +16,9 @@
   </p>
 
   <p>
-    <a href="https://haodifan.github.io/AnthonyHF.Skill/"><img src="https://img.shields.io/badge/homepage-GitHub%20Pages-111827" alt="GitHub Pages homepage" /></a>
-    <a href="https://github.com/HaodiFan/AnthonyHF.Skill"><img src="https://img.shields.io/badge/repo-public-2EA44F" alt="Repo: public" /></a>
-    <a href="package.json"><img src="https://img.shields.io/badge/homepage-React%20%2B%20GSAP-96F2E5" alt="Homepage built with React and GSAP" /></a>
+    <a href="https://haodifan.github.io/AnthonyHF.LifeOS/"><img src="https://img.shields.io/badge/homepage-GitHub%20Pages-111827" alt="GitHub Pages homepage" /></a>
+    <a href="https://github.com/HaodiFan/AnthonyHF.LifeOS"><img src="https://img.shields.io/badge/repo-public-2EA44F" alt="Repo: public" /></a>
+    <a href="apps/homepage/package.json"><img src="https://img.shields.io/badge/homepage-React%20%2B%20GSAP-96F2E5" alt="Homepage built with React and GSAP" /></a>
     <a href="identity/psp/anthony-fan/PSP.md"><img src="https://img.shields.io/badge/PSP-v0.4-4B8BFF" alt="PSP v0.4" /></a>
     <a href="skills/engineering-everything/engineering-everything/SKILL.md"><img src="https://img.shields.io/badge/skill-Engineering%20Everything-15A36B" alt="Engineering Everything" /></a>
     <a href="skills/self-evolution/cognitive-alignment"><img src="https://img.shields.io/badge/self--evolution-Alignment%20%2B%20PSP%20%2B%20Wenxin-FF9F45" alt="Alignment, PSP and Wenxin self evolution" /></a>
@@ -83,13 +83,14 @@
 
 ## 主页实现
 
-[GitHub Pages 主页](https://haodifan.github.io/AnthonyHF.Skill/) 现在是一个 Vite + React + TypeScript + Tailwind 4 + GSAP ScrollTrigger 应用。
+[GitHub Pages 主页](https://haodifan.github.io/AnthonyHF.LifeOS/) 现在是一个 Vite + React + TypeScript + Tailwind 4 + GSAP ScrollTrigger 应用。
 
 它做三件事：
 
 - 把 `README.md`、`SKILL.md`、`matrix.yml`、`AF-wiki` 这几个核心入口做成可滚动的公开导航。
-- 用 `components/ui/story-scroll.tsx` 承载 GSAP story scroll 动效，并保留 shadcn-compatible 的 `components/ui` 结构。
-- 把来自 `sayhi2anthony` 的公开个人照片、项目 logo、产品图和硬件图整理进 `public/assets/`，避免继续散落在不同页面里。
+- 用 `apps/homepage/components/ui/story-scroll.tsx` 承载 GSAP story scroll 动效，并保留 shadcn-compatible 的 `components/ui` 结构。
+- 把来自 `sayhi2anthony` 的公开个人照片、项目 logo、产品图和硬件图整理进 `apps/homepage/public/assets/`，避免继续散落在不同页面里。
+- `apps/homepage/` 是 public surface，不是身份、记忆或 Skill 的真相源。
 
 ## 里面有什么
 
@@ -164,13 +165,13 @@ Cognitive Alignment、Wenxin 和 PSP 是这个仓库的“自我更新工具”�
 如果只是看公开 README 和公开材料：
 
 ```bash
-git clone https://github.com/HaodiFan/AnthonyHF.Skill.git
+git clone https://github.com/HaodiFan/AnthonyHF.LifeOS.git
 ```
 
 如果你有私有 submodule 的访问权限，可以连同 AF-wiki、Wenxin、PSP 等子仓库一起拉下来：
 
 ```bash
-git clone --recurse-submodules https://github.com/HaodiFan/AnthonyHF.Skill.git
+git clone --recurse-submodules https://github.com/HaodiFan/AnthonyHF.LifeOS.git
 ```
 
 如果已经克隆过：
@@ -196,19 +197,20 @@ git submodule update --init --recursive
 ## 目录结构
 
 ```text
-AnthonyHF.Skill/
-├── src/               # React 首页源码
-├── components/ui/     # shadcn-compatible UI 组件，含 story-scroll.tsx
-├── public/assets/     # 首页使用的公开静态资源
+AnthonyHF.LifeOS/
+├── DELIVERY.md        # 当前 delivery 适配 lifeos / openclaw / hermes / homepage
+├── SKILL.md           # 给 AI 的协作说明
+├── matrix.yml         # 给机器读的结构化索引
 ├── identity/          # 我是谁：问心报告、PSP、公开身份材料
 ├── skills/            # 我会怎么做事，也会怎么更新自己
-│   ├── engineering-everything/ # 工程、项目、架构和执行判断
-│   └── self-evolution/         # Cognitive Alignment、Wenxin 和 PSP，用来自我更新
 ├── memory/            # 我记得什么：AF-wiki，长期工作/生活/知识库
-├── docs/              # 对外展示材料
+├── cognition/         # openLifeOS cognition object 和数据契约
+├── integrations/      # GitHub、Feishu、Hermes 等外部系统边界
+├── profiles/          # OpenClaw / Hermes runtime projection
 ├── security/          # 公开边界和隐私规则
-├── SKILL.md           # 给 AI 的协作说明
-└── matrix.yml         # 给机器读的结构化索引
+├── docs/              # 对外展示材料、迁移报告和 evidence gate
+└── apps/
+    └── homepage/      # React 首页源码和公开静态资源
 ```
 
 ## 公开边界

@@ -1,0 +1,22 @@
+translation_id: "anthonyhf-hermes-20260530-173932"
+target_runtime: "hermes"
+coverage:
+  supported:
+    - "identity.psp -> SOUL.md"
+    - "identity.wenxin -> IDENTITY.md/PROFILE.md"
+    - "runtime_skill -> skills/"
+  partial:
+    - "long_term_memory -> USER.md/memories/seed.md; runtime may not enforce fact provenance"
+    - "distilled_knowledge -> USER.md/memories/knowledge.md; claim freshness is preserved as text"
+    - "distilled_meta_skill -> AGENTS.md/PROFILE.md; runtime may treat rules as advisory"
+    - "skill_binding -> TOOLS.md/config.yaml; runtime may not enforce bindings"
+    - "security.permissions -> policy text/config; runtime enforcement depends on adapter"
+    - "integrations.data_sources -> connector hints; connector availability is runtime-specific"
+    - "evidence_sufficiency -> README.md; no native maturity field assumed"
+  unsupported:
+    - "owner_alignment_promotion_gate; keep in LifeOS and adapter-side review queue"
+    - "tiered_memory_write_enforcement; keep canonical memory isolation in LifeOS"
+  intentionally_excluded:
+    - "raw_materials export; raw private evidence stays in LifeOS"
+    - "working_lessons prompt injection; unreviewed lessons stay in learning_queue"
+    - "skill_roadmap runtime activation; roadmap remains backlog until promoted"
