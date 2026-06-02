@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnthonyHF.LifeOS · LifeOS Catalog</title>
+<style>
+body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC", Arial, sans-serif; background: #f7f8fa; color: #101828; line-height: 1.55; }
+header { background: #17324d; color: #fff; padding: 40px 32px 32px; }
+main, .inner { max-width: 1180px; margin: 0 auto; }
+h1 { margin: 8px 0; font-size: 34px; letter-spacing: 0; }
+.sub { color: rgba(255,255,255,.84); max-width: 900px; }
+nav { position: sticky; top: 0; z-index: 2; background: rgba(255,255,255,.96); border-bottom: 1px solid #e4e7ec; padding: 10px 32px; }
+nav .inner { display: flex; gap: 8px; overflow-x: auto; }
+nav a { color: #344054; text-decoration: none; font-weight: 700; font-size: 13px; padding: 6px 10px; border-radius: 6px; white-space: nowrap; }
+nav a:hover { background: #e7f2f8; color: #0b4a6f; }
+main { padding: 28px 32px 44px; }
+section { margin-bottom: 34px; }
+h2 { margin: 0 0 6px; font-size: 23px; }
+.lead { margin: 0 0 16px; color: #667085; font-size: 14px; }
+.panel { background: #fff; border: 1px solid #d9e1ea; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(15,23,42,.04), 0 6px 18px rgba(15,23,42,.06); }
+.snapshot { display: grid; grid-template-columns: minmax(180px, 1.1fr) minmax(250px, 1.35fr) minmax(210px, 1fr) minmax(260px, 1.35fr); }
+.row { display: contents; }
+.cell { border-top: 1px solid #edf1f5; padding: 12px 14px; font-size: 13.5px; }
+.head .cell { border-top: 0; background: #eef4f8; color: #344054; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .02em; }
+.field { font-weight: 800; color: #182230; }
+.value { color: #101828; }
+.source { color: #475467; }
+.status { color: #667085; }
+.status.ready { color: #067647; font-weight: 700; }
+.status.partial { color: #b54708; font-weight: 700; }
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.card { background: #fff; border: 1px solid #e4e7ec; border-radius: 8px; padding: 17px 18px; box-shadow: 0 1px 2px rgba(15,23,42,.04), 0 4px 14px rgba(15,23,42,.05); }
+.card h3 { margin: 0 0 7px; font-size: 16px; }
+.card p { margin: 0; color: #344054; font-size: 13.5px; }
+code { font-family: "SF Mono", Menlo, Consolas, monospace; background: #eef2f7; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+@media (max-width: 760px) {
+  .snapshot { display: block; }
+  .row { display: block; border-top: 1px solid #edf1f5; padding: 10px 0; }
+  .row.head { display: none; }
+  .row:first-child { border-top: 0; }
+  .cell { display: block; border-top: 0; padding: 3px 14px; }
+  .field::before { content: "字段："; color: #667085; font-weight: 600; }
+  .value::before { content: "当前值："; color: #667085; font-weight: 600; }
+  .status::before { content: "状态："; color: #667085; font-weight: 600; }
+  .source::before { content: "来源："; color: #667085; font-weight: 600; }
+}
+</style>
+</head>
+<body>
+<header><div class="inner"><div>LifeOS Catalog</div><h1>AnthonyHF.LifeOS</h1><p class="sub">这是 AnthonyHF 数字人的用户入口。它先回答“我能知道 AnthonyHF 的哪些信息”，再列出每项信息的证据状态和来源；机器真源仍是 <code>artifacts/current.yml</code>、<code>identity/current.yml</code> 和 <code>LIFEOS_STATUS.yml</code>。</p></div></header>
+<nav><div class="inner"><a href="#avatar">Avatar</a><a href="#reports">Reports</a><a href="#runtime">Runtime</a><a href="#capabilities">Capabilities</a><a href="#os">OS</a></div></nav>
+<main>
+<section id="avatar">
+  <h2>Avatar Snapshot</h2>
+  <p class="lead">这张表是普通用户最应该先看的地方：哪些已经有证据，哪些只是局部可用，哪些不能被当成完整人格复刻。</p>
+  <div class="panel snapshot">
+    <div class="row head"><div class="cell">字段</div><div class="cell">当前值</div><div class="cell">状态</div><div class="cell">来源 / 生成者</div></div>
+    <div class="row"><div class="cell field">姓名 / 显示名</div><div class="cell value">Anthony Fan</div><div class="cell status ready">已设置</div><div class="cell source"><code>identity/avatar-description/current.yml</code></div></div>
+    <div class="row"><div class="cell field">数字人年龄</div><div class="cell value">61 天 · 约 2 个月</div><div class="cell status ready">从创建时间计算</div><div class="cell source"><code>LIFEOS_STATUS.yml</code> 的 <code>created_at</code> / <code>updated_at</code></div></div>
+    <div class="row"><div class="cell field">生命周期阶段</div><div class="cell value">Stage 8 · Meta Skill Formation</div><div class="cell status ready">已有稳定能力沉淀</div><div class="cell source"><code>doctor_avatar_repo.py</code>；证据在 <code>capabilities/</code></div></div>
+    <div class="row"><div class="cell field">内容成熟度</div><div class="cell value">evidence-limited-v0</div><div class="cell status partial">结构完整，证据仍有限</div><div class="cell source"><code>docs/evidence-sufficiency.md</code></div></div>
+    <div class="row"><div class="cell field">一句话定位</div><div class="cell value">以长期工程深度、企业 AI 落地和 AI-native organization 构建为主线的连续创业 CTO。</div><div class="cell status partial">证据有限但可公开表达</div><div class="cell source"><code>identity/avatar-description/current.yml</code> / <code>identity/wenxin/WENXIN_REPORT.html</code></div></div>
+    <div class="row"><div class="cell field">当前公开角色</div><div class="cell value">AnthonyHF.LifeOS owner、连续创业 CTO、企业 AI 系统构建者、openLifeOS 样板间 owner。</div><div class="cell status partial">公开层可用</div><div class="cell source"><code>identity/avatar-description/current.yml</code></div></div>
+    <div class="row"><div class="cell field">MBTI / 认知倾向</div><div class="cell value">未固定成 MBTI 标签；可用的是 PSP 里的认知地基、注意力筛选和类比域。</div><div class="cell status partial">from PSP / Wenxin，不作为唯一人格标签</div><div class="cell source"><code>identity/psp/anthony-fan/PSP.md</code> 的认知层；<code>identity/wenxin/WENXIN_REPORT.html</code></div></div>
+    <div class="row"><div class="cell field">履历 / 时间线</div><div class="cell value">公开履历覆盖 2007-2026；包含早期编程、UIUC ECE、NVIDIA Tegra SoC、企业 AI 落地、GrainedAI、MetaInflow。</div><div class="cell status partial">可公开骨架，仍需原始证据持续补强</div><div class="cell source"><code>identity/psp/anthony-fan/PSP.md</code> / <code>identity/wenxin/WENXIN_REPORT.html</code></div></div>
+    <div class="row"><div class="cell field">能力地图</div><div class="cell value">稳定能力：Engineering Everything；候选能力：AI data QC / delivery ops、agent runtime architecture。</div><div class="cell status ready">已有稳定能力 + 候选能力</div><div class="cell source"><code>capabilities/index.md</code> / <code>identity/wenxin/skill-recommendations.yml</code></div></div>
+    <div class="row"><div class="cell field">判断模型 / 行为边界</div><div class="cell value">可支持公开身份介绍、工程师分身路由、工作会议风格、产品/GTM 判断、AI-native 公司构建判断。</div><div class="cell status partial">PSP v0.4，不能当作完整人格复刻</div><div class="cell source"><code>identity/psp/anthony-fan/PSP.md</code> / <code>SOUL.md</code></div></div>
+    <div class="row"><div class="cell field">语言指纹</div><div class="cell value">已有正式英文写作、中文工作会议、ChatGPT 用户侧短指令统计；缺真人对人私下聊天语料。</div><div class="cell status partial">工作/公开表达可参考，不能生产级 impersonation</div><div class="cell source"><code>identity/psp/anthony-fan/analysis/linguistic_fingerprint.json</code> / <code>PSP.md</code></div></div>
+    <div class="row"><div class="cell field">作品 / 产出</div><div class="cell value">当前页面模型、homepage/app 相关工作、公开报告和 LifeOS 结构产物。</div><div class="cell status partial">持续增长中</div><div class="cell source"><code>work/</code> / <code>docs/avatar-page-information-architecture.md</code></div></div>
+    <div class="row"><div class="cell field">稳定能力</div><div class="cell value">Engineering Everything 已进入 <code>capabilities/</code>；Publication / public narrative 为已有能力面但证据仍需继续 review。</div><div class="cell status ready">至少一个稳定能力已沉淀</div><div class="cell source"><code>capabilities/engineering-everything/SKILL.md</code></div></div>
+  </div>
+</section>
+
+<section id="reports">
+  <h2>Core Reports</h2>
+  <p class="lead">Wenxin 负责“我是谁、我强在哪、我往哪走”；PSP 负责“我如何判断、如何表达、如何被 AI 运行”。</p>
+  <div class="grid">
+    <article class="card"><h3>当前分身描述</h3><p><code>identity/avatar-description/current.yml</code><br>产品和 runtime 读取的压缩入口，包含 one-line、当前公开角色、strengths、boundaries 和 evidence refs。</p></article>
+    <article class="card"><h3>Wenxin</h3><p><code>identity/wenxin/WENXIN_REPORT.html</code><br><code>identity/wenxin/WENXIN_REPORT.xml</code><br>当前是 evidence-limited public wrapper，用于公开定位、能力范围、未来路径和候选能力。</p></article>
+    <article class="card"><h3>PSP</h3><p><code>identity/psp/anthony-fan/PSP.html</code><br><code>identity/psp/anthony-fan/PSP.md</code><br>当前 PSP v0.4 可用于工作/公开场景，不支持完整私人生活人格复刻。</p></article>
+    <article class="card"><h3>Soul / Design</h3><p><code>SOUL.md</code><br><code>DESIGN.md</code><br>处事方法、行为边界、表达偏好和设计判断入口。</p></article>
+  </div>
+</section>
+
+<section id="runtime">
+  <h2>Runtime Flow</h2>
+  <p class="lead">AnthonyHF 的能力来源仍然是 session 和 runtime 经验，稳定后才进入 capabilities。</p>
+  <div class="grid">
+    <article class="card"><h3>材料代谢</h3><p><code>metabolism/inbox/</code> → <code>metabolism/processing/</code> → <code>metabolism/extracted/</code><br>外部 drive、Feishu first read 和项目 evidence 先进入这里。</p></article>
+    <article class="card"><h3>活动现场</h3><p><code>runtime/sessions/</code><br><code>runtime/runtime-skills/</code><br><code>runtime/runtime-lessons/</code><br>用于记录真实任务、局部能力和 lesson。</p></article>
+    <article class="card"><h3>能力沉淀</h3><p><code>evolution/ipo/</code> → <code>capabilities/</code><br>Engineering Everything 已沉淀；候选能力仍需 IPO Reverse 和 owner alignment。</p></article>
+  </div>
+</section>
+
+<section id="capabilities">
+  <h2>Capabilities</h2>
+  <p class="lead">这里放已经能被路由、复用和验证的稳定能力，不放 self-evolution 生产系统。</p>
+  <div class="grid">
+    <article class="card"><h3>Engineering Everything</h3><p><code>capabilities/engineering-everything/SKILL.md</code><br>工程、产品、组织、流程、交付、研究、复盘或 Skill 沉淀任务的构建型判断入口。</p></article>
+    <article class="card"><h3>候选能力</h3><p><code>identity/wenxin/skill-recommendations.yml</code><br>AI data QC / delivery ops 与 agent runtime architecture 仍处于推荐或假设阶段。</p></article>
+    <article class="card"><h3>场景身份</h3><p><code>identities/index.md</code><br>定义 AnthonyHF 能在什么场景下出现、代表什么、什么时候需要 owner 确认。</p></article>
+  </div>
+</section>
+
+<section id="os">
+  <h2>OS Layer</h2>
+  <p class="lead">系统治理、机器入口、证据边界和页面模型。</p>
+  <div class="grid">
+    <article class="card"><h3>Registries</h3><p><code>artifacts/current.yml</code><br><code>identity/current.yml</code><br><code>matrix.yml</code><br>当前 Wenxin、PSP、Soul、Design、maturity 的 machine-readable 指针。</p></article>
+    <article class="card"><h3>Evidence / Security</h3><p><code>docs/evidence-sufficiency.md</code><br><code>security/permissions.yml</code><br><code>integrations/data-sources.yml</code><br>说明哪些结论可公开、哪些资料不可进入 repo。</p></article>
+    <article class="card"><h3>Avatar Page</h3><p><code>docs/avatar-page-information-architecture.md</code><br><code>work/avatar-page/view-model.yml</code><br>第三人称数字人页面的信息架构和结构化展示模型。</p></article>
+  </div>
+</section>
+</main>
+</body>
+</html>
