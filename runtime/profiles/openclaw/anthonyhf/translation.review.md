@@ -1,0 +1,70 @@
+# Translation Review Proposal
+
+Translation ID: `anthonyhf-openclaw-20260531-022906`
+Target runtime: `openclaw`
+Target profile: `output/meta/AnthonyHF.LifeOS/runtime/profiles/openclaw/anthonyhf`
+
+This file is a proposal surface for SKILL.md-guided semantic tuning. It must not be applied automatically.
+
+## Tuning Policy
+
+- Mode: `proposal_only`.
+- The deterministic script output is the baseline.
+- A Skill or agent may propose edits to runtime projection files, but must not overwrite canonical LifeOS files.
+- Manual confirmation or an explicit apply command is required before proposed changes are applied.
+
+## Immutable Fields
+
+- `profile.manifest.yml` source paths, rules, validation results, and timestamps.
+- `coverage-report.yml` coverage status and generated audit categories.
+- Secret scan and private body scan results.
+- Canonical LifeOS identity, memory, skill, security, and integration files.
+
+## Allowed Proposal Areas
+
+- Runtime voice and structure in `SOUL.md`.
+- Behavior-rule organization in `AGENTS.md` or `PROFILE.md`.
+- Summary ordering in `USER.md` or `memories/seed.md`.
+- Adapter backlog notes for partial or unsupported coverage.
+
+## Suggested Review Items
+
+### SOUL.md
+
+- Status: `present`
+- Source evidence: `identity/psp/*/PSP-*.md`
+- Suggested change: Review Runtime voice, section order, boundary wording, and clarity of source limitations.
+- Reason: Improve runtime fit without changing the LifeOS source of truth.
+- Risk: May overfit runtime phrasing or weaken evidence boundaries if applied without review.
+- Coverage impact: Advisory only; update adapter backlog if a feature remains partial or unsupported.
+
+### AGENTS.md
+
+- Status: `present`
+- Source evidence: `identity/wenxin/skill-summaries/ and security/permissions.yml`
+- Suggested change: Review Agent-workspace operating rules, promotion boundaries, and enforcement wording.
+- Reason: Improve runtime fit without changing the LifeOS source of truth.
+- Risk: May overfit runtime phrasing or weaken evidence boundaries if applied without review.
+- Coverage impact: Advisory only; update adapter backlog if a feature remains partial or unsupported.
+
+### USER.md
+
+- Status: `present`
+- Source evidence: `identity/memories/long-term/ and capabilities/memory/distilled-knowledge/`
+- Suggested change: Review Stable fact ordering, preference grouping, and claim readability.
+- Reason: Improve runtime fit without changing the LifeOS source of truth.
+- Risk: May overfit runtime phrasing or weaken evidence boundaries if applied without review.
+- Coverage impact: Advisory only; update adapter backlog if a feature remains partial or unsupported.
+
+### TOOLS.md
+
+- Status: `present`
+- Source evidence: `identity/cognition/skill-bindings/data-sources.yml and integrations/data-sources.yml`
+- Suggested change: Review Connector binding clarity and unsupported connector notes.
+- Reason: Improve runtime fit without changing the LifeOS source of truth.
+- Risk: May overfit runtime phrasing or weaken evidence boundaries if applied without review.
+- Coverage impact: Advisory only; update adapter backlog if a feature remains partial or unsupported.
+
+## Proposal Patch
+
+No patch has been applied. Add human-reviewed diff notes here if runtime files need tuning.

@@ -4,9 +4,9 @@
 
 当前说明：
 
-- 完整 Wenxin Skill 已安装在 `skills/self-evolution/wenxin/`。
-- 完整 PSP Skill 已安装在 `skills/self-evolution/psp/`。
-- 完整 IPO Reverse Skill 已安装在 `skills/self-evolution/ipo-reverse/`。
-- 不要在 `integrations/skill-sources/default-skills/` 下放同名 Skill 副本；真实 Skill 必须放在 `skills/<skill-id>/SKILL.md`。
+- 完整 Wenxin Skill 已安装在 `evolution/organ-systems/wenxin/`。
+- 完整 PSP Skill 已安装在 `evolution/organ-systems/psp/`。
+- 完整 IPO Reverse Skill 已安装在 `evolution/organ-systems/ipo-reverse/`。
+- 不要在 `integrations/skill-sources/default-skills/` 下放同名 Skill 副本；runtime skill 放在 `runtime/runtime-skills/<skill-id>/manifest.yml` 或外部 repo，稳定能力放在 `capabilities/<capability-id>/SKILL.md`。
 
-用户自己的 runtime skill 或 distilled meta skill 默认进入 `skills/`。
+用户自己的 runtime skill 默认进入 `runtime/runtime-skills/`；distilled meta skill 默认进入 `capabilities/`。

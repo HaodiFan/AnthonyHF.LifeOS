@@ -1,0 +1,1804 @@
+schema: openlifeos.file-role-inventory.v1
+generated_at: '2026-06-02'
+repo: AnthonyHF.LifeOS
+purpose: File-level audit of current schema role; not a truth source.
+entries:
+- path: .gitignore
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: .gitmodules
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: DELIVERY.md
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: DESIGN.md
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: LIFEOS-CATALOG.html
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: LIFEOS_STATUS.yml
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: README.md
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: SKILL.md
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: SOUL.md
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: artifacts/README.md
+  layer: artifacts
+  class: artifact-registry
+  role: latest/current artifact registry or artifact documentation
+  source: schema-inferred
+- path: artifacts/current.yml
+  layer: artifacts
+  class: artifact-registry
+  role: latest/current artifact registry or artifact documentation
+  source: schema-inferred
+- path: capabilities/README.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/README.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/SKILL.md
+  layer: capabilities
+  class: capability-entrypoint
+  role: stable capability executable entrypoint
+  source: schema-inferred
+- path: capabilities/engineering-everything/SKILLS-CATALOG.html
+  layer: capabilities
+  class: capability-catalog
+  role: capability-specific HTML catalog
+  source: schema-inferred
+- path: capabilities/engineering-everything/agents/openai.yaml
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/data/review_roles.yaml
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/data/routes.yaml
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/data/validation_commands.yaml
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/agent-operating-standards.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/architecture-cases-ai.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/architecture-cases.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/checklists.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/code-review-standards.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/engineering-scenario-map.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/engineering-scenarios.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/execution-pipeline.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/inheriting-projects.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/lessons.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/memory-bank-guide.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/patterns-skill.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/project-blueprints.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/prompts-guide.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/psps-framework.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/refactoring-rules.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/scenario-playbooks.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/spec-templates.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/stage-playbook.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/templates-core.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/templates-governance.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/references/templates-specs.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/schemas/lesson.schema.json
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/schemas/pattern.schema.json
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/scripts/install.py
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/scripts/lesson.py
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/engineering-everything/scripts/skill_doctor.py
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/index.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/memory/distilled-knowledge/README.md
+  layer: capabilities
+  class: capability-memory
+  role: capability-level memory, distilled knowledge, or evidence support
+  source: schema-inferred
+- path: capabilities/publication/public-narrative-system/SKILL.md
+  layer: capabilities
+  class: capability-entrypoint
+  role: stable capability executable entrypoint
+  source: schema-inferred
+- path: capabilities/publication/public-narrative-system/SKILLS-CATALOG.html
+  layer: capabilities
+  class: capability-catalog
+  role: capability-specific HTML catalog
+  source: schema-inferred
+- path: capabilities/publication/public-narrative-system/references/channels/rednote.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/publication/public-narrative-system/references/humanizer-zh-adapter.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/publication/public-narrative-system/references/lessons.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/publication/public-narrative-system/references/psp-voice-adapter.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: capabilities/publication/public-narrative-system/references/publication-repo-map.md
+  layer: capabilities
+  class: capability-internal-reference
+  role: capability-owned reference, data, schema, script, or support document
+  source: schema-inferred
+- path: docs/README.md
+  layer: docs
+  class: governance-doc
+  role: human-facing governance, review, status, or policy doc
+  source: schema-inferred
+- path: docs/assets/anthonyhf-readme-cover.png
+  layer: docs
+  class: documentation-asset
+  role: documentation visual asset
+  source: schema-inferred
+  duplicate_policy: documentation asset also used by app
+- path: docs/avatar-description-eval.md
+  layer: docs
+  class: governance-doc
+  role: human-facing governance, review, status, or policy doc
+  source: schema-inferred
+- path: docs/avatar-page-information-architecture.md
+  layer: docs
+  class: avatar-page-ia
+  role: third-person avatar page information architecture
+  source: schema-inferred
+- path: docs/evidence-sufficiency.md
+  layer: docs
+  class: governance-doc
+  role: human-facing governance, review, status, or policy doc
+  source: schema-inferred
+- path: docs/file-role-inventory.yml
+  layer: docs
+  class: file-role-inventory
+  role: generated file-level role audit
+  source: schema-inferred
+- path: docs/file-structure-policy.md
+  layer: docs
+  class: governance-doc
+  role: human-facing governance, review, status, or policy doc
+  source: schema-inferred
+- path: docs/layer-file-review.md
+  layer: docs
+  class: layer-file-review
+  role: generated layer-level role review
+  source: schema-inferred
+- path: docs/lifeos-content-review.md
+  layer: docs
+  class: governance-doc
+  role: human-facing governance, review, status, or policy doc
+  source: schema-inferred
+- path: docs/migration/anthonyhf-skill-import-report.md
+  layer: docs
+  class: migration-doc
+  role: migration instruction, source inventory, or retention audit
+  source: schema-inferred
+- path: docs/migration/information-retention-audit-20260530.md
+  layer: docs
+  class: migration-doc
+  role: migration instruction, source inventory, or retention audit
+  source: schema-inferred
+- path: docs/migration/platform-migration-instructions.md
+  layer: docs
+  class: migration-doc
+  role: migration instruction, source inventory, or retention audit
+  source: schema-inferred
+- path: docs/migration/source-inventory.yml
+  layer: docs
+  class: migration-doc
+  role: migration instruction, source inventory, or retention audit
+  source: schema-inferred
+- path: docs/schema-trim-completion-audit.md
+  layer: docs
+  class: governance-doc
+  role: human-facing governance, review, status, or policy doc
+  source: schema-inferred
+- path: docs/self-evolution-output-standards.md
+  layer: docs
+  class: governance-doc
+  role: human-facing governance, review, status, or policy doc
+  source: schema-inferred
+- path: docs/skill-system/runtime-skill-candidates.md
+  layer: docs
+  class: skill-system-doc
+  role: runtime skill candidate or skill-system documentation
+  source: schema-inferred
+- path: docs/user-guide.md
+  layer: docs
+  class: governance-doc
+  role: user-facing guide for what to read and what information each entry provides
+  source: schema-inferred
+- path: evolution/README.md
+  layer: evolution
+  class: evolution-support
+  role: evolution layer index or support file
+  source: schema-inferred
+- path: evolution/alignment/README.md
+  layer: evolution
+  class: evolution-alignment
+  role: owner alignment and cognitive-alignment process support
+  source: schema-inferred
+- path: evolution/index.md
+  layer: evolution
+  class: evolution-support
+  role: evolution layer index or support file
+  source: schema-inferred
+- path: evolution/ipo/README.md
+  layer: evolution
+  class: evolution-ipo
+  role: IPO evolution process index or artifact
+  source: schema-inferred
+- path: evolution/ipo/index.md
+  layer: evolution
+  class: evolution-ipo
+  role: IPO evolution process index or artifact
+  source: schema-inferred
+- path: evolution/mutations/README.md
+  layer: evolution
+  class: evolution-mutation
+  role: mutation proposal, changelog, or support index
+  source: schema-inferred
+- path: evolution/organ-systems/cognitive-alignment/SKILL.md
+  layer: evolution
+  class: organ-system-entrypoint
+  role: self-evolution organ-system Skill entrypoint
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/.openlifeos-skill-source.yml
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/LICENSE
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/README.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/SKILL.md
+  layer: evolution
+  class: organ-system-entrypoint
+  role: self-evolution organ-system Skill entrypoint
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/evals/evals.json
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/examples/business-proposal-reverse.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/examples/conversation-to-sop.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/examples/skill-reverse.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/ipo-reverse-spec.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/ipo-reverse-v2-upgrade-spec.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/references/active-inference-rules.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/references/evidence-ladder.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/references/ipo-output-template.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/references/methodology-map.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/references/middle-layer-artifacts.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/ipo-reverse/references/questioning-strategies.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/.gitignore
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/.openlifeos-skill-source.yml
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/LICENSE
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+  duplicate_policy: vendored organ-system license copy
+- path: evolution/organ-systems/psp/README.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/SKILL.md
+  layer: evolution
+  class: organ-system-entrypoint
+  role: self-evolution organ-system Skill entrypoint
+  source: schema-inferred
+- path: evolution/organ-systems/psp/references/PSP_v2.1_full.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/references/anti_blunting_rules.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/references/extraction_protocol.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/references/scoring_rules.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/references/system_prompt_structure.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/scripts/blind_eval_prep.py
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/scripts/consistency_scan.py
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/scripts/extract_fingerprint.py
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/scripts/init_person.sh
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/templates/PSP_template.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/templates/anti_blunting_template.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/templates/judgment_test_template.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/templates/system_prompt_template.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/psp/templates/validation_report_template.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/.gitignore
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/.openlifeos-skill-source.yml
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/LICENSE
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+  duplicate_policy: vendored organ-system license copy
+- path: evolution/organ-systems/wenxin/README.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/SKILL.md
+  layer: evolution
+  class: organ-system-entrypoint
+  role: self-evolution organ-system Skill entrypoint
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/assets/output_template.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/bp_reconstruction.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/coverage_assessment.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/domain_question_banks/README.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/domain_question_banks/_template.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/domain_question_banks/ecommerce.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/integration_with_web_design.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/knowledge_probes/README.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/knowledge_probes/_template.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/knowledge_probes/gpu_soc_architecture.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/mbti_assessment.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/methodology_sources.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/questionnaire_bank.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/reference_person_matching.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/update_logic.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/references/wenxin_report_protocol.md
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/scripts/compare_versions.py
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: evolution/organ-systems/wenxin/scripts/generate_questionnaire.py
+  layer: evolution
+  class: organ-system-internal
+  role: self-evolution organ-system reference, template, script, example, eval, or
+    license
+  source: schema-inferred
+- path: identities/README.md
+  layer: identities
+  class: identity-projection
+  role: social/work identity projection index or support file
+  source: schema-inferred
+- path: identities/index.md
+  layer: identities
+  class: identity-projection
+  role: social/work identity projection index or support file
+  source: schema-inferred
+- path: identity/README.md
+  layer: identity
+  class: identity-support
+  role: identity layer index, registry, or support artifact
+  source: schema-inferred
+- path: identity/avatar-description/README.md
+  layer: identity
+  class: identity-avatar-description
+  role: product-facing avatar identity description and version ledger
+  source: schema-inferred
+- path: identity/avatar-description/changelog.md
+  layer: identity
+  class: identity-avatar-description
+  role: product-facing avatar identity description and version ledger
+  source: schema-inferred
+- path: identity/avatar-description/current.yml
+  layer: identity
+  class: identity-avatar-description
+  role: product-facing avatar identity description and version ledger
+  source: schema-inferred
+- path: identity/avatar-description/versions.yml
+  layer: identity
+  class: identity-avatar-description
+  role: product-facing avatar identity description and version ledger
+  source: schema-inferred
+- path: identity/cognition/README.md
+  layer: identity
+  class: identity-cognition-contract
+  role: cognition object taxonomy, data contract, or source binding
+  source: schema-inferred
+- path: identity/cognition/data-contracts.yml
+  layer: identity
+  class: identity-cognition-contract
+  role: cognition object taxonomy, data contract, or source binding
+  source: schema-inferred
+- path: identity/cognition/object-taxonomy.yml
+  layer: identity
+  class: identity-cognition-contract
+  role: cognition object taxonomy, data contract, or source binding
+  source: schema-inferred
+- path: identity/cognition/skill-bindings/README.md
+  layer: identity
+  class: identity-cognition-contract
+  role: cognition object taxonomy, data contract, or source binding
+  source: schema-inferred
+- path: identity/cognition/skill-bindings/data-sources.yml
+  layer: identity
+  class: identity-cognition-contract
+  role: cognition object taxonomy, data contract, or source binding
+  source: schema-inferred
+- path: identity/current.yml
+  layer: identity
+  class: identity-support
+  role: identity layer index, registry, or support artifact
+  source: schema-inferred
+- path: identity/design/DESIGN-20260530-235550.md
+  layer: identity
+  class: identity-design
+  role: global design/aesthetic artifact and version ledger
+  source: schema-inferred
+- path: identity/design/README.md
+  layer: identity
+  class: identity-design
+  role: global design/aesthetic artifact and version ledger
+  source: schema-inferred
+- path: identity/design/changelog.md
+  layer: identity
+  class: identity-design
+  role: global design/aesthetic artifact and version ledger
+  source: schema-inferred
+- path: identity/design/versions.yml
+  layer: identity
+  class: identity-design
+  role: global design/aesthetic artifact and version ledger
+  source: schema-inferred
+- path: identity/memories/README.md
+  layer: identity
+  class: identity-memory
+  role: long-term self-knowledge boundary, approved memory index, or external wiki
+    pointer
+  source: schema-inferred
+- path: identity/memories/START-HERE.md
+  layer: identity
+  class: identity-memory
+  role: long-term self-knowledge boundary, approved memory index, or external wiki
+    pointer
+  source: schema-inferred
+- path: identity/memories/long-term/README.md
+  layer: identity
+  class: identity-memory
+  role: long-term self-knowledge boundary, approved memory index, or external wiki
+    pointer
+  source: schema-inferred
+- path: identity/memories/wiki-repo.yml
+  layer: identity
+  class: identity-memory
+  role: long-term self-knowledge boundary, approved memory index, or external wiki
+    pointer
+  source: schema-inferred
+- path: identity/psp/README.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/INITIALIZATION.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/PSP-00000000-openlifeos.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/PSP-20260530-171725.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/PSP.html
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/PSP.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/PSP.xml
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/SOUL-20260530-235550.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/analysis/README.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/analysis/conflict_stories.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/analysis/feishu_private_evidence_summary.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/analysis/feishu_writing_first_read_20260530.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/analysis/linguistic_fingerprint.json
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/analysis/pattern_observations.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/changelog.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/current.yml
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/raw_materials/README.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/raw_materials/chat_logs/.gitkeep
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+  duplicate_policy: placeholder duplicate
+- path: identity/psp/anthony-fan/raw_materials/emails/.gitkeep
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+  duplicate_policy: placeholder duplicate
+- path: identity/psp/anthony-fan/raw_materials/interviews/.gitkeep
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+  duplicate_policy: placeholder duplicate
+- path: identity/psp/anthony-fan/raw_materials/meta.json
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/raw_materials/speeches/.gitkeep
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+  duplicate_policy: placeholder duplicate
+- path: identity/psp/anthony-fan/system_prompt.txt
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/update-log-20260530-171725.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/validation/test_samples/ai_outputs/.gitkeep
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+  duplicate_policy: placeholder duplicate
+- path: identity/psp/anthony-fan/validation/test_samples/human_samples/.gitkeep
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+  duplicate_policy: placeholder duplicate
+- path: identity/psp/anthony-fan/validation/validation_report.md
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/psp/anthony-fan/versions.yml
+  layer: identity
+  class: identity-person-model
+  role: PSP/person-model artifact, version, evidence summary, validation, or support
+    file
+  source: schema-inferred
+- path: identity/public-profile/README.md
+  layer: identity
+  class: identity-public-profile
+  role: public identity profile and public-safe biography data
+  source: schema-inferred
+- path: identity/public-profile/profile.yml
+  layer: identity
+  class: identity-public-profile
+  role: public identity profile and public-safe biography data
+  source: schema-inferred
+- path: identity/soul/README.md
+  layer: identity
+  class: identity-soul
+  role: Soul operating-principle layer support file
+  source: schema-inferred
+- path: identity/wenxin/README.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/WENXIN-20260530-235550.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/WENXIN_REPORT.html
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/WENXIN_REPORT.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/WENXIN_REPORT.xml
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/changelog.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/project-evidence-external-drive-20260530.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/project-evidence/README.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/project-evidence/computer-use-datasets-20260530.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/project-evidence/feishu-project-ops-20260530.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/project-evidence/qcanything-platform-20260530.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/project-evidence/webtwin-20260530.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/public-positioning.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/skill-recommendations.yml
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/skill-summaries/README.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/skill-summaries/engineering-everything.md
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/versions.yml
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
+  layer: identity
+  class: identity-wenxin
+  role: Wenxin identity artifact, public positioning, evidence packet, or recommendation
+  source: schema-inferred
+- path: integrations/README.md
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: integrations/agents/openai.yaml
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: integrations/data-sources.yml
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: integrations/feishu.yml
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: integrations/github.yml
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: integrations/hermes-sync-log.md
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: integrations/hermes.yml
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: integrations/skill-sources/default-skills/README.md
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: integrations/skill-sources/default-skills/self-evolution.md
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: integrations/skill-sources/default-skills/skill-updates.yml
+  layer: integrations
+  class: integration-config
+  role: external system, runtime sync, data source, or skill-source binding
+  source: schema-inferred
+- path: legacy/build-output/README.md
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/README.md
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/hardware/jetson-orin.png
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/hardware/jetson-xavier-clean.png
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/index-BnLsZEj6.js
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/index-uaf-mR80.css
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/logos/grainedai-logo-clean.png
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/logos/grainedai.svg
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/logos/metainflow-logo.png
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/logos/metainflow.svg
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/logos/nvidia-logo-clean.png
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/logos/nvidia.svg
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/logos/shellprobe-logo.jpg
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/logos/snapanthony-logo.png
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/personal/anthonyhf-readme-cover.png
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/personal/selfie.jpg
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/products/shellprobe-product.jpg
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/assets/products/snapanthony-product.png
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+  duplicate_policy: legacy duplicate not part of current schema
+- path: legacy/build-output/homepage-dist-20260602/dist/index.html
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/docs-v1/folder-structure.md
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/migration-reports/0002_lifeos_schema_v2.json
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/migration-reports/0003_lifeos_schema_v2_refine_living_fs.json
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/navigation-v1/life/README.md
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/navigation-v1/system/README.md
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/scripts/update_default_skills.py
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/skills-v1/README.md
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: legacy/skills-v1/SKILLS-CATALOG.html
+  layer: legacy
+  class: legacy-archive
+  role: v1/v1.5 historical, generated, or unclassified material kept out of current
+    schema
+  source: schema-inferred
+- path: matrix.yml
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: metabolism/extracted/README.md
+  layer: metabolism
+  class: metabolism-extracted
+  role: digested/extracted material placeholder or index
+  source: schema-inferred
+- path: metabolism/inbox/README.md
+  layer: metabolism
+  class: metabolism-inbox
+  role: raw-material intake index or public-safe entrypoint
+  source: schema-inferred
+- path: metabolism/inbox/index.md
+  layer: metabolism
+  class: metabolism-inbox
+  role: raw-material intake index or public-safe entrypoint
+  source: schema-inferred
+- path: metabolism/processing/README.md
+  layer: metabolism
+  class: metabolism-processing
+  role: material processing, evidence-intake, review, or extraction state
+  source: schema-inferred
+- path: metabolism/processing/evidence-intake/README.md
+  layer: metabolism
+  class: metabolism-processing
+  role: material processing, evidence-intake, review, or extraction state
+  source: schema-inferred
+- path: metabolism/processing/evidence-intake/external-drive-afelite-20260530.md
+  layer: metabolism
+  class: metabolism-processing
+  role: material processing, evidence-intake, review, or extraction state
+  source: schema-inferred
+- path: metabolism/processing/evidence-intake/external-drive-next-pass-20260530.md
+  layer: metabolism
+  class: metabolism-processing
+  role: material processing, evidence-intake, review, or extraction state
+  source: schema-inferred
+- path: metabolism/processing/evidence-intake/external-drive-project-first-read-20260530.md
+  layer: metabolism
+  class: metabolism-processing
+  role: material processing, evidence-intake, review, or extraction state
+  source: schema-inferred
+- path: metabolism/processing/evidence-intake/feishu-first-read-20260530.md
+  layer: metabolism
+  class: metabolism-processing
+  role: material processing, evidence-intake, review, or extraction state
+  source: schema-inferred
+- path: replicateme.yml
+  layer: root
+  class: root-entrypoint
+  role: root control, human entrypoint, or machine-readable root index
+  source: schema-inferred
+- path: runtime/README.md
+  layer: runtime
+  class: runtime-support
+  role: runtime layer index or support file
+  source: schema-inferred
+- path: runtime/index.md
+  layer: runtime
+  class: runtime-support
+  role: runtime layer index or support file
+  source: schema-inferred
+- path: runtime/memory/working-lessons/README.md
+  layer: runtime
+  class: runtime-memory
+  role: session context, working lesson, or runtime memory support
+  source: schema-inferred
+- path: runtime/profiles/hermes/anthonyhf/PROFILE.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/hermes/anthonyhf/README.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/hermes/anthonyhf/SOUL.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+  duplicate_policy: allowed runtime projection duplicate
+- path: runtime/profiles/hermes/anthonyhf/config.yaml
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/hermes/anthonyhf/coverage-report.yml
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/hermes/anthonyhf/learning_queue/skill-recommendations.yml
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/hermes/anthonyhf/learning_queue/working-lessons.README.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/hermes/anthonyhf/memories/seed.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+  duplicate_policy: allowed runtime projection duplicate
+- path: runtime/profiles/hermes/anthonyhf/profile.manifest.yml
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/hermes/anthonyhf/translation.review.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/AGENTS.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/IDENTITY.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/README.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/SOUL.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+  duplicate_policy: allowed runtime projection duplicate
+- path: runtime/profiles/openclaw/anthonyhf/TOOLS.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/USER.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+  duplicate_policy: allowed runtime projection duplicate
+- path: runtime/profiles/openclaw/anthonyhf/coverage-report.yml
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/learning_queue/skill-recommendations.yml
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/learning_queue/working-lessons.README.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/profile.manifest.yml
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/skills/_source-links.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/skills/anthonyhf-root/SKILL.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/skills/engineering-everything/SKILL.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/skills/openlifeos-migration/SKILL.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/skills/self-evolution/cognitive-alignment/SKILL.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/skills/self-evolution/ipo-reverse/SKILL.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/skills/self-evolution/psp/SKILL.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/skills/self-evolution/wenxin/SKILL.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/profiles/openclaw/anthonyhf/translation.review.md
+  layer: runtime
+  class: runtime-projection
+  role: runtime projection/profile for external agent platform
+  source: schema-inferred
+- path: runtime/runtime-lessons/README.md
+  layer: runtime
+  class: runtime-lesson
+  role: local runtime lesson or lesson index
+  source: schema-inferred
+- path: runtime/runtime-lessons/index.md
+  layer: runtime
+  class: runtime-lesson
+  role: local runtime lesson or lesson index
+  source: schema-inferred
+- path: runtime/runtime-profile/README.md
+  layer: runtime
+  class: runtime-local-profile
+  role: local runtime context/profile placeholder; not an external projection and
+    not a personality truth source
+  source: schema-inferred
+- path: runtime/runtime-skills/README.md
+  layer: runtime
+  class: runtime-skill
+  role: temporary or bound runtime skill, manifest, projection, or support file
+  source: schema-inferred
+- path: runtime/runtime-skills/index.md
+  layer: runtime
+  class: runtime-skill
+  role: temporary or bound runtime skill, manifest, projection, or support file
+  source: schema-inferred
+- path: runtime/runtime-skills/snapaf/README.md
+  layer: runtime
+  class: runtime-skill
+  role: temporary or bound runtime skill, manifest, projection, or support file
+  source: schema-inferred
+- path: runtime/runtime-skills/snapaf/manifest.yml
+  layer: runtime
+  class: runtime-skill
+  role: temporary or bound runtime skill, manifest, projection, or support file
+  source: schema-inferred
+- path: runtime/sessions/README.md
+  layer: runtime
+  class: runtime-session
+  role: runtime session record, index, output, observation, or artifact
+  source: schema-inferred
+- path: runtime/sessions/index.md
+  layer: runtime
+  class: runtime-session
+  role: runtime session record, index, output, observation, or artifact
+  source: schema-inferred
+- path: security/README.md
+  layer: security
+  class: security-policy
+  role: privacy, permission, public boundary, or security policy
+  source: schema-inferred
+- path: security/permissions.yml
+  layer: security
+  class: security-policy
+  role: privacy, permission, public boundary, or security policy
+  source: schema-inferred
+- path: work/README.md
+  layer: work
+  class: work-support
+  role: work layer index, project, report, publication, or support file
+  source: schema-inferred
+- path: work/apps/homepage/DESIGN.md
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/components.json
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/components/ui/story-scroll.tsx
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/index.html
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/lib/utils.ts
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/package-lock.json
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/package.json
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/public/assets/README.md
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/public/assets/hardware/jetson-orin.png
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/hardware/jetson-xavier-clean.png
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/logos/grainedai-logo-clean.png
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/logos/grainedai.svg
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/logos/metainflow-logo.png
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/logos/metainflow.svg
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/logos/nvidia-logo-clean.png
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/logos/nvidia.svg
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/personal/anthonyhf-readme-cover.png
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/personal/selfie.jpg
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/shared/shellprobe.jpg
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/public/assets/shared/snapanthony.png
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+  duplicate_policy: current source asset duplicated only by legacy build output
+- path: work/apps/homepage/src/App.tsx
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/src/index.css
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/src/main.tsx
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/src/vite-env.d.ts
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/tsconfig.app.json
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/tsconfig.json
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/tsconfig.node.json
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/apps/homepage/vite.config.ts
+  layer: work
+  class: work-homepage-app
+  role: homepage app source, public-safe asset, config, or package metadata
+  source: schema-inferred
+- path: work/avatar-page/view-model.yml
+  layer: work
+  class: work-avatar-page
+  role: third-person avatar page view model or presentation artifact
+  source: schema-inferred
+- path: work/index.md
+  layer: work
+  class: work-support
+  role: work layer index, project, report, publication, or support file
+  source: schema-inferred

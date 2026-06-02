@@ -1,0 +1,83 @@
+{
+  "schema_version": "v2",
+  "revision": "0002_lifeos_schema_v2",
+  "moves": [
+    {
+      "from": "agents",
+      "to": "integrations/agents"
+    },
+    {
+      "from": "apps",
+      "to": "work/apps"
+    },
+    {
+      "from": "profiles",
+      "to": "runtime/profiles"
+    },
+    {
+      "from": "scripts",
+      "to": "legacy/scripts"
+    },
+    {
+      "from": "design",
+      "to": "identity/design"
+    },
+    {
+      "from": "life",
+      "to": "legacy/navigation-v1/life"
+    },
+    {
+      "from": "system",
+      "to": "legacy/navigation-v1/system"
+    }
+  ],
+  "rewrites": [
+    "README.md",
+    ".gitignore",
+    "DELIVERY.md",
+    "SKILL.md",
+    "matrix.yml",
+    "DESIGN.md",
+    "artifacts/current.yml",
+    "identity/current.yml",
+    "docs/lifeos-content-review.md",
+    "docs/README.md",
+    "docs/self-evolution-output-standards.md",
+    "docs/folder-structure.md",
+    "work/README.md",
+    "work/index.md",
+    "identity/design/DESIGN-20260530-235550.md",
+    "identity/design/changelog.md",
+    "identity/design/versions.yml",
+    "identity/avatar-description/current.yml",
+    "identity/wenxin/project-evidence/computer-use-datasets-20260530.md",
+    "runtime/sessions/README.md",
+    "runtime/profiles/openclaw/anthonyhf/translation.review.md",
+    "runtime/profiles/openclaw/anthonyhf/profile.manifest.yml",
+    "runtime/profiles/hermes/anthonyhf/translation.review.md",
+    "runtime/profiles/hermes/anthonyhf/profile.manifest.yml",
+    "legacy/navigation-v1/system/README.md",
+    "metabolism/processing/evidence-intake/external-drive-next-pass-20260530.md",
+    "docs/migration/information-retention-audit-20260530.md",
+    "docs/migration/source-inventory.yml",
+    "docs/migration/anthonyhf-skill-import-report.md",
+    "docs/migration/platform-migration-instructions.md",
+    "work/apps/homepage/DESIGN.md",
+    "capabilities/engineering-everything/README.md",
+    "capabilities/engineering-everything/references/spec-templates.md",
+    "capabilities/engineering-everything/references/prompts-guide.md",
+    "capabilities/engineering-everything/references/checklists.md",
+    "capabilities/engineering-everything/references/engineering-scenarios.md",
+    "capabilities/engineering-everything/references/memory-bank-guide.md",
+    "capabilities/engineering-everything/references/templates-core.md",
+    "capabilities/engineering-everything/references/templates-governance.md",
+    "capabilities/engineering-everything/references/templates-specs.md",
+    "capabilities/engineering-everything/references/stage-playbook.md",
+    "capabilities/engineering-everything/references/project-blueprints.md",
+    "capabilities/engineering-everything/references/inheriting-projects.md",
+    "capabilities/engineering-everything/references/architecture-cases.md",
+    "capabilities/engineering-everything/agents/openai.yaml",
+    "capabilities/engineering-everything/data/validation_commands.yaml"
+  ],
+  "status_updated": true
+}

@@ -1,7 +1,8 @@
 schema: openlifeos.lifecycle-status.v1
 repo: AnthonyHF.LifeOS
 owner: Anthony Fan
-updated_at: "2026-05-31T00:00:00+08:00"
+created_at: "2026-04-02T00:00:00+08:00"
+updated_at: "2026-06-02T00:00:00+08:00"
 lifecycle:
   mode: development
   meaning:
@@ -18,7 +19,7 @@ source_policy:
       uploadable: true
       active_sources:
         - id: engineering-everything
-          canonical: skills/engineering-everything/SKILL.md
+          canonical: capabilities/engineering-everything/SKILL.md
           summary: identity/wenxin/skill-summaries/engineering-everything.md
           source_mode: submodule
           upload_target: https://github.com/HaodiFan/engineering-everything.git
@@ -28,7 +29,7 @@ source_policy:
       uploadable: false
       target_sources:
         - id: engineering-everything
-          canonical: skills/engineering-everything/SKILL.md
+          canonical: capabilities/engineering-everything/SKILL.md
           summary: identity/wenxin/skill-summaries/engineering-everything.md
           source_mode: release-archive
           release_source: https://github.com/HaodiFan/engineering-everything/releases/latest
@@ -47,3 +48,5 @@ release_gate:
     - resolve_meta_skill_sources_to_release_archive
     - regenerate_openclaw_profile
     - regenerate_hermes_profile
+lifeos_schema: v2
+schema_revision: 0003_lifeos_schema_v2_refine_living_fs

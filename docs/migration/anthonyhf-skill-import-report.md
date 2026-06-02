@@ -11,22 +11,22 @@ This output repo is the openLifeOS showroom instance derived from `HaodiFan/Anth
 
 ## Preserved Source Surfaces
 
-- GitHub Pages / Vite / React homepage source moved from the original repo root into `apps/homepage/`, including `src/`, `components/`, `public/assets/`, `package.json`, `package-lock.json`, and `vite.config.ts`.
-- Original root surfaces: `README.md`, `DESIGN.md`, `SKILL.md`, `matrix.yml`, `agents/openai.yaml`.
+- GitHub Pages / Vite / React homepage source moved from the original repo root into `work/apps/homepage/`, including `src/`, `components/`, `public/assets/`, `package.json`, `package-lock.json`, and `vite.config.ts`.
+- Original root surfaces: `README.md`, `DESIGN.md`, `SKILL.md`, `matrix.yml`, `integrations/agents/openai.yaml`.
 - Identity artifacts: `identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf`, `identity/psp/anthony-fan/PSP.md`, PSP analysis and validation files.
-- External skill/source pointers: `skills/engineering-everything`, `skills/self-evolution/psp`, `skills/self-evolution/wenxin`, `skills/self-evolution/ipo-reverse`, `skills/self-evolution/cognitive-alignment`.
+- External skill/source pointers: `capabilities/engineering-everything`, `evolution/organ-systems/psp`, `evolution/organ-systems/wenxin`, `evolution/organ-systems/ipo-reverse`, `evolution/organ-systems/cognitive-alignment`.
 
 ## Added openLifeOS Layers
 
 - Root delivery manifest: `DELIVERY.md`, declaring `lifeos`, `openclaw`, `hermes`, and `homepage` targets.
 - Canonical root structure: root now keeps LifeOS identity, memory, skills, cognition, integrations, security, docs, and runtime projections.
-- Public surface app: original Vite/React homepage is preserved under `apps/homepage/` so frontend dependencies and static assets do not compete with canonical LifeOS files at root.
-- Cognition contracts: `cognition/object-taxonomy.yml`, `cognition/data-contracts.yml`.
-- Memory tiers: `memory/working-lessons/`, `memory/long-term/`, `memory/distilled-knowledge/`.
-- Skill taxonomy surfaces: `identity/wenxin/skill-recommendations.yml`, `identity/wenxin/skill-summaries/`, `cognition/skill-bindings/`, `integrations/skill-sources/default-skills/`.
+- Public surface app: original Vite/React homepage is preserved under `work/apps/homepage/` so frontend dependencies and static assets do not compete with canonical LifeOS files at root.
+- Cognition contracts: `identity/cognition/object-taxonomy.yml`, `identity/cognition/data-contracts.yml`.
+- Memory tiers: `runtime/memory/working-lessons/`, `identity/memories/long-term/`, `capabilities/memory/distilled-knowledge/`.
+- Skill taxonomy surfaces: `identity/wenxin/skill-recommendations.yml`, `identity/wenxin/skill-summaries/`, `identity/cognition/skill-bindings/`, `integrations/skill-sources/default-skills/`.
 - Integration contracts: `integrations/data-sources.yml`, `integrations/github.yml`, `integrations/feishu.yml`, `integrations/hermes.yml`.
 - Evidence and output gates: `docs/evidence-sufficiency.md`, `docs/self-evolution-output-standards.md`.
-- Runtime projections: `profiles/openclaw/anthonyhf/`, `profiles/hermes/anthonyhf/`.
+- Runtime projections: `runtime/profiles/openclaw/anthonyhf/`, `runtime/profiles/hermes/anthonyhf/`.
 
 ## PSP Mirror
 

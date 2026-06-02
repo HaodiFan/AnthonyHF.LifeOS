@@ -12,7 +12,7 @@ Visibility: `public-safe-summary`
 - `Code/screenshot-pc-version/TL_ComputerUseDatasets/modules/bilibili/TASK_DISPATCH_DESIGN.md`
 - `Code/screenshot-pc-version/TL_ComputerUseDatasets/BAIDU_SEARCH_ISSUE_ANALYSIS.md`
 
-Only README/design/issue-analysis material was read. No scraped data, downloaded media, dataset body, platform credential, private task output, or source implementation body was copied into LifeOS.
+Only README/identity/design/issue-analysis material was read. No scraped data, downloaded media, dataset body, platform credential, private task output, or source implementation body was copied into LifeOS.
 
 ## Project Purpose
 

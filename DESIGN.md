@@ -1,6 +1,6 @@
 # Design · AnthonyHF
 
-Current artifact: `design/DESIGN-20260530-235550.md`
+Current artifact: `identity/design/DESIGN-20260530-235550.md`
 
 This is the active global aesthetics entrypoint for AnthonyHF.LifeOS.
 
@@ -19,7 +19,7 @@ This is the active global aesthetics entrypoint for AnthonyHF.LifeOS.
 - Prefer direct product/person signals over decorative explanation.
 - Preserve the existing GitHub Pages/Vite homepage as the human-facing public surface.
 - Do not infer a complete long-term taste profile from repo structure alone.
-- Treat project-level design choices in `apps/homepage/` as local evidence until owner review promotes them to global preference.
+- Treat project-level design choices in `work/apps/homepage/` as local evidence until owner review promotes them to global preference.
 
 ## What It Cannot Do Yet
 
@@ -29,4 +29,4 @@ This is the active global aesthetics entrypoint for AnthonyHF.LifeOS.
 
 ## Update Rule
 
-Write `design/DESIGN-<timestamp>.md` first, then update this file, `design/versions.yml`, `design/changelog.md`, and `artifacts/current.yml` together.
+Write `identity/design/DESIGN-<timestamp>.md` first, then update this file, `identity/design/versions.yml`, `identity/design/changelog.md`, and `artifacts/current.yml` together.

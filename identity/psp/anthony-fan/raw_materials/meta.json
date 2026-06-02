@@ -55,7 +55,7 @@
     {
       "id": "engineering-everything-skill",
       "type": "skill_artifact",
-      "path": "skills/engineering-everything/SKILL.md",
+      "path": "capabilities/engineering-everything/SKILL.md",
       "performance_coefficient": 0.8,
       "linkage_type": "complete",
       "use": "工程方法论与执行路由。"

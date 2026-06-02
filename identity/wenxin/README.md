@@ -16,7 +16,7 @@
 
 问心 Skill 的源仓库现在作为自我更新工具接入在：
 
-- `skills/self-evolution/wenxin/`
+- `evolution/organ-systems/wenxin/`
 
 当需要重新整理 Anthony 的公开定位、履历叙事或个人 BP 时，先读这个 Skill，再决定是否更新本目录下的公开产物。
 

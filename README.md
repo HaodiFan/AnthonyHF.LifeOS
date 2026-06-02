@@ -11,6 +11,7 @@
     <a href="#这个仓库是什么">仓库定位</a> ·
     <a href="#里面有什么">组织结构</a> ·
     <a href="#怎么使用">使用方法</a> ·
+    <a href="docs/user-guide.md">用户说明书</a> ·
     <a href="SKILL.md">Agent 协议</a> ·
     <a href="matrix.yml">机器索引</a>
   </p>
@@ -18,11 +19,11 @@
   <p>
     <a href="https://haodifan.github.io/AnthonyHF.LifeOS/"><img src="https://img.shields.io/badge/homepage-GitHub%20Pages-111827" alt="GitHub Pages homepage" /></a>
     <a href="https://github.com/HaodiFan/AnthonyHF.LifeOS"><img src="https://img.shields.io/badge/repo-public-2EA44F" alt="Repo: public" /></a>
-    <a href="apps/homepage/package.json"><img src="https://img.shields.io/badge/homepage-React%20%2B%20GSAP-96F2E5" alt="Homepage built with React and GSAP" /></a>
+    <a href="work/apps/homepage/package.json"><img src="https://img.shields.io/badge/homepage-React%20%2B%20GSAP-96F2E5" alt="Homepage built with React and GSAP" /></a>
     <a href="identity/psp/anthony-fan/PSP.md"><img src="https://img.shields.io/badge/PSP-v0.4-4B8BFF" alt="PSP v0.4" /></a>
     <a href="identity/wenxin/skill-summaries/engineering-everything.md"><img src="https://img.shields.io/badge/meta-Engineering%20Everything-15A36B" alt="Engineering Everything meta skill" /></a>
-    <a href="skills/self-evolution/cognitive-alignment"><img src="https://img.shields.io/badge/self--evolution-Alignment%20%2B%20PSP%20%2B%20Wenxin-FF9F45" alt="Alignment, PSP and Wenxin self evolution" /></a>
-    <a href="memory/wiki-repo.yml"><img src="https://img.shields.io/badge/memory-AF--wiki-6D5DF6" alt="AF-wiki memory wiki" /></a>
+    <a href="evolution/organ-systems/cognitive-alignment"><img src="https://img.shields.io/badge/self--evolution-Alignment%20%2B%20PSP%20%2B%20Wenxin-FF9F45" alt="Alignment, PSP and Wenxin self evolution" /></a>
+    <a href="identity/memories/wiki-repo.yml"><img src="https://img.shields.io/badge/memory-AF--wiki-6D5DF6" alt="AF-wiki memory wiki" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111827" alt="MIT License" /></a>
   </p>
 </div>
@@ -65,9 +66,9 @@
 
 - [问心报告：连续创业的苦行僧](identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf)
 - [PSP · Anthony Fan](identity/psp/anthony-fan/PSP.md)
-- [Cognitive Alignment Skill](skills/self-evolution/cognitive-alignment)：帮 AI 在任务中讲出自己的评判，和我的认知对齐；出现分歧时复盘并迭代 skill。
-- [Wenxin Skill](skills/self-evolution/wenxin)：帮我把经历整理成对外定位、履历叙事和公开表达。
-- [PSP Skill](skills/self-evolution/psp)：帮我把真实材料提炼成数字分身能使用的人物模型。
+- [Cognitive Alignment Skill](evolution/organ-systems/cognitive-alignment)：帮 AI 在任务中讲出自己的评判，和我的认知对齐；出现分歧时复盘并迭代 skill。
+- [Wenxin Skill](evolution/organ-systems/wenxin)：帮我把经历整理成对外定位、履历叙事和公开表达。
+- [PSP Skill](evolution/organ-systems/psp)：帮我把真实材料提炼成数字分身能使用的人物模型。
 
 ## 这个仓库是什么
 
@@ -81,6 +82,10 @@
 
 简单说，这里承载的是我的“工作/生活数字分身”的入口。
 
+如果要把这个 LifeOS 做成一个具体的第三人称数字人页面，不应该再新建一份根目录说明书。页面模型在 [docs/avatar-page-information-architecture.md](/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS/docs/avatar-page-information-architecture.md)，实际展示用的 view model 在 [work/avatar-page/view-model.yml](/Users/anthonyf/projects/metainflow/openLifeOS/output/meta/AnthonyHF.LifeOS/work/avatar-page/view-model.yml)。它们消费 `identity/`、`runtime/`、`capabilities/` 等产物，不替代这些真相源。
+
+如果只是想知道“我应该看什么、能得到什么”，直接读 [用户说明书](docs/user-guide.md)。
+
 ## 主页实现
 
 [GitHub Pages 主页](https://haodifan.github.io/AnthonyHF.LifeOS/) 现在是一个 Vite + React + TypeScript + Tailwind 4 + GSAP ScrollTrigger 应用。
@@ -88,21 +93,40 @@
 它做三件事：
 
 - 把 `README.md`、`SKILL.md`、`matrix.yml` 和 approved memory tiers 这几个核心入口做成可滚动的公开导航。
-- 用 `apps/homepage/components/ui/story-scroll.tsx` 承载 GSAP story scroll 动效，并保留 shadcn-compatible 的 `components/ui` 结构。
-- 把来自 `sayhi2anthony` 的公开个人照片、项目 logo、产品图和硬件图整理进 `apps/homepage/public/assets/`，避免继续散落在不同页面里。
-- `apps/homepage/` 是 public surface，不是身份、记忆或 Skill 的真相源。
+- 用 `work/apps/homepage/components/ui/story-scroll.tsx` 承载 GSAP story scroll 动效，并保留 shadcn-compatible 的 `components/ui` 结构。
+- 把来自 `sayhi2anthony` 的公开个人照片、项目 logo、产品图和硬件图整理进 `work/apps/homepage/public/assets/`，避免继续散落在不同页面里。
+- `work/apps/homepage/` 是 public surface，不是身份、记忆或 Skill 的真相源。
 
 ## 里面有什么
 
-这个仓库分成五块。名字看起来像文件夹，本质上是五个抽屉：
+这个仓库现在按 LifeOS schema v2 组织：顶层目录本身就是结构契约。
 
-| 抽屉 | 放什么 | 当前内容 |
+### 生命主线
+
+| 入口 | 回答的问题 | 当前内容 |
 | --- | --- | --- |
-| `identity/` | 我是谁 | 问心报告、PSP、公开身份材料 |
-| `skills/` | 我会怎么做事，也会怎么更新自己 | Engineering Everything 是构建型 meta skill；Cognitive Alignment、Wenxin、PSP 和 IPO Reverse 用来自我更新 |
-| `memory/` | 我长期记住什么 | AF-wiki 作为 AnthonyHF 的 memory wiki；repo 内保留 owner-approved 摘要、working lessons 和 distilled knowledge |
-| `docs/` | 给外面看的材料 | README 封面图、说明材料、公开展示内容 |
+| `identity/` | 我是谁 | 问心报告、PSP、公开身份材料、Design/aesthetics |
+| `identities/` | 我在不同场景下能以什么身份出现 | 场景身份、能代表我说什么、不能代表我说什么、什么时候需要 owner 确认；不是固定角色目录 |
+| `metabolism/inbox/` | 哪些原料正在等待消化 | GitHub、Feishu、聊天、文档等入口索引 |
+| `runtime/` | 生命活动在哪里发生 | sessions、runtime skills、runtime lessons、runtime profiles |
+| `work/` | 我创造了什么 | reports、projects、posts、homepage/public app |
+| `work/avatar-page/` | 具体数字人页面如何展示 | 第三人称 view model，消费 LifeOS 产物，不是真相源 |
+| `evolution/` | 我如何进化 | IPO Reverse、alignment、self-evolution 过程 |
+| `capabilities/` | 我已经沉淀出什么能力 | 稳定能力、能力地图、Skill 绑定 |
+| `identity/memories/` | 我长期如何理解自己 | AF-wiki 配置、长期自我认知、approved summaries |
+| `runtime/memory/` | 当前活动记忆 | session context、working lessons |
+
+### 治理与支撑
+
+| 入口 | 放什么 | 当前内容 |
+| --- | --- | --- |
+| `evolution/organ-systems/` | 能力生产系统 | Cognitive Alignment、Wenxin、PSP 和 IPO Reverse 用来自我更新 |
+| `artifacts/` | 当前产物指针 | Wenxin、PSP、Soul、Design、maturity 的 latest registry |
+| `identity/cognition/` | 认知对象契约 | memory / capability / identity / policy 的写入规则 |
+| `integrations/` | 外部系统边界 | GitHub、Feishu/Lark、Hermes、agent metadata、data source policy |
 | `security/` | 什么不能公开 | 隐私、权限、密钥、会议和私有资料边界 |
+| `docs/` | 给外面看的材料 | README 封面图、说明材料、evidence gate |
+| `legacy/` | v1/v1.5 历史遗留 | 旧导航层、实例维护脚本、迁移报告 |
 
 这里有一个很重要的区别：
 
@@ -126,9 +150,9 @@ Cognitive Alignment、Wenxin、PSP 和 IPO Reverse 是这个仓库的“自我�
 - 介绍 Anthony：不是套模板，而是基于问心报告和 PSP 讲清楚我的主线。
 - 更新 Anthony：用 Wenxin 整理新的公开叙事，用 PSP 更新人物模型和分身边界。
 - 对齐判断：遇到需要讲判断、和我的认知校准、分歧复盘或 skill 迭代的任务，进入 Cognitive Alignment。
-- 协助构建型判断：遇到项目、架构、代码、流程、SOP、产品或组织问题，先进入 `skills/engineering-everything/SKILL.md`。
+- 协助构建型判断：遇到项目、架构、代码、流程、SOP、产品或组织问题，先进入 `capabilities/engineering-everything/SKILL.md`。
 - 理解工作方式：比如我为什么总会追任务表、时间线、风险、负责人、验收标准和交付链路。
-- 读取长期记忆：需要当前项目、知识、复盘或生活上下文时，按 `memory/wiki-repo.yml` 查询当前配置的 memory wiki；不可用时使用 `memory/` 中 owner-approved 的摘要或用户本轮显式提供的材料。
+- 读取长期记忆：需要当前项目、知识、复盘或生活上下文时，按 `identity/memories/wiki-repo.yml` 查询当前配置的 memory wiki；不可用时使用 `identity/memories/` 中 owner-approved 的摘要或用户本轮显式提供的材料。
 - 保护边界：知道哪些内容不能公开，哪些只能留在私有系统里。
 
 它还不能做这些事：
@@ -153,11 +177,11 @@ Cognitive Alignment、Wenxin、PSP 和 IPO Reverse 是这个仓库的“自我�
 大致规则是：
 
 - 问“Anthony 是谁”：读 `identity/`。
-- 更新公开定位、履历、个人叙事：读 `skills/self-evolution/wenxin/`。
-- 更新 PSP、语言风格、判断方式、分身边界：读 `skills/self-evolution/psp/`。
-- 需要讲出 agent 自己的评判、对齐我的认知、处理分歧复盘或迭代 skill：读 `skills/self-evolution/cognitive-alignment/`。
-- 问工程、项目、架构、代码、流程、产品/组织构建：先读 `skills/engineering-everything/SKILL.md`，需要能力总结再读 `identity/wenxin/skill-summaries/engineering-everything.md`。
-- 问当前工作、生活、知识、项目复盘：读 `memory/wiki-repo.yml`、`memory/START-HERE.md`，再进入当前配置的 memory wiki 或 `memory/` 下 approved summary。
+- 更新公开定位、履历、个人叙事：读 `evolution/organ-systems/wenxin/`。
+- 更新 PSP、语言风格、判断方式、分身边界：读 `evolution/organ-systems/psp/`。
+- 需要讲出 agent 自己的评判、对齐我的认知、处理分歧复盘或迭代 skill：读 `evolution/organ-systems/cognitive-alignment/`。
+- 问工程、项目、架构、代码、流程、产品/组织构建：先读 `capabilities/engineering-everything/SKILL.md`，需要能力总结再读 `identity/wenxin/skill-summaries/engineering-everything.md`。
+- 问当前工作、生活、知识、项目复盘：读 `identity/memories/wiki-repo.yml`、`identity/memories/START-HERE.md`，再进入当前配置的 memory wiki 或 `identity/memories/` 下 approved summary。
 - 问能不能公开、能不能提交、能不能复制：读 `security/`。
 
 ### 克隆仓库
@@ -168,7 +192,7 @@ Cognitive Alignment、Wenxin、PSP 和 IPO Reverse 是这个仓库的“自我�
 git clone https://github.com/HaodiFan/AnthonyHF.LifeOS.git
 ```
 
-Wenxin、PSP、IPO Reverse 作为 release/archive vendored skill 进入 `skills/self-evolution/`，不是 submodule。AF-wiki 是 AnthonyHF 选择的 memory wiki，可作为 private submodule/index 连接；openLifeOS factory 不默认使用 AF-wiki。
+Wenxin、PSP、IPO Reverse 作为 release/archive vendored skill 进入 `evolution/organ-systems/`，不是 submodule。AF-wiki 是 AnthonyHF 选择的 memory wiki，可作为 private submodule/index 连接；openLifeOS factory 不默认使用 AF-wiki。
 
 ## 一个例子
 
@@ -182,7 +206,7 @@ Wenxin、PSP、IPO Reverse 作为 release/archive vendored skill 进入 `skills/
 
 回答应该像这样：
 
-> 先别急着写代码。先找项目资料、当前状态、任务表、风险、负责人和验收标准；构建型判断走 Engineering Everything meta skill，涉及 Anthony 当前上下文时按 `memory/wiki-repo.yml` 查询配置的 memory wiki。
+> 先别急着写代码。先找项目资料、当前状态、任务表、风险、负责人和验收标准；构建型判断走 Engineering Everything meta skill，涉及 Anthony 当前上下文时按 `identity/memories/wiki-repo.yml` 查询配置的 memory wiki。
 
 ## 目录结构
 
@@ -191,16 +215,22 @@ AnthonyHF.LifeOS/
 ├── DELIVERY.md        # 当前 delivery 适配 lifeos / openclaw / hermes / homepage
 ├── SKILL.md           # 给 AI 的协作说明
 ├── matrix.yml         # 给机器读的结构化索引
-├── identity/          # 我是谁：问心报告、PSP、公开身份材料
-├── skills/            # 我会怎么做事，也会怎么更新自己
-├── memory/            # 我记得什么：memory wiki 配置、approved summaries、working lessons、distilled knowledge
-├── cognition/         # openLifeOS cognition object 和数据契约
-├── integrations/      # GitHub、Feishu、Hermes 等外部系统边界
-├── profiles/          # OpenClaw / Hermes runtime projection
+├── identity/          # 我是谁：Wenxin、PSP、Soul、Design/aesthetics、公开身份
+├── identities/        # 场景身份：由具体人的材料生成，不预设固定角色页面
+├── metabolism/        # 代谢系统：inbox / processing / extracted
+├── runtime/           # sessions、runtime skills、runtime lessons、runtime profiles
+├── work/              # 创造物、项目、报告、homepage/public app
+├── evolution/         # IPO Reverse、alignment、自我进化过程
+├── capabilities/      # 稳定能力、能力地图、Skill 绑定
+├── identity/memories/ # 长期自我认知和 memory wiki 配置
+├── runtime/memory/    # session context 和 working lessons
+├── capabilities/*/memory/ # 能力经验库
+├── artifacts/         # latest registry 和 active artifact 指针
+├── identity/cognition/         # openLifeOS cognition object 和数据契约
+├── integrations/      # GitHub、Feishu、Hermes、agent metadata 等外部系统边界
 ├── security/          # 公开边界和隐私规则
 ├── docs/              # 对外展示材料、迁移报告和 evidence gate
-└── apps/
-    └── homepage/      # React 首页源码和公开静态资源
+└── legacy/            # v1/v1.5 无法直接归类或已废弃的历史入口
 ```
 
 ## 公开边界

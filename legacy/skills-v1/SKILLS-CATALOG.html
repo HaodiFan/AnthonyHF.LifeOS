@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnthonyHF Meta Skills · 可插拔使用场景 Catalog</title>
+<style>
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --ink-1: #111827;
+  --ink-2: #374151;
+  --ink-3: #6b7280;
+  --line: #e5e7eb;
+  --engineering: #0b4a6f;
+  --engineering-soft: #e7f2f8;
+  --narrative: #7c2d12;
+  --narrative-soft: #fff3e8;
+  --bridge: #4f46e5;
+  --bridge-soft: #eef2ff;
+  --warn: #b45309;
+  --shadow: 0 1px 2px rgba(17,24,39,.04), 0 4px 14px rgba(17,24,39,.06);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink-1);
+  line-height: 1.65;
+  font-size: 15px;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.hero {
+  background: #172033;
+  color: #fff;
+  padding: 50px 32px 42px;
+}
+.hero-inner, main { max-width: 1280px; margin: 0 auto; }
+.eyebrow { font-size: 12px; letter-spacing: 1.8px; text-transform: uppercase; opacity: .72; }
+h1 { margin: 12px 0 8px; font-size: 38px; line-height: 1.18; }
+.subtitle { max-width: 860px; margin: 0; color: rgba(255,255,255,.84); font-size: 17px; }
+.meta { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.16); font-size: 13px; color: rgba(255,255,255,.8); }
+.nav { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+.nav-inner { max-width: 1280px; margin: 0 auto; padding: 10px 32px; display: flex; gap: 8px; overflow-x: auto; }
+.nav a { white-space: nowrap; color: var(--ink-2); padding: 6px 10px; border-radius: 6px; font-size: 13px; font-weight: 600; }
+.nav a:hover { background: #f3f4f6; text-decoration: none; }
+main { padding: 36px 32px 78px; }
+section { margin-bottom: 48px; }
+h2 { margin: 0 0 6px; font-size: 26px; letter-spacing: -0.2px; }
+h3 { margin: 0 0 8px; font-size: 18px; }
+.section-lead { margin: 0 0 22px; color: var(--ink-3); font-size: 14px; }
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+}
+.skill-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); }
+.skill {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+}
+.skill.engineering { border-top: 5px solid var(--engineering); }
+.skill.narrative { border-top: 5px solid var(--narrative); }
+.skill p { margin: 0 0 14px; color: var(--ink-2); }
+.tag {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin: 0 5px 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.engineering .tag { background: var(--engineering-soft); color: var(--engineering); }
+.narrative .tag { background: var(--narrative-soft); color: var(--narrative); }
+.rows { display: grid; gap: 9px; margin-top: 12px; }
+.row { display: grid; grid-template-columns: 92px 1fr; gap: 12px; font-size: 13px; }
+.row strong { color: var(--ink-3); }
+.scenario-map { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.scenario {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+}
+.scenario h3 { font-size: 16px; }
+.scenario p { margin: 0 0 10px; color: var(--ink-2); font-size: 13.5px; }
+.route {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.route.engineering { background: var(--engineering-soft); color: var(--engineering); }
+.route.narrative { background: var(--narrative-soft); color: var(--narrative); }
+.route.bridge { background: var(--bridge-soft); color: var(--bridge); }
+.decision {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.decision th, .decision td { border-bottom: 1px solid var(--line); padding: 12px 14px; text-align: left; vertical-align: top; }
+.decision th { background: #f9fafb; color: var(--ink-3); font-size: 13px; }
+.decision tr:last-child td { border-bottom: 0; }
+code { font-family: "SF Mono", Menlo, Consolas, monospace; background: #f3f4f6; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+.note { border-left: 4px solid var(--warn); background: #fffbeb; color: #78350f; padding: 12px 14px; border-radius: 6px; font-size: 13.5px; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">AnthonyHF.LifeOS · Meta Skills Usage Catalog</div>
+    <h1>Meta Skill 在什么场景下用</h1>
+    <p class="subtitle">这个 catalog 是根层路由图：它回答“当前任务应该先调用哪个 meta skill，以及是否需要组合调用”。这里不声明当前有多少个 skill；AnthonyHF 的 skills 是可插拔集合，新增或删除 skill 时只更新对应路由卡片。</p>
+    <div class="meta">
+      <span><strong>Scope:</strong> AnthonyHF meta skill routing</span>
+      <span><strong>Catalog Type:</strong> pluggable meta skill router</span>
+      <span><strong>Rule:</strong> 先判任务对象，再判输出形态</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#core">核心区别</a>
+    <a href="#decision">决策表</a>
+    <a href="#scenarios">场景地图</a>
+    <a href="#combo">组合使用</a>
+    <a href="#wrong">不要误用</a>
+  </div>
+</nav>
+
+<main>
+  <section id="core">
+    <h2>核心区别</h2>
+    <p class="section-lead">每个 meta skill 都应有自己的使用边界。下面是当前已登记路由卡片；这不是固定 skill 数量。</p>
+    <div class="skill-grid">
+      <article class="skill engineering">
+        <h3>Engineering Everything</h3>
+        <p>当任务本质是“构建一个系统”时用它。系统可以是软件、产品、组织机制、SOP、交付流程、培训体系、企业运行机制或一个可复用 Skill。</p>
+        <span class="tag">系统构建</span>
+        <span class="tag">架构</span>
+        <span class="tag">执行</span>
+        <span class="tag">验证</span>
+        <span class="tag">治理</span>
+        <div class="rows">
+          <div class="row"><strong>核心问题</strong><span>这个东西怎么被定义、拆解、实现、验证、交付、复盘？</span></div>
+          <div class="row"><strong>典型输入</strong><span>项目想法、需求、代码、架构、PR、组织问题、流程问题、SOP、交付方案。</span></div>
+          <div class="row"><strong>典型输出</strong><span>工程路由、设计文档、架构选择、实施计划、验证 gate、review findings、SOP。</span></div>
+          <div class="row"><strong>深入地图</strong><span><a href="engineering-everything/SKILLS-CATALOG.html">engineering-everything/SKILLS-CATALOG.html</a></span></div>
+        </div>
+      </article>
+
+      <article class="skill narrative">
+        <h3>Public Narrative System</h3>
+        <p>当任务本质是“把真实判断和产品/人生/创业实验表达出去”时用它。渠道可以是小红书、公众号、官网、产品页、路演、朋友圈或公告。</p>
+        <span class="tag">公开叙事</span>
+        <span class="tag">语气保真</span>
+        <span class="tag">产品传播</span>
+        <span class="tag">去 AI 腔</span>
+        <span class="tag">发布复盘</span>
+        <div class="rows">
+          <div class="row"><strong>核心问题</strong><span>这个判断怎么公开表达、怎么像 Anthony、怎么不越界、怎么沉淀成叙事资产？</span></div>
+          <div class="row"><strong>典型输入</strong><span>聊天想法、草稿、产品材料、公开身份、文章、口播、发布反馈、社媒内容。</span></div>
+          <div class="row"><strong>典型输出</strong><span>intake、系列 brief、产品叙事、口播稿、文章、标题、封面、风险检查、复盘记录。</span></div>
+          <div class="row"><strong>深入地图</strong><span><a href="content/public-narrative-system/SKILLS-CATALOG.html">content/public-narrative-system/SKILLS-CATALOG.html</a></span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="decision">
+    <h2>决策表</h2>
+    <p class="section-lead">一句话判断：先看任务对象是不是“要构建/改变一个系统”；再看最终产物是不是“要公开表达”。</p>
+    <table class="decision">
+      <tr><th>用户要做什么</th><th>先用哪个</th><th>为什么</th><th>后续可能接哪个</th></tr>
+      <tr><td>做一个项目、功能、工具、系统、平台</td><td><span class="route engineering">Engineering</span></td><td>本质是定义边界、架构、实现、验证和交付。</td><td>需要对外介绍时接 Narrative。</td></tr>
+      <tr><td>修 bug、写代码、review PR、做技术方案</td><td><span class="route engineering">Engineering</span></td><td>要先明确真相源、最小切片、测试和回归风险。</td><td>通常不需要 Narrative。</td></tr>
+      <tr><td>设计 SOP、组织机制、入职培训、团队协作</td><td><span class="route engineering">Engineering</span></td><td>组织也是系统，要拆角色、接口、流程、指标和异常处理。</td><td>要写成公开方法论时接 Narrative。</td></tr>
+      <tr><td>把产品矩阵、创业判断、AI-native organization 写出去</td><td><span class="route bridge">Engineering → Narrative</span></td><td>先用 Engineering 校准事实、系统结构和边界，再用 Narrative 做表达。</td><td>必要时读 Wenxin / PSP。</td></tr>
+      <tr><td>写小红书、公众号、官网、产品页、口播、朋友圈</td><td><span class="route narrative">Narrative</span></td><td>本质是公开表达、渠道化和发布风险控制。</td><td>涉及产品承诺时先补 Engineering 判断。</td></tr>
+      <tr><td>把 AI 草稿改得像 Anthony</td><td><span class="route narrative">Narrative</span></td><td>要做 voice fidelity、humanizer 和公开边界检查。</td><td>必要时读 PSP voice adapter。</td></tr>
+      <tr><td>从一次完成的项目/文章/方案里沉淀 SOP 或 Skill</td><td><span class="route bridge">Engineering → IPO Reverse</span></td><td>先判断这个产出属于哪个系统能力，再逆向萃取方法论。</td><td>若要公开发布，再接 Narrative。</td></tr>
+    </table>
+  </section>
+
+  <section id="scenarios">
+    <h2>场景地图</h2>
+    <p class="section-lead">这些是 Anthony 当前最常见的 meta skill 使用场景。</p>
+    <div class="scenario-map">
+      <article class="scenario">
+        <h3>新建或接手一个软件项目</h3>
+        <p>包括 repo 盘点、架构选择、feature 拆解、实现、测试和 PR。</p>
+        <span class="route engineering">Engineering Everything</span>
+      </article>
+      <article class="scenario">
+        <h3>把企业流程做成可运行机制</h3>
+        <p>销售、交付、培训、运营、项目管理、SOP、角色接口和指标。</p>
+        <span class="route engineering">Engineering Everything</span>
+      </article>
+      <article class="scenario">
+        <h3>把一次经验沉淀成 Skill / SOP</h3>
+        <p>先判断它是不是可复用系统能力，再决定放到 skill、memory、reference 或 training material。</p>
+        <span class="route engineering">Engineering Everything</span>
+      </article>
+      <article class="scenario">
+        <h3>写产品页或官网文案</h3>
+        <p>如果产品事实和边界未清楚，先 Engineering；事实清楚后 Narrative 负责表达和发布形态。</p>
+        <span class="route bridge">Engineering → Narrative</span>
+      </article>
+      <article class="scenario">
+        <h3>写 openLifeOS / 数字分身公开内容</h3>
+        <p>先确认系统机制和实验边界，再写成 Anthony 的公开叙事。</p>
+        <span class="route bridge">Engineering → Narrative</span>
+      </article>
+      <article class="scenario">
+        <h3>小红书 / 公众号 / 口播稿</h3>
+        <p>处理标题、封面、钩子、正文、标签、互动、CTA、风险检查和 method mapping。</p>
+        <span class="route narrative">Public Narrative System</span>
+      </article>
+      <article class="scenario">
+        <h3>去 AI 腔 / 改成像 Anthony</h3>
+        <p>保留判断密度，删除机械结构、宣传腔、泛泛铺垫和不真实归因。</p>
+        <span class="route narrative">Public Narrative System</span>
+      </article>
+      <article class="scenario">
+        <h3>发布后复盘并反哺产品</h3>
+        <p>把评论、误解、反馈和数据写回产品叙事、series brief 或方法论资产。</p>
+        <span class="route narrative">Public Narrative System</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="combo" class="panel">
+    <h2>组合使用顺序</h2>
+    <p class="section-lead">很多 Anthony 的任务不是二选一，而是先工程判断，再公开表达。</p>
+    <ol>
+      <li><strong>构建型问题先 Engineering：</strong>明确事实、真相源、边界、系统结构、验收和风险。</li>
+      <li><strong>对外表达再 Narrative：</strong>把已经校准的事实和判断转成文章、口播、产品页、社媒或路演材料。</li>
+      <li><strong>涉及 Anthony 身份时加 Wenxin：</strong>确认公开定位、履历叙事、能力地图和未来路径。</li>
+      <li><strong>涉及语气和分身保真时加 PSP：</strong>只用公开/工作场景可用部分，不做私人生活或高保真 impersonation。</li>
+      <li><strong>用户纠偏时加 Cognitive Alignment：</strong>定位分歧，决定规则沉淀到哪个 skill 或 memory。</li>
+    </ol>
+  </section>
+
+  <section id="wrong" class="panel">
+    <h2>不要误用</h2>
+    <div class="note">
+      不要把 Engineering Everything 当“写代码 skill”，也不要把 Public Narrative System 当“营销文案 skill”。前者处理构建系统的判断，后者处理公开表达的保真、边界和资产化。一个负责把事情做成系统，一个负责把系统判断说出去。
+    </div>
+  </section>
+</main>
+</body>
+</html>

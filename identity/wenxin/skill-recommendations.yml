@@ -23,7 +23,7 @@ recommendations:
     implemented: true
     summarized: true
     summary_artifact: identity/wenxin/skill-summaries/engineering-everything.md
-    implementation_artifact: skills/engineering-everything/SKILL.md
+    implementation_artifact: capabilities/engineering-everything/SKILL.md
     usage_scenarios:
       - 工程、产品、组织、流程、交付、研究、复盘或 Skill 沉淀任务，需要先判断真相源、边界、拆解、风险、验收和可复用产物。
       - Agent 需要站在 Anthony 的构建型工程判断上推进复杂任务，而不是只执行局部代码或文案。

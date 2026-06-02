@@ -8,17 +8,17 @@ default_source:
   path: integrations/skill-sources/default-skills
 skills:
   wenxin:
-    local_path: skills/self-evolution/wenxin
+    local_path: evolution/organ-systems/wenxin
     github_repo: "MetaInFLow/wenxin-skill"
     ref: latest
     update_mode: owner-reviewed-release-archive
   psp:
-    local_path: skills/self-evolution/psp
+    local_path: evolution/organ-systems/psp
     github_repo: "MetaInFLow/psp-skill"
     ref: latest
     update_mode: owner-reviewed-release-archive
   ipo-reverse:
-    local_path: skills/self-evolution/ipo-reverse
+    local_path: evolution/organ-systems/ipo-reverse
     github_repo: "MetaInFLow/ipo-reverse-skill"
     ref: latest
     update_mode: owner-reviewed-release-archive

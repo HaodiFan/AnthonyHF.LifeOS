@@ -1,16 +1,29 @@
 schema: openlifeos.identity-current.v2
 owner: Anthony Fan
 repo: AnthonyHF.LifeOS
-updated_at: "2026-05-30T23:55:50+08:00"
+updated_at: "2026-06-02T12:00:00+08:00"
 policy:
   canonical_rule: "Runtime profiles read active identity artifacts from this registry; the full latest-artifact view lives in artifacts/current.yml."
   update_rule: "New Wenxin, PSP, Soul, or design output must be written as a timestamped artifact first, then activated by updating artifacts/current.yml, this registry when identity-related, and the per-artifact versions.yml ledger."
   raw_material_rule: "Raw ChatGPT exports, Feishu/Miaoji transcripts, external private memory bodies, and drive archives remain outside the public repo."
 active:
+  avatar_description:
+    artifact_id: avatar-description-20260602-000000
+    current_entrypoint: identity/avatar-description/current.yml
+    versions_ledger: identity/avatar-description/versions.yml
+    changelog: identity/avatar-description/changelog.md
+    status: active
+    evidence_sufficiency: partial
+    derived_from:
+      - active.wenxin.current_entrypoint
+      - active.psp.current_entrypoint
+      - active.soul.current_entrypoint
   wenxin:
-    artifact_id: wenxin-20260530-235550
-    current_entrypoint: identity/wenxin/WENXIN_REPORT.md
-    versioned_artifact: identity/wenxin/WENXIN-20260530-235550.md
+    artifact_id: wenxin-structured-20260602
+    current_entrypoint: identity/wenxin/WENXIN_REPORT.html
+    machine_entrypoint: identity/wenxin/WENXIN_REPORT.xml
+    legacy_markdown_source: identity/wenxin/WENXIN_REPORT.md
+    legacy_versioned_markdown_source: identity/wenxin/WENXIN-20260530-235550.md
     versions_ledger: identity/wenxin/versions.yml
     changelog: identity/wenxin/changelog.md
     status: evidence-limited-public-wrapper
@@ -19,11 +32,13 @@ active:
       - identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
       - identity/wenxin/project-evidence-external-drive-20260530.md
       - identity/wenxin/project-evidence/
-      - identity/psp/anthony-fan/PSP.md
+      - identity/psp/anthony-fan/PSP.html
   psp:
-    artifact_id: psp-20260530-171725
-    current_entrypoint: identity/psp/anthony-fan/PSP.md
-    versioned_artifact: identity/psp/anthony-fan/PSP-20260530-171725.md
+    artifact_id: psp-structured-20260602
+    current_entrypoint: identity/psp/anthony-fan/PSP.html
+    machine_entrypoint: identity/psp/anthony-fan/PSP.xml
+    legacy_markdown_source: identity/psp/anthony-fan/PSP.md
+    legacy_versioned_markdown_source: identity/psp/anthony-fan/PSP-20260530-171725.md
     versions_ledger: identity/psp/anthony-fan/versions.yml
     changelog: identity/psp/anthony-fan/changelog.md
     status: v0.4-chatgpt-export-enriched-scaffold
@@ -42,20 +57,20 @@ active:
     status: v0.1-psp-derived-operating-method
     evidence_sufficiency: partial
     based_on:
-      - identity/psp/anthony-fan/PSP-20260530-171725.md
-      - identity/wenxin/WENXIN_REPORT.md
+      - identity/psp/anthony-fan/PSP.html
+      - identity/wenxin/WENXIN_REPORT.html
 runtime_projection_inputs:
   openclaw:
-    profile: profiles/openclaw/anthonyhf/
+    profile: runtime/profiles/openclaw/anthonyhf/
     uses:
-      - active.wenxin.versioned_artifact
-      - active.psp.versioned_artifact
+      - active.wenxin.current_entrypoint
+      - active.psp.current_entrypoint
       - active.soul.versioned_artifact
       - docs/evidence-sufficiency.md
   hermes:
-    profile: profiles/hermes/anthonyhf/
+    profile: runtime/profiles/hermes/anthonyhf/
     uses:
-      - active.wenxin.versioned_artifact
-      - active.psp.versioned_artifact
+      - active.wenxin.machine_entrypoint
+      - active.psp.machine_entrypoint
       - active.soul.versioned_artifact
       - docs/evidence-sufficiency.md

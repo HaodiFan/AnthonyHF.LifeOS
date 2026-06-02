@@ -2,6 +2,12 @@
 
 This log records active PSP/person-model changes. Raw private evidence is never stored here.
 
+## 2026-06-02T12:00:00+08:00
+
+- Added `PSP.html` as the structured human-facing PSP output.
+- Added `PSP.xml` as the machine-readable PSP output.
+- Updated local and global registries to treat Markdown as `legacy_markdown_source` rather than the current PSP output artifact.
+
 ## 2026-05-30T23:55:50+08:00
 
 - Added machine-readable active PSP registry in `current.yml`.

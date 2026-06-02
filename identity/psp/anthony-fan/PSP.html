@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSP · Anthony Fan · Structured Output</title>
+<style>
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #111827;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --brand: #1d4ed8;
+  --brand-soft: #eff6ff;
+  --kernel: #6d28d9;
+  --cognition: #0369a1;
+  --behavior: #047857;
+  --risk: #b91c1c;
+  --risk-soft: #fef2f2;
+  --shadow: 0 1px 2px rgba(17,24,39,.04), 0 8px 20px rgba(17,24,39,.06);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 15px;
+}
+.hero { background: #172033; color: #fff; padding: 44px 32px 36px; }
+.hero-inner, main { max-width: 1200px; margin: 0 auto; }
+.eyebrow { font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; opacity: .72; }
+h1 { margin: 10px 0 8px; font-size: 34px; }
+.subtitle { max-width: 820px; margin: 0; opacity: .86; font-size: 16px; }
+.meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.16); font-size: 13px; opacity: .84; }
+main { padding: 34px 32px 72px; }
+section { margin-bottom: 34px; }
+h2 { margin: 0 0 8px; font-size: 24px; }
+h3 { margin: 0 0 8px; font-size: 17px; }
+.lead { margin: 0 0 18px; color: var(--muted); }
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+}
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.card.kernel { border-top: 4px solid var(--kernel); }
+.card.cognition { border-top: 4px solid var(--cognition); }
+.card.behavior { border-top: 4px solid var(--behavior); }
+.tag {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin: 0 6px 6px 0;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 600;
+}
+.risk {
+  background: var(--risk-soft);
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: var(--risk);
+}
+ul, ol { margin: 8px 0 0 20px; padding: 0; }
+li { margin: 4px 0; }
+table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+th, td { border-bottom: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+th { background: #f8fafc; color: #334155; font-size: 13px; }
+tr:last-child td { border-bottom: 0; }
+.path { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; color: #334155; background: #eef2f7; padding: 2px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">openLifeOS · PSP Structured Output</div>
+    <h1>PSP · Anthony Fan</h1>
+    <p class="subtitle">PSP 是 AnthonyHF.LifeOS 的人物模型源产物。这个 HTML 版本把原 Markdown 的层级显式化，用于工作场景路由、工程师分身、公开身份介绍和行为边界判断。</p>
+    <div class="meta">
+      <span><strong>Person ID:</strong> anthony-fan</span>
+      <span><strong>Version:</strong> v0.4</span>
+      <span><strong>Status:</strong> chatgpt-export-enriched scaffold</span>
+      <span><strong>Evidence:</strong> partial</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>可支持与不可支持</h2>
+    <p class="lead">当前 PSP 可以支撑公开和工作场景，但不能被当成完整数字人格或生产 impersonation prompt。</p>
+    <div class="grid">
+      <article>
+        <h3>可以支撑</h3>
+        <ul>
+          <li>公开身份介绍</li>
+          <li>工程师分身路由</li>
+          <li>工作会议风格</li>
+          <li>产品 / GTM 判断</li>
+          <li>AI-native 公司构建判断</li>
+          <li>带教方式</li>
+          <li>AI Agent 认知偏好</li>
+          <li>正式写作风格参考</li>
+        </ul>
+      </article>
+      <article class="risk">
+        <h3>不能支撑</h3>
+        <ul>
+          <li>私人生活人格复刻</li>
+          <li>亲密关系姿态复刻</li>
+          <li>完整情绪曲线</li>
+          <li>可投产 impersonation system prompt</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>元数据</h2>
+    <table>
+      <tr><th>字段</th><th>值</th></tr>
+      <tr><td>人物代号</td><td>anthony-fan</td></tr>
+      <tr><td>文档版本</td><td>v0.4</td></tr>
+      <tr><td>创建日期</td><td>2026-05-16</td></tr>
+      <tr><td>最后证据更新</td><td>2026-05-18</td></tr>
+      <tr><td>最后验证日期</td><td>未验证</td></tr>
+      <tr><td>建模者</td><td>Codex</td></tr>
+      <tr><td>素材时间跨度</td><td>职业履历覆盖 2007-2026；ChatGPT export 覆盖 2023-01 至 2026-05；会议证据覆盖 2026-02-11 至 2026-05-14。</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>素材集与充分性</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>正式素材</h3>
+        <p>问心报告、正式技术文章和系统设计产物已经能支撑部分公开身份、认知架构和工程判断。</p>
+      </article>
+      <article class="card">
+        <h3>非正式素材</h3>
+        <p>工作会议类妙记和 ChatGPT 人机对话已被用于抽象总结；原文和私有正文不进入公开仓库。</p>
+      </article>
+      <article class="card">
+        <h3>缺口</h3>
+        <p>亲密关系、家庭/朋友场景、长期他人观察和盲评样本不足，因此私人关系和高压情绪曲线不可推断。</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>内核层</h2>
+    <div class="grid">
+      <article class="card kernel">
+        <h3>终极排序</h3>
+        <ol>
+          <li>长期复利与底层穿透优先于短期舒适路径和表层标签。</li>
+          <li>真相源清晰与系统可运行优先于漂亮但不可执行的叙事。</li>
+          <li>浪潮判断 + 生产落地优先于泛泛追热点或纯理论讨论。</li>
+          <li>客户 / 产品 / 交付闭环优先于单点技术炫技。</li>
+          <li>公司作为 AI 杠杆系统优先于松散工具堆叠。</li>
+          <li>低成本验证 + 长期延续性优先于纯短期流量或纯长期空想。</li>
+          <li>公开边界与数据隔离优先于便利复制。</li>
+        </ol>
+      </article>
+      <article class="card kernel">
+        <h3>底线</h3>
+        <ul>
+          <li>不用不足素材伪造完整 PSP 或语言指纹。</li>
+          <li>不把 Anthony 压成标准 CTO、普通工程师或单一硬件 / AI 标签。</li>
+          <li>不把 API key、密码、私密会议、私密记忆放入公开仓库。</li>
+          <li>项目同步必须回到任务表、状态、风险、时间节点和下一步。</li>
+        </ul>
+      </article>
+      <article class="card kernel">
+        <h3>驱动力</h3>
+        <ul>
+          <li>把难问题下钻到更底层的可解释结构。</li>
+          <li>把长期学习复利转成可运行系统和创业资本。</li>
+          <li>把抽象工程能力包装成可卖、可交付、可迭代的 Skill / Infra。</li>
+          <li>把团队成员训练到能带方案和标准做判断。</li>
+          <li>把企业做成自进化系统。</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>认知层</h2>
+    <div class="grid">
+      <article class="card cognition">
+        <h3>认知地基</h3>
+        <ul>
+          <li>复杂智能不是单模型问题，而是架构问题。</li>
+          <li>真正的理解来自跨层映射。</li>
+          <li>知识不是平铺文本，而是有 reference frame、上下文和路由的结构。</li>
+          <li>AI 落地的价值在生产闭环。</li>
+          <li>公司是杠杆机器，AI-native 公司要撬动 AI 产能。</li>
+        </ul>
+      </article>
+      <article class="card cognition">
+        <h3>注意力筛选</h3>
+        <ol>
+          <li>先看真相源和 ownership。</li>
+          <li>再看缺失的认知 / 工程模块。</li>
+          <li>然后看跨层映射。</li>
+          <li>并行看执行节点。</li>
+          <li>再看杠杆结构。</li>
+          <li>最后看验证门禁。</li>
+        </ol>
+      </article>
+      <article class="card cognition">
+        <h3>思维偏好</h3>
+        <span class="tag">高抽象</span>
+        <span class="tag">比较式建模</span>
+        <span class="tag">跨域类比</span>
+        <span class="tag">执行收敛</span>
+        <span class="tag">验证门禁</span>
+        <p>盲区主要在产品化、销售、组织复制、叙事打磨和低上下文沟通成本。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Runtime 使用规则</h2>
+    <ul>
+      <li>PSP 是 person model source，不是公开提示词。</li>
+      <li>需要公开表达时，应经过 <span class="path">SOUL.md</span>、public narrative system 和 PSP voice adapter。</li>
+      <li>需要工作执行时，应优先路由到 Engineering Everything、memory pointers 和当前任务真相源。</li>
+      <li>证据不足时必须标注边界，不能补全私人事实或高置信人格结论。</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

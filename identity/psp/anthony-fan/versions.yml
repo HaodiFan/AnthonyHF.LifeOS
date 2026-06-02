@@ -2,11 +2,12 @@ schema: openlifeos.artifact-versions.v1
 artifact_type: psp
 person_id: anthony-fan
 owner: Anthony Fan
-active_artifact: psp-20260530-171725
-current_entrypoint: PSP.md
+active_artifact: psp-structured-20260602
+current_entrypoint: PSP.html
+machine_entrypoint: PSP.xml
 activation_policy:
-  write_path: "PSP-<timestamp>.md"
-  current_entrypoint_policy: "Keep PSP.md as the active human-readable entrypoint; it must match or intentionally summarize the active timestamped artifact."
+  write_path: "PSP.html and PSP.xml"
+  current_entrypoint_policy: "Keep PSP.html as the structured human-readable active entrypoint and PSP.xml as the machine-readable entrypoint; keep Markdown only as legacy source."
   activation_requires:
     - approved evidence summary
     - standard_output_gate
@@ -39,6 +40,21 @@ versions:
       - "Added ChatGPT-export-enriched PSP scaffold."
       - "Marked Hao Daily Notes as intern notes and removed them from Anthony PSP evidence."
       - "Kept private source bodies outside the public repo."
+  - artifact_id: psp-structured-20260602
+    path: PSP.html
+    machine_entrypoint: PSP.xml
+    legacy_markdown_source: PSP.md
+    legacy_versioned_markdown_source: PSP-20260530-171725.md
+    status: active
+    created_at: "2026-06-02T12:00:00+08:00"
+    evidence_sufficiency: partial
+    based_on:
+      - PSP.md
+      - PSP-20260530-171725.md
+    changes:
+      - "Activated HTML as the structured human-facing PSP output."
+      - "Added XML as the machine-readable PSP output."
+      - "Kept Markdown files as legacy sources instead of current output artifacts."
   - artifact_id: soul-20260530-235550
     path: SOUL-20260530-235550.md
     current_entrypoint: ../../../SOUL.md

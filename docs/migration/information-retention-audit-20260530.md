@@ -18,19 +18,19 @@ No tracked source file was lost in the migration.
 
 ## Path Mapping
 
-The original homepage app was moved under `apps/homepage/` so the repo root can serve as the canonical openLifeOS kernel.
+The original homepage app was moved under `work/apps/homepage/` so the repo root can serve as the canonical openLifeOS kernel.
 
-- `src/` -> `apps/homepage/src/`
-- `components/` -> `apps/homepage/components/`
-- `lib/` -> `apps/homepage/lib/`
-- `public/` -> `apps/homepage/public/`
-- `index.html` -> `apps/homepage/index.html`
-- `package.json` -> `apps/homepage/package.json`
-- `package-lock.json` -> `apps/homepage/package-lock.json`
-- `vite.config.ts` -> `apps/homepage/vite.config.ts`
-- `tsconfig*.json` -> `apps/homepage/tsconfig*.json`
-- `components.json` -> `apps/homepage/components.json`
-- `DESIGN.md` -> `apps/homepage/DESIGN.md`
+- `src/` -> `work/apps/homepage/src/`
+- `components/` -> `work/apps/homepage/components/`
+- `lib/` -> `work/apps/homepage/lib/`
+- `public/` -> `work/apps/homepage/public/`
+- `index.html` -> `work/apps/homepage/index.html`
+- `package.json` -> `work/apps/homepage/package.json`
+- `package-lock.json` -> `work/apps/homepage/package-lock.json`
+- `vite.config.ts` -> `work/apps/homepage/vite.config.ts`
+- `tsconfig*.json` -> `work/apps/homepage/tsconfig*.json`
+- `components.json` -> `work/apps/homepage/components.json`
+- `DESIGN.md` -> `work/apps/homepage/DESIGN.md`
 
 ## Intentionally Changed Files
 
@@ -41,18 +41,18 @@ These files changed to update naming, repo paths, homepage base URL, or openLife
 - `SKILL.md`
 - `matrix.yml`
 - `docs/README.md`
-- `skills/README.md`
-- `apps/homepage/DESIGN.md`
-- `apps/homepage/index.html`
-- `apps/homepage/package.json`
-- `apps/homepage/package-lock.json`
-- `apps/homepage/public/assets/README.md`
-- `apps/homepage/src/App.tsx`
-- `apps/homepage/vite.config.ts`
+- `legacy/skills-v1/README.md`
+- `work/apps/homepage/DESIGN.md`
+- `work/apps/homepage/index.html`
+- `work/apps/homepage/package.json`
+- `work/apps/homepage/package-lock.json`
+- `work/apps/homepage/public/assets/README.md`
+- `work/apps/homepage/src/App.tsx`
+- `work/apps/homepage/vite.config.ts`
 
 ## Binary Asset Check
 
-All original public image assets are present and hash-identical after the `public/` -> `apps/homepage/public/` move.
+All original public image assets are present and hash-identical after the `public/` -> `work/apps/homepage/public/` move.
 
 The checked assets include:
 
@@ -65,21 +65,23 @@ The checked assets include:
 - `public/assets/logos/*`
 - `docs/assets/anthonyhf-readme-cover.png`
 
+Current schema note: SnapAnthony and ShellProbe product/logo files were later deduplicated into `work/apps/homepage/public/assets/shared/`. Historical build output with the old duplicated paths is retained only under `legacy/build-output/`.
+
 ## Submodule Pointer Check
 
 All original submodule gitlinks are preserved at the same commit:
 
 - `memory/af-wiki`: configured as AnthonyHF's memory wiki instance; not an openLifeOS default.
-- `skills/engineering-everything`: `7542eeff809a9ee7f9e919c046108bfde4caf143`
-- `skills/self-evolution/cognitive-alignment`: `15f791ff41cfa110c2451c5e555761f87d7d4c1b`
-- `skills/self-evolution/psp`: `cb2f1fbb78d6d8beba22c80b89680f44edbc01b8`
-- `skills/self-evolution/wenxin`: `983a79be33f15f89a53b59c2717ff46f61675233`
+- `capabilities/engineering-everything`: `7542eeff809a9ee7f9e919c046108bfde4caf143`
+- `evolution/organ-systems/cognitive-alignment`: `15f791ff41cfa110c2451c5e555761f87d7d4c1b`
+- `evolution/organ-systems/psp`: `cb2f1fbb78d6d8beba22c80b89680f44edbc01b8`
+- `evolution/organ-systems/wenxin`: `983a79be33f15f89a53b59c2717ff46f61675233`
 
 ## Validation
 
 - `python3 scripts/validate_avatar_repo.py output/meta/AnthonyHF.LifeOS`: passed
 - `python3 scripts/openlifeos_progress.py output/meta/AnthonyHF.LifeOS --json`: required 9/9, overall 15/15
-- `cd output/meta/AnthonyHF.LifeOS/apps/homepage && npm ci && npm run build`: passed
+- `cd output/meta/AnthonyHF.LifeOS/work/apps/homepage && npm ci && npm run build`: passed
 
 ## Boundary
 

@@ -10,7 +10,7 @@ Current Update Log: `update-log-20260530-171725.md`
 
 这个文件的唯一作用：把当前 openLifeOS 产物转换成指定 Agent 框架可用的初始化文件。
 
-它不是人物模型本体，不存放原始私密材料，也不把 workflow 写进 memory。执行者应从 `PSP-20260530-171725.md`、`memory/`、`skills/`、`identity/` 和 `security/` 中抽取内容，再按目标框架写入对应文件。
+它不是人物模型本体，不存放原始私密材料，也不把 workflow 写进 memory。执行者应从 `PSP-20260530-171725.md`、`identity/memories/`、`runtime/runtime-skills/`、`capabilities/`、`identity/` 和 `security/` 中抽取内容，再按目标框架写入对应文件。
 
 ## 核心分界
 
@@ -23,7 +23,7 @@ Current Update Log: `update-log-20260530-171725.md`
 
 1. 先读取 `identity/current.yml` 和本目录 `current.yml`，确认 active PSP 主产物；当前为 `PSP-20260530-171725.md`。
 2. 读取 `identity/public-profile/profile.yml`，只使用 owner-approved 的公开身份字段。
-3. 读取 `memory/long-term/` 和 `memory/distilled-knowledge/`，只抽取稳定事实、偏好、长期上下文和证据摘要。
+3. 读取 `identity/memories/long-term/` 和 `capabilities/memory/distilled-knowledge/`，只抽取稳定事实、偏好、长期上下文和证据摘要。
 4. 读取 `identity/wenxin/skill-recommendations.yml`、`identity/wenxin/skill-summaries/` 和 `integrations/skill-sources/default-skills/`，只抽取可复用 procedure、触发条件、验证门和失败处理。
 5. 读取 `security/README.md` 和 `security/permissions.yml`，抽取硬边界、禁入内容、审批规则和工具权限。
 6. 对每条候选内容执行分型：事实进 memory/identity/persona，流程进 Skill/agent instruction，混合内容先拆分再写入。
@@ -34,7 +34,7 @@ Current Update Log: `update-log-20260530-171725.md`
 2. 建立输出目录，不覆盖已有人工维护文件；如目标文件已存在，先生成 `*.candidate.md` 供 review。
 3. 从 PSP 抽取 persona 层：身份姿态、价值排序、行为边界、最佳态对齐、反钝化约束。
 4. 从 memory 抽取 declarative 层：稳定事实、偏好、长期上下文、证据来源和置信度。
-5. 从 skills 抽取 procedural 层：运行规则、任务步骤、路由规则、验证门和失败处理。
+5. 从 runtime skills 和 capabilities 抽取 procedural 层：运行规则、任务步骤、路由规则、验证门和失败处理。
 6. 从 security 抽取 governance 层：权限、禁止事项、外发边界、审批要求。
 7. 写入目标框架文件。
 8. 运行校验：确认 memory 文件没有 procedure，Skill/agent instruction 文件没有私人事实，persona 文件没有原始素材。
@@ -54,7 +54,7 @@ Current Update Log: `update-log-20260530-171725.md`
 
 1. 从 `PSP-20260530-171725.md` 抽取 persona、身份姿态、行为边界、最佳态画像和反钝化约束，写入 `SOUL.md`。
 2. 从 `identity/public-profile/profile.yml` 抽取用户身份字段和称呼偏好，写入 `USER.md`。
-3. 从 `memory/long-term/` 抽取稳定事实、偏好、长期项目上下文和证据摘要，写入 `MEMORY.md`。
+3. 从 `identity/memories/long-term/` 抽取稳定事实、偏好、长期项目上下文和证据摘要，写入 `MEMORY.md`。
 4. 从 `identity/wenxin/skill-recommendations.yml` 和 `identity/wenxin/skill-summaries/` 抽取可复用流程，按主题拆成 `skills/<skill-id>/SKILL.md`。
 5. 如果存在项目级约束，把 repo 操作规则、审批边界、工具限制写入 `.hermes.md`，不要写进 `MEMORY.md`。
 6. 校验 `MEMORY.md`：删除步骤、SOP、workflow、临时任务状态。
@@ -79,9 +79,9 @@ Current Update Log: `update-log-20260530-171725.md`
 1. 从 `PSP-20260530-171725.md` 抽取人格位、身份姿态、行为边界和最佳态画像，写入 `SOUL.md`。
 2. 从 `identity/public-profile/profile.yml` 和 PSP 的身份字段抽取 self/user/org/alias 信息，写入 `IDENTITY.md` 和 `USER.md`。
 3. 从 `security/` 和 root `SKILL.md` 抽取 agent 运行规则、路由规则、协作规则和项目边界，写入 `AGENTS.md`。
-4. 从 `security/permissions.yml`、`integrations/` 和 `cognition/skill-bindings/data-sources.yml` 抽取工具权限、数据源边界和禁止事项，写入 `TOOLS.md`。
-5. 从 `memory/long-term/` 抽取稳定事实和长期偏好，写入 `MEMORY.md`。
-6. 从 `memory/working-lessons/` 抽取候选经验，按日期写入 `memory/YYYY-MM-DD.md`；未验证内容必须标注 candidate/review-needed。
+4. 从 `security/permissions.yml`、`integrations/` 和 `identity/cognition/skill-bindings/data-sources.yml` 抽取工具权限、数据源边界和禁止事项，写入 `TOOLS.md`。
+5. 从 `identity/memories/long-term/` 抽取稳定事实和长期偏好，写入 `MEMORY.md`。
+6. 从 `runtime/memory/working-lessons/` 抽取候选经验，按日期写入 `memory/YYYY-MM-DD.md`；未验证内容必须标注 candidate/review-needed。
 7. 从 `identity/wenxin/skill-recommendations.yml`、`identity/wenxin/skill-summaries/` 和 `integrations/skill-sources/default-skills/` 复制或改写为 OpenClaw 兼容 `skills/<skill-id>/SKILL.md`。
 8. 校验 `AGENTS.md`：只能放操作规则和 routing，不放长期人物事实。
 9. 校验 `MEMORY.md`：只能放 declarative facts，不放 procedure。
@@ -100,8 +100,8 @@ Current Update Log: `update-log-20260530-171725.md`
 
 1. 从 `PSP-20260530-171725.md` 抽取 persona、行为边界、输出契约、反钝化约束，写入 system prompt。
 2. 从 `security/` 抽取不可违反规则、审批边界、外发边界，写入 developer prompt 或 agent instruction。
-3. 从 `skills/` 抽取可复用 procedure，写成 Skill 文件、tool instruction 或 agent instruction。
-4. 从 `memory/long-term/` 和 `memory/distilled-knowledge/` 抽取稳定事实与知识 claims，导入 memory/knowledge store。
+3. 从 `runtime/runtime-skills/` 和 `capabilities/` 抽取可复用 procedure，写成 Skill 文件、tool instruction 或 agent instruction。
+4. 从 `identity/memories/long-term/` 和 `capabilities/memory/distilled-knowledge/` 抽取稳定事实与知识 claims，导入 memory/knowledge store。
 5. 对导入 memory 的每条内容保留 source、confidence、visibility 和 freshness。
 6. 校验 system/developer prompt：不放原始材料，不放 transcript，不放大段长期知识。
 7. 校验 Skill：不把用户私人事实写进 procedure；需要事实时通过 binding 或 memory retrieval 获取。
@@ -113,7 +113,7 @@ Current Update Log: `update-log-20260530-171725.md`
 - `AGENTS.md` / Skill / agent instruction 只包含操作规则、步骤、触发条件和验证门。
 - `TOOLS.md` / permissions 只包含工具权限、数据源边界和审批规则。
 - 所有 raw private material 都留在授权外部系统，不进入目标框架文件。
-- 每个目标文件都能追溯到 `PSP-20260530-171725.md`、`memory/`、`skills/` 或 `security/` 的来源。
+- 每个目标文件都能追溯到 `PSP-20260530-171725.md`、`identity/memories/`、`runtime/runtime-skills/`、`capabilities/` 或 `security/` 的来源。
 - 本次转换已写入 `update-log-20260530-171725.md`。
 
 ## 初始化状态

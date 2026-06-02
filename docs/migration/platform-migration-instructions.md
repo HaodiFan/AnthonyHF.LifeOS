@@ -22,7 +22,7 @@ Use this protocol before any platform-specific migration:
 
 1. Identify the platform target: `lifeos`, `openclaw`, `hermes`, `codex-skill`, `github-pages`, or `local-evidence-source`.
 2. Read `DELIVERY.md` to confirm which architecture target is being updated.
-3. Read `cognition/object-taxonomy.yml`, `cognition/data-contracts.yml`, and `security/README.md`.
+3. Read `identity/cognition/object-taxonomy.yml`, `identity/cognition/data-contracts.yml`, and `security/README.md`.
 4. Classify each source as identity, memory, skill, integration, public surface, evidence, or raw/private material.
 5. Write only the platform-safe projection, index, or proposal.
 6. Update provenance and coverage notes.
@@ -35,9 +35,12 @@ Use when importing new evidence, updating AnthonyHF identity, improving memory r
 Source:
 
 - `identity/`
-- `memory/`
-- `skills/`
-- `cognition/`
+- `identity/memories/`
+- `runtime/memory/`
+- `capabilities/memory/`
+- `runtime/runtime-skills/`
+- `capabilities/`
+- `identity/cognition/`
 - `integrations/`
 - `security/`
 - approved evidence pointers
@@ -47,10 +50,12 @@ Write targets:
 - Public identity: `identity/public-profile/profile.yml`
 - Wenxin output: `identity/wenxin/`
 - PSP/person model: `identity/psp/anthony-fan/`
-- Memory pointers and tiers: `memory/`
+- Long-term memory pointers and tiers: `identity/memories/`
+- Runtime working lessons: `runtime/memory/working-lessons/`
+- Capability memory: `capabilities/*/memory/`
 - Runtime skill candidates: `identity/wenxin/skill-recommendations.yml`
 - Distilled meta skills: `identity/wenxin/skill-summaries/`
-- Skill bindings: `cognition/skill-bindings/`
+- Skill bindings: `identity/cognition/skill-bindings/`
 - Evidence maturity: `docs/evidence-sufficiency.md`
 
 Rules:
@@ -75,16 +80,16 @@ python3 scripts/translate_lifeos.py output/meta/AnthonyHF.LifeOS \
 
 Output:
 
-- `profiles/openclaw/anthonyhf/SOUL.md`
-- `profiles/openclaw/anthonyhf/IDENTITY.md`
-- `profiles/openclaw/anthonyhf/USER.md`
-- `profiles/openclaw/anthonyhf/AGENTS.md`
-- `profiles/openclaw/anthonyhf/TOOLS.md`
-- `profiles/openclaw/anthonyhf/skills/<skill>/SKILL.md`
-- `profiles/openclaw/anthonyhf/skills/_source-links/`
-- `profiles/openclaw/anthonyhf/profile.manifest.yml`
-- `profiles/openclaw/anthonyhf/coverage-report.yml`
-- `profiles/openclaw/anthonyhf/translation.review.md`
+- `runtime/profiles/openclaw/anthonyhf/SOUL.md`
+- `runtime/profiles/openclaw/anthonyhf/IDENTITY.md`
+- `runtime/profiles/openclaw/anthonyhf/USER.md`
+- `runtime/profiles/openclaw/anthonyhf/AGENTS.md`
+- `runtime/profiles/openclaw/anthonyhf/TOOLS.md`
+- `runtime/profiles/openclaw/anthonyhf/skills/<skill>/SKILL.md`
+- `runtime/profiles/openclaw/anthonyhf/skills/_source-links/`
+- `runtime/profiles/openclaw/anthonyhf/profile.manifest.yml`
+- `runtime/profiles/openclaw/anthonyhf/coverage-report.yml`
+- `runtime/profiles/openclaw/anthonyhf/translation.review.md`
 
 Review focus:
 
@@ -118,13 +123,13 @@ python3 scripts/translate_lifeos.py output/meta/AnthonyHF.LifeOS \
 
 Output:
 
-- `profiles/hermes/anthonyhf/SOUL.md`
-- `profiles/hermes/anthonyhf/PROFILE.md`
-- `profiles/hermes/anthonyhf/config.yaml`
-- `profiles/hermes/anthonyhf/memories/seed.md`
-- `profiles/hermes/anthonyhf/profile.manifest.yml`
-- `profiles/hermes/anthonyhf/coverage-report.yml`
-- `profiles/hermes/anthonyhf/translation.review.md`
+- `runtime/profiles/hermes/anthonyhf/SOUL.md`
+- `runtime/profiles/hermes/anthonyhf/PROFILE.md`
+- `runtime/profiles/hermes/anthonyhf/config.yaml`
+- `runtime/profiles/hermes/anthonyhf/memories/seed.md`
+- `runtime/profiles/hermes/anthonyhf/profile.manifest.yml`
+- `runtime/profiles/hermes/anthonyhf/coverage-report.yml`
+- `runtime/profiles/hermes/anthonyhf/translation.review.md`
 
 Review focus:
 
@@ -153,7 +158,7 @@ Write target:
 
 - A separate skill package, not the LifeOS root.
 - The skill package must include its own `SKILL.md`.
-- LifeOS should keep a binding or pointer in `cognition/skill-bindings/` or `matrix.yml`.
+- LifeOS should keep a binding or pointer in `identity/cognition/skill-bindings/` or `matrix.yml`.
 
 Rules:
 
@@ -167,14 +172,14 @@ Use when migrating long-term work, life, knowledge, project, or area context int
 
 Write targets:
 
-- `memory/START-HERE.md` and `memory/wiki-repo.yml` for routing policy.
-- `memory/working-lessons/` for unpromoted observations.
-- `memory/long-term/` only for owner-approved summaries or pointers.
-- `memory/distilled-knowledge/` only for approved distilled knowledge.
+- `identity/memories/START-HERE.md` and `identity/memories/wiki-repo.yml` for routing policy.
+- `runtime/memory/working-lessons/` for unpromoted observations.
+- `identity/memories/long-term/` only for owner-approved summaries or pointers.
+- `capabilities/memory/distilled-knowledge/` only for approved distilled knowledge.
 
 Rules:
 
-- A configured memory wiki can be a target/authority when `memory/wiki-repo.yml` enables it; AF-wiki is only AnthonyHF's instance choice.
+- A configured memory wiki can be a target/authority when `identity/memories/wiki-repo.yml` enables it; AF-wiki is only AnthonyHF's instance choice.
 - Do not copy external private memory bodies into this public repo.
 - Use source IDs, local evidence manifests, and summaries instead of raw bodies.
 
@@ -184,12 +189,12 @@ Use when updating the public human-facing website.
 
 Write target:
 
-- `apps/homepage/`
+- `work/apps/homepage/`
 
 Build check:
 
 ```bash
-cd output/meta/AnthonyHF.LifeOS/apps/homepage
+cd output/meta/AnthonyHF.LifeOS/work/apps/homepage
 npm ci
 npm run build
 rm -rf node_modules
@@ -221,7 +226,7 @@ python3 scripts/intake_external_drive.py /Volumes/<drive-name> \
   --force
 ```
 
-The script writes raw paths only to the private local intake directory and writes a public-safe summary to `docs/evidence-intake/`.
+The script writes raw paths only to the private local intake directory and writes a public-safe summary to `metabolism/processing/evidence-intake/`.
 
 Manual fallback private workspace:
 
@@ -248,11 +253,11 @@ Then classify files into:
 Allowed LifeOS outputs:
 
 - `docs/evidence-sufficiency.md` maturity update
-- `docs/evidence-intake/` public-safe inventory and next-pass queue
+- `metabolism/processing/evidence-intake/` public-safe inventory and next-pass queue
 - `identity/wenxin/` project-backed capability map, field position, gap analysis, and public-safe synthesis
 - `identity/psp/anthony-fan/` abstracted patterns and boundaries from Anthony-authored writing,感悟, reflection, correction, or judgment samples
 - `identity/wenxin/skill-recommendations.yml`
-- `memory/` pointers or summaries
+- `identity/memories/`, `runtime/memory/`, or `capabilities/*/memory/` pointers or approved summaries
 
 Do not:
 

@@ -29,7 +29,7 @@
 | `Exploring AGI | Appendix 01...en.md` | 正式文章 | x0.7 | Transformer、neocortex、参考系、动态系统类比偏好证据。 |
 | `Exploring AGI | Appendix 02...en.md` | 正式文章 | x0.7 | Thousand Brains、连续学习、reference frame、跨学科综合证据。 |
 | `SKILL.md` | 系统设计产物 | x0.8 | 根 Skill 路由、公开/私密边界和 agent 协作规则。 |
-| `skills/engineering-everything/SKILL.md` | Skill 产物 | x0.8 | 工程方法论与执行纪律。 |
+| `capabilities/engineering-everything/SKILL.md` | Skill 产物 | x0.8 | 工程方法论与执行纪律。 |
 | Feishu 妙记转写私有蒸馏，13 条 | 工作会议/1on1/产品讨论/项目同步 | x0.95 | 工作风格、产品/GTM 判断、带教方式、中文会议语言指纹。原文只在临时私有目录分析，不进入公开仓库。 |
 | Feishu 文档搜索索引 | 私有文档标题/摘要级信号 | x0.4 | 判断工作主题分布；不提交链接、正文或客户细节。 |
 | ChatGPT export，2023-01 至 2026-05 | 人机对话导出 | x0.75 | 个人履历、创业复盘、产品机会、工程偏好、AI-native 公司观、交互语言指纹。1162 conversations 中初筛 390 条 Anthony candidate、320 条 maybe、49 条教师/教案排除；原始全文不进入本 PSP。 |
@@ -338,7 +338,7 @@
 
 - 触发：项目、架构、SOP、实现、review 或验证问题。
 - 动作序列：
-  1. 读取 `skills/engineering-everything/SKILL.md`。
+  1. 读取 `capabilities/engineering-everything/SKILL.md`。
   2. 判断项目阶段、真相源、边界和验证门禁。
   3. 只有决策依赖 Anthony-specific 状态时，才读取本仓库 approved summary 或用户本轮显式提供的材料。
 
@@ -420,8 +420,8 @@
 
 - 触发：当前项目、生活、复盘、知识库、Hermes memory。
 - 动作序列：
-  1. 读取 `memory/START-HERE.md`。
-  2. 再读 `memory/long-term/`、`memory/distilled-knowledge/` 或 `memory/working-lessons/` 中的 approved summary。
+  1. 读取 `identity/memories/START-HERE.md`。
+  2. 再读 `identity/memories/long-term/`、`capabilities/memory/distilled-knowledge/` 或 `runtime/memory/working-lessons/` 中的 approved summary。
   3. 不把 AF-wiki 私密正文复制进根仓库。
 
 ## 3.4 压力响应与内在矛盾

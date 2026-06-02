@@ -1,9 +1,9 @@
-[submodule "skills/engineering-everything"]
-	path = skills/engineering-everything
+[submodule "capabilities/engineering-everything"]
+	path = capabilities/engineering-everything
 	url = https://github.com/HaodiFan/engineering-everything.git
 [submodule "memory/af-wiki"]
 	path = memory/af-wiki
 	url = https://github.com/HaodiFan/AF-wiki.git
-[submodule "skills/self-evolution/cognitive-alignment"]
-	path = skills/self-evolution/cognitive-alignment
+[submodule "evolution/organ-systems/cognitive-alignment"]
+	path = evolution/organ-systems/cognitive-alignment
 	url = https://github.com/HaodiFan/cognitive-alignment-skill.git

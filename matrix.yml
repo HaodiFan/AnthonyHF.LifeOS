@@ -17,16 +17,32 @@ root_skill:
 layers:
   artifacts:
     path: artifacts/
-    purpose: 核心过程产物 latest registry，统一指向 Wenxin、PSP、Soul、Design、recommendations 和 maturity 的最新版本。
+    purpose: 核心过程产物 latest registry，统一指向 Wenxin、PSP、Soul、Design、recommendations 和
+      maturity 的最新版本。
   identity:
     path: identity/
     purpose: 我是谁、如何被理解、分身协议。
-  skills:
-    path: skills/
-    purpose: 数字分身能替 Anthony 做什么。
-  memory:
-    path: memory/
-    purpose: AnthonyHF 配置的 memory wiki、owner-approved 长期事实、摘要、working lessons 和 distilled knowledge。
+  metabolism:
+    path: metabolism/
+    purpose: 材料代谢层，记录 owner-approved 原材料入口、处理状态和已抽取 evidence packet。
+  runtime:
+    path: runtime/
+    purpose: 活动现场层，记录 sessions、runtime skills、runtime lessons、runtime profiles 和运行期记忆。
+  evolution:
+    path: evolution/
+    purpose: 进化层，记录 IPO Reverse、alignment、mutations 和 Wenxin/PSP/IPO 等能力生产系统。
+  capabilities:
+    path: capabilities/
+    purpose: 数字分身已经沉淀出来的稳定能力。
+  identities:
+    path: identities/
+    purpose: founder、author、teacher、speaker 等社会身份投影。
+  work:
+    path: work/
+    purpose: AnthonyHF.LifeOS 的产出物、项目、应用和公开 surface。
+  identity_memories:
+    path: identity/memories/
+    purpose: AnthonyHF 配置的 memory wiki、owner-approved 长期事实和摘要入口。
   security:
     path: security/
     purpose: 公开仓库的安全边界和禁入内容。
@@ -43,15 +59,15 @@ artifacts:
     role: 从 PSP 激活出来的处事方法和行为操作层。
   design:
     current_entrypoint: DESIGN.md
-    versioned_artifacts: design/DESIGN-<timestamp>.md
+    versioned_artifacts: identity/design/DESIGN-<timestamp>.md
     role: 全局审美、表达偏好和设计判断入口。
 homepage:
   type: github_pages_project_site
   source:
     branch: main
-    path: /apps/homepage
+    path: /work/apps/homepage
   url: https://haodifan.github.io/AnthonyHF.LifeOS/
-  entrypoint: apps/homepage/index.html
+  entrypoint: work/apps/homepage/index.html
 delivery:
   manifest: DELIVERY.md
   current: AnthonyHF.LifeOS
@@ -59,133 +75,173 @@ delivery:
     lifeos:
       status: canonical
       path: .
-      role: Canonical identity, memory, skills, cognition, integrations, security, and evidence gates.
+      role: Canonical identity, metabolism, runtime, capabilities, evolution, identities,
+        work, integrations, security, and evidence gates.
     openclaw:
       status: generated-projection
-      path: profiles/openclaw/anthonyhf/
+      path: runtime/profiles/openclaw/anthonyhf/
       role: OpenClaw agent workspace projection.
     hermes:
       status: generated-projection
-      path: profiles/hermes/anthonyhf/
+      path: runtime/profiles/hermes/anthonyhf/
       role: Hermes profile projection.
     homepage:
       status: public-surface
-      path: apps/homepage/
+      path: work/apps/homepage/
       role: Vite/React public presentation app, not identity truth source.
 identity:
   current_registry:
     artifact: identity/current.yml
-    role: Machine-readable active pointer for Wenxin and PSP artifacts. Runtime projections must resolve identity artifacts through this registry before falling back to legacy entrypoints.
+    role: Machine-readable active pointer for Wenxin and PSP artifacts. Runtime projections
+      must resolve identity artifacts through this registry before falling back to
+      legacy entrypoints.
   public_positioning:
     source: 问心 Skill
     repository: https://github.com/MetaInFLow/wenxin-skill
-    submodule_path: skills/self-evolution/wenxin
+    submodule_path: evolution/organ-systems/wenxin
     artifact: identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
     role: 对外定位、个人履历、个人 BP 和 README 展示内容；同时作为 AnthonyHF.LifeOS 自我更新所用的定位 Skill。
   structure_visual:
     artifact: docs/assets/anthonyhf-readme-cover.png
-    role: README 顶部的个人数字分身接口封面图，用普通人能理解的方式展示入口文件、Anthony.HF Core、模块名与当前实例的区别、Identity/Skills/Memory 三个核心模块、问心报告/PSP/engineering-everything/AF-wiki 当前实例、展示层、安全边界和底层运行组件。
+    role: README 顶部的个人数字分身接口封面图，用普通人能理解的方式展示入口文件、Anthony.HF Core、模块名与当前实例的区别、Identity/Skills/Memory
+      三个核心模块、问心报告/PSP/engineering-everything/AF-wiki 当前实例、展示层、安全边界和底层运行组件。
 person_models:
-  - id: anthony-fan
-    path: identity/psp/anthony-fan/PSP.md
-    active_registry: identity/psp/anthony-fan/current.yml
-    versions_ledger: identity/psp/anthony-fan/versions.yml
-    status: v0.4 chatgpt-export-enriched scaffold
-    scope: 当前公开身份画像、工程师身份切片、工作会议风格、产品/GTM 判断、AI Agent 认知偏好、正式写作风格参考与工作/生活上下文路由；PSP 方法产出物，属于 Identity 层的分身描述。已吸收 Feishu 妙记私有蒸馏结论，但仍不可作为完整真人复刻。
+- id: anthony-fan
+  path: identity/psp/anthony-fan/PSP.md
+  active_registry: identity/psp/anthony-fan/current.yml
+  versions_ledger: identity/psp/anthony-fan/versions.yml
+  status: v0.4 chatgpt-export-enriched scaffold
+  scope: 当前公开身份画像、工程师身份切片、工作会议风格、产品/GTM 判断、AI Agent 认知偏好、正式写作风格参考与工作/生活上下文路由；PSP 方法产出物，属于
+    Identity 层的分身描述。已吸收 Feishu 妙记私有蒸馏结论，但仍不可作为完整真人复刻。
 aesthetics:
   current_entrypoint: DESIGN.md
-  versions_ledger: design/versions.yml
-  changelog: design/changelog.md
+  versions_ledger: identity/design/versions.yml
+  changelog: identity/design/changelog.md
   scope: AnthonyHF 的全局表达偏好、设计偏好、叙事节奏、视觉倾向和好作品判断标准；项目级设计文件只作为局部覆盖，不自动升级为长期偏好。
 submodules:
-  skills:
-    - id: engineering-everything
-      name: Engineering Everything
-      path: skills/engineering-everything
-      entrypoint: skills/engineering-everything/SKILL.md
-      repository: https://github.com/HaodiFan/engineering-everything.git
-      role: Engineering Everything 的外部可执行 Skill 实现；canonical meta 说明在 identity/wenxin/skill-summaries/engineering-everything.md。
-      skill_type: external-executable-meta-skill
-    - id: psp
-      name: PSP Skill
-      path: skills/self-evolution/psp
-      entrypoint: skills/self-evolution/psp/SKILL.md
-      repository: https://github.com/MetaInFLow/psp-skill.git
-      role: AnthonyHF.LifeOS 自我进化所用的人物建模 Skill，用于从原始材料提炼 PSP、语言指纹、冲突故事、分身边界和验证方法。
-      visibility: private
-    - id: ipo-reverse
-      name: IPO Reverse Skill
-      path: skills/self-evolution/ipo-reverse
-      entrypoint: skills/self-evolution/ipo-reverse/SKILL.md
-      repository: https://github.com/MetaInFLow/ipo-reverse-skill.git
-      license: PolyForm-Noncommercial-1.0.0
-      role: AnthonyHF.LifeOS 自我进化所用的 IPO 逆向 Skill，用于从已完成产出物反推证据、隐性认知任务、中间思考资产和可复用 IPO。
-      visibility: public-source-available-noncommercial
-    - id: cognitive-alignment
-      name: Cognitive Alignment Skill
-      path: skills/self-evolution/cognitive-alignment
-      entrypoint: skills/self-evolution/cognitive-alignment/SKILL.md
-      repository: https://github.com/HaodiFan/cognitive-alignment-skill.git
-      role: AnthonyHF.LifeOS 自我进化所用的认知对齐 Skill，用于让 agent 先讲清自己的评判，与 Anthony 的认知校准；出现分歧时选择复盘方法，并把纠偏沉淀到正确 skill、memory tier 或新 skill。
-      visibility: private
-    - id: wenxin
-      name: Wenxin Skill
-      path: skills/self-evolution/wenxin
-      entrypoint: skills/self-evolution/wenxin/SKILL.md
-      repository: https://github.com/MetaInFLow/wenxin-skill.git
-      role: AnthonyHF.LifeOS 自我进化所用的对外定位 Skill，用于把经历、能力、短板和阶段目标整理成公开叙事、履历和个人 BP。
-      visibility: private
-  memory:
-    - id: af-wiki
-      name: AF-wiki
-      path: memory/af-wiki
-      repository: https://github.com/HaodiFan/AF-wiki.git
-      role: AnthonyHF.LifeOS 当前配置的 memory wiki；作为 Anthony 实例选择，不是 openLifeOS 默认架构。
+  runtime_skills:
+  - id: snapaf
+    name: snapAF Skills
+    path: runtime/runtime-skills/snapaf
+    manifest: runtime/runtime-skills/snapaf/manifest.yml
+    repository: https://github.com/HaodiFan/snapAF-skills.git
+    observed_head: 841afae5b26b5ebbe1020e059e0e754d740269d8
+    role: External runtime skill repo binding for snapAF-related concrete execution
+      workflows; produces runtime evidence and lessons, not stable capability truth.
+    skill_type: runtime-skill
+    promotion_gate: IPO Reverse plus owner alignment before any update to capabilities/.
+  capabilities:
+  - id: engineering-everything
+    name: Engineering Everything
+    path: capabilities/engineering-everything
+    entrypoint: capabilities/engineering-everything/SKILL.md
+    repository: https://github.com/HaodiFan/engineering-everything.git
+    role: Engineering Everything 的外部可执行 Skill 实现；canonical meta 说明在 identity/wenxin/skill-summaries/engineering-everything.md。
+    skill_type: external-executable-meta-skill
+  - id: public-narrative-system
+    name: Public Narrative System
+    path: capabilities/publication/public-narrative-system
+    entrypoint: capabilities/publication/public-narrative-system/SKILL.md
+    repository: local-import-from-AnthonyHF.Skill
+    role: AnthonyHF 的公开叙事、公开表达与措辞 meta skill，用于写文章、发公告、公开说明、产品叙事、社媒/公众号/官网/路演文本，以及把
+      AI 草稿去人机味、改成更像 Anthony 的公开/工作表达。
+    skill_type: local-meta-skill
+  memory_sources:
+  - id: af-wiki
+    name: AF-wiki
+    path: identity/memories/af-wiki
+    repository: https://github.com/HaodiFan/AF-wiki.git
+    role: AnthonyHF.LifeOS 当前配置的 memory wiki；作为 Anthony 实例选择，不是 openLifeOS 默认架构。
+  organ_systems:
+  - id: psp
+    name: PSP Skill
+    path: evolution/organ-systems/psp
+    entrypoint: evolution/organ-systems/psp/SKILL.md
+    repository: https://github.com/MetaInFLow/psp-skill.git
+    role: AnthonyHF.LifeOS 自我进化所用的人物建模 Skill，用于从原始材料提炼 PSP、语言指纹、冲突故事、分身边界和验证方法。
+    visibility: private
+  - id: ipo-reverse
+    name: IPO Reverse Skill
+    path: evolution/organ-systems/ipo-reverse
+    entrypoint: evolution/organ-systems/ipo-reverse/SKILL.md
+    repository: https://github.com/MetaInFLow/ipo-reverse-skill.git
+    license: PolyForm-Noncommercial-1.0.0
+    role: AnthonyHF.LifeOS 自我进化所用的 IPO 逆向 Skill，用于从已完成产出物反推证据、隐性认知任务、中间思考资产和可复用 IPO。
+    visibility: public-source-available-noncommercial
+  - id: cognitive-alignment
+    name: Cognitive Alignment Skill
+    path: evolution/organ-systems/cognitive-alignment
+    entrypoint: evolution/organ-systems/cognitive-alignment/SKILL.md
+    repository: https://github.com/HaodiFan/cognitive-alignment-skill.git
+    role: AnthonyHF.LifeOS 自我进化所用的认知对齐 Skill，用于让 agent 先讲清自己的评判，与 Anthony 的认知校准；出现分歧时选择复盘方法，并把纠偏沉淀到正确
+      skill、memory tier 或新 skill。
+    visibility: private
+  - id: wenxin
+    name: Wenxin Skill
+    path: evolution/organ-systems/wenxin
+    entrypoint: evolution/organ-systems/wenxin/SKILL.md
+    repository: https://github.com/MetaInFLow/wenxin-skill.git
+    role: AnthonyHF.LifeOS 自我进化所用的对外定位 Skill，用于把经历、能力、短板和阶段目标整理成公开叙事、履历和个人 BP。
+    visibility: private
 self_evolution:
   purpose: 让 AnthonyHF.LifeOS 可以持续更新“我是谁”和“AI 如何理解我”。
-  skills:
-    - cognitive-alignment
-    - wenxin
-    - psp
+  organ_systems:
+  - cognitive-alignment
+  - wenxin
+  - psp
+  - ipo-reverse
 openlifeos_protocol:
-  role: AnthonyHF.LifeOS is the showroom instance for openLifeOS. It is derived from the original AnthonyHF.Skill repo, preserving the public homepage and Skill routes while adding cognition, memory tiers, Skill taxonomy, integrations, evidence sufficiency, and runtime translation protocols as canonical openLifeOS layers.
+  role: AnthonyHF.LifeOS is the showroom instance for openLifeOS. It is derived from
+    the original AnthonyHF.Skill repo, preserving the public homepage and Skill routes
+    while adding cognition, memory tiers, Skill taxonomy, integrations, evidence sufficiency,
+    and runtime translation protocols as canonical openLifeOS layers.
   source_repo:
     repository: https://github.com/HaodiFan/AnthonyHF.Skill
     import_target: output/meta/AnthonyHF.LifeOS
     strategy: additive_migration_no_information_loss
   cognition:
-    taxonomy: cognition/object-taxonomy.yml
-    data_contracts: cognition/data-contracts.yml
-    rule: Memory answers what is true; Skill answers how to do something. Mixed material must be split before promotion.
+    taxonomy: identity/cognition/object-taxonomy.yml
+    data_contracts: identity/cognition/data-contracts.yml
+    rule: Memory answers what is true; Skill answers how to do something. Mixed material
+      must be split before promotion.
   memory_tiers:
-    working_lessons: memory/working-lessons/
-    long_term: memory/long-term/
-    distilled_knowledge: memory/distilled-knowledge/
-    external_authority: memory/wiki-repo.yml
-    rule: Each LifeOS should configure its own memory wiki. AnthonyHF uses AF-wiki; public LifeOS tiers only expose owner-approved summaries, evidence manifests, or current-task extracts.
+    working_lessons: runtime/memory/working-lessons/
+    long_term: identity/memories/long-term/
+    distilled_knowledge: capabilities/*/memory/
+    external_authority: identity/memories/wiki-repo.yml
+    rule: Each LifeOS should configure its own memory wiki. AnthonyHF uses AF-wiki;
+      public LifeOS tiers only expose owner-approved summaries, evidence manifests,
+      or current-task extracts.
   skill_taxonomy:
-    skill_packages: skills/
-    skill_package_rule: Every branch under skills/ must eventually contain a SKILL.md entrypoint; non-Skill summaries, bindings, and source metadata live outside skills/.
+    skill_packages: capabilities/
+    skill_package_rule: Only stable capability packages belong under capabilities/<capability-id>/;
+      capabilities/memory/ is a capability-local knowledge layer, not a package.
     skill_recommendations: identity/wenxin/skill-recommendations.yml
     skill_summaries: identity/wenxin/skill-summaries/
-    local_self_evolution_skills: skills/self-evolution/
+    local_self_evolution_skills: evolution/organ-systems/
     default_bridge_skills: integrations/skill-sources/default-skills/
-    promotion_gate: Runtime evidence requires IPO Reverse, owner alignment, and privacy review before becoming distilled meta skill behavior.
+    promotion_gate: Runtime evidence requires IPO Reverse, owner alignment, and privacy
+      review before becoming distilled meta skill behavior.
   meta_skills:
     engineering_everything:
-      canonical: skills/engineering-everything/SKILL.md
+      canonical: capabilities/engineering-everything/SKILL.md
       summary: identity/wenxin/skill-summaries/engineering-everything.md
       meaning: Anthony 自己命名的构建型 meta skill；很多构建类型的事情，都以工程化方式思考。
   runtime_translation:
-    openclaw_profile: profiles/openclaw/anthonyhf/
-    hermes_profile: profiles/hermes/anthonyhf/
+    openclaw_profile: runtime/profiles/openclaw/anthonyhf/
+    hermes_profile: runtime/profiles/hermes/anthonyhf/
     policy: Deterministic script projection plus SKILL-guided proposal-only review.
   migration:
     report: docs/migration/anthonyhf-skill-import-report.md
     inventory: docs/migration/source-inventory.yml
 skill_layers:
   placement_policy:
-    instance_local: only directories that contain a descendant SKILL.md belong under skills/.
-    non_skill_artifacts: use identity/wenxin/skill-recommendations.yml, identity/wenxin/skill-summaries/, cognition/skill-bindings/, integrations/skill-sources/, or docs/skill-system/.
-    installable_codex: installable Codex Skills must live in standalone skill packages or the Codex skills directory.
-    external Skills are installed from release/archive copies with source manifests; private source bodies are not copied unless explicitly vendored as approved skill packages.
+    instance_local: only directories that contain a descendant SKILL.md belong under
+      capabilities/.
+    non_skill_artifacts: use identity/wenxin/skill-recommendations.yml, identity/wenxin/skill-summaries/,
+      identity/cognition/skill-bindings/, integrations/skill-sources/, or docs/skill-system/.
+    installable_codex: installable Codex Skills must live in standalone skill packages
+      or the Codex skills directory.
+    external_skills: external Skills are installed from release/archive copies with
+      source manifests; private source bodies are not copied unless explicitly vendored
+      as approved skill packages.

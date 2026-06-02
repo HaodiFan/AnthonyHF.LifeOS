@@ -23,22 +23,24 @@ Delivery state is for consumers. In this state, meta skills should be downloaded
 
 | Target | Status | Path | Role |
 | --- | --- | --- | --- |
-| `lifeos` | canonical | `/` | Identity, memory, skills, cognition contracts, integrations, security, and evidence gates. |
-| `openclaw` | generated projection | `profiles/openclaw/anthonyhf/` | OpenClaw agent workspace projection generated from LifeOS artifacts. |
-| `hermes` | generated projection | `profiles/hermes/anthonyhf/` | Hermes profile projection generated from LifeOS artifacts. |
-| `homepage` | public surface | `apps/homepage/` | Vite/React public presentation surface; not a source of identity truth. |
+| `lifeos` | canonical | `/` | Identity, memories, capabilities, runtime, cognition contracts, integrations, security, and evidence gates. |
+| `openclaw` | generated projection | `runtime/profiles/openclaw/anthonyhf/` | OpenClaw agent workspace projection generated from LifeOS artifacts. |
+| `hermes` | generated projection | `runtime/profiles/hermes/anthonyhf/` | Hermes profile projection generated from LifeOS artifacts. |
+| `homepage` | public surface | `work/apps/homepage/` | Vite/React public presentation surface; not a source of identity truth. |
 
 ## Source Of Truth
 
 - Identity truth: `identity/`
-- Memory truth and pointers: `memory/`
-- Skill truth and promotion surfaces: `skills/`
-- Runtime projections: `profiles/`
-- Public presentation app: `apps/homepage/`
+- Memory truth and pointers: `identity/memories/`, configured external memory wiki, `runtime/memory/`, and `capabilities/*/memory/`
+- Stable capability truth and promotion surfaces: `capabilities/`
+- Runtime skill bindings and evidence: `runtime/runtime-skills/`, `runtime/runtime-lessons/`, and `runtime/sessions/`
+- Self-evolution production systems: `evolution/organ-systems/`
+- Runtime projections: `runtime/profiles/`
+- Public presentation app: `work/apps/homepage/`
 
 ## Delivery Rules
 
 - Runtime profiles are generated projections, not canonical identity or memory.
 - Homepage content should point back to canonical LifeOS files instead of becoming a second truth source.
 - OpenClaw and Hermes profiles must keep `profile.manifest.yml`, `coverage-report.yml`, and `translation.review.md`.
-- Any runtime feedback must return as lesson evidence before changing LifeOS identity, memory, or skills.
+- Any runtime feedback must return as lesson evidence before changing LifeOS identity, memory, runtime skills, or capabilities.

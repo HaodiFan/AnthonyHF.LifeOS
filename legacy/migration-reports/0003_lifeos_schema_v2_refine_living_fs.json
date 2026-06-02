@@ -1,0 +1,158 @@
+{
+  "schema_version": "v2",
+  "revision": "0003_lifeos_schema_v2_refine_living_fs",
+  "moves": [
+    {
+      "from": "skills/engineering-everything",
+      "to": "capabilities/engineering-everything"
+    },
+    {
+      "from": "skills/content/public-narrative-system",
+      "to": "capabilities/publication/public-narrative-system"
+    },
+    {
+      "from": "skills/publication",
+      "to": "capabilities/publication"
+    },
+    {
+      "from": "skills/self-evolution/wenxin",
+      "to": "evolution/organ-systems/wenxin"
+    },
+    {
+      "from": "skills/self-evolution/psp",
+      "to": "evolution/organ-systems/psp"
+    },
+    {
+      "from": "skills/self-evolution/ipo-reverse",
+      "to": "evolution/organ-systems/ipo-reverse"
+    },
+    {
+      "from": "skills/self-evolution/cognitive-alignment",
+      "to": "evolution/organ-systems/cognitive-alignment"
+    },
+    {
+      "from": "skills/README.md",
+      "to": "legacy/skills-v1/README.md"
+    },
+    {
+      "from": "skills/SKILLS-CATALOG.html",
+      "to": "legacy/skills-v1/SKILLS-CATALOG.html"
+    },
+    {
+      "from": "memory/START-HERE.md",
+      "to": "identity/memories/START-HERE.md"
+    },
+    {
+      "from": "memory/README.md",
+      "to": "identity/memories/README.md"
+    },
+    {
+      "from": "memory/wiki-repo.yml",
+      "to": "identity/memories/wiki-repo.yml"
+    },
+    {
+      "from": "memory/af-wiki",
+      "to": "identity/memories/af-wiki"
+    },
+    {
+      "from": "memory/long-term",
+      "to": "identity/memories/long-term"
+    },
+    {
+      "from": "memory/working-lessons",
+      "to": "runtime/memory/working-lessons"
+    },
+    {
+      "from": "memory/distilled-knowledge",
+      "to": "capabilities/memory/distilled-knowledge"
+    },
+    {
+      "from": "cognition",
+      "to": "identity/cognition"
+    },
+    {
+      "from": "intake",
+      "to": "metabolism/inbox"
+    },
+    {
+      "from": "roles",
+      "to": "identities"
+    }
+  ],
+  "removed_empty_dirs": [
+    "skills/self-evolution",
+    "skills/content",
+    "skills",
+    "memory"
+  ],
+  "rewrites": [
+    ".gitmodules",
+    "README.md",
+    "SKILL.md",
+    "matrix.yml",
+    "LIFEOS_STATUS.yml",
+    "capabilities/README.md",
+    "docs/self-evolution-output-standards.md",
+    "docs/evidence-sufficiency.md",
+    "docs/folder-structure.md",
+    "integrations/data-sources.yml",
+    "work/README.md",
+    "work/index.md",
+    "capabilities/engineering-everything/README.md",
+    "capabilities/publication/public-narrative-system/SKILL.md",
+    "capabilities/publication/public-narrative-system/references/lessons.md",
+    "capabilities/publication/public-narrative-system/references/publication-repo-map.md",
+    "identity/cognition/data-contracts.yml",
+    "identity/cognition/README.md",
+    "identity/cognition/object-taxonomy.yml",
+    "identity/psp/README.md",
+    "identity/wenxin/README.md",
+    "identity/wenxin/skill-recommendations.yml",
+    "identity/memories/START-HERE.md",
+    "identity/memories/wiki-repo.yml",
+    "identity/cognition/skill-bindings/data-sources.yml",
+    "identity/psp/anthony-fan/INITIALIZATION.md",
+    "identity/psp/anthony-fan/PSP-20260530-171725.md",
+    "identity/psp/anthony-fan/PSP.md",
+    "identity/psp/anthony-fan/raw_materials/meta.json",
+    "identity/wenxin/skill-summaries/engineering-everything.md",
+    "runtime/runtime-skills/README.md",
+    "runtime/memory/working-lessons/README.md",
+    "runtime/profiles/openclaw/anthonyhf/translation.review.md",
+    "runtime/profiles/openclaw/anthonyhf/README.md",
+    "runtime/profiles/openclaw/anthonyhf/USER.md",
+    "runtime/profiles/openclaw/anthonyhf/SOUL.md",
+    "runtime/profiles/openclaw/anthonyhf/AGENTS.md",
+    "runtime/profiles/openclaw/anthonyhf/profile.manifest.yml",
+    "runtime/profiles/openclaw/anthonyhf/TOOLS.md",
+    "runtime/profiles/openclaw/anthonyhf/learning_queue/skill-recommendations.yml",
+    "runtime/profiles/openclaw/anthonyhf/learning_queue/working-lessons.README.md",
+    "runtime/profiles/openclaw/anthonyhf/skills/engineering-everything/SKILL.md",
+    "runtime/profiles/openclaw/anthonyhf/skills/self-evolution/cognitive-alignment/SKILL.md",
+    "runtime/profiles/openclaw/anthonyhf/skills/self-evolution/psp/SKILL.md",
+    "runtime/profiles/openclaw/anthonyhf/skills/self-evolution/wenxin/SKILL.md",
+    "runtime/profiles/openclaw/anthonyhf/skills/self-evolution/ipo-reverse/SKILL.md",
+    "runtime/profiles/hermes/anthonyhf/translation.review.md",
+    "runtime/profiles/hermes/anthonyhf/README.md",
+    "runtime/profiles/hermes/anthonyhf/SOUL.md",
+    "runtime/profiles/hermes/anthonyhf/profile.manifest.yml",
+    "runtime/profiles/hermes/anthonyhf/learning_queue/skill-recommendations.yml",
+    "runtime/profiles/hermes/anthonyhf/learning_queue/working-lessons.README.md",
+    "runtime/profiles/hermes/anthonyhf/memories/seed.md",
+    "metabolism/inbox/README.md",
+    "metabolism/inbox/index.md",
+    "legacy/migration-reports/0002_lifeos_schema_v2.json",
+    "legacy/skills-v1/README.md",
+    "legacy/navigation-v1/life/README.md",
+    "docs/evidence-intake/external-drive-next-pass-20260530.md",
+    "docs/skill-system/runtime-skill-candidates.md",
+    "docs/migration/information-retention-audit-20260530.md",
+    "docs/migration/source-inventory.yml",
+    "docs/migration/anthonyhf-skill-import-report.md",
+    "docs/migration/platform-migration-instructions.md",
+    "integrations/skill-sources/default-skills/skill-updates.yml",
+    "integrations/skill-sources/default-skills/README.md",
+    "integrations/skill-sources/default-skills/self-evolution.md"
+  ],
+  "status_updated": true
+}

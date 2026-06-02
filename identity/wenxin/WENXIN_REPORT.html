@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnthonyHF Wenxin Report · Structured Output</title>
+<style>
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --ink: #101418;
+  --muted: #5f6b7a;
+  --line: #dfe4ea;
+  --brand: #0f4c81;
+  --brand-soft: #e8f1f8;
+  --accent: #9a3412;
+  --warn: #b45309;
+  --ok: #047857;
+  --shadow: 0 1px 2px rgba(16,20,24,.04), 0 8px 22px rgba(16,20,24,.06);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 15px;
+}
+.hero {
+  background: #102a43;
+  color: #fff;
+  padding: 44px 32px 36px;
+}
+.hero-inner, main { max-width: 1180px; margin: 0 auto; }
+.eyebrow { font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; opacity: .72; }
+h1 { margin: 10px 0 8px; font-size: 34px; line-height: 1.2; }
+.subtitle { max-width: 760px; margin: 0; opacity: .86; font-size: 16px; }
+.meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.18); font-size: 13px; opacity: .82; }
+main { padding: 34px 32px 72px; }
+section { margin-bottom: 34px; }
+h2 { margin: 0 0 8px; font-size: 24px; }
+h3 { margin: 0 0 8px; font-size: 17px; }
+.lead { margin: 0 0 18px; color: var(--muted); }
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 24px;
+  box-shadow: var(--shadow);
+}
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+.card h3 { color: var(--brand); }
+.tag {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin: 0 6px 6px 0;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 600;
+}
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #f3d19c;
+  background: #fff7ed;
+  color: var(--warn);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+ul { margin: 8px 0 0 20px; padding: 0; }
+li { margin: 4px 0; }
+.map { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.map div { background: #f9fafb; border: 1px solid var(--line); border-radius: 7px; padding: 12px 14px; }
+.path { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; color: #334155; background: #eef2f7; padding: 2px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">openLifeOS · Wenxin Structured Output</div>
+    <h1>AnthonyHF Wenxin Report</h1>
+    <p class="subtitle">一个用于描述 Anthony Fan 当前公开身份、能力定位、领域覆盖和下一步路径的结构化问心产物。HTML 是人读入口，XML 是机器读入口；Markdown 仅保留为 legacy source。</p>
+    <div class="meta">
+      <span><strong>Owner:</strong> Anthony Fan</span>
+      <span><strong>Artifact:</strong> Wenxin</span>
+      <span><strong>Evidence:</strong> insufficient</span>
+      <span><strong>Status:</strong> evidence-limited public wrapper</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>定位</h2>
+    <p class="lead">Anthony Fan 是以长期工程深度、企业 AI 落地和 AI-native organization 构建为主线的连续创业 CTO。</p>
+    <div class="status">证据说明：当前结构化版本来自公开 wrapper、PSP 和项目 evidence first pass；它不是完整 PDF 原报告重建。</div>
+  </section>
+
+  <section>
+    <h2>三段卖点</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>底层穿透</h3>
+        <p>从底层软硬件、系统工程到企业 AI 和 Agent workflow，习惯把复杂问题拆到可解释结构。</p>
+      </article>
+      <article class="card">
+        <h3>业务闭环</h3>
+        <p>技术判断需要回到客户、产品、交付、现金流和可验证结果。</p>
+      </article>
+      <article class="card">
+        <h3>长期复利</h3>
+        <p>把多年工程、创业、知识系统和数字分身实践沉淀成可复用 Skill matrix。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>四个问心问题</h2>
+    <div class="grid">
+      <article>
+        <h3>我是谁</h3>
+        <p>公开层可表达为 AnthonyHF.LifeOS 的 owner、连续创业 CTO、企业 AI 系统构建者和 openLifeOS 样板间 owner。</p>
+      </article>
+      <article>
+        <h3>我现在站在哪</h3>
+        <p>当前站在从个人超级工程师能力转向组织级 AI-native company runtime 的阶段。</p>
+      </article>
+      <article>
+        <h3>离完整版还差多少</h3>
+        <p>当前 Markdown wrapper 的结构完整度约 60%；这不代表完整 Wenxin 证据成熟度。</p>
+      </article>
+      <article>
+        <h3>我该往哪走</h3>
+        <p>继续把 LifeOS 作为样板间，把高频工作流沉淀成 Skill，并把 runtime profiles 与 Dream Loop 连接成持续进化系统。</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>领域覆盖图</h2>
+    <p class="lead">当前可表达的能力范围，按公开证据和项目 evidence first pass 组织。</p>
+    <div class="map">
+      <div>Engineering systems</div>
+      <div>Enterprise AI delivery</div>
+      <div>Agent / Skill / memory infrastructure</div>
+      <div>AI/data tooling platforms</div>
+      <div>Plugin runtime and process-control architecture</div>
+      <div>Web-agent / computer-use data pipeline infrastructure</div>
+      <div>AI data production, QC operations, and delivery retrospectives</div>
+      <div>Public narrative and identity systems</div>
+      <div>Organization and training mechanisms</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Gap 分析</h2>
+    <ul>
+      <li>需要从 PDF 中抽取完整结构化 Wenxin 字段。</li>
+      <li>需要 owner 确认哪些公开叙事可进入 README / profile。</li>
+      <li>需要把新材料继续分流到 PSP、memory、Skill recommendations 和 public narrative system。</li>
+      <li>AFElite 项目 evidence 目前是 README/architecture metadata 级别，尚未验证交付规模、采用情况、商业结果或反例。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>推荐 Skill</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>engineering-capability</h3>
+        <span class="tag">repeated workflow</span>
+        <span class="tag">active implementation</span>
+        <p>对应 Engineering Everything。证据来自 PSP 中关于真相源、边界、任务拆解、验证、交付、复用的模式。</p>
+      </article>
+      <article class="card">
+        <h3>ai-data-qc-and-delivery-ops</h3>
+        <span class="tag">repeated workflow</span>
+        <p>对应 QCAnything、WebAgent data production、computer-use dataset pipeline 和大规模数据交付复盘。</p>
+      </article>
+      <article class="card">
+        <h3>agent-and-plugin-runtime-architecture</h3>
+        <span class="tag">top 5% hypothesis</span>
+        <span class="tag">needs benchmark</span>
+        <p>对应 QCAnything backend/runtime、plugin sandboxing、IPC/RPC、WebTwin 和 computer-use data pipeline。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Source Inventory</h2>
+    <ul>
+      <li><span class="path">identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf</span></li>
+      <li><span class="path">README.md</span></li>
+      <li><span class="path">identity/psp/anthony-fan/PSP.md</span></li>
+      <li><span class="path">identity/wenxin/project-evidence/</span></li>
+      <li><span class="path">identity/wenxin/skill-recommendations.yml</span></li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

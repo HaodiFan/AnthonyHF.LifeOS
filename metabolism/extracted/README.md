@@ -1,0 +1,5 @@
+# Metabolism Extracted
+
+已经从原材料中抽取、脱敏并通过 owner-approved 边界检查的 evidence packet。
+
+这些材料可继续路由到 Wenxin、PSP、runtime session、work、identity memories 或 capability memory。

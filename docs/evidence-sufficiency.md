@@ -28,8 +28,8 @@ Reasons:
 
 Available sources:
 
-- `external-drive-afelite-20260530`: local-only inventory created at `~/LifeOS_Intake/AnthonyHF/external-drive/`; public-safe intake summary recorded in `docs/evidence-intake/external-drive-afelite-20260530.md`.
-- Project first-read summary: `docs/evidence-intake/external-drive-project-first-read-20260530.md`.
+- `external-drive-afelite-20260530`: local-only inventory created at `~/LifeOS_Intake/AnthonyHF/external-drive/`; public-safe intake summary recorded in `metabolism/processing/evidence-intake/external-drive-afelite-20260530.md`.
+- Project first-read summary: `metabolism/processing/evidence-intake/external-drive-project-first-read-20260530.md`.
 - Wenxin project evidence:
   - `identity/wenxin/project-evidence-external-drive-20260530.md`
   - `identity/wenxin/project-evidence/qcanything-platform-20260530.md`
@@ -37,7 +37,7 @@ Available sources:
   - `identity/wenxin/project-evidence/computer-use-datasets-20260530.md`
   - `identity/wenxin/project-evidence/feishu-project-ops-20260530.md`
 - Feishu first read:
-  - `docs/evidence-intake/feishu-first-read-20260530.md`
+  - `metabolism/processing/evidence-intake/feishu-first-read-20260530.md`
   - `identity/psp/anthony-fan/analysis/feishu_writing_first_read_20260530.md`
 
 Unavailable or not yet processed:

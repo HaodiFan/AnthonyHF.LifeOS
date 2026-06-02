@@ -49,7 +49,7 @@ feishu_token_policy: not-configured
 hermes_configure: true
 hermes_update_cadence: on-new-evidence
 hermes_source_usage: github-events, feishu-export, wiki-diff, manual-approved-material
-hermes_targets: identity/wenxin, identity/psp, identity/wenxin/skill-recommendations, memory/index, SKILL.md
+hermes_targets: identity/wenxin, identity/psp, identity/wenxin/skill-recommendations, identity/memories/START-HERE.md, SKILL.md
 hermes_token_policy: env-only-or-platform-secret
 wenxin_goals: self-understanding, public-positioning, field-map, gap-analysis, future-paths, skill-candidates
 recommended_skill_domains: professional-core, communication, decision-making

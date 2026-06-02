@@ -1,0 +1,9 @@
+schema: openlifeos.avatar-description-versions.v1
+owner: Anthony Fan
+current: identity/avatar-description/current.yml
+versions:
+  - id: avatar-description-20260602-000000
+    path: identity/avatar-description/current.yml
+    activated_at: "2026-06-02T00:00:00+08:00"
+    evidence_level: partial
+    notes: "Initial structured product-facing avatar description derived from Wenxin, PSP, and Soul."

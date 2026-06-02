@@ -1,0 +1,53 @@
+schema: openlifeos.runtime-skill.external-repo.v1
+skill_id: snapaf
+name: snapAF Skills
+skill_type: runtime-skill
+status: external-repo-bound
+source:
+  repository: https://github.com/HaodiFan/snapAF-skills.git
+  default_ref: HEAD
+  observed_head: 841afae5b26b5ebbe1020e059e0e754d740269d8
+  observed_at: "2026-06-02"
+  fetch_status: ls-remote-ok; clone-timeout
+role:
+  purpose: Concrete runtime skill repo for snapAF-related execution workflows.
+  not_a_truth_source_for:
+    - identity
+    - PSP
+    - Soul
+    - stable capabilities
+boundaries:
+  input:
+    allowed:
+      - owner-approved task brief
+      - repo issue or PR links
+      - public-safe runtime context
+      - configured external data-source pointers
+    forbidden:
+      - secrets
+      - raw private transcripts
+      - unapproved personal facts embedded into skill files
+  output:
+    writes_first_to:
+      - runtime/sessions/
+      - runtime/memory/working-lessons/
+      - runtime/runtime-lessons/
+    may_update:
+      - this external runtime skill repo
+      - identity/wenxin/skill-recommendations.yml
+    must_not_update_without_promotion:
+      - capabilities/
+      - root SKILL.md
+      - SOUL.md
+promotion_gate:
+  target_if_repeated_and_generalized: capabilities/
+  requires:
+    - repeated successful or failed runtime runs
+    - IPO Reverse reconstruction
+    - owner alignment
+    - privacy review
+    - stable input/output contract
+    - verification or eval evidence
+notes:
+  - This manifest records the LifeOS binding only; it does not vendor the external repo.
+  - Treat repository internals as runtime implementation until promoted.

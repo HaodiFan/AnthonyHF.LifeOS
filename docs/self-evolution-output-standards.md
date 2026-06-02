@@ -3,7 +3,7 @@
 Generated: 2026-05-30
 Owner: AnthonyHF
 
-This file defines the minimum standard outputs for Wenxin, PSP, Soul, Design, and IPO Reverse.
+This file defines the minimum standard outputs for Avatar Description, Wenxin, PSP, Soul, Design, and IPO Reverse.
 
 The rule is simple:
 
@@ -37,18 +37,23 @@ If `evidence_sufficiency=insufficient`, the artifact must stop before making sta
 
 ## Active Artifact Rule
 
-Wenxin, PSP, Soul, and Design are cumulative artifacts, not one-off overwritten reports.
+Avatar Description, Wenxin, PSP, Soul, and Design are cumulative artifacts, not one-off overwritten reports.
 
 - Global latest registry: `artifacts/current.yml`.
 - Global active identity registry: `identity/current.yml`.
-- Wenxin current entrypoint: `identity/wenxin/WENXIN_REPORT.md`.
+- Avatar Description current entrypoint: `identity/avatar-description/current.yml`.
+- Wenxin current entrypoint: `identity/wenxin/WENXIN_REPORT.html`.
+- Wenxin machine entrypoint: `identity/wenxin/WENXIN_REPORT.xml`.
+- Wenxin Markdown fallback/source: `identity/wenxin/WENXIN_REPORT.md`.
 - Wenxin versioned artifacts: `identity/wenxin/WENXIN-<timestamp>.md`.
-- PSP current entrypoint: `identity/psp/<person_id>/PSP.md`.
+- PSP current entrypoint: `identity/psp/<person_id>/PSP.html`.
+- PSP machine entrypoint: `identity/psp/<person_id>/PSP.xml`.
+- PSP Markdown fallback/source: `identity/psp/<person_id>/PSP.md`.
 - PSP versioned artifacts: `identity/psp/<person_id>/PSP-<timestamp>.md`.
 - Soul current entrypoint: `SOUL.md`.
 - Soul versioned artifacts: `identity/psp/<person_id>/SOUL-<timestamp>.md`.
 - Design current entrypoint: `DESIGN.md`.
-- Design versioned artifacts: `design/DESIGN-<timestamp>.md`.
+- Design versioned artifacts: `identity/design/DESIGN-<timestamp>.md`.
 
 Update sequence:
 
@@ -58,9 +63,39 @@ Update sequence:
 4. Update `versions.yml`, `changelog.md`, local PSP `current.yml` when applicable, global `identity/current.yml` when identity-related, and `artifacts/current.yml`.
 5. Regenerate runtime projections so `profile.manifest.yml` records the active source artifacts used.
 
+## Avatar Description Standard Output
+
+Path: `identity/avatar-description/current.yml`
+
+Avatar Description is the product-facing current digital avatar description. It is the first structured read model for Studio UI, runtime handbooks, and dashboards. It must not become a private fact source, raw evidence store, or long-form person model.
+
+Passes only if it can fill these key fields or explicitly declares insufficiency:
+
+- `schema: openlifeos.avatar-description.v1`
+- `display_name`
+- `one_line`
+- `current_role`
+- `operating_mode`
+- `strengths`
+- `boundaries`
+- `evidence_level`
+- `maturity_notice`
+- `source_refs`
+- `claim_evidence`
+- `derived_from`
+
+Minimum evidence for `sufficient`:
+
+- Wenxin, PSP, and Soul have enough evidence for the fields summarized here.
+- Every stable claim is traceable through `claim_evidence`; document-level `source_refs` are not enough for sufficient evidence.
+- `boundaries` explicitly states what the avatar cannot support yet.
+- `maturity_notice` distinguishes product-facing summary from full evidence completeness.
+
 ## Wenxin Standard Output
 
-Path: `identity/wenxin/WENXIN_REPORT.md`
+Current path: `identity/wenxin/WENXIN_REPORT.html`
+Machine path: `identity/wenxin/WENXIN_REPORT.xml`
+Markdown fallback/source: `identity/wenxin/WENXIN_REPORT.md`
 
 Passes only if it can fill these key sections or explicitly declares insufficiency:
 
@@ -137,7 +172,7 @@ Minimum evidence for `sufficient`:
 
 ## Design Standard Output
 
-Path: `DESIGN.md` and `design/DESIGN-<timestamp>.md`
+Path: `DESIGN.md` and `identity/design/DESIGN-<timestamp>.md`
 
 Passes only if it can fill these key sections or explicitly declares insufficiency:
 
@@ -160,7 +195,7 @@ Minimum evidence for `sufficient`:
 
 ## IPO Reverse Standard Output
 
-Path: `identity/ipo-reverse/<artifact_id>.md` or `memory/working-lessons/<artifact_id>-ipo.md`
+Path: `identity/ipo-reverse/<artifact_id>.md` or `runtime/memory/working-lessons/<artifact_id>-ipo.md`
 
 Passes only if it can fill these key sections or explicitly declares insufficiency:
 

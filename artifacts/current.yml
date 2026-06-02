@@ -1,18 +1,35 @@
 schema: openlifeos.artifacts-current.v1
 owner: Anthony Fan
 repo: AnthonyHF.LifeOS
-updated_at: "2026-05-31T00:00:00+08:00"
+updated_at: "2026-06-02T12:00:00+08:00"
 policy:
   purpose: "Single machine-readable latest registry for core openLifeOS process artifacts."
   write_rule: "Create timestamped artifacts first; activate by updating current entrypoints, versions ledgers, changelogs, and this registry together."
   projection_rule: "Runtime profiles consume these active artifacts as inputs; runtime files are projections and must not become truth sources."
   raw_material_rule: "Raw private materials remain outside this repo."
 artifacts:
+  avatar_description:
+    semantic_role: product_facing_current_avatar_description
+    answers: "What is this digital avatar currently like for a human user or runtime handbook?"
+    current_entrypoint: identity/avatar-description/current.yml
+    active_artifact: identity/avatar-description/current.yml
+    versions_ledger: identity/avatar-description/versions.yml
+    changelog: identity/avatar-description/changelog.md
+    status: active
+    evidence_sufficiency: partial
+    derived_from:
+      - identity/wenxin/WENXIN_REPORT.html
+      - identity/psp/anthony-fan/PSP.html
+      - SOUL.md
+      - docs/evidence-sufficiency.md
   wenxin:
     semantic_role: identity_self_discovery
     answers: "Who am I, where do I stand, how far am I from the fuller version of my field, and where should I go?"
-    current_entrypoint: identity/wenxin/WENXIN_REPORT.md
-    active_artifact: identity/wenxin/WENXIN-20260530-235550.md
+    current_entrypoint: identity/wenxin/WENXIN_REPORT.html
+    active_artifact: identity/wenxin/WENXIN_REPORT.html
+    machine_entrypoint: identity/wenxin/WENXIN_REPORT.xml
+    legacy_markdown_source: identity/wenxin/WENXIN_REPORT.md
+    legacy_versioned_markdown_source: identity/wenxin/WENXIN-20260530-235550.md
     versions_ledger: identity/wenxin/versions.yml
     changelog: identity/wenxin/changelog.md
     status: evidence-limited-public-wrapper
@@ -20,8 +37,11 @@ artifacts:
   psp:
     semantic_role: person_model_source
     answers: "What recurring judgment model, value ordering, behavior boundary, and confidence model can be inferred from approved evidence?"
-    current_entrypoint: identity/psp/anthony-fan/PSP.md
-    active_artifact: identity/psp/anthony-fan/PSP-20260530-171725.md
+    current_entrypoint: identity/psp/anthony-fan/PSP.html
+    active_artifact: identity/psp/anthony-fan/PSP.html
+    machine_entrypoint: identity/psp/anthony-fan/PSP.xml
+    legacy_markdown_source: identity/psp/anthony-fan/PSP.md
+    legacy_versioned_markdown_source: identity/psp/anthony-fan/PSP-20260530-171725.md
     versions_ledger: identity/psp/anthony-fan/versions.yml
     changelog: identity/psp/anthony-fan/changelog.md
     status: v0.4-chatgpt-export-enriched-scaffold
@@ -41,18 +61,20 @@ artifacts:
     semantic_role: global_aesthetic_system
     answers: "What expression, product, visual, narrative, and taste preferences should guide global output?"
     current_entrypoint: DESIGN.md
-    active_artifact: design/DESIGN-20260530-235550.md
-    versions_ledger: design/versions.yml
-    changelog: design/changelog.md
+    active_artifact: identity/design/DESIGN-20260530-235550.md
+    versions_ledger: identity/design/versions.yml
+    changelog: identity/design/changelog.md
     status: v0.1-boundary-and-homepage-informed
     evidence_sufficiency: insufficient
   skill_recommendations:
     semantic_role: wenxin_candidate_skill_recommendations
+    answers: "Which candidate runtime/meta skills are recommended from the current Wenxin and evidence surface, and what evidence maturity or next review is needed before promotion?"
     current_entrypoint: identity/wenxin/skill-recommendations.yml
     status: active
     evidence_sufficiency: partial
   evidence_maturity:
     semantic_role: maturity_and_gap_report
+    answers: "How mature is the current LifeOS evidence base, which artifact claims are under-supported, and what targeted material should be collected next?"
     current_entrypoint: docs/evidence-sufficiency.md
     status: active
     evidence_sufficiency: insufficient

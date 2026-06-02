@@ -1,0 +1,172 @@
+schema: openlifeos.avatar-page-view-model.v1
+generated_at: "2026-06-02"
+owner: Anthony Fan
+perspective: third-person
+purpose: "Define the concrete avatar page sections for AnthonyHF without making the page a source of truth."
+source_policy:
+  rule: "The page consumes LifeOS artifacts; it does not replace registries, Wenxin, PSP, Soul, capabilities, memory, or runtime logs."
+  primary_registries:
+    - artifacts/current.yml
+    - identity/current.yml
+  architecture_doc: docs/avatar-page-information-architecture.md
+depths:
+  overview:
+    purpose: "Fast third-person understanding."
+    sections:
+      - identity_card
+      - maturity
+      - top_capabilities
+      - boundaries
+  profile:
+    purpose: "Explain why the avatar behaves this way."
+    sections:
+      - public_identity
+      - person_model
+      - scene_identity
+      - memory_and_evidence
+  operations:
+    purpose: "Explain how it works, runs, and evolves."
+    sections:
+      - capabilities
+      - runtime_activity
+      - work_outputs
+      - evolution
+      - governance
+sections:
+  identity_card:
+    status: available
+    source:
+      - identity/avatar-description/current.yml
+      - identity/public-profile/profile.yml
+    page_fields:
+      - display_name
+      - one_line
+      - current_operating_context
+      - maturity_badge
+      - public_boundary
+  public_identity:
+    status: available_with_partial_evidence
+    source:
+      - identity/wenxin/WENXIN_REPORT.html
+      - identity/wenxin/WENXIN_REPORT.xml
+      - identity/public-profile/profile.yml
+    page_fields:
+      - positioning
+      - domain
+      - career_line
+      - current_constraints
+  person_model:
+    status: partial
+    source:
+      - identity/psp/anthony-fan/PSP.html
+      - SOUL.md
+    page_fields:
+      - judgment_model
+      - operating_principles
+      - communication_mode
+      - anti_claims
+    missing:
+      - validated examples
+      - confidence by section
+      - stronger Anthony-authored evidence
+  scene_identity:
+    status: weak
+    source:
+      - identities/
+      - identity/wenxin/
+      - identity/public-profile/
+      - work/
+      - security/
+    page_fields:
+      - generated_scene_identities
+      - representation_rules
+      - owner_confirmation_required
+    missing:
+      - scene identity schema
+      - evidence-backed scene identity generator
+      - per-scene confidence and authority boundary
+  capabilities:
+    status: partial
+    source:
+      - capabilities/
+      - runtime/runtime-skills/
+      - identity/wenxin/skill-recommendations.yml
+    stable:
+      - capabilities/engineering-everything/
+      - capabilities/publication/public-narrative-system/
+    runtime:
+      - runtime/runtime-skills/snapaf/manifest.yml
+    missing:
+      - capability evidence examples
+      - capability memory pages
+      - runtime run history
+  memory_and_evidence:
+    status: available_as_boundary
+    source:
+      - identity/memories/
+      - runtime/memory/
+      - capabilities/memory/
+      - metabolism/
+      - docs/evidence-sufficiency.md
+    missing:
+      - public-safe memory summaries
+      - concrete evidence packets for each major claim
+  runtime_activity:
+    status: weak
+    source:
+      - runtime/sessions/
+      - runtime/runtime-lessons/
+      - runtime/profiles/
+    missing:
+      - concrete session records
+      - lesson examples
+      - feedback history
+  work_outputs:
+    status: partial
+    source:
+      - work/
+      - work/apps/homepage/
+    available:
+      - homepage app
+    missing:
+      - project index with evidence refs
+      - reports index
+      - publications index
+  evolution:
+    status: available_as_process
+    source:
+      - evolution/
+      - docs/lifeos-content-review.md
+    missing:
+      - completed IPO run artifacts
+      - alignment run history
+      - mutation changelog with evidence refs
+  governance:
+    status: available
+    source:
+      - security/
+      - integrations/data-sources.yml
+      - identity/cognition/
+    page_fields:
+      - security_boundary
+      - data_source_policy
+      - prohibited_claims
+      - approval_requirements
+ui_guidance:
+  language: zh-CN
+  voice: "third-person, evidence-aware, not autobiographical"
+  avoid:
+    - "first-person identity claims"
+    - "unsupported private-life simulation"
+    - "turning external runtime versions into truth sources"
+    - "flat catalog-only page"
+  recommended_order:
+    - identity_card
+    - current_maturity
+    - what_this_avatar_can_do
+    - how_it_thinks_and_behaves
+    - memory_and_evidence
+    - runtime_activity
+    - work_outputs
+    - evolution
+    - boundaries

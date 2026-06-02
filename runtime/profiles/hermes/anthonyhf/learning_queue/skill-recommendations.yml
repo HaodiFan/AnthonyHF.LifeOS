@@ -1,0 +1,5 @@
+schema: openlifeos.runtime-projection-pointer.v1
+target_runtime: hermes
+role: runtime learning queue pointer
+canonical_source: identity/wenxin/skill-recommendations.yml
+rule: Do not duplicate canonical Wenxin recommendations inside runtime projections. Resolve this pointer before use.

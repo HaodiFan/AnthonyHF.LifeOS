@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wenxinReport schema="openlifeos.wenxin.structured.v1" owner="Anthony Fan" artifactId="wenxin-structured-20260602" evidenceSufficiency="insufficient" status="evidence-limited-public-wrapper">
+  <sourceInventory>
+    <source role="primary">identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf</source>
+    <source role="public-summary">README.md</source>
+    <source role="psp-context">identity/psp/anthony-fan/PSP.md</source>
+    <source role="project-evidence">identity/wenxin/project-evidence-external-drive-20260530.md</source>
+    <source role="project-evidence">identity/wenxin/project-evidence/qcanything-platform-20260530.md</source>
+    <source role="project-evidence">identity/wenxin/project-evidence/webtwin-20260530.md</source>
+    <source role="project-evidence">identity/wenxin/project-evidence/computer-use-datasets-20260530.md</source>
+    <source role="project-evidence">identity/wenxin/project-evidence/feishu-project-ops-20260530.md</source>
+  </sourceInventory>
+  <positioning>
+    <oneLine>Anthony Fan 是以长期工程深度、企业 AI 落地和 AI-native organization 构建为主线的连续创业 CTO。</oneLine>
+    <sellingPoints>
+      <point id="bottom-up-depth">从底层软硬件、系统工程到企业 AI 和 Agent workflow，习惯把复杂问题拆到可解释结构。</point>
+      <point id="business-closure">技术判断需要回到客户、产品、交付、现金流和可验证结果。</point>
+      <point id="long-term-compounding">把多年工程、创业、知识系统和数字分身实践沉淀成可复用 Skill matrix。</point>
+    </sellingPoints>
+  </positioning>
+  <identityQuestions>
+    <question id="who-am-i">
+      <answer>公开层可表达为 AnthonyHF.LifeOS 的 owner、连续创业 CTO、企业 AI 系统构建者和 openLifeOS 样板间 owner。</answer>
+    </question>
+    <question id="where-i-stand">
+      <answer>当前站在从个人超级工程师能力转向组织级 AI-native company runtime 的阶段。</answer>
+    </question>
+    <question id="completion">
+      <answer>Evidence-limited public wrapper: 60%。该百分比只描述公开 wrapper 的结构完整度，不代表完整 Wenxin 原报告重建。</answer>
+    </question>
+    <question id="where-to-go">
+      <answer>继续把 AnthonyHF.LifeOS 作为公开数字分身入口和 openLifeOS 样板间；把高频工作流沉淀成 Skill；连接 runtime profiles 和 Dream Loop。</answer>
+    </question>
+  </identityQuestions>
+  <fieldCoverageMap>
+    <field>Engineering systems</field>
+    <field>Enterprise AI delivery</field>
+    <field>Agent / Skill / memory infrastructure</field>
+    <field>AI/data tooling platforms</field>
+    <field>Plugin runtime and process-control architecture</field>
+    <field>Web-agent / computer-use data pipeline infrastructure</field>
+    <field>AI data production, QC operations, and delivery retrospectives</field>
+    <field>Public narrative and identity systems</field>
+    <field>Organization and training mechanisms</field>
+  </fieldCoverageMap>
+  <gapAnalysis>
+    <gap>需要从 PDF 中抽取完整结构化 Wenxin 字段。</gap>
+    <gap>需要 owner 确认哪些公开叙事可进入 README / profile。</gap>
+    <gap>需要把新材料继续分流到 PSP、memory、Skill recommendations 和 public narrative system。</gap>
+    <gap>AFElite 项目 evidence 目前是 README/architecture metadata 级别，尚未验证交付规模、采用情况、商业结果或反例。</gap>
+  </gapAnalysis>
+  <futurePaths>
+    <path order="1">继续把 AnthonyHF.LifeOS 作为公开数字分身入口和 openLifeOS 样板间。</path>
+    <path order="2">把已经通过证据门控的高频工作流或高分位能力沉淀成可安装或可复用 Skill。</path>
+    <path order="3">将 runtime profiles 和 Dream Loop 连接成持续进化系统。</path>
+  </futurePaths>
+  <recommendedSkills>
+    <skill id="engineering-capability" implementation="engineering-everything" eligibilityType="repeated_workflow">
+      <alias>engineering-everything</alias>
+      <alias>Engineering Everything</alias>
+      <alias>工程化万物</alias>
+      <evidence>PSP 中关于真相源、边界、任务拆解、验证、交付、复用的模式；长期重复出现的工程、产品、组织构建任务。</evidence>
+    </skill>
+    <skill id="ai-data-qc-and-delivery-ops" eligibilityType="repeated_workflow">
+      <evidence>QCAnything, WebAgent data production, computer-use dataset pipeline, large data delivery retrospectives.</evidence>
+    </skill>
+    <skill id="agent-and-plugin-runtime-architecture" eligibilityType="top_5_percent_capability_hypothesis" status="hypothesis">
+      <evidence>QCAnything backend/runtime, plugin sandboxing, IPC/RPC, WebTwin, computer-use data pipeline.</evidence>
+      <needs>外部 benchmark、采用情况或生产可靠性证据。</needs>
+    </skill>
+  </recommendedSkills>
+  <missingInformation>
+    <suggestedPrompt>请从 Wenxin PDF 中抽取完整字段，并标注哪些内容可以公开。</suggestedPrompt>
+    <whyNeeded>当前结构化产物是迁移入口，不替代 PDF 原文。</whyNeeded>
+  </missingInformation>
+</wenxinReport>

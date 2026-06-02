@@ -23,7 +23,7 @@
 
 ## Relationship To The Skill
 
-- Skill entrypoint: `skills/engineering-everything/SKILL.md`
+- Skill entrypoint: `capabilities/engineering-everything/SKILL.md`
 - Wenxin summary: `identity/wenxin/skill-summaries/engineering-everything.md`
 
 AnthonyHF.LifeOS 中的 `SKILL.md` 是本地可路由入口；本文件是问心侧能力总结，负责说明它为什么存在、如何归类、什么时候使用。
@@ -45,7 +45,7 @@ Use this meta skill when the task is about:
 - Anthony 身份、履历或 PSP 结论。
 - 直接替代 Wenxin、PSP、IPO Reverse 或 Cognitive Alignment。
 
-事实和长期上下文应通过 `memory/wiki-repo.yml`、`memory/` tiers 或 `cognition/skill-bindings/data-sources.yml` 查询。
+事实和长期上下文应通过 `identity/memories/wiki-repo.yml`、`identity/memories/`、`runtime/memory/`、`capabilities/*/memory/` 或 `identity/cognition/skill-bindings/data-sources.yml` 查询。
 
 ## Operating Gate
 
@@ -57,4 +57,4 @@ Use this meta skill when the task is about:
 4. 产出物写到哪里。
 5. 验证 gate 是什么。
 
-如果任务需要 Anthony-specific 状态，再按 `memory/wiki-repo.yml` 查询配置的 memory wiki；不要把事实硬写进本 meta skill。
+如果任务需要 Anthony-specific 状态，再按 `identity/memories/wiki-repo.yml` 查询配置的 memory wiki；不要把事实硬写进本 meta skill。
