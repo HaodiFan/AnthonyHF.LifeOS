@@ -143,7 +143,7 @@ def render_html(old_fm, new_fm, old_sections, new_sections, output_path):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>问心 · 进展对比 {old_date} → {new_date}</title>
+<title>InnerAtlas（问心）· 进展对比 {old_date} → {new_date}</title>
 <style>
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
   body {{
@@ -298,7 +298,7 @@ def render_html(old_fm, new_fm, old_sections, new_sections, output_path):
 <div class="container">
 
 <div class="header">
-  <div class="label">问心 · 进展对比</div>
+  <div class="label">InnerAtlas（问心）· 进展对比</div>
   <h1>你的成长记录</h1>
   <div class="dates">
     <span>{old_date}</span>
@@ -330,7 +330,7 @@ def render_html(old_fm, new_fm, old_sections, new_sections, output_path):
 </div>
 
 <footer>
-  <p>由「问心」生成 · {datetime.now().strftime("%Y-%m-%d %H:%M")}</p>
+  <p>由 InnerAtlas（问心）生成 · {datetime.now().strftime("%Y-%m-%d %H:%M")}</p>
   <div class="links">
     <a href="/">← 个人网站首页</a>
     <a href="/report.html">完整问心报告 →</a>

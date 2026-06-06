@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-问心 · 动态问卷生成器
+InnerAtlas（问心）· 动态问卷生成器
 ====================
 
 用于「路径 B」（用户无素材）入口。根据用户已经回答的内容，动态生成下一组问题。
@@ -237,7 +237,7 @@ def select_questions(round_num: int, previous_answers: dict = None) -> dict:
 # ============== 主入口 ==============
 
 def main():
-    parser = argparse.ArgumentParser(description="问心 · 动态问卷生成器")
+    parser = argparse.ArgumentParser(description="InnerAtlas（问心）· 动态问卷生成器")
     parser.add_argument("--round", type=int, required=True, help="当前轮次（1-4）")
     parser.add_argument(
         "--previous-answers",

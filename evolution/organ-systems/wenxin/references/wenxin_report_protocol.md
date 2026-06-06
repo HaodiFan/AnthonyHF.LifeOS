@@ -1,6 +1,6 @@
-# WENXIN_REPORT.md · 接力协议详细规则
+# InnerAtlas（问心）WENXIN_REPORT.md · 接力协议详细规则
 
-「问心」的标准化输出文件。给下游工具（web-design / 简历生成器 / 个人 BP 工具 / 任何消费者）读取。
+InnerAtlas（问心）的标准化输出文件。给下游工具（web-design / 简历生成器 / 个人 BP 工具 / 任何消费者）读取。
 
 ## 设计哲学
 
@@ -29,7 +29,7 @@
 
 ```yaml
 ---
-schema: wenxin-report           # 固定值，标识此文件是 wenxin 协议
+schema: wenxin-report           # 固定值，legacy protocol id；当前产品名是 InnerAtlas（问心）
 version: 1.0                    # 协议版本（不是用户的版本）
 generated_at: 2026-05-03        # 首次生成时间
 last_updated: 2026-05-03        # 最近更新时间（增量更新时改这里）
