@@ -1,6 +1,6 @@
 schema: openlifeos.skill-source.v1
 skill_id: inneratlas
-github_repo: MetaInFLow/inneratlas
+github_repo: MetaInFLow/innerAtlas-skill
 source_type: release
 source_ref: v0.1.1
 installed_at: 2026-05-31T00:48:38+08:00

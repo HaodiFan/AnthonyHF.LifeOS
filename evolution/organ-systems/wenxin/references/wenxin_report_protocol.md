@@ -1,242 +1,381 @@
-# InnerAtlas（问心）WENXIN_REPORT.md · 接力协议详细规则
+# InnerAtlas（问心）WENXIN_REPORT.xml · Canonical Output Contract
 
-InnerAtlas（问心）的标准化输出文件。给下游工具（web-design / 简历生成器 / 个人 BP 工具 / 任何消费者）读取。
+InnerAtlas（问心）的原始标准产物逻辑名只有一个：`WENXIN_REPORT.xml`。
 
-## 设计哲学
+Markdown、HTML、PDF、长图、简历、BP 和网页都只能是从 XML 派生的 presentation artifact，不是源产物。任何字段没有写进 XML，都视为没有完成。
 
-### 为什么需要这个文件
+## Artifact Root
 
-之前「问心」的输出是 HTML / PDF / 长图——**人类可读，但下游工具不可读**。
+产出物根目录必须可自定义。不要假设当前工作目录就是产出目录。
 
-下游工具要消费需要结构化数据。但是：
-- **JSON 太死板**——失去"用户能阅读 / 修改"的属性
-- **完全自由的 Markdown 无法机读**——下游工具不知道哪段是雷达图哪段是壁垒
+默认 root 是当前工作目录；用户或调用方可以指定任意 root，例如：
 
-**协议解法**：用 **Markdown + frontmatter + 严格段落标题**——既人类可读、用户可手动改、下游工具也能稳定提取字段。
-
-### 核心原则
-
-1. **frontmatter 提供元数据**（schema 版本 / 生成时间 / 外号 / 索引字段）
-2. **段落标题严格固定**（不允许变化，下游工具按标题识别区段）
-3. **段落内容相对自由**（可以是表格、列表、自然段，下游工具按段处理）
-4. **"持续迭代记录"段是 append-only**（永远向下追加，不修改历史条目）
-
----
-
-## 完整字段规范
-
-### Frontmatter（必填）
-
-```yaml
----
-schema: wenxin-report           # 固定值，legacy protocol id；当前产品名是 InnerAtlas（问心）
-version: 1.0                    # 协议版本（不是用户的版本）
-generated_at: 2026-05-03        # 首次生成时间
-last_updated: 2026-05-03        # 最近更新时间（增量更新时改这里）
-nickname: 连续创业的苦行僧       # 接地气版外号（搜索 / 索引用）
-nickname_serious: 连续创业的全栈 CTO  # 严肃版（可选）
----
+```bash
+python scripts/inneratlas_doctor.py --root ./inneratlas-output
+python scripts/inneratlas_doctor.py --root /path/to/person-artifacts
 ```
 
-### 段落 1: 身份层（必填）
+推荐布局：
 
-```markdown
-## 身份层
-
-- 外号-接地气版: [killer 外号]
-- 外号-严肃版: [精炼版]
-- 一句话定位: [一句话描述，30-60 字]
-- 真实主线 (对外): [对外可用的人物主线]
-- 真实主线 (对内): [真实驱动的内核，可能和对外不同]
-- 外号为什么成立: [1-2 句。说明它压缩了哪条全人生迁移链，为什么既让人记住，又对应真实稀缺价值]
-- 外号稀缺性判断: [全国少见 / 全球少见 / 普通；必须给事实依据]
+```text
+<artifact_root>/
+  current/
+    WENXIN_REPORT.xml
+  versions/
+    WENXIN_REPORT.20260606-191248.xml
+    WENXIN_REPORT.20260607-101500.xml
+  derived/
+    report.md
+    report.html
+    report.pdf
+  ARTIFACTS.xml
 ```
 
-下游工具的关键消费场景：
-- **网站 Hero**：用"外号-接地气版" + "一句话定位"
-- **简历 Title**：用"外号-严肃版"
-- **About 页正文**：用"真实主线 (对外)"
-- **个人独白 / 博客 bio**：可以用"真实主线 (对内)"
+- `current/WENXIN_REPORT.xml` 是当前 active XML。
+- `versions/WENXIN_REPORT.<version_id>.xml` 保存同名产物的不同版本。
+- `derived/` 只能保存从 XML 派生的人类可读产物。
+- `ARTIFACTS.xml` 可选，用于记录 current 指针、版本列表和派生物来源。
 
-### 段落 2: 雷达图（必填）
+同名产物允许有多个版本，但必须通过 `version_id` 区分；不得覆盖历史版本。
 
-```markdown
-## 雷达图
+## Completion Rule
 
-| 维度 | 来自人物 | 水位% | 证据 |
-|---|---|---|---|
-| 浪潮判断力 | 季逸超 | 85% | 2021 离开 NVIDIA / 2024 抢 GUI agent 数据窗口 / 2026 转 AI 落地 |
-| 阅读纪律 | P. Collison | 90% | 6 年每日 2.5h + 周末，累计 7350+ 小时定向学习 |
-...
+`WENXIN_REPORT.xml` 必须跑 doctor。doctor 输出 `completion_percent`、缺失字段、证据不足字段和下一轮追问。
 
-**整体形状**: 双钉子型 — [一句话描述形状的含义]
+- `completion_percent = 100` 才算正式完成。
+- 小于 100 时，只能输出临时画像或中间报告。
+- agent 必须根据 doctor 的 `next_questions` 继续多轮对话获取材料，再更新 XML，再重跑 doctor。
+- 用户明确拒绝回答的字段也不能静默跳过；写入 XML 的 `missing_information`，状态标为 `user_skipped`，并由 doctor 判断是否允许作为 completion exception。
+
+## Canonical XML Skeleton
+
+```xml
+<inneratlas_report schema="inneratlas-report" version="1.2" artifact_name="WENXIN_REPORT.xml" version_id="20260606-191248" language="zh-CN">
+  <metadata>
+    <generated_at>2026-06-06</generated_at>
+    <last_updated>2026-06-06</last_updated>
+    <artifact_root></artifact_root>
+    <current_path>current/WENXIN_REPORT.xml</current_path>
+    <version_path>versions/WENXIN_REPORT.20260606-191248.xml</version_path>
+    <subject_display_name></subject_display_name>
+    <assessment_mode>quick|complete</assessment_mode>
+    <workflow_state>mode_selected|input_ingested|initial_inference_done|interaction_needed|interaction_done|xml_draft_written|doctor_running|doctor_blocked|complete</workflow_state>
+    <report_status>draft|complete</report_status>
+    <completion_percent>0</completion_percent>
+  </metadata>
+
+  <source_discovery presentation="source_inventory">
+    <scanned_at></scanned_at>
+    <scan_status>completed|skipped|failed</scan_status>
+    <path_entries_scanned></path_entries_scanned>
+    <total_executables_seen></total_executables_seen>
+    <discovery_policy>Discovery only. Do not ingest local, private, remote, or account-bound material without explicit user approval.</discovery_policy>
+    <cli_candidates>
+      <cli_candidate name="gh" status="available|not_found" source_type="github_repos_issues_prs" approval_required="true">
+        <matched_aliases></matched_aliases>
+        <command_path></command_path>
+        <suggested_use></suggested_use>
+        <user_approval>pending|approved|denied</user_approval>
+        <approved_scope></approved_scope>
+      </cli_candidate>
+    </cli_candidates>
+  </source_discovery>
+
+  <interaction_review required_for_mode="complete" presentation="review_log">
+    <contradiction>
+      <signal></signal>
+      <why_it_matters></why_it_matters>
+      <user_resolution></user_resolution>
+    </contradiction>
+    <anomaly>
+      <signal></signal>
+      <hypothesis></hypothesis>
+      <user_response></user_response>
+    </anomaly>
+    <confirmation>
+      <target_field></target_field>
+      <why_confirm></why_confirm>
+      <question_or_simulated_scenario></question_or_simulated_scenario>
+      <answer></answer>
+    </confirmation>
+  </interaction_review>
+
+  <identity_layer presentation="short_text">
+    <nickname_plain></nickname_plain>
+    <nickname_serious></nickname_serious>
+    <one_line_positioning></one_line_positioning>
+    <public_mainline></public_mainline>
+    <private_mainline></private_mainline>
+    <why_nickname_fits></why_nickname_fits>
+    <scarcity_judgment scale="ordinary|rare_local|rare_national|rare_global"></scarcity_judgment>
+    <evidence></evidence>
+  </identity_layer>
+
+  <explicit_analysis presentation="mixed">
+    <mbti presentation="dimension_scores">
+      <method>known_type|short_test|user_skipped|insufficient_evidence</method>
+      <current_judgment></current_judgment>
+      <dimension code="E/I" tendency="" score_out_of_100="" confidence=""></dimension>
+      <dimension code="S/N" tendency="" score_out_of_100="" confidence=""></dimension>
+      <dimension code="T/F" tendency="" score_out_of_100="" confidence=""></dimension>
+      <dimension code="J/P" tendency="" score_out_of_100="" confidence=""></dimension>
+      <change_trajectory></change_trajectory>
+      <evidence></evidence>
+    </mbti>
+
+    <big_five presentation="score_table">
+      <trait name="openness" score_out_of_5="" confidence=""><evidence></evidence></trait>
+      <trait name="conscientiousness" score_out_of_5="" confidence=""><evidence></evidence></trait>
+      <trait name="extraversion" score_out_of_5="" confidence=""><evidence></evidence></trait>
+      <trait name="agreeableness" score_out_of_5="" confidence=""><evidence></evidence></trait>
+      <trait name="emotional_stability" score_out_of_5="" confidence=""><evidence></evidence></trait>
+    </big_five>
+
+    <capability_levels presentation="score_table">
+      <capability name="" implementation_level="L0-L5" metacognition_level="L0-L5" coverage_percent="" confidence="">
+        <evidence></evidence>
+      </capability>
+    </capability_levels>
+
+    <field_coverage presentation="coverage_map">
+      <strength_zone></strength_zone>
+      <touched_zone></touched_zone>
+      <blank_zone></blank_zone>
+    </field_coverage>
+
+    <gap_analysis presentation="score_plus_text">
+      <advantage_area name="" completion_percent="">
+        <full_version_definition></full_version_definition>
+        <must_improve></must_improve>
+        <optional_to_ignore></optional_to_ignore>
+        <thousand_hour_advice></thousand_hour_advice>
+      </advantage_area>
+    </gap_analysis>
+  </explicit_analysis>
+
+  <radar presentation="radar_chart">
+    <dimension name="" reference_person="" score_out_of_100="">
+      <definition></definition>
+      <evidence></evidence>
+    </dimension>
+    <overall_shape></overall_shape>
+  </radar>
+
+  <barriers presentation="cards">
+    <barrier name="">
+      <source_experience></source_experience>
+      <scarcity></scarcity>
+      <evidence></evidence>
+      <ai_era_resilience>strengthened|neutral|weakened</ai_era_resilience>
+    </barrier>
+  </barriers>
+
+  <milestones presentation="timeline">
+    <milestone date="">
+      <event></event>
+      <meaning></meaning>
+      <evidence></evidence>
+    </milestone>
+  </milestones>
+
+  <pitch presentation="three_text_blocks">
+    <who_they_are></who_they_are>
+    <why_they_are_credible></why_they_are_credible>
+    <what_value_they_create></what_value_they_create>
+  </pitch>
+
+  <soft_texture presentation="pattern_sentences">
+    <pattern_sentence>
+      <condition></condition>
+      <behavior></behavior>
+      <evidence></evidence>
+    </pattern_sentence>
+  </soft_texture>
+
+  <skill_recommendations presentation="skill_cards">
+    <recommended_skill name="" type="scarce_meta_capability|repeated_workflow|role_required_workflow" recommend="yes|no">
+      <why_recommended></why_recommended>
+      <scarcity_basis></scarcity_basis>
+      <repetition_basis></repetition_basis>
+      <role_requirement_basis></role_requirement_basis>
+      <inputs></inputs>
+      <process></process>
+      <outputs></outputs>
+      <acceptance_criteria></acceptance_criteria>
+      <evidence></evidence>
+    </recommended_skill>
+  </skill_recommendations>
+
+  <presentation_plan presentation="rendering_contract">
+    <section name="source_discovery" recommended_form="source_inventory"></section>
+    <section name="identity_layer" recommended_form="short_text"></section>
+    <section name="mbti" recommended_form="dimension_scores"></section>
+    <section name="big_five" recommended_form="x_out_of_5_score_table"></section>
+    <section name="capability_levels" recommended_form="L0-L5_score_table"></section>
+    <section name="field_coverage" recommended_form="coverage_map"></section>
+    <section name="gap_analysis" recommended_form="percent_score_plus_text"></section>
+    <section name="radar" recommended_form="radar_chart"></section>
+    <section name="barriers" recommended_form="cards"></section>
+    <section name="milestones" recommended_form="timeline"></section>
+    <section name="pitch" recommended_form="three_text_blocks"></section>
+    <section name="soft_texture" recommended_form="pattern_sentence_list"></section>
+    <section name="skill_recommendations" recommended_form="skill_cards"></section>
+  </presentation_plan>
+
+  <missing_information presentation="doctor_queue">
+    <status>has_missing_required_fields|no_missing_required_fields</status>
+    <missing field="" status="unknown|insufficient_evidence|user_skipped" required_for_100="true">
+      <why_needed></why_needed>
+      <next_question></next_question>
+    </missing>
+  </missing_information>
+
+  <iteration_log presentation="append_only">
+    <entry date="">
+      <trigger></trigger>
+      <changes></changes>
+    </entry>
+  </iteration_log>
+</inneratlas_report>
 ```
 
-下游工具关键消费：
-- **网站的"能力概览"section**：直接重用此表
-- **PDF / 报告页**：渲染成 SVG 雷达图
-- **持续迭代**：版本对比时用此表算 diff
+## Required Sections
 
-### 段落 3: 核心壁垒（必填，3-5 个）
+Doctor must verify these top-level sections:
 
-```markdown
-## 核心壁垒
-
-### 壁垒 1: [名称]
-- 来源: [哪些项目沉淀的]
-- 稀缺性: [为什么别人短期学不会]
-- 证据: [1-2 个具体事实]
-- AI 时代耐受性: [强化 / 中性 / 削弱]
-
-### 壁垒 2: ...
-```
-
-下游工具关键消费：
-- **网站 Strengths section**：用 web-design 的"3 个卧槽爆点"原则展示
-- **简历核心能力区**：直接列出
-- **BP / 融资材料**：核心壁垒论证
-
-### 段落 4: 里程碑（必填，按时间顺序）
-
-```markdown
-## 里程碑
-
-- 2007 · 9 岁开始编程: 起点是想搞懂攻击脚本，反映"下到底层"的本能
-- 2018 · UIUC ECE 中断: 因家庭原因肄业（不抹去这段，是真实主线的一部分）
-- 2019 · NVIDIA Tegra SoC: 无学位 → 顶级硬件岗
-- 2021 · 离开 NVIDIA 进入 AI 落地: 早于 LLM 浪潮 1 年
-- 2025/1 · 第一次创业 CTO: GrainedAI，奇绩 F24
-- 2026/2 · 第二次创业 CTO: MetaInflow
-```
-
-下游工具关键消费：
-- **网站 About / Timeline section**：直接渲染时间线
-- **简历经历区**：转换格式
-
-### 段落 5: 卖点三段（必填）
-
-```markdown
-## 卖点三段
-
-- 🎯 ta 是谁: [50-80 字]
-- 💎 ta 凭什么: [50-80 字]
-- 🚀 ta 能给你什么: [50-80 字]
-```
-
-下游工具关键消费：
-- **网站 Hero 副文案** / **联系页 pitch** / **第三方介绍模板**
-
-### 段落 6: 软实力质地（必填，4-7 条）
-
-```markdown
-## 软实力质地
-
-- [模式句 1]: 在 [场景] 下，倾向于 [行为]。证据: [来源事件]
-- [模式句 2]: ...
-...
-```
-
-下游工具关键消费：
-- **网站 About 隐藏深度**：作为"性格 / 工作方式"的细腻补充
-- **博客 bio**：选 1-2 条作为标签
-
-### 段落 7: 给 web-design 的设计建议（必填）
-
-```markdown
-## 给 web-design 的设计建议
-
-### 风格调性候选（按推荐度排序）
-1. **[Style A]** — 理由: [人格特征匹配解释]
-2. **[Style B]** — 理由: ...
-3. **[Style C]** — 理由: ...
-
-### 推荐参照站
-- [品牌 1]: [为什么参考]
-- [品牌 2]: [为什么参考]
-
-### 必须包含的内容板块
-- [板块 1]: [为什么必须有]
-- [板块 2]: ...
-- [板块 3]: ...
-
-### 应该避开的
-- [不要做成什么样]
-- ...
-```
-
-**这是「问心」给 web-design 的接力 PRD**——web-design 启动 Phase A4 时直接读取此段。
-
-#### 风格推导映射表
-
-「问心」如何根据人格 / 主线推导风格调性？参考下表：
-
-| 人物特征 | 推荐风格 | 推荐参照站 |
+| Section | Required content | Recommended presentation |
 |---|---|---|
-| 长期主义 + 工程深度 + 学术气质 | Cream Editorial / Minimal Pure | stripe.com / linear.app / cohere.com |
-| 连续创业 + 反共识 + 科技 | Dark Tech / Editorial | x.ai / cursor.sh / vercel.com |
-| 创意 + 美学敏感 + 视觉强 | Bold Typography / Brutalist | apple.com / figma.com / runwayml.com |
-| 学者 / 研究者 / 内向 | Cream Editorial / Minimal Pure | mintlify.com / sanity.io |
-| 销售 / 商业 / 外向 | Confident / Bold | stripe.com / wise.com |
-| 苦行僧 / 修行 / 极致简洁 | Minimal Pure / Mono | claude.com / x.ai |
-| 多元 / 跨域 / 不可定义 | Editorial 混搭 | notion.so / pinterest.com |
-| 创意工作者 + 个性强 | 风格化 + 个人色彩 | figma.com / runwayml.com |
+| `source_discovery` | startup scan time, scan status, source-discovery policy, CLI candidates, user approval state | source inventory |
+| `identity_layer` | nickname, one-line positioning, public/private mainline, scarcity judgment, evidence | short text |
+| `interaction_review` | contradictions, anomalies, and confirmations in complete mode | review log |
+| `explicit_analysis/mbti` | method, current judgment, E/I, S/N, T/F, J/P, change trajectory, evidence | dimension scores |
+| `explicit_analysis/big_five` | five traits with `score_out_of_5`, confidence, evidence | x out of 5 score table |
+| `explicit_analysis/capability_levels` | capabilities with implementation L0-L5, metacognition L0-L5, coverage %, evidence | score table |
+| `explicit_analysis/field_coverage` | strength, touched, blank zones | coverage map |
+| `explicit_analysis/gap_analysis` | full-version definition, completion %, must-improve, optional-to-ignore, 1000-hour advice | percent score plus text |
+| `radar` | 5-7 dimensions, reference person, score, evidence, overall shape | radar chart |
+| `barriers` | 3-5 barriers with source, scarcity, evidence, AI-era resilience | cards |
+| `milestones` | dated events, meaning, evidence | timeline |
+| `pitch` | who they are, why credible, what value they create | three text blocks |
+| `soft_texture` | 4-7 condition-behavior-evidence pattern sentences | pattern sentence list |
+| `skill_recommendations` | scarce meta-capability or repeated/role-required workflow candidates | skill cards |
+| `presentation_plan` | recommended rendering form for each section | rendering contract |
+| `missing_information` | every unresolved required field and next question | doctor queue |
+| `iteration_log` | append-only change history | append-only log |
 
-⚠️ **不要硬套**——每个人的特征组合不一样。可以混搭，可以创造新方向。这是建议，不是强制。
+## Skill Recommendation Rules
 
-### 段落 8: 持续迭代记录（首次为空）
+`skill_recommendations` is a required output section.
 
-```markdown
-## 持续迭代记录
+InnerAtlas must recommend candidate personal skills when either condition is met:
 
-（首次生成时此段为空。后续每次更新追加一条，格式见 references/update_logic.md）
+1. **Scarce meta-capability**: evidence suggests the person has a rare, high-percentile meta ability. This should combine scarcity, experience, repeated judgment, and evidence. It does not need to be a conventional job skill.
+2. **Repeated or role-required workflow**: the person repeatedly faces a workflow because of their role, even if they are not industry-top in it. Examples: sales people need sales workflow skills; founders need fundraising, hiring, customer discovery, and narrative skills; engineering leads need review, architecture, prioritization, incident response.
+
+Every recommended skill must include:
+
+- `type`: `scarce_meta_capability`, `repeated_workflow`, or `role_required_workflow`
+- why it is recommended
+- scarcity basis, repetition basis, or role requirement basis
+- inputs
+- process
+- outputs
+- acceptance criteria
+- evidence
+
+If evidence is insufficient, recommend `no` and add the missing field to `missing_information`.
+
+## Modes
+
+At the beginning, InnerAtlas must ask the user to choose:
+
+```text
+你想用哪种模式？
+A. 快速模式：我基于你已经给的全部原始输入直接推理并出 XML 报告。猜测会写明猜测依据。
+B. 完整模式：我先基于输入推理所有方面，再围绕矛盾点、异常点、重点产出点和确认点继续多轮交互，直到 doctor 达到 100%。
 ```
 
----
+After mode selection and before ingesting additional material, InnerAtlas must run local source discovery:
 
-## 文件保存路径
-
-```
-项目根目录/
-├── WENXIN_REPORT.md       # ⭐ 当前版本（最新）
-├── archive/
-│   ├── 2026-05-03.md      # 历史版本
-│   └── 2026-12-15.md
-└── public/
-    ├── index.html          # 个人网站首页（web-design 生成）
-    ├── report.html         # 完整问心报告
-    ├── report.pdf
-    ├── poster.png
-    └── compare.html        # 版本对比（持续迭代时生成）
+```bash
+python scripts/inneratlas_source_scan.py --xml-snippet
 ```
 
-## 下游工具消费的标准做法
+The scan only detects CLI availability from `PATH`. It must not fetch Lark/Feishu content, enumerate GitHub data, search local folders, inspect repositories, or call account-bound APIs. Write the result to `source_discovery`, show the candidate entrances to the user, and ask which sources are approved and what scope is allowed. Without approval, use only material already provided by the user.
 
-```python
-# 伪代码，给下游工具参考
-import frontmatter
+### Quick Mode
 
-with open('WENXIN_REPORT.md') as f:
-    report = frontmatter.load(f)
+Quick mode still writes every required XML field and runs doctor. It may fill uncertain fields with clearly marked inference, but every inference must include evidence or reasoning in the relevant `<evidence>` node.
 
-# 元数据
-nickname = report['nickname']
-last_updated = report['last_updated']
+Quick mode can finish only when doctor reaches 100%. If doctor finds missing fields, ask targeted follow-up questions even in quick mode; otherwise the result is only a draft.
 
-# 段落（按标题分割）
-sections = parse_sections_by_h2(report.content)
-identity = sections['身份层']
-radar = sections['雷达图']
-strengths = sections['核心壁垒']
-design_hints = sections['给 web-design 的设计建议']
+### Complete Mode
+
+Complete mode must include `interaction_review`.
+
+The interaction must focus on:
+
+1. **Contradictions**: claims, timelines, self-descriptions, or evidence that conflict.
+2. **Anomalies**: unusually dense capability jumps, rare outcomes, suspiciously smooth stories, missing failure evidence, over-strong labels.
+3. **Second confirmation of key outputs**: nickname, public/private mainline, MBTI trajectory, key capability levels, scarcity judgment, barriers, future paths, and skill recommendations.
+4. **Simulated scenario confirmation**: when direct self-report is weak, ask a situation-based question that tests the inferred pattern.
+
+Complete mode cannot finish until:
+
+- each important contradiction has either a resolution or an explicit unknown;
+- each important anomaly has a hypothesis and user response;
+- every key output has been confirmed or marked as evidence-insufficient;
+- doctor reaches 100%.
+
+## Doctor Loop
+
+Use `scripts/inneratlas_doctor.py`:
+
+```bash
+python scripts/inneratlas_doctor.py WENXIN_REPORT.xml
+python scripts/inneratlas_doctor.py --root ./inneratlas-output
+python scripts/inneratlas_doctor.py --root ./inneratlas-output --version-id 20260606-191248
+python scripts/inneratlas_doctor.py WENXIN_REPORT.xml --json
 ```
 
----
+Doctor behavior:
 
-## 协议演进
+1. Resolve target XML from explicit path, `--root current/WENXIN_REPORT.xml`, or `--root versions/WENXIN_REPORT.<version_id>.xml`.
+2. Parse XML.
+3. Check required sections and required fields.
+4. Count filled fields vs required fields.
+5. Treat placeholder text, empty tags, `未知`, `证据不足`, `TODO`, and `TBD` as incomplete unless the field is explicitly allowed as a completion exception.
+6. Emit `completion_percent`.
+7. Emit `missing_fields`.
+8. Emit `next_questions`.
+9. If completion is below 100, agent must continue asking targeted questions and update XML before claiming completion.
 
-如果未来字段需要扩展：
-- **加新段落** → version 不变（向后兼容，旧消费者忽略未知段）
-- **改段落标题或字段语义** → version + 1（破坏性变更）
-- **删段落** → version + 1（破坏性变更）
+## Versioning Rules
 
-下游工具应该检查 `version` 字段，对不兼容的版本给出明确错误。
+When updating a report:
+
+1. Resolve artifact root.
+2. Read `current/WENXIN_REPORT.xml` if it exists.
+3. Before modifying current, copy it to `versions/WENXIN_REPORT.<old_version_id>.xml` if that exact version does not already exist.
+4. Write the new version to `versions/WENXIN_REPORT.<new_version_id>.xml`.
+5. Update `current/WENXIN_REPORT.xml` to the same XML content as the new version.
+6. Set root attributes:
+   - `artifact_name="WENXIN_REPORT.xml"`
+   - `version_id="<new_version_id>"`
+7. Set metadata paths:
+   - `metadata/artifact_root`
+   - `metadata/current_path`
+   - `metadata/version_path`
+8. Run doctor against the current file.
+
+Version IDs should be timestamp-like and stable, e.g. `YYYYMMDD-HHMMSS`. If a user supplies a semantic version label, normalize it into a filesystem-safe suffix.
+
+## Compatibility
+
+Legacy names remain accepted as compatibility aliases:
+
+- `identity/wenxin/`
+- `schema: wenxin-report`
+- `WENXIN_REPORT.md`
+
+But new source-of-truth outputs must be written to `WENXIN_REPORT.xml`.

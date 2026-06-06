@@ -106,12 +106,21 @@ InnerAtlas 是英文 repo/product name；「问心」是中文名。历史产物
 
 ## 工作流总览
 
-整个流程分 5 个阶段。**不要跳步**。
+整个流程先选模式，再进入阶段。**不要跳过模式选择、状态记录和 doctor gate**。
 
 ```
-阶段 0：入口分流
-  ├─ 路径 A：用户有素材 → 进入阶段 1
-  └─ 路径 B：用户无素材 → 走问卷流程（references/questionnaire_bank.md）
+阶段 -1：模式选择
+  ├─ 快速模式：基于用户所有原始输入直接推理全部字段，猜测必须写猜测依据
+  └─ 完整模式：先推理全部字段，再围绕矛盾点、异常点、重点产出点做交互确认
+
+阶段 -0.5：本地资料入口扫描
+  ├─ 运行 scripts/inneratlas_source_scan.py
+  ├─ 只发现可用 CLI，不自动读取私有资料
+  └─ 把 source_discovery 写入 XML，等待用户授权使用哪些资料入口
+
+阶段 0：入口分流 + 状态初始化
+  ├─ 用户有素材 → 进入阶段 1
+  └─ 用户无素材 → 走问卷流程（references/questionnaire_bank.md）
                        → 收集足够信号后进入阶段 1
 
 阶段 1：硬实力评估
@@ -160,17 +169,84 @@ InnerAtlas 是英文 repo/product name；「问心」是中文名。历史产物
        🛤️ 三条未来路径
        📝 软实力质地（模式句）
 
-  📦 三份产物：HTML（交互） + PDF（打印） + 长图 PNG（社交分享）
+  📦 标准源产物：WENXIN_REPORT.xml；人类可读报告只作为按需派生物
 
 阶段 6：接力 + 持续迭代 ⭐
-  6.1 生成 WENXIN_REPORT.md（标准化协议，给下游工具如 web-design 消费）
-  6.2 检测首次 vs 增量（看是否已有 WENXIN_REPORT.md）
-  6.3 持续迭代（A 完全重跑 / B 局部更新 / C 里程碑追加）
-  6.4 版本归档（archive/[date].md）
-  6.5 外号重审视（重大变化才改 · 触发条件 ≥30% 变化或主线变化）
-  6.6 网站同步（半自动 · 报告页自动 / 首页手动确认）
-  6.7 持续迭代记录段
+  6.1 生成 WENXIN_REPORT.xml（canonical 原始产物）
+  6.2 运行 scripts/inneratlas_doctor.py
+  6.3 completion < 100 时继续多轮追问、更新 XML、重跑 doctor
+  6.4 completion = 100 后才允许输出正式报告或派生 presentation artifact
+  6.5 持续迭代（完全重跑 / 局部更新 / 里程碑追加）
+  6.6 版本归档（archive/WENXIN_REPORT-YYYY-MM-DD.xml）
+  6.7 外号重审视（重大变化才改 · 触发条件 >=30% 变化或主线变化）
 ```
+
+## 模式选择与状态机
+
+第一轮必须让用户选择：
+
+```text
+你想用哪种模式？
+
+A. 快速模式
+我基于你已经给的全部原始输入直接推理并生成 WENXIN_REPORT.xml。所有猜测都会写明猜测依据。doctor 不到 100% 时，我只补问缺失项。
+
+B. 完整模式
+我先基于输入尽量推理所有方面，然后围绕矛盾点、异常点、重点产出点和确认点继续交互。只有 doctor 到 100% 才算完成。
+```
+
+模式写入 `metadata/assessment_mode`：`quick` 或 `complete`。
+
+每轮必须维护 `metadata/workflow_state`：
+
+| State | 含义 |
+|---|---|
+| `mode_selected` | 已选择快速/完整模式 |
+| `source_discovery_done` | 已扫描本地可用资料入口 CLI，并写入 source_discovery |
+| `input_ingested` | 已接收并索引原始输入 |
+| `initial_inference_done` | 已基于输入推理所有字段 |
+| `interaction_needed` | 完整模式下发现需要交互确认的点 |
+| `interaction_done` | 矛盾点、异常点、重点产出点已交互 |
+| `xml_draft_written` | 已写入 XML draft |
+| `doctor_running` | 正在跑 doctor |
+| `doctor_blocked` | doctor 未满 100%，等待补材料 |
+| `complete` | doctor 100%，正式完成 |
+
+状态规则：
+
+- 快速模式可以从 `initial_inference_done` 直接进入 `xml_draft_written`，但猜测字段必须写入证据或推理依据。
+- 完整模式必须经过 `interaction_needed` 和 `interaction_done`，并写入 `interaction_review`。
+- `source_discovery_done` 只表示发现了可能的资料入口；不表示已经读取资料。
+- 未经用户明确授权，不得通过 `larkcli`、`gh`、`git`、`rg`、`mdfind` 等 CLI 读取本地、私有或账号绑定内容。
+- `doctor_blocked` 时禁止结束任务；只能根据 doctor 的 `next_questions` 继续追问、更新 XML、重跑 doctor。
+- 只有 `completion_percent=100` 时才能把 `workflow_state` 改成 `complete`。
+
+## 本地资料入口扫描
+
+启动 InnerAtlas 后，在模式选择完成后、正式取材前，必须先扫描用户本机环境里可用于寻找基础资料的 CLI。
+
+默认命令：
+
+```bash
+python scripts/inneratlas_source_scan.py --xml-snippet
+```
+
+扫描目标包括但不限于：
+
+- `larkcli` / `lark` / `feishu`：飞书/Lark 文档、会议记录、工作痕迹。
+- `gh`：GitHub repo、issue、PR、公开贡献痕迹。
+- `git`：本地 repo 和提交历史。
+- `rg` / `fd` / `mdfind`：用户授权目录内的本地简历、自述、笔记、旧报告、项目材料。
+- `obsidian` / `notion`：用户授权的知识库入口。
+- `gcloud` / `aws`：用户授权的云项目元数据，用于验证交付系统痕迹。
+
+安全原则：
+
+- 这一步只做 `PATH` 里的命令存在性发现，不读取账号内容、不列 repo、不搜索本地文件、不调用远程 API。
+- 把扫描结果写入 XML 的 `source_discovery`。
+- 向用户展示候选入口，并询问允许使用哪些入口、限定哪些目录/仓库/文档范围。
+- 用户未授权时，只能使用用户直接提供的原始输入。
+- 如果没有发现候选 CLI，也要写入 `source_discovery/cli_candidate name="none"`，然后走手动材料收集。
 
 ## 采访节奏与阶段门禁
 
@@ -226,29 +302,26 @@ InnerAtlas 是英文 repo/product name；「问心」是中文名。历史产物
 
 在项目剖面、差异化价值、MBTI 三个门禁完成前，可以给**临时画像**，但必须标注「临时」。不要提前输出正式外号、BP、完整路径建议。
 
-### 阶段 5 的网页输出约束
+### 阶段 5 的呈现形式约束
 
-如果最终产物要落成网站，默认遵守以下规则：
+阶段 5 可以输出人类可读报告，但报告必须从 `WENXIN_REPORT.xml` 派生。标准产物中只记录 `presentation_plan`，不直接生成具体渠道、页面或视觉设计建议。
 
-- **必须使用 GSAP 作为主动画引擎**，尤其是分段 reveal、pin、parallax、timeline 编排和 scroll-triggered transitions
-- **不能把所有内容粗暴塞进单一长页面的一次性平铺**；页面可以是单路由长叙事，也可以是多页面结构，但阅读体验必须是**渐进展开**
-- **首屏只承载总览**：外号、一句话、主线轮廓、少量关键视觉信号
-- 用户继续 scroll down 后，再**按信息层级逐段展开**：能力图谱 → 核心壁垒 → 里程碑 → 诚实画像 → 路径建议
-- **转场必须由 scroll 驱动**，不是点击 tab 才看见内容；可以有点击补充交互，但主叙事节奏由 scroll 控制
-- 每一段的进入都应该有明确的"上一层抽象 → 下一层细节"关系，不能只是换背景继续堆字
-- 长报告页与品牌首页可以分开：首页负责总览和引导，报告页负责深读；但两者都应遵守 GSAP + 渐进式展开原则
+默认推荐呈现形式：
 
-### 阶段 5 的网页叙事顺序（默认）
-
-如果没有用户另行指定，网站按下面顺序组织：
-
-1. **总览 Hero**：外号、一句话、整体判断
-2. **能力轮廓**：雷达图 / 进度条 / 整体形状判断
-3. **核心壁垒展开**：逐个 pin 或分屏展开
-4. **关键里程碑**：时间线式 scroll narrative
-5. **诚实自我画像**：盲区、虚胖、低估区
-6. **未来路径**：三条路径逐段展开
-7. **完整报告入口**：跳转或继续深入到全文页
+- 本地资料入口扫描：source inventory。
+- 身份层：短文本。
+- MBTI：四维倾向评分和变化轨迹。
+- Big Five：x out of 5 评分表。
+- 能力水位：L0-L5 评分表。
+- 领域覆盖：覆盖图。
+- Gap 分析：百分比 + 文本解释。
+- 雷达图：radar chart。
+- 核心壁垒：cards。
+- 里程碑：timeline。
+- 卖点三段：three text blocks。
+- 软实力质地：pattern sentence list。
+- Skill 推荐：skill cards。
+- 缺失信息：doctor queue。
 
 ---
 
@@ -256,7 +329,18 @@ InnerAtlas 是英文 repo/product name；「问心」是中文名。历史产物
 
 ### 开场白
 
-如果用户已经丢了材料过来（简历/自述/经历），跳过开场，直接进入阶段 1。
+即使用户已经丢了材料过来（简历/自述/经历），也必须先完成模式选择。选择后：
+
+- 快速模式：不做主动深挖，先根据全部输入推理完整 XML，猜测写依据，跑 doctor。
+- 完整模式：先根据全部输入推理完整 XML draft，再进入交互确认。
+
+模式选择后必须先执行本地资料入口扫描：
+
+```bash
+python scripts/inneratlas_source_scan.py --xml-snippet
+```
+
+把扫描结果写入 `source_discovery`。随后用一句话询问用户是否授权使用其中某些入口，例如：「我发现本机有 `gh`、`git`、`rg`，它们可能能帮我找 GitHub 项目、提交历史和本地简历/笔记。你允许我用哪些？范围限定在哪些 repo 或目录？」未经授权不取材。
 
 如果用户只说"帮我做个分析"或"我想了解自己"这种没材料的话，开场：
 
@@ -269,6 +353,21 @@ InnerAtlas 是英文 repo/product name；「问心」是中文名。历史产物
 
 - 选 (1) 或 (2)：进入路径 A
 - 选 (3)：进入路径 B（无素材问卷流程）
+
+### 完整模式交互原则
+
+完整模式只围绕三类问题交互：
+
+1. **矛盾点**：时间线、自述、行为证据、能力水位、外号或主线互相冲突。
+2. **异常点**：能力跃迁过快、成果密度异常、叙事过顺、标签过强、失败证据缺失。
+3. **重点产出点确认**：外号、对外/对内主线、MBTI 变化轨迹、核心能力水位、稀缺性判断、核心壁垒、未来路径、Skill 推荐。
+
+确认方式：
+
+- 直接二次确认：让用户保留、下调、改写或标证据不足。
+- 模拟类似场景：当直接自述不可靠时，用场景题确认判断模式。
+
+交互模板见 `references/interaction_templates.md`。
 
 ### 路径 B 的处理
 
@@ -1376,218 +1475,114 @@ with sync_playwright() as p:
 
 ---
 
-## 阶段 6：接力 + 持续迭代 ⭐
+## 阶段 6：XML 交付 + Doctor Completion Gate ⭐
 
-「问心」的最终交付**不止于一次报告**。每次运行结束后，必须做两件事：
-1. **生成 `WENXIN_REPORT.md`**——标准化的接力协议，给下游工具（如 web-design）消费
-2. **检测是否首次 vs 增量**——决定是首次评估还是持续迭代
+InnerAtlas 的最终原始交付物只有 `WENXIN_REPORT.xml`。Markdown、HTML、PDF、长图、简历、BP 和网页都只是从 XML 派生的 presentation artifact，不是源产物。
 
-### 6.1 WENXIN_REPORT.md · 接力协议（核心新增）
+产出物 root 可以自定义。未指定时使用当前工作目录；指定时使用用户给的 artifact root。不要把当前目录硬编码为产物目录。
 
-每次运行结束，除了金字塔 HTML/PDF/长图，还要生成一份 `WENXIN_REPORT.md`。这是**结构化的标准产物**，给下游工具读取：
+推荐布局：
 
-```markdown
----
-schema: wenxin-report
-version: 1.0
-generated_at: 2026-05-03
-last_updated: 2026-05-03
-nickname: [接地气版外号]
----
-
-# 问心报告 · [外号]
-
-## 身份层
-- 外号-接地气版: [killer 外号]
-- 外号-严肃版: [精炼版]
-- 一句话定位: [一句话描述]
-- 真实主线 (对外): [对外可用的人物主线]
-- 真实主线 (对内): [真实驱动的内核]
-
-## 雷达图（5-7 维）
-| 维度 | 来自人物 | 水位% | 证据 |
-|---|---|---|---|
-| 维度 1 | X | 85% | ... |
-...
-
-## 核心壁垒（3-5 个）
-### 壁垒 1: [名称]
-- 来源: ...
-- 稀缺性: ...
-- 证据: ...
-- AI 时代耐受性: 强化/中性/削弱
-
-## 里程碑（按时间）
-- YYYY · 节点名: 发生了什么 + 意味着什么
-...
-
-## 卖点三段
-- 🎯 ta 是谁: [50-80 字]
-- 💎 ta 凭什么: [50-80 字]
-- 🚀 ta 能给你什么: [50-80 字]
-
-## 软实力质地（4-7 条模式句）
-- [场景] + [行为模式] + [证据]
-...
-
-## 给 web-design 的设计建议
-- 风格调性候选 (2-3 个，按推荐度排序):
-  - 候选 A: [Dark Editorial / Cream / Minimal / ...] —— 理由：[人格特征匹配]
-  - 候选 B: ... —— 理由：...
-  - 候选 C: ... —— 理由：...
-- 推荐参照站 (从 web-design design-systems 库): [品牌 1, 品牌 2]
-- 必须包含的内容板块: [3-5 块最值得展示]
-- 应该避开的: [不要做成什么样]
-
-## 持续迭代记录
-（首次为空。后续每次更新追加一条，格式见 references/update_logic.md）
+```text
+<artifact_root>/
+  current/WENXIN_REPORT.xml
+  versions/WENXIN_REPORT.<version_id>.xml
+  derived/
 ```
 
-**详细字段规则 + 风格推导映射** 见 `references/wenxin_report_protocol.md`。
+同名产物允许多版本，但必须通过 `version_id` 区分；更新 current 前先保存历史版本，不得覆盖 `versions/` 中已有文件。
 
-### 6.2 检测：首次 vs 增量
+每次运行结束必须做三件事：
 
-**第一步 always 是检测**：
+1. 写入或更新 `<artifact_root>/current/WENXIN_REPORT.xml` 和 `<artifact_root>/versions/WENXIN_REPORT.<version_id>.xml`。
+2. 运行 `python scripts/inneratlas_doctor.py --root <artifact_root>`。
+3. 如果 doctor 不是 100%，根据 `next_questions` 继续多轮对话获取材料，更新 XML，再重跑 doctor。
 
-```
-扫描当前工作目录是否存在 WENXIN_REPORT.md：
-  存在 → 进入"持续迭代模式"（6.3）
-  不存在 → 进入"首次评估模式"（按阶段 0-5 走完整流程）
-```
+### 6.1 Canonical XML Contract
 
-### 6.3 持续迭代模式（混合粒度）
+XML 结构和字段规则见 `references/wenxin_report_protocol.md`。必须包含：
 
-检测到已有 `WENXIN_REPORT.md` 时，**先呈现现有画像**，再让用户选模式：
+- `source_discovery`
+- `identity_layer`
+- `explicit_analysis`
+- `radar`
+- `barriers`
+- `milestones`
+- `pitch`
+- `soft_texture`
+- `skill_recommendations`
+- `presentation_plan`
+- `missing_information`
+- `iteration_log`
 
-```
-问心：我看到你 [last_updated] 跑过一次问心。当时的画像是：
-      外号: [现外号]
-      雷达图主要维度: [前 3 名 + 水位]
+`presentation_plan` 只定义每个部分推荐怎么呈现，例如 `short_text`、`dimension_scores`、`x_out_of_5_score_table`、`L0-L5_score_table`、`percent_score_plus_text`、`radar_chart`、`cards`、`timeline`、`pattern_sentence_list`、`skill_cards`。不要在标准产物里生成具体渠道、页面或视觉设计建议。
 
-      你想:
-      A. 完全重跑（适合换工作 / 经历重大变化 / 觉得之前评估不准）
-      B. 局部更新（哪几个维度有变化）
-      C. 加一段新经历 / 里程碑（比如刚完成一个项目 / 拿到融资）
-```
+### 6.2 Doctor Loop
 
-#### 模式 A · 完全重跑
+doctor 是 completion gate，不是建议工具。
 
-按阶段 0-5 走完整流程。生成新报告。**自动归档旧版** 到 `archive/[YYYY-MM].md`。
-
-#### 模式 B · 局部更新（增量）
-
-```
-问心：哪些维度有变化？我列出来你勾选——
-      [ ] 商业转化（之前 45%）
-      [ ] 产品定义（之前 30%）
-      [ ] MBTI 切换进度（之前 INTJ 43%）
-      [ ] 跨域学习（之前 90%）
-      ...
-
-[用户勾]
-
-问心：[针对勾选的维度做精准追问，不动其他维度]
-       问完后：
-       - 更新这些维度的水位 + 证据
-       - 重画雷达图
-       - 在持续迭代记录段加一条
-       - 旧版归档
-       - 评估这些变化是否触发外号变化（详见 6.5）
-       - 生成 compare.html
+```bash
+python scripts/inneratlas_doctor.py WENXIN_REPORT.xml
+python scripts/inneratlas_doctor.py --root ./inneratlas-output
+python scripts/inneratlas_doctor.py --root ./inneratlas-output --version-id 20260606-191248
+python scripts/inneratlas_doctor.py WENXIN_REPORT.xml --json
 ```
 
-#### 模式 C · 里程碑追加（轻量）
+规则：
 
-用户报告刚发生的事（"我刚拿到 A 轮"、"我离开了 X 公司"、"我学完了某个领域的某本书"）。
+- `completion_percent = 100` 才能声明正式完成。
+- 小于 100 时，只能说“当前是临时画像 / draft”。
+- 缺失字段进入 `missing_information`，并继续向用户问 doctor 给出的下一轮问题。
+- 用户明确跳过的项目也要写入 XML，状态标为 `user_skipped`；不能因为用户跳过就从产物中删除该字段。
+- XML 中残留 `未知`、`证据不足`、`TODO`、`TBD`、空标签或占位符时，doctor 会视为未完成，除非该字段被明确记录为 completion exception。
 
-```
-问心：[追加到里程碑]
-      YYYY-MM · [里程碑名]
-      - 影响哪些维度: [自动推导]
-        · 商业转化 +15%（45% → 60%）
-        · 社交势能 +10%（40% → 50%）
-      - 是否触发外号变化: [按 6.5 评估]
+### 6.3 Skill Recommendations
 
-      要不要根据这件事重新看看雷达图？(yes/no)
-```
+`skill_recommendations` 是标准产出物的一部分。推荐候选个人 Skill 时分三类：
 
-### 6.4 版本归档（自动）
+1. `scarce_meta_capability`：结合稀缺性、经历、重复判断和证据，说明这个人可能拥有值得沉淀的稀缺元能力。
+2. `repeated_workflow`：虽然未必行业顶尖，但这个人反复做同一类工作，已经能抽象出稳定输入、过程、输出和验收标准。
+3. `role_required_workflow`：因为角色要求会高频遇到，例如销售要沉淀销售 Skill，创始人要沉淀融资/招聘/客户发现 Skill，工程负责人要沉淀架构/review/优先级/事故响应 Skill。
 
-每次更新前，**自动**把当前 `WENXIN_REPORT.md` 复制到 `archive/[YYYY-MM-DD].md`。
+每个推荐项必须写：
 
-archive/ 目录的作用：
-- 提供 compare.html 的数据源
-- 让用户回溯"我以前是什么样的"
-- 防止用户误操作（覆盖了想保留的版本）
+- 为什么推荐
+- 稀缺性依据、重复性依据或角色要求依据
+- 输入
+- 过程
+- 输出
+- 验收标准
+- 证据
 
-### 6.5 外号重审视（"重大变化才改"原则）
+证据不足时，`recommend="no"`，并把缺口写入 `missing_information`。
 
-外号是金字塔的灵魂——**频繁变会失去标识性**。但重大成长后**该改要改**。
+### 6.4 首次 vs 增量
 
-**触发条件**（满足任一即触发"重审视"）：
-- 任一维度变化 ≥ 30%
-- 主线（对外或对内）发生根本变化
-- 用户主动要求"重新审视外号"
-- 增量更新累计达 3 次但没改过外号
+第一步 always 是解析 artifact root，并检测是否已有 `<artifact_root>/current/WENXIN_REPORT.xml`：
 
-**触发后**：
-
-```
-问心：检测到 [触发条件]。
-      当前外号"[现外号]"是不是还匹配？我看到几个变化：
-      - [变化 1]
-      - [变化 2]
-
-      候选演化方向（不是必须改）：
-      A. 保留"[现外号]"——理由：[核心特征还在]
-      B. 演化版"[新外号建议]"——理由：[反映了什么变化]
-      C. 完全重写——你想强调什么新特征？
-
-      你倾向？
+```text
+存在 -> 读取 XML，进入增量模式
+不存在 -> 进入首次评估，按阶段 0-5 走完整流程
 ```
 
-**演化版的写法**：尽量保留核心强词，加修饰词反映变化。例如：
-- "连续创业的苦行僧" → "拿到弹药的苦行僧"（融资后）
-- "连续创业的苦行僧" → "退役的苦行僧"（不再创业后）
-- "9 岁脚本小子的连续起死回生" → "9 岁脚本小子的最终归宿"（找到长期方向后）
+增量模式下：
 
-### 6.6 网站同步（半自动）
+- 先读取 XML 中的 `metadata`、`identity_layer`、`explicit_analysis`、`radar` 和 `iteration_log`。
+- 用户可以选择完全重跑、局部更新或追加里程碑。
+- 更新前把当前 XML 保存到 `versions/WENXIN_REPORT.<old_version_id>.xml`。
+- 新版本写入 `versions/WENXIN_REPORT.<new_version_id>.xml`，再同步到 `current/WENXIN_REPORT.xml`。
+- 更新后追加 `iteration_log/entry`，重跑 doctor。
 
-用户**部署了个人网站**（基于「问心」的接力协议生成）后，每次「问心」更新会涉及网站文件。原则：
+### 6.5 外号重审视
 
-| 网站文件 | 更新策略 | 理由 |
-|---|---|---|
-| `public/report.html` | **自动同步**：每次更新自动重新生成 | 报告页面就是评估的视觉化，必须跟着评估走 |
-| `public/report.pdf` | **自动同步** | 同上 |
-| `public/poster.png` | **自动同步**（如果外号变化则重新生成长图） | 同上 |
-| `public/index.html`（个人网站首页） | **手动确认**：仅提示用户，由用户决定是否更新 | 这是用户精心设计的个人品牌，不应该被自动改动 |
-| `public/compare.html` | **自动生成 / 更新** | 每次更新都需要新对比页 |
+外号重大变化才改。触发条件：
 
-### 6.7 持续迭代记录段的格式
+- 任一关键维度变化 >= 30%。
+- 对外主线或对内主线发生根本变化。
+- 用户主动要求重新审视外号。
+- 增量更新累计 3 次但外号从未重审。
 
-每次更新都在 `WENXIN_REPORT.md` 末尾追加一条：
-
-```markdown
-## 持续迭代记录
-
-### 2026-12-15 · 模式 B 局部更新
-**触发**: 用户报告"商业转化提升 + 拿到第一个标准化合同"
-**变化**:
-- 商业转化: 45% → 60% (+15%)
-- 社交势能: 40% → 50% (+10%)
-- 阅读纪律: 90% → 85% (-5%)（用户诚实下调，最近 2 个月学习时间减少）
-**外号**: 保持"连续创业的苦行僧"（核心特征未变）
-**新增里程碑**: 2026-12 · MetaInflow 第一个标准化合同
-**归档**: archive/2026-05-03.md
-
-### 2027-04-20 · 模式 C 里程碑追加
-**触发**: A 轮融资
-**变化**: 商业转化 60% → 75% / 社交势能 50% → 65%
-**外号**: 演化版"拿到弹药的苦行僧"（重大变化触发）
-**归档**: archive/2026-12-15.md
-```
-
-详细规则见 `references/update_logic.md`。
+触发后，把候选变化写入 XML 的 `identity_layer` 和 `iteration_log`，再跑 doctor。
 
 ---
 
@@ -1599,14 +1594,14 @@ archive/ 目录的作用：
 - `references/methodology_sources.md` —— 方法论出处
 - `references/reference_person_matching.md` —— **参照人物匹配规则**（雷达图核心机制）
 - `references/mbti_assessment.md` —— **MBTI 评估题库 + 变化追踪规则**
-- `references/wenxin_report_protocol.md` —— ⭐ **WENXIN_REPORT.md 协议详细规则 + 风格推导映射**
+- `references/wenxin_report_protocol.md` —— ⭐ **WENXIN_REPORT.xml canonical contract + doctor completion gate**
 - `references/update_logic.md` —— ⭐ **持续迭代规则（增量 / 全量 / 里程碑）+ 外号重审视触发条件**
-- `references/integration_with_web_DESIGN.md` —— ⭐ **和 web-design skill 的接力协议**
 - `references/knowledge_probes/` —— **知识抽样问题库**（L4-L5 高水位验证，按领域分文件，可扩展）
 - `references/domain_question_banks/` —— **领域暖场题库**（L2-L3 基础熟悉度验证，按领域分文件，可扩展）
 - `assets/output_template.md` —— 金字塔输出的完整模板
 - `scripts/generate_questionnaire.py` —— 路径 B 的动态问卷生成器（可选）
-- `scripts/compare_versions.py` —— ⭐ 对比两个版本的 WENXIN_REPORT.md 生成 compare.html
+- `scripts/inneratlas_doctor.py` —— ⭐ 检查 `WENXIN_REPORT.xml` 是否达到 100% completion，并输出下一轮追问
+- `scripts/inneratlas_source_scan.py` —— ⭐ 启动时扫描本机可用资料入口 CLI，只发现入口，不自动读取资料
 
 ---
 

@@ -9,7 +9,7 @@ default_source:
 skills:
   wenxin:
     local_path: evolution/organ-systems/wenxin
-    github_repo: "MetaInFLow/wenxin-skill"
+    github_repo: "MetaInFLow/innerAtlas-skill"
     ref: latest
     update_mode: owner-reviewed-release-archive
   psp:

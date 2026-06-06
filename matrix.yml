@@ -97,7 +97,7 @@ identity:
       legacy entrypoints.
   public_positioning:
     source: 问心 Skill
-    repository: https://github.com/MetaInFLow/wenxin-skill
+    repository: https://github.com/MetaInFLow/innerAtlas-skill
     submodule_path: evolution/organ-systems/wenxin
     artifact: identity/wenxin/wenxin-report-continuous-founder-ascetic.pdf
     role: 对外定位、个人履历、个人 BP 和 README 展示内容；同时作为 AnthonyHF.LifeOS 自我更新所用的定位 Skill。
@@ -180,7 +180,7 @@ submodules:
     name: Wenxin Skill
     path: evolution/organ-systems/wenxin
     entrypoint: evolution/organ-systems/wenxin/SKILL.md
-    repository: https://github.com/MetaInFLow/wenxin-skill.git
+    repository: https://github.com/MetaInFLow/innerAtlas-skill.git
     role: AnthonyHF.LifeOS 自我进化所用的对外定位 Skill，用于把经历、能力、短板和阶段目标整理成公开叙事、履历和个人 BP。
     visibility: private
 self_evolution:
