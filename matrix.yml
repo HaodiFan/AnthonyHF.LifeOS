@@ -153,21 +153,6 @@ submodules:
     repository: https://github.com/HaodiFan/AF-wiki.git
     role: AnthonyHF.LifeOS 当前配置的 memory wiki；作为 Anthony 实例选择，不是 openLifeOS 默认架构。
   organ_systems:
-  - id: psp
-    name: PSP Skill
-    path: evolution/organ-systems/psp
-    entrypoint: evolution/organ-systems/psp/SKILL.md
-    repository: https://github.com/MetaInFLow/psp-skill.git
-    role: AnthonyHF.LifeOS 自我进化所用的人物建模 Skill，用于从原始材料提炼 PSP、语言指纹、冲突故事、分身边界和验证方法。
-    visibility: private
-  - id: ipo-reverse
-    name: IPO Reverse Skill
-    path: evolution/organ-systems/ipo-reverse
-    entrypoint: evolution/organ-systems/ipo-reverse/SKILL.md
-    repository: https://github.com/MetaInFLow/ipo-reverse-skill.git
-    license: PolyForm-Noncommercial-1.0.0
-    role: AnthonyHF.LifeOS 自我进化所用的 IPO 逆向 Skill，用于从已完成产出物反推证据、隐性认知任务、中间思考资产和可复用 IPO。
-    visibility: public-source-available-noncommercial
   - id: cognitive-alignment
     name: Cognitive Alignment Skill
     path: evolution/organ-systems/cognitive-alignment
@@ -176,11 +161,38 @@ submodules:
     role: AnthonyHF.LifeOS 自我进化所用的认知对齐 Skill，用于让 agent 先讲清自己的评判，与 Anthony 的认知校准；出现分歧时选择复盘方法，并把纠偏沉淀到正确
       skill、memory tier 或新 skill。
     visibility: private
+vendored_skill_sources:
+  organ_systems:
+  - id: psp
+    name: PSP Skill
+    path: evolution/organ-systems/psp
+    entrypoint: evolution/organ-systems/psp/SKILL.md
+    repository: https://github.com/MetaInFLow/psp-skill.git
+    source_type: release
+    install_mode: github-archive-vendor
+    submodule: false
+    role: AnthonyHF.LifeOS 自我进化所用的人物建模 Skill，用于从原始材料提炼 PSP、语言指纹、冲突故事、分身边界和验证方法。
+    visibility: private
+  - id: ipo-reverse
+    name: IPO Reverse Skill
+    path: evolution/organ-systems/ipo-reverse
+    entrypoint: evolution/organ-systems/ipo-reverse/SKILL.md
+    repository: https://github.com/MetaInFLow/ipo-reverse-skill.git
+    source_type: release
+    install_mode: github-archive-vendor
+    submodule: false
+    license: PolyForm-Noncommercial-1.0.0
+    role: AnthonyHF.LifeOS 自我进化所用的 IPO 逆向 Skill，用于从已完成产出物反推证据、隐性认知任务、中间思考资产和可复用 IPO。
+    visibility: public-source-available-noncommercial
   - id: wenxin
     name: Wenxin Skill
     path: evolution/organ-systems/wenxin
     entrypoint: evolution/organ-systems/wenxin/SKILL.md
     repository: https://github.com/MetaInFLow/innerAtlas-skill.git
+    source_type: release
+    source_ref: v0.2.0
+    install_mode: github-archive-vendor
+    submodule: false
     role: AnthonyHF.LifeOS 自我进化所用的对外定位 Skill，用于把经历、能力、短板和阶段目标整理成公开叙事、履历和个人 BP。
     visibility: private
 self_evolution:
